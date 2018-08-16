@@ -1,6 +1,8 @@
 #include <a_samp>
 #include <i_sampp\i_colorlist>
 #include <i_sampp\i_pickupids>
+#include <i_sampp\i_vehids>
+#include <i_sampp\i_weaponids>
 
 #if defined FILTERSCRIPT
 
@@ -28,6 +30,50 @@ main()
 
 #endif
 
+new pickupWeapBrassKnuckles;
+new pickupWeapGolfClub;
+new pickupWeapKnife;
+new pickupWeapBaseballBat;
+new pickupWeapNightStick;
+new pickupWeapShovel;
+new pickupWeapPoolCue;
+new pickupWeapKatana;
+new pickupWeapChainsaw;
+new pickupWeapRdildo;
+new pickupWeapWdildo;
+new pickupWeapVibrator;
+new pickupWeapVibrator2;
+new pickupWeapFlowers;
+new pickupWeapCane;
+new pickupWeapGrenade;
+new pickupWeapTeargas;
+new pickupWeapMolotov;
+new pickupWeapSatchel;
+new pickupWeapPistol;
+new pickupWeapSilencedPistol;
+new pickupWeapDeagle;
+new pickupWeapShotgun;
+new pickupWeapSawedoff;
+new pickupWeapAutoshotgun;
+new pickupWeapMicroUzi;
+new pickupWeapMP5;
+new pickupWeapTec9;
+new pickupWeapAK47;
+new pickupWeapM4;
+new pickupWeapRifle;
+new pickupWeapSniperRifle;
+new pickupWeapRPG;
+new pickupWeapHeatRPG;
+new pickupWeapFlamethrower;
+new pickupWeapMinigun;
+new pickupWeapDetonator;
+new pickupWeapSpray;
+new pickupWeapExtinguisher;
+new pickupWeapCamera;
+new pickupWeapNGoggles;
+new pickupWeapTGoggles;
+new pickupWeapParachute;
+
 public OnGameModeInit()
 {
 	SetWorldTime(12);
@@ -36,52 +82,52 @@ public OnGameModeInit()
 	AddPlayerClass(0, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	
 	//PICKUPS - ROW 1
-	CreatePickup(PICKUP_WEAP_RDILDO, 1, 425.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_WDILDO, 1, 420.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_VIBRATOR, 1, 415.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_VIBRATOR2, 1, 410.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_FLOWERS, 1, 405.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_CANE, 1, 400.5590,2480.2830,16.4844, -1);
+	pickupWeapRdildo = CreatePickup(PICKUP_WEAP_RDILDO, 2, 425.5590,2480.2830,16.4844, -1);
+	pickupWeapWdildo = CreatePickup(PICKUP_WEAP_WDILDO, 2, 420.5590,2480.2830,16.4844, -1);
+	pickupWeapVibrator = CreatePickup(PICKUP_WEAP_VIBRATOR, 2, 415.5590,2480.2830,16.4844, -1);
+	pickupWeapVibrator2 = CreatePickup(PICKUP_WEAP_VIBRATOR2, 2, 410.5590,2480.2830,16.4844, -1);
+	pickupWeapFlowers = CreatePickup(PICKUP_WEAP_FLOWERS, 2, 405.5590,2480.2830,16.4844, -1);
+	pickupWeapCane = CreatePickup(PICKUP_WEAP_CANE, 2, 400.5590,2480.2830,16.4844, -1);
 	CreatePickup(PICKUP_WEAP_PHONE, 1, 395.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_BRASSKNUCKLES, 1, 390.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_GOLFCLUB, 1, 385.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_NIGHTSTICK, 1, 380.5590,2480.2830,16.4844, -1);
-    CreatePickup(PICKUP_WEAP_KNIFE, 1, 375.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_BASEBALLBAT, 1, 370.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_SHOVEL, 1, 365.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_POOLCUE, 1, 360.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_KATANA, 1, 355.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_CHAINSAW, 1, 350.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_GRENADE, 1, 345.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_TEARGAS, 1, 340.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_MOLOTOV, 1, 335.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_PISTOL, 1, 330.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_SILENCEDPISTOL, 1, 325.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_DEAGLE, 1, 320.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_SHOTGUN, 1, 315.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_SAWNOFF, 1, 310.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_AUTOSHOTGUN, 1, 305.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_MICROUZI, 1, 300.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_MP5, 1, 295.5590,2480.2830,16.4844, -1);
+	pickupWeapBrassKnuckles = CreatePickup(PICKUP_WEAP_BRASSKNUCKLES, 2, 390.5590,2480.2830,16.4844, -1);
+	pickupWeapGolfClub = CreatePickup(PICKUP_WEAP_GOLFCLUB, 2, 385.5590,2480.2830,16.4844, -1);
+	pickupWeapNightStick = CreatePickup(PICKUP_WEAP_NIGHTSTICK, 2, 380.5590,2480.2830,16.4844, -1);
+    pickupWeapKnife = CreatePickup(PICKUP_WEAP_KNIFE, 2, 375.5590,2480.2830,16.4844, -1);
+	pickupWeapBaseballBat = CreatePickup(PICKUP_WEAP_BASEBALLBAT, 2, 370.5590,2480.2830,16.4844, -1);
+	pickupWeapShovel = CreatePickup(PICKUP_WEAP_SHOVEL, 2, 365.5590,2480.2830,16.4844, -1);
+	pickupWeapPoolCue = CreatePickup(PICKUP_WEAP_POOLCUE, 2, 360.5590,2480.2830,16.4844, -1);
+	pickupWeapKatana = CreatePickup(PICKUP_WEAP_KATANA, 2, 355.5590,2480.2830,16.4844, -1);
+	pickupWeapChainsaw = CreatePickup(PICKUP_WEAP_CHAINSAW, 2, 350.5590,2480.2830,16.4844, -1);
+	pickupWeapGrenade = CreatePickup(PICKUP_WEAP_GRENADE, 2, 345.5590,2480.2830,16.4844, -1);
+	pickupWeapTeargas = CreatePickup(PICKUP_WEAP_TEARGAS, 2, 340.5590,2480.2830,16.4844, -1);
+	pickupWeapMolotov = CreatePickup(PICKUP_WEAP_MOLOTOV, 2, 335.5590,2480.2830,16.4844, -1);
+	pickupWeapPistol = CreatePickup(PICKUP_WEAP_PISTOL, 2, 330.5590,2480.2830,16.4844, -1);
+	pickupWeapSilencedPistol = CreatePickup(PICKUP_WEAP_SILENCEDPISTOL, 2, 325.5590,2480.2830,16.4844, -1);
+	pickupWeapDeagle = CreatePickup(PICKUP_WEAP_DEAGLE, 2, 320.5590,2480.2830,16.4844, -1);
+	pickupWeapShotgun = CreatePickup(PICKUP_WEAP_SHOTGUN, 2, 315.5590,2480.2830,16.4844, -1);
+	pickupWeapSawedoff = CreatePickup(PICKUP_WEAP_SAWNOFF, 2, 310.5590,2480.2830,16.4844, -1);
+	pickupWeapAutoshotgun = CreatePickup(PICKUP_WEAP_AUTOSHOTGUN, 2, 305.5590,2480.2830,16.4844, -1);
+	pickupWeapMicroUzi = CreatePickup(PICKUP_WEAP_MICROUZI, 2, 300.5590,2480.2830,16.4844, -1);
+	pickupWeapMP5 = CreatePickup(PICKUP_WEAP_MP5, 2, 295.5590,2480.2830,16.4844, -1);
 	CreatePickup(PICKUP_WEAP_HYDRAFLARE, 1, 290.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_AK47, 1, 285.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_M4, 1, 280.5590,2480.2830,16.4844, -1);
-    CreatePickup(PICKUP_WEAP_RIFLE, 1, 275.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_SNIPERRIFLE, 1, 270.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_RPG, 1, 265.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_HEATRPG, 1, 260.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_FLAMETHROWER, 1, 255.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_MINIGUN, 1, 250.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_SATCHEL, 1, 245.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_DETONATOR, 1, 240.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_SPRAY, 1, 235.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_EXTINGUISHER, 1, 230.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_CAMERA, 1, 225.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_NGOGGLES, 1, 220.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_IGOGGLES, 1, 215.5590,2480.2830,16.4844, -1);
+	pickupWeapAK47 = CreatePickup(PICKUP_WEAP_AK47, 2, 285.5590,2480.2830,16.4844, -1);
+	pickupWeapM4 = CreatePickup(PICKUP_WEAP_M4, 2, 280.5590,2480.2830,16.4844, -1);
+    pickupWeapRifle = CreatePickup(PICKUP_WEAP_RIFLE, 2, 275.5590,2480.2830,16.4844, -1);
+	pickupWeapSniperRifle = CreatePickup(PICKUP_WEAP_SNIPERRIFLE, 2, 270.5590,2480.2830,16.4844, -1);
+	pickupWeapRPG = CreatePickup(PICKUP_WEAP_RPG, 2, 265.5590,2480.2830,16.4844, -1);
+	pickupWeapHeatRPG = CreatePickup(PICKUP_WEAP_HEATRPG, 2, 260.5590,2480.2830,16.4844, -1);
+	pickupWeapFlamethrower = CreatePickup(PICKUP_WEAP_FLAMETHROWER, 2, 255.5590,2480.2830,16.4844, -1);
+	pickupWeapMinigun = CreatePickup(PICKUP_WEAP_MINIGUN, 2, 250.5590,2480.2830,16.4844, -1);
+	pickupWeapSatchel = CreatePickup(PICKUP_WEAP_SATCHEL, 2, 245.5590,2480.2830,16.4844, -1);
+	pickupWeapDetonator = CreatePickup(PICKUP_WEAP_DETONATOR, 2, 240.5590,2480.2830,16.4844, -1);
+	pickupWeapSpray = CreatePickup(PICKUP_WEAP_SPRAY, 2, 235.5590,2480.2830,16.4844, -1);
+	pickupWeapExtinguisher = CreatePickup(PICKUP_WEAP_EXTINGUISHER, 2, 230.5590,2480.2830,16.4844, -1);
+	pickupWeapCamera = CreatePickup(PICKUP_WEAP_CAMERA, 2, 225.5590,2480.2830,16.4844, -1);
+	pickupWeapNGoggles = CreatePickup(PICKUP_WEAP_NGOGGLES, 2, 220.5590,2480.2830,16.4844, -1);
+	pickupWeapTGoggles = CreatePickup(PICKUP_WEAP_TGOGGLES, 2, 215.5590,2480.2830,16.4844, -1);
 	CreatePickup(PICKUP_WEAP_JETPACK, 1, 210.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_PARACHUTE, 1, 205.5590,2480.2830,16.4844, -1);
-	CreatePickup(PICKUP_WEAP_TEC9, 1, 200.5590,2480.2830,16.4844, -1);
+	pickupWeapParachute = CreatePickup(PICKUP_WEAP_PARACHUTE, 2, 205.5590,2480.2830,16.4844, -1);
+	pickupWeapTec9 = CreatePickup(PICKUP_WEAP_TEC9, 2, 200.5590,2480.2830,16.4844, -1);
 	
 	//PICKUPS - ROW 2
 	CreatePickup(PICKUP_BRIEFCASE, 1, 425.5590,2486.2830,16.4844, -1);
@@ -174,6 +220,176 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_HEARTBED, 1, 210.5590,2492.2830,16.4844, -1);
 	CreatePickup(PICKUP_CJCAMMONET, 1, 205.5590,2492.2830,16.4844, -1);
 	CreatePickup(PICKUP_ALTCHAINSAW, 1, 200.5590,2492.2830,16.4844, -1);
+	
+	//VEHICLES - ROW1
+	//[!]WARNING: Do not use more than 1 row of vehicles otherwise the game might crash
+	AddStaticVehicle(VEH_LANDSTALKER,425.7991,2523.3472,16.5794,180,0,0);
+	AddStaticVehicle(VEH_BRAVURA,420.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BUFFALO,415.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_LINERUNNER,410.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PERENNIAL,405.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SENTINEL,400.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_DUMPER,395.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FIRETRUCK,390.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TRASHMASTER,385.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_STRETCH,380.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MANANA,375.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_INFERNUS,370.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_VOODOO,365.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PONY,360.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MULE,355.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CHEETAH,350.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_AMBULANCE,345.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MOONBEAM,340.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ESPERANTO,335.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TAXI,330.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_WASHINGTON,325.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BOBCAT,320.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MRWHOOPEE,315.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BFINJECTION,310.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PREMIER,305.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ENFORCER,300.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SECURICAR,295.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BANSHEE,290.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BUS,285.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_RHINO,280.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BARRACKS,275.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HOTKNIFE,270.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PREVION,265.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_COACH,260.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CABBIE,255.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_STALLION,250.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_RUMPO,245.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ROMERO,240.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PACKER,235.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MONSTER,230.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ADMIRAL,225.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TURISMO,220.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FLATBED,215.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_YANKEE,210.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CADDY,205.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SOLAIR,200.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TOPFUN,195.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_GLENDALE,190.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_OCEANIC,185.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PATRIOT,180.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HERMES,175.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SABRE,170.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ZR350,165.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_WALTON,160.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_REGINA,155.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_COMET,150.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BURRITO,145.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CAMPER,140.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BAGGAGE,135.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_DOZER,130.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_RANCHER,125.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FBIRANCHER,120.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_VIRGO,115.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_GREENWOOD,110.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HOTRING,105.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SANDKING,100.7991,2523.3472,16.5764,180,0,0);
+	
+	//VEHICLES - ROW2
+	/*AddStaticVehicle(VEH_BLISTA,425.7991,2513.3472,16.5794,180,0,0);
+	AddStaticVehicle(VEH_BOXVILLE,420.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BENSON,415.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MESA,410.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HOTRINGA,405.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HOTRINGB,400.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BLOODRING,395.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_RANCHERLURE,390.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SUPERGT,385.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ELEGANT,380.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_JOURNEY,375.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TANKER,370.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ROADTRAIN,365.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_NEBULA,360.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MAJESTIC,355.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BUCCANEER,350.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CEMENTTRUCK,345.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TOWTRUCK,340.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FORTUNE,335.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CADRONA,330.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FBITRUCK,325.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_WILLARD,320.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FORKLIFT,315.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TRACTOR,310.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_COMBINE,305.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FELTZER,300.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_REMINGTON,295.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SLAMVAN,290.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BLADE,285.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_VORTEX,280.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_VINCENT,275.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BULLET,270.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CLOVER,265.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SADLER,260.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FIRETRUCKLA,255.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HUSTLER,250.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_INTRUDER,245.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PRIMO,240.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TAMPA,235.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SUNRISE,230.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MERIT,225.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_UTILITY,220.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_YOSEMITE,215.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_WINDSOR,210.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MONSTERA,205.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MONSTERB,200.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_URANUS,195.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_JESTER,190.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SULTAN,185.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_STRATUM,180.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ELEGY,175.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FLASH,170.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TAHOMA,165.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SAVANNA,160.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BANDITO,155.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_KART,150.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MOWER,145.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_DUNE,140.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SWEEPER,135.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BROADWAY,130.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TORNADO,125.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_DFT30,120.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HUNTLEY,115.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_STAFFORD,110.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_NEWSVAN,105.7991,2513.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_TUG,100.7991,2513.3472,16.5764,180,0,0);*/
+	
+	//VEHICLES - ROW3
+	/*AddStaticVehicle(VEH_EMPEROR,425.7991,2503.3472,16.5794,180,0,0);
+	AddStaticVehicle(VEH_EUROS,420.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HOTDOG,415.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CLUB,410.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_COPCARLA,405.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_COPCARSF,400.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_COPCARVG,395.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_POLRANGER,390.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PICADOR,385.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SWATVAN,380.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_ALPHA,375.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PHOENIX,370.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_GLENSHIT,365.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SADLERSHIT,360.7991,2503.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BOXVILLEBURG,355.7991,2503.3472,16.5764,180,0,0);*/
+	
+	//Motorbikes + Bicycles
+	AddStaticVehicle(VEH_PIZZABOY,95.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PCJ600,90.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FAGGIO,85.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FREEWAY,80.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_SANCHEZ,75.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_QUAD,70.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FCR900,65.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_NRG500,60.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_COPBIKE,55.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BF400,50.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_WAYFARER,45.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BMX,40.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BIKE,35.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_MTBIKE,30.7991,2523.3472,16.5764,180,0,0);
 	
 	return 1;
 }
@@ -527,6 +743,136 @@ public OnPlayerObjectMoved(playerid, objectid)
 
 public OnPlayerPickUpPickup(playerid, pickupid)
 {
+    if(pickupid == pickupWeapRdildo) {
+        GivePlayerWeapon(playerid, WEAP_RDILDO, 1);
+    }
+    else if(pickupid == pickupWeapWdildo) {
+        GivePlayerWeapon(playerid, WEAP_WDILDO, 1);
+    }
+    else if(pickupid == pickupWeapVibrator) {
+        GivePlayerWeapon(playerid, WEAP_VIBRATOR, 1);
+    }
+    else if(pickupid == pickupWeapVibrator2) {
+        GivePlayerWeapon(playerid, WEAP_VIBRATOR2, 1);
+    }
+    else if(pickupid == pickupWeapFlowers) {
+        GivePlayerWeapon(playerid, WEAP_FLOWERS, 1);
+    }
+	else if(pickupid == pickupWeapCane) {
+        GivePlayerWeapon(playerid, WEAP_CANE, 1);
+    }
+    else if(pickupid == pickupWeapBrassKnuckles) {
+        GivePlayerWeapon(playerid, WEAP_BRASSKNUCKLES, 1);
+    }
+    else if(pickupid == pickupWeapGolfClub) {
+        GivePlayerWeapon(playerid, WEAP_GOLFCLUB, 1);
+    }
+    else if(pickupid == pickupWeapNightStick) {
+        GivePlayerWeapon(playerid, WEAP_NIGHTSTICK, 1);
+    }
+    else if(pickupid == pickupWeapKnife) {
+        GivePlayerWeapon(playerid, WEAP_KNIFE, 1);
+    }
+    else if(pickupid == pickupWeapBaseballBat) {
+        GivePlayerWeapon(playerid, WEAP_BASEBALLBAT, 1);
+    }
+    else if(pickupid == pickupWeapShovel) {
+        GivePlayerWeapon(playerid, WEAP_SHOVEL, 1);
+    }
+    else if(pickupid == pickupWeapPoolCue) {
+        GivePlayerWeapon(playerid, WEAP_POOLCUE, 1);
+    }
+    else if(pickupid == pickupWeapKatana) {
+        GivePlayerWeapon(playerid, WEAP_KATANA, 1);
+    }
+    else if(pickupid == pickupWeapChainsaw) {
+        GivePlayerWeapon(playerid, WEAP_CHAINSAW, 1);
+    }
+    else if(pickupid == pickupWeapGrenade) {
+        GivePlayerWeapon(playerid, WEAP_GRENADE, 10);
+    }
+    else if(pickupid == pickupWeapTeargas) {
+        GivePlayerWeapon(playerid, WEAP_TEARGAS, 10);
+    }
+    else if(pickupid == pickupWeapMolotov) {
+        GivePlayerWeapon(playerid, WEAP_MOLOTOV, 10);
+    }
+    else if(pickupid == pickupWeapPistol) {
+        GivePlayerWeapon(playerid, WEAP_PISTOL, 100);
+    }
+    else if(pickupid == pickupWeapSilencedPistol) {
+        GivePlayerWeapon(playerid, WEAP_SILENCEDPISTOL, 100);
+    }
+    else if(pickupid == pickupWeapDeagle) {
+        GivePlayerWeapon(playerid, WEAP_DEAGLE, 100);
+    }
+    else if(pickupid == pickupWeapShotgun) {
+        GivePlayerWeapon(playerid, WEAP_SHOTGUN, 50);
+    }
+    else if(pickupid == pickupWeapSawedoff) {
+        GivePlayerWeapon(playerid, WEAP_SAWEDOFF, 50);
+    }
+    else if(pickupid == pickupWeapAutoshotgun) {
+        GivePlayerWeapon(playerid, WEAP_AUTOSHOTGUN, 50);
+    }
+    else if(pickupid == pickupWeapMicroUzi) {
+        GivePlayerWeapon(playerid, WEAP_MICROUZI, 100);
+    }
+    else if(pickupid == pickupWeapMP5) {
+        GivePlayerWeapon(playerid, WEAP_MP5, 100);
+    }
+    else if(pickupid == pickupWeapAK47) {
+        GivePlayerWeapon(playerid, WEAP_AK47, 100);
+    }
+    else if(pickupid == pickupWeapM4) {
+        GivePlayerWeapon(playerid, WEAP_M4, 100);
+    }
+    else if(pickupid == pickupWeapRifle) {
+        GivePlayerWeapon(playerid, WEAP_RIFLE, 25);
+    }
+    else if(pickupid == pickupWeapSniperRifle) {
+        GivePlayerWeapon(playerid, WEAP_SNIPERRIFLE, 25);
+    }
+    else if(pickupid == pickupWeapRPG) {
+        GivePlayerWeapon(playerid, WEAP_RPG, 10);
+    }
+    else if(pickupid == pickupWeapHeatRPG) {
+        GivePlayerWeapon(playerid, WEAP_HEATRPG, 10);
+    }
+    else if(pickupid == pickupWeapFlamethrower) {
+        GivePlayerWeapon(playerid, WEAP_FLAMETHROWER, 200);
+    }
+    else if(pickupid == pickupWeapMinigun) {
+        GivePlayerWeapon(playerid, WEAP_MINIGUN, 500);
+    }
+    else if(pickupid == pickupWeapSatchel) {
+        GivePlayerWeapon(playerid, WEAP_SATCHEL, 10);
+    }
+    else if(pickupid == pickupWeapDetonator) {
+        GivePlayerWeapon(playerid, WEAP_DETONATOR, 1);
+    }
+    else if(pickupid == pickupWeapSpray) {
+        GivePlayerWeapon(playerid, WEAP_SPRAY, 100);
+    }
+    else if(pickupid == pickupWeapExtinguisher) {
+        GivePlayerWeapon(playerid, WEAP_EXTINGUISHER, 100);
+    }
+    else if(pickupid == pickupWeapCamera) {
+        GivePlayerWeapon(playerid, WEAP_CAMERA, 25);
+    }
+    else if(pickupid == pickupWeapNGoggles) {
+        GivePlayerWeapon(playerid, WEAP_NGOGGLES, 1);
+    }
+    else if(pickupid == pickupWeapTGoggles) {
+        GivePlayerWeapon(playerid, WEAP_TGOGGLES, 1);
+    }
+    else if(pickupid == pickupWeapParachute) {
+        GivePlayerWeapon(playerid, WEAP_PARACHUTE, 1);
+    }
+    else if(pickupid == pickupWeapTec9) {
+        GivePlayerWeapon(playerid, WEAP_TEC9, 100);
+    }
+    
 	return 1;
 }
 
