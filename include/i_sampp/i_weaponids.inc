@@ -29,7 +29,7 @@
 #define WEAP_CANE                  15
 
 //Weapon Slot 8
-#define WEAP_GRANADE               16
+#define WEAP_GRENADE               16
 #define WEAP_TEARGAS               17
 #define WEAP_MOLOTOV               18
 #define WEAP_SATCHEL               39
