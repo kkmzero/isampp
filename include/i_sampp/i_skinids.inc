@@ -320,4 +320,4 @@
 #define SKIN_WFYCLEM               308  //Paramedic SF (F)
 #define SKIN_WFYCLLV               309  //Policewoman LV
 #define SKIN_CSHERNA               310  //Country Sheriff (Without hat)
-#define SKIN_DSHERNA               311  //Desert Sheriff (Wihtout hat)
+#define SKIN_DSHERNA               311  //Desert Sheriff (Without hat)
