@@ -1,8 +1,5 @@
 #include <a_samp>
-#include <i_sampp\i_colorlist>
-#include <i_sampp\i_pickupids>
-#include <i_sampp\i_vehids>
-#include <i_sampp\i_weaponids>
+#include <i_sampp>
 
 #if defined FILTERSCRIPT
 
@@ -79,7 +76,93 @@ public OnGameModeInit()
 	SetWorldTime(12);
 	// Don't use these lines if it's a filterscript
 	SetGameModeText("SA-MP Includes Library+ Test GameMode");
-	AddPlayerClass(0, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	
+	AddPlayerClass(SKIN_CJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_TRUTH, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_MACCER, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_ANDRE, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BBTHIN, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BBFAT, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_EMMET, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_MALE01, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_JANITOR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BFORI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BFOST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VBFYCRP, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BFYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BFYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMORI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMOST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYAP, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYBU, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYBE, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYDJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYCR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYBMX, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WBDYG1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WBDYG2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYBP, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYCON, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYDRUG, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYDRUG, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMYDRUG, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_DWFOLC, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_DWMOLC1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_DWMOLC2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_DWMYLC1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMOGAR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYGOL1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYGOL2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HFORI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HFOST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HFYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HFYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_JETHRO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMORI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMOST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMYBE, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMYCR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HMYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OMOKUNG, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYMECH, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYMOUN, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYMOUN, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OFORI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OFOST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OFYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OFYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OMORI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OMOST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OMYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OMYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYPLT, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMOPJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BFYPRO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_HFYPRO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_KENDL, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYPOL1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYPOL2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMOPREA, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SBFYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMOSCI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYSGRD, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SWMYHP1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SWMYHP2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SWFOPRO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WFYSTEW, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SWMOTR1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMOTR1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMOTR1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VBMYBOX, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VWMYBOX, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VHMYELV, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VBMYELV, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VIMYELV, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VWFYPRO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_RYDER3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	
 	//PICKUPS - ROW 1
 	pickupWeapRdildo = CreatePickup(PICKUP_WEAP_RDILDO, 2, 425.5590,2480.2830,16.4844, -1);
@@ -92,7 +175,7 @@ public OnGameModeInit()
 	pickupWeapBrassKnuckles = CreatePickup(PICKUP_WEAP_BRASSKNUCKLES, 2, 390.5590,2480.2830,16.4844, -1);
 	pickupWeapGolfClub = CreatePickup(PICKUP_WEAP_GOLFCLUB, 2, 385.5590,2480.2830,16.4844, -1);
 	pickupWeapNightStick = CreatePickup(PICKUP_WEAP_NIGHTSTICK, 2, 380.5590,2480.2830,16.4844, -1);
-    pickupWeapKnife = CreatePickup(PICKUP_WEAP_KNIFE, 2, 375.5590,2480.2830,16.4844, -1);
+	pickupWeapKnife = CreatePickup(PICKUP_WEAP_KNIFE, 2, 375.5590,2480.2830,16.4844, -1);
 	pickupWeapBaseballBat = CreatePickup(PICKUP_WEAP_BASEBALLBAT, 2, 370.5590,2480.2830,16.4844, -1);
 	pickupWeapShovel = CreatePickup(PICKUP_WEAP_SHOVEL, 2, 365.5590,2480.2830,16.4844, -1);
 	pickupWeapPoolCue = CreatePickup(PICKUP_WEAP_POOLCUE, 2, 360.5590,2480.2830,16.4844, -1);
@@ -112,7 +195,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_WEAP_HYDRAFLARE, 1, 290.5590,2480.2830,16.4844, -1);
 	pickupWeapAK47 = CreatePickup(PICKUP_WEAP_AK47, 2, 285.5590,2480.2830,16.4844, -1);
 	pickupWeapM4 = CreatePickup(PICKUP_WEAP_M4, 2, 280.5590,2480.2830,16.4844, -1);
-    pickupWeapRifle = CreatePickup(PICKUP_WEAP_RIFLE, 2, 275.5590,2480.2830,16.4844, -1);
+	pickupWeapRifle = CreatePickup(PICKUP_WEAP_RIFLE, 2, 275.5590,2480.2830,16.4844, -1);
 	pickupWeapSniperRifle = CreatePickup(PICKUP_WEAP_SNIPERRIFLE, 2, 270.5590,2480.2830,16.4844, -1);
 	pickupWeapRPG = CreatePickup(PICKUP_WEAP_RPG, 2, 265.5590,2480.2830,16.4844, -1);
 	pickupWeapHeatRPG = CreatePickup(PICKUP_WEAP_HEATRPG, 2, 260.5590,2480.2830,16.4844, -1);
@@ -222,7 +305,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_ALTCHAINSAW, 1, 200.5590,2492.2830,16.4844, -1);
 	
 	//VEHICLES - ROW1
-	//[!]WARNING: Do not use more than 1 row of vehicles otherwise the game might crash
+	//[!]WARNING: Do not use more than 1 row of vehicles otherwise the game client might crash
 	AddStaticVehicle(VEH_LANDSTALKER,425.7991,2523.3472,16.5794,180,0,0);
 	AddStaticVehicle(VEH_BRAVURA,420.7991,2523.3472,16.5764,180,0,0);
 	AddStaticVehicle(VEH_BUFFALO,415.7991,2523.3472,16.5764,180,0,0);
@@ -401,9 +484,9 @@ public OnGameModeExit()
 
 public OnPlayerRequestClass(playerid, classid)
 {
-	SetPlayerPos(playerid, 1958.3783, 1343.1572, 15.3746);
-	SetPlayerCameraPos(playerid, 1958.3783, 1343.1572, 15.3746);
-	SetPlayerCameraLookAt(playerid, 1958.3783, 1343.1572, 15.3746);
+	SetPlayerPos(playerid, 441.7056, 2500.1367, 17.7823);
+	SetPlayerCameraPos(playerid, 446.7056, 2500.1367, 18.7823);
+	SetPlayerCameraLookAt(playerid, 441.7056 ,2500.1367, 17.7823);
 	return 1;
 }
 
@@ -445,13 +528,22 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-	if (strcmp("/help", cmdtext, true, 10) == 0)
-	{
-		SendClientMessage(playerid,COLOR_WHITE,"/defcols[0-14]");
-
+	if (strcmp("/help", cmdtext, true, 10) == 0) {
+		SendClientMessage(playerid,COLOR_WHITE,"/defcols[0-14]; /w [ID] (type /w help for id list)");
 		return 1;
 	}
-
+	
+	if (strcmp("/w help", cmdtext, true, 10) == 0) {
+	    SendClientMessage(playerid, COLOR_BLUE, "/w [ID]");
+	    SendClientMessage(playerid, COLOR_BLUE, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
+	    SendClientMessage(playerid, COLOR_BLUE, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
+	    SendClientMessage(playerid, COLOR_BLUE, "sunnyvegas, extrasunnyvegas, cloudyvegas");
+	    SendClientMessage(playerid, COLOR_BLUE, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
+	    SendClientMessage(playerid, COLOR_BLUE, "extrasunnydesert, sunnydesert, sandstorm, underwater");
+		return 1;
+	}
+	
+	//COLOR TEXT TEST COMMANDS
 	if (strcmp("/defcols0", cmdtext, true, 10) == 0)
 	{
 		SendClientMessage(playerid,COLOR_WHITE,"White");
@@ -683,6 +775,113 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		
 		return 1;
 	}
+	
+	//WEATHER COMMANDS
+	if (strcmp("/w extrasunnyla", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_EXSUNNY_LA);
+	    return 1;
+	}
+	
+	if (strcmp("/w sunnyla", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_SUNNY_LA);
+	    return 1;
+	}
+	
+	if (strcmp("/w extrasunnysmogla", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_EXSUNNY_SMOG_LA);
+	    return 1;
+	}
+	
+	if (strcmp("/w sunnysmogla", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_SUNNY_SMOG_LA);
+	    return 1;
+	}
+	
+	if (strcmp("/w cloudyla", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_CLOUDY_LA);
+	    return 1;
+	}
+	
+	if (strcmp("/w sunnysf", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_SUNNY_SF);
+	    return 1;
+	}
+	
+	if (strcmp("/w extrasunnysf", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_EXSUNNY_SF);
+	    return 1;
+	}
+	
+	if (strcmp("/w cloudysf", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_CLOUDY_SF);
+	    return 1;
+	}
+	
+	if (strcmp("/w rainysf", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_RAINY_SF);
+	    return 1;
+	}
+	
+	if (strcmp("/w foggysf", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_FOGGY_SF);
+	    return 1;
+	}
+	
+	if (strcmp("/w sunnyvegas", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_SUNNY_VEGAS);
+	    return 1;
+	}
+	
+	if (strcmp("/w extrasunnyvegas", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_EXSUNNY_VEGAS);
+	    return 1;
+	}
+	
+	if (strcmp("/w cloudyvegas", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_CLOUDY_VEGAS);
+	    return 1;
+	}
+	
+	if (strcmp("/w extrasunnycountry", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_EXSUNNY_CTRYSIDE);
+	    return 1;
+	}
+	
+	if (strcmp("/w sunnycountry", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_SUNNY_CTRYSIDE);
+	    return 1;
+	}
+	
+	if (strcmp("/w cloudycountry", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_CLOUDY_CTRYSIDE);
+	    return 1;
+	}
+	
+	if (strcmp("/w rainycountry", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_RAINY_CTRYSIDE);
+	    return 1;
+	}
+	
+	if (strcmp("/w extrasunnydesert", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_EXSUNNY_DESERT);
+	    return 1;
+	}
+	
+	if (strcmp("/w sunnydesert", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_SUNNY_DESERT);
+	    return 1;
+	}
+	
+	if (strcmp("/w sandstorm", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_SANDSTORM_DESERT);
+	    return 1;
+	}
+	
+	if (strcmp("/w underwater", cmdtext, true, 10) == 0) {
+	    SetWeather(WEATHER_UNDERWATER);
+	    return 1;
+	}
+
 	return 0;
 }
 
