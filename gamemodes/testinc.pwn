@@ -27,6 +27,22 @@ main()
 
 #endif
 
+//CUSTOM FUNCTIONS
+ISAMPP_TELEPORT(playerid, locationID) {
+	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
+	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
+	SetPlayerInterior(playerid, locID[locationID][0]);
+}
+
+ISAMPP_TELEPORTEX(playerid, locationID) {
+	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
+	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
+	SetPlayerInterior(playerid, locID[locationID][0]);
+	SendClientMessage(playerid,COLOR_ORANGE,locName[locationID]);
+	
+}
+
+//PICKUPS
 new pickupWeapBrassKnuckles;
 new pickupWeapGolfClub;
 new pickupWeapKnife;
@@ -530,6 +546,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 {
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_WHITE,"/defcols[0-14]; /w [ID] (type /w help for id list)");
+		SendClientMessage(playerid,COLOR_WHITE,"/teleport [ID]");
 		return 1;
 	}
 	
@@ -882,6 +899,72 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	    return 1;
 	}
 
+	//TELEPORT COMMANDS
+	if (strcmp("/teleport warehouse2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_WAREHOUSE2);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport transfenders", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_TRANSFENDER);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport worldofcoq", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_WORLDOFCOQ);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport ammunation2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION2);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport suburban", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_SUBURBAN);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport denise", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_DENISEBEDROOM);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport sfgarage", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_SFGARAGE);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport ovalstadium", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_OVALSTADIUM);
+	    return 1;
+	}
+
+	if (strcmp("/teleport libertycity", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_LIBERTYCITY);
+	    return 1;
+	}
+
+	if (strcmp("/teleport sweet", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_SWEETSHOUSE);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport caligulas", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_CALIGULAS);
+	    return 1;
+	}
+
+	if (strcmp("/teleport wuzimu", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_WUZIMU);
+	    return 1;
+	}
+
+	if (strcmp("/teleport jet", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_JET);
+	    return 1;
+	}
+	
 	return 0;
 }
 
