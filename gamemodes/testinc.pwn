@@ -5,9 +5,9 @@
 
 public OnFilterScriptInit()
 {
-	print("\n--------------------------------------");
-	print(" SA-MP Includes Library+ Test GameMode");
-	print("--------------------------------------\n");
+	print("\n-----------------------------------------------");
+	print(" SA-MP Includes Library+ Test Sandbox GameMode");
+	print("-----------------------------------------------\n");
 	return 1;
 }
 
@@ -20,9 +20,9 @@ public OnFilterScriptExit()
 
 main()
 {
-	print("\n----------------------------------");
-	print(" SA-MP Includes Library+ Test GameMode");
-	print("----------------------------------\n");
+	print("\n-----------------------------------------------");
+	print(" SA-MP Includes Library+ Test Sandbox GameMode");
+	print("-----------------------------------------------\n");
 }
 
 #endif
@@ -241,6 +241,65 @@ public OnGameModeInit()
 	AddPlayerClass(SKIN_WMYBU, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_BFYBU, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_SMOKEV, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WFYBU, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_DWFYLC1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WFYPRO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYCONB, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYBE, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYPIZZ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMOBAR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWFYHB, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWMOFR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWMOHB1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWMOHB2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWMYFR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWMYHB1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYBOUN, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYBOUN, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMOMIB, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYMIB, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYBELL, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMOCHIL, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SOFYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SOMYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VWMYBJD, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VWFYCRP, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SFR1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SFR2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SFR3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYBAR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYBAR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WFYSEX, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYAMMO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_BMYTATT, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VWMYCR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VBMOCD, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VBMYCR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VHMYCR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SBMYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SOMYRI, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SOMYBU, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SWMYST, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYVA, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_COPGRL3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_GUNGRL3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_MECGRL3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_NURGRL3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CROGRL3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_GANGRL3, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWFOFR, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWFOHB, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWFYFR1, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWFYFR2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_CWMYHB2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_DWFYLC2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_DWMYLC2, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_OMYKARA, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WMYKARA, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_WFYBURG, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VWMYCD, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_VHFYPRO, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
+	AddPlayerClass(SKIN_SUZIE, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	
 	//PICKUPS - ROW 1
 	pickupWeapRdildo = CreatePickup(PICKUP_WEAP_RDILDO, 2, 425.5590,2480.2830,16.4844, -1);
@@ -607,7 +666,7 @@ public OnPlayerText(playerid, text[])
 public OnPlayerCommandText(playerid, cmdtext[])
 {
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid,COLOR_WHITE,"/defcols[0-14]; /w [ID] (type /w help for id list)");
+		SendClientMessage(playerid,COLOR_WHITE,"/defcols[0-14]; /stringcols; /w [ID] (type /w help for id list)");
 		SendClientMessage(playerid,COLOR_WHITE,"/teleport [ID]");
 		return 1;
 	}
@@ -623,8 +682,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 	
 	//COLOR TEXT TEST COMMANDS
-	if (strcmp("/defcols0", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols0", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_WHITE,"White");
 		SendClientMessage(playerid,COLOR_BLACK,"Black");
 		SendClientMessage(playerid,COLOR_RED,"Red");
@@ -635,12 +693,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_YELLOW,"Yellow");
 		SendClientMessage(playerid,COLOR_DARKRED,"DarkRed");
 		SendClientMessage(playerid,COLOR_DARKGREEN,"DarkGreen");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols1", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols1", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_DARKBLUE,"DarkBlue");
 		SendClientMessage(playerid,COLOR_DARKCYAN,"DarkCyan");
 		SendClientMessage(playerid,COLOR_DARKMAGENTA,"DarkMagenta");
@@ -651,12 +707,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_LIGHTCYAN,"LightCyan");
 		SendClientMessage(playerid,COLOR_LIGHTMAGENTA,"LightMagenta");
 		SendClientMessage(playerid,COLOR_LIGHTYELLOW,"LightYellow");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols2", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols2", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_ALICEBLUE,"AliceBlue");
 		SendClientMessage(playerid,COLOR_ANTIQUEWHITE,"AntiqueWhite");
 		SendClientMessage(playerid,COLOR_AQUA,"Aqua");
@@ -667,12 +721,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_BLUEVIOLET,"BlueViolet");
 		SendClientMessage(playerid,COLOR_BROWN,"Brown");
 		SendClientMessage(playerid,COLOR_BURLYWOOD,"Burlywood");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols3", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols3", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_CADETBLUE,"CadetBlue");
 		SendClientMessage(playerid,COLOR_CHARTEREUSE,"Chartereuse");
 		SendClientMessage(playerid,COLOR_CHOCOLATE,"Chocolate");
@@ -683,12 +735,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_DARKGOLDENROD,"DarkGoldenRod");
 		SendClientMessage(playerid,COLOR_DARKGRAY,"DarkGray");
 		SendClientMessage(playerid,COLOR_DARKKHAKI,"DarkKhaki");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols4", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols4", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_DARKOLIVEGREEN,"DarkOliveGreen");
 		SendClientMessage(playerid,COLOR_DARKORANGE,"DarkOrange");
 		SendClientMessage(playerid,COLOR_DARKORCHID,"DarkOrchid");
@@ -699,12 +749,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_DARKTURQUOISE,"DarkTurquoise");
 		SendClientMessage(playerid,COLOR_DARKVIOLET,"DarkViolet");
 		SendClientMessage(playerid,COLOR_DEEPPINK,"DeepPink");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols5", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols5", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_DEEPSKYBLUE,"DeepSkyBlue");
 		SendClientMessage(playerid,COLOR_DIMGRAY,"DimGray");
 		SendClientMessage(playerid,COLOR_DODGERBLUE,"DodgerBlue");
@@ -715,12 +763,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_GHOSTWHITE,"GhostWhite");
 		SendClientMessage(playerid,COLOR_GOLD,"Gold");
 		SendClientMessage(playerid,COLOR_GOLDENROD,"GoldenRod");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols6", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols6", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_DARKERGREEN,"DarkerGreen");
 		SendClientMessage(playerid,COLOR_GREENYELLOW,"GreenYellow");
 		SendClientMessage(playerid,COLOR_HONEYDEW,"Honeydew");
@@ -731,12 +777,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_KHAKI,"Khaki");
 		SendClientMessage(playerid,COLOR_LAVENDER,"Lavender");
 		SendClientMessage(playerid,COLOR_LAVENDERBLUSH,"LavenderBlush");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols7", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols7", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_LAWNGREEN,"LawnGreen");
 		SendClientMessage(playerid,COLOR_LEMONCHIFFON,"LemonChiffon");
 		SendClientMessage(playerid,COLOR_LIGHTCORAL,"LightCoral");
@@ -747,12 +791,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_LIGHTSEAGREEN,"LightSeaGreen");
 		SendClientMessage(playerid,COLOR_LIGHTSKYBLUE,"LightSkyBlue");
 		SendClientMessage(playerid,COLOR_LIGHTSLATEGRAY,"LightSlateGray");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols8", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols8", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_LIGHTSTEELBLUE,"LightSteelBlue");
 		SendClientMessage(playerid,COLOR_LIME,"Lime");
 		SendClientMessage(playerid,COLOR_LIMEGREEN,"LimeGreen");
@@ -763,12 +805,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_MEDIUMORCHID,"MediumOrchid");
 		SendClientMessage(playerid,COLOR_MEDIUMPURPLE,"MediumPurple");
 		SendClientMessage(playerid,COLOR_MEDIUMSEAGREEN,"MediumSeaGreen");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols9", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols9", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_MEDIUMSLATEBLUE,"MediumSlateBlue");
 		SendClientMessage(playerid,COLOR_MEDIUMSPRINGGREEN,"MediumSpringGreen");
 		SendClientMessage(playerid,COLOR_MEDIUMTURQUOISE,"MediumTurquoise");
@@ -779,12 +819,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_MOCCASIN,"Moccasin");
 		SendClientMessage(playerid,COLOR_NAVAJOWHITE,"NavajoWhite");
 		SendClientMessage(playerid,COLOR_NAVY,"Navy");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols10", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols10", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_OLDLACE,"Oldlace");
 		SendClientMessage(playerid,COLOR_OLIVE,"Olive");
 		SendClientMessage(playerid,COLOR_OLIVEDRAB,"OliveDrab");
@@ -795,12 +833,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_PALEGREEN,"PaleGreen");
 		SendClientMessage(playerid,COLOR_PALETURQUOISE,"PaleTurquoise");
 		SendClientMessage(playerid,COLOR_PALEVIOLETRED,"PaleVioletRed");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols11", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols11", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_PAPAYAWHIP,"PapayaWhip");
 		SendClientMessage(playerid,COLOR_PEACHPUFF,"PeachPuff");
 		SendClientMessage(playerid,COLOR_PERU,"Peru");
@@ -811,12 +847,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_REBECCAPURPLE, "RebeccaPurple");
 		SendClientMessage(playerid,COLOR_ROSYBROWN,"RosyBrown");
 		SendClientMessage(playerid,COLOR_ROYALBLUE,"RoyalBlue");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols12", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols12", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_SADDLEBROWN,"SaddleBrown");
 		SendClientMessage(playerid,COLOR_SALMON,"Salmon");
 		SendClientMessage(playerid,COLOR_SANDYBROWN,"SandyBrown");
@@ -827,12 +861,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_SKYBLUE,"SkyBlue");
 		SendClientMessage(playerid,COLOR_SLATEBLUE,"SlateBlue");
 		SendClientMessage(playerid,COLOR_SLATEGRAY,"SlateGray");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols13", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols13", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_SNOW,"Snow");
 		SendClientMessage(playerid,COLOR_SPRINGGREEN,"SpringGreen");
 		SendClientMessage(playerid,COLOR_STEELBLUE,"SteelBlue");
@@ -843,15 +875,18 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid,COLOR_TURQUOISE,"Turquoise");
 		SendClientMessage(playerid,COLOR_VIOLET,"Violet");
 		SendClientMessage(playerid,COLOR_WHEAT,"Wheat");
-
 		return 1;
 	}
 
-	if (strcmp("/defcols14", cmdtext, true, 10) == 0)
-	{
+	if (strcmp("/defcols14", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_WHITESMOKE,"WhiteSmoke");
 		SendClientMessage(playerid,COLOR_YELLOWGREEN,"YellowGreen");
-		
+		return 1;
+	}
+	
+	if (strcmp("/stringcols", cmdtext, true, 10) == 0) {
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_BLACK"X"SCOL_WHITE"X"SCOL_RED"X"SCOL_GREEN"X"SCOL_BLUE"X"SCOL_CYAN"X"SCOL_MAGENTA"X"SCOL_YELLOW"X"SCOL_DARKRED"X"SCOL_DARKGREEN"X"SCOL_DARKBLUE"X"SCOL_DARKCYAN"X"SCOL_DARKMAGENTA"X"SCOL_DARKYELLOW"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_LIGHTRED"X"SCOL_LIGHTGREEN"X"SCOL_LIGHTBLUE"X"SCOL_LIGHTCYAN"X"SCOL_LIGHTMAGENTA"X"SCOL_LIGHTYELLOW"X");
 		return 1;
 	}
 	
@@ -977,7 +1012,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	    return 1;
 	}
 	
-	if (strcmp("/teleport ammunation2", cmdtext, true, 20) == 0) {
+	if (strcmp("/teleport ammunation2", cmdtext, true, 30) == 0) {
     	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION2);
 	    return 1;
 	}
@@ -1209,6 +1244,186 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	if (strcmp("/teleport drivingschool", cmdtext, true, 20) == 0) {
     	ISAMPP_TELEPORT(playerid, LOC_DRIVESCHOOL);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport burgh12", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH12);
+	    return 1;
+	}
+
+	if (strcmp("/teleport ammunation3", cmdtext, true, 30) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION3);
+	    return 1;
+	}
+
+	if (strcmp("/teleport jaysdinner", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_JAYSDINER);
+	    return 1;
+	}
+
+	if (strcmp("/teleport 247v5", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_247V5);
+	    return 1;
+	}
+
+	if (strcmp("/teleport michelle", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_MICHELLESNEST);
+	    return 1;
+	}
+
+	if (strcmp("/teleport burgh13", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH13);
+	    return 1;
+	}
+
+	if (strcmp("/teleport dirtbike", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_DIRTBIKE);
+	    return 1;
+	}
+
+	if (strcmp("/teleport burgh15", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH15);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport gantongym", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_GANTONGYM);
+	    return 1;
+	}
+
+	if (strcmp("/teleport diner1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_DINER1);
+	    return 1;
+	}
+
+	if (strcmp("/teleport pizzastack", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_PIZZASTACK);
+	    return 1;
+	}
+
+	if (strcmp("/teleport victim", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_VICTIM);
+	    return 1;
+	}
+
+	if (strcmp("/teleport barbara", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BARBARASNEST);
+	    return 1;
+	}
+
+	if (strcmp("/teleport madddogg", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_MADDDOGGMANSION);
+	    return 1;
+	}
+
+	if (strcmp("/teleport burningdesire", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURNINGDESIREB);
+	    return 1;
+	}
+
+	if (strcmp("/teleport safehouse1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_SAFEHOUSE1);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport burgh4", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH4);
+	    return 1;
+	}
+
+	if (strcmp("/teleport crackden", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_CRACKDEN);
+	    return 1;
+	}
+
+	if (strcmp("/teleport burgh11", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH11);
+	    return 1;
+	}
+
+	if (strcmp("/teleport burgh16", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH16);
+	    return 1;
+	}
+
+	if (strcmp("/teleport burgh17", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH17);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport safehouse2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_SAFEHOUSE2);
+	    return 1;
+	}
+
+	if (strcmp("/teleport millie", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_MILLIESROOM);
+	    return 1;
+	}
+
+	if (strcmp("/teleport cobragym", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_COBRAGYM);
+	    return 1;
+	}
+
+	if (strcmp("/teleport lspdhq", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_LSPDHQ);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport burgh18", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH18);
+	    return 1;
+	}
+
+	if (strcmp("/teleport burgh19", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BURGH19);
+	    return 1;
+	}
+
+	if (strcmp("/teleport zerorc", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_ZERORCSHOP);
+	    return 1;
+	}
+
+	if (strcmp("/teleport ammunation4", cmdtext, true, 30) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION4);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport ammunation5", cmdtext, true, 30) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION5);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport 247v6", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_247V6);
+	    return 1;
+	}
+
+	if (strcmp("/teleport valleydiner", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_VALLEYDINER);
+	    return 1;
+	}
+
+	if (strcmp("/teleport whorehouse", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_WHOREHOUSE);
+	    return 1;
+	}
+	
+	if (strcmp("/teleport ammunation", cmdtext, true, 30) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION);
+	    return 1;
+	}
+
+	if (strcmp("/teleport belowbeltgym", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_BBELTGYM);
+	    return 1;
+	}
+
+	if (strcmp("/teleport 8track", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORT(playerid, LOC_8TSTADIUM);
 	    return 1;
 	}
 	
