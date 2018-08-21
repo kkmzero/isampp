@@ -33,7 +33,7 @@
 #define LOC_BSCRACKPALACE          24
 #define LOC_BURGH2                 25
 #define LOC_PAIRBURGH              26
-#define LOC_CALIGOFFICE            27
+#define LOC_CALIGOFFICE            27  //[!] No Collisions
 #define LOC_STRIPCASINO            28
 #define LOC_LOCOLOWCO              29
 #define LOC_BROTHEL1               30
@@ -56,8 +56,44 @@
 #define LOC_BURGH1                 47
 #define LOC_BIKESCHOOL             48
 #define LOC_DRIVESCHOOL            49
+#define LOC_BURGH12                50
+#define LOC_AMMUNATION3            51
+#define LOC_JAYSDINER              52
+#define LOC_247V5                  53
+#define LOC_MICHELLESNEST          54
+#define LOC_BURGH13                55
+#define LOC_DIRTBIKE               56
+#define LOC_BURGH15                57
+#define LOC_GANTONGYM              58
+#define LOC_DINER1                 59  //[!] No Collisions
+#define LOC_PIZZASTACK             60
+#define LOC_VICTIM                 61
+#define LOC_BARBARASNEST           62
+#define LOC_MADDDOGGMANSION        63
+#define LOC_BURNINGDESIREB         64
+#define LOC_SAFEHOUSE1             65
+#define LOC_BURGH4                 66
+#define LOC_CRACKDEN               67  //[?] TODO: CIV
+#define LOC_BURGH11                68
+#define LOC_BURGH16                69
+#define LOC_BURGH17                70
+#define LOC_SAFEHOUSE2             71  //[!] No Collisions
+#define LOC_MILLIESROOM            72
+#define LOC_COBRAGYM               73
+#define LOC_LSPDHQ                 74
+#define LOC_BURGH18                75
+#define LOC_BURGH19                76
+#define LOC_ZERORCSHOP             77
+#define LOC_AMMUNATION4            78
+#define LOC_AMMUNATION5            79
+#define LOC_247V6                  80
+#define LOC_VALLEYDINER            81  //[!] No Collisions
+#define LOC_WHOREHOUSE             82
+#define LOC_AMMUNATION             83
+#define LOC_BBELTGYM               84
+#define LOC_8TSTADIUM              85
 
-new Float:locCoords[50][4] = {
+new Float:locCoords[86][4] = {
 {1412.15,-2.28,1000.92,114.66},
 {621.45,-23.73,1000.92,15.68},
 {445.6,-6.98,1000.73,172.21},
@@ -107,10 +143,46 @@ new Float:locCoords[50][4] = {
 {-2638.82,1407.34,906.46,94.68},
 {234.61,1187.82,1080.26,349.48},
 {1494.86,1306.48,1093.3,196.07},
-{-2031.12,-115.83,1035.17,190.19}
+{-2031.12,-115.83,1035.17,190.19},
+{261.12,1287.22,1080.26,178.91},
+{291.76,-80.13,1001.52,290.22},
+{449.02,-88.99,999.55,89.66},
+{-27.84,-26.67,1003.56,184.31},
+{306.2,307.82,1003.3,203.14},
+{221.68,1142.5,1082.61,184.96},
+{-1421.56,-663.83,1059.56,170.93},
+{-262.18,1456.62,1084.37,82.46},
+{770.8,-0.7,1000.73,22.86},
+{454.99,-107.25,999.44,309.02},
+{372.56,-131.36,1001.49,354.23},
+{225.03,-9.18,1002.22,85.53},
+{322.5,303.69,999.15,8.17},
+{1267.84,-776.96,1091.91,231.34},
+{2350.16,-1181.07,1027.98,99.19},
+{2233.69,-1112.81,1050.88,8.65},
+{239.28,1114.2,1080.99,270.27},
+{227.39,1114.66,1081.0,267.46},
+{227.76,1114.38,1080.99,266.26},
+{22.86,1404.92,1084.43,349.62},
+{140.37,1367.88,1083.86,349.24},
+{1211.25,1049.02,359.94,170.93},
+{345.0,307.18,999.16,193.64},
+{773.89,-47.77,1000.59,10.72},
+{246.67,65.8,1003.64,7.96},
+{234.28,1065.23,1084.21,4.39},
+{-68.51,1353.85,1080.21,3.57},
+{-2240.1,136.97,1035.41,269.1},
+{297.14,-109.87,1001.52,20.23},
+{316.5,-167.63,999.59,10.3},
+{-26.83,-55.58,1003.55,3.95},
+{442.13,-52.48,999.72,177.94},
+{748.46,1438.24,1102.95,0.61},
+{315.24,-140.89,999.6,7.42},
+{773.73,-74.7,1000.65,5.23},
+{-1403.01,-250.45,1043.53,355.86}
 };
 
-new locID[50][1] = {
+new locID[86][1] = {
 {1},
 {1},
 {1},
@@ -160,14 +232,50 @@ new locID[50][1] = {
 {3},
 {3},
 {3},
-{3}
+{3},
+{4},
+{4},
+{4},
+{4},
+{4},
+{4},
+{4},
+{4},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{5},
+{6},
+{6},
+{6},
+{6},
+{6},
+{6},
+{6},
+{6},
+{6},
+{6},
+{6},
+{6},
+{7},
+{7},
+{7}
 };
 
-new locName[50][] = {
+new locName[86][] = {
 "Warehouse 2",
 "TransFender",
 "World of Coq",
-"Ammunation (v2)",
+"Ammu-Nation (v2)",
 "Suburban",
 "Denise's Bedroom",
 "San Fierro Garage",
@@ -213,5 +321,41 @@ new locName[50][] = {
 "Pleasure Domes",
 "Burglary House 1",
 "Bike School",
-"Driving School"
+"Driving School",
+"Burglary House 12",
+"Ammu-Nation (v3)",
+"Jay's Diner",
+"24/7 (v5)",
+"Michelle's Love Nest",
+"Burglary House 13",
+"Dirtbike Stadium",
+"Burglary House 15",
+"Ganton Gym",
+"Diner 1",
+"The Well Stacked Pizza Co.",
+"Victim",
+"Barbara's Love Nest",
+"Madd Dogg's Mansion",
+"Burning Desire Building",
+"Safe House Group 1",
+"Burglary House 4",
+"Crack Den",
+"Burglary House 11",
+"Burglary House 16",
+"Burglary House 17",
+"Safe House Group 2",
+"Millie's Bedroom",
+"Cobra Gym",
+"Los Santos Police Department HQ",
+"Burglary House 18",
+"Burglary House 19",
+"Zero's RC Shop",
+"Ammu-Nation (v4)",
+"Ammu-Nation (v5)",
+"24/7 (v6)",
+"Secret Valley Diner",
+"Fanny Batter's Whore House",
+"Ammu-Nation",
+"Below the Belt Gym",
+"8-Track Stadium"
 };
