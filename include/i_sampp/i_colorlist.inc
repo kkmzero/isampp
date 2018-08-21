@@ -150,3 +150,24 @@
 #define COLOR_WHEAT                0xF5DEB3FF
 #define COLOR_WHITESMOKE           0xF5F5F5FF
 #define COLOR_YELLOWGREEN          0x9ACD32FF
+
+#define SCOL_WHITE                 "{FFFFFF}"
+#define SCOL_BLACK                 "{000000}"
+#define SCOL_RED                   "{FF0000}"
+#define SCOL_GREEN                 "{00FF00}"
+#define SCOL_BLUE                  "{0000FF}"
+#define SCOL_CYAN                  "{00FFFF}"
+#define SCOL_MAGENTA               "{FF00FF}"
+#define SCOL_YELLOW                "{FFFF00}"
+#define SCOL_DARKRED               "{8B0000}"
+#define SCOL_DARKGREEN             "{006400}"
+#define SCOL_DARKBLUE              "{00008B}"
+#define SCOL_DARKCYAN              "{008B8B}"
+#define SCOL_DARKMAGENTA           "{8B008B}"
+#define SCOL_DARKYELLOW            "{8B8B00}"
+#define SCOL_LIGHTRED              "{EE9090}"
+#define SCOL_LIGHTGREEN            "{90EE90}"
+#define SCOL_LIGHTBLUE             "{ADD8E6}"
+#define SCOL_LIGHTCYAN             "{E0FFFF}"
+#define SCOL_LIGHTMAGENTA          "{FFE0FF}"
+#define SCOL_LIGHTYELLOW           "{FFFFE0}"
