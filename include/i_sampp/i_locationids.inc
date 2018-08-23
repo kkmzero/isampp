@@ -92,8 +92,68 @@
 #define LOC_AMMUNATION             83
 #define LOC_BBELTGYM               84
 #define LOC_8TSTADIUM              85
+#define LOC_COLONELS               86
+#define LOC_SHVBLUFFS              87
+#define LOC_BURGH21                88
+#define LOC_SAFEHOUSE3             89
+#define LOC_CBELL                  90
+#define LOC_ANDROMADA              91
+#define LOC_BURGH22                92
+#define LOC_BURGH23                93
+#define LOC_SFPDHQ                 94
+#define LOC_247V2                  95
+#define LOC_FOURDRAGONS            96
+#define LOC_RCBATTLEFIELD          97
+#define LOC_BURGERSHOT             98
+#define LOC_ACTOWER                99
+#define LOC_SAFEHOUSE4             100
+#define LOC_BURGH14                101
+#define LOC_CFDJANITOR             102
+#define LOC_CFDSUITE               103 //[!] No Collisions
+#define LOC_BAR                    104
+#define LOC_SHWFIELD               105 //[?] TODO: CIV
+#define LOC_CASINO                 106
+#define LOC_BUDGETMOTEL            107
+#define LOC_USAFEHOUSE             108
+#define LOC_BARBERSHOP2            109
+#define LOC_WARDROBE               110
+#define LOC_DIDERSACHS             111
+#define LOC_KICKSTADIUM            112
+#define LOC_LSAIRPORT              113 //[!] No Collisions
+#define LOC_FRANCISINTL            114
+#define LOC_JEFFERSONM             115
+#define LOC_BINCO                  116
+#define LOC_4BURGH                 117
+#define LOC_BLOODBOWL              118
+#define LOC_BURGH20                119
+#define LOC_LSTATTOO               120
+#define LOC_247V4                  121
+#define LOC_VICESTADIUM            122
+#define LOC_LSFTATTOO              123 //[!] Causes Client Crash
+#define LOC_247V1                  124
+#define LOC_RUSTYBDONUTS           125
+#define LOC_CLUB                   126 //[?] Coords are not exact
+#define LOC_SHERMANDAM             127
+#define LOC_WAREHOUSE1             128
+#define LOC_247V3                  129
+#define LOC_ZIP                    130
+#define LOC_ATRIUM                 131
+#define LOC_LILPROBEINN            132
+#define LOC_PALOBANK               133
+#define LOC_PALODINER              134
+#define LOC_DILLIGASST             135
+#define LOC_TORRENOR               136
+#define LOC_ZOMBOTECH              137
+#define LOC_LSCEMETC               138
+#define LOC_BLUEBLIQ               139
+#define LOC_WAREHOUSE3             140
+#define LOC_MILITARYDEPO           141
+#define LOC_AREA69                 142
+#define LOC_BIKESCH                143
+#define LOC_OTTOAUTOS              144
+#define LOC_WANGCARS               145
 
-new Float:locCoords[86][4] = {
+new Float:locCoords[146][4] = {
 {1412.15,-2.28,1000.92,114.66},
 {621.45,-23.73,1000.92,15.68},
 {445.6,-6.98,1000.73,172.21},
@@ -179,10 +239,70 @@ new Float:locCoords[86][4] = {
 {748.46,1438.24,1102.95,0.61},
 {315.24,-140.89,999.6,7.42},
 {773.73,-74.7,1000.65,5.23},
-{-1403.01,-250.45,1043.53,355.86}
+{-1403.01,-250.45,1043.53,355.86},
+{2807.36,-1171.7,1025.57,193.71},
+{2365.11,-1133.08,1050.88,177.39},
+{-42.53,1408.23,1084.43,172.07},
+{2319.13,-1023.96,1050.21,167.4},
+{366.0,-9.43,1001.85,160.53},
+{315.45,976.6,1960.85,359.64},
+{84.92,1324.3,1083.86,159.56},
+{260.74,1238.23,1084.26,84.31},
+{246.07,108.97,1003.22,0.29},
+{6.09,-28.9,1003.55,5.04},
+{2016.12,1017.15,996.88,88.01},
+{-1129.89,1057.54,1346.41,274.53},
+{366.02,-73.35,1001.51,292.01},
+{419.89,2537.12,10.0,67.65},
+{2261.1,-1137.88,1050.63,266.88},
+{24.38,1341.18,1084.38,8.33},
+{1893.07,1017.9,31.88,86.1},
+{2003.12,1015.19,33.01,351.58},
+{501.96,-70.56,998.76,171.57},
+{2283.31,1139.31,1050.9,19.7},
+{1133.35,-7.85,1000.68,165.85},
+{446.32,509.97,1001.42,330.57},
+{2323.71,-1147.65,1050.71,206.54},
+{411.97,-51.92,1001.9,173.34},
+{256.9,-41.65,1002.02,85.88},
+{204.17,-165.77,1000.52,181.76},
+{-1420.43,1616.92,1052.53,159.13},
+{-1864.94,55.73,1055.53,85.85},
+{-1813.21,-58.01,1058.96,335.32},
+{2217.28,-1150.53,1025.8,273.73},
+{207.52,-109.74,1005.13,358.62},
+{295.14,1473.37,1080.26,352.95},
+{-1417.89,932.45,1041.53,0.7},
+{-285.25,1471.2,1084.38,85.65},
+{-202.84,-24.03,1002.27,252.82},
+{-26.19,-140.92,1003.55,2.91},
+{-1401.07,1265.37,1039.87,178.65},
+{-202.94,-6.7,1002.27,204.27},
+{-25.72,-187.82,1003.55,5.08},
+{378.03,-190.52,1000.63,141.02},
+{493.14,-24.26,1000.68,356.99},
+{-944.24,1886.15,5.01,179.85},
+{1290.41,1.95,1001.02,179.94},
+{-30.99,-89.68,1003.55,359.84},
+{161.4,-94.24,1001.8,0.79},
+{1727.29,-1642.95,20.23,172.42},
+{-227.57,1401.55,27.77,269.3},
+{2306.38,-15.24,26.75,274.49},
+{2331.9,6.78,26.5,100.24},
+{663.06,-573.63,16.34,264.98},
+{-688.15,942.08,13.63,177.66},
+{-1916.13,714.86,46.56,152.28},
+{818.77,-1102.87,25.79,91.14},
+{255.21,-59.68,1.57,1.46},
+{2135.2,-2276.28,20.67,318.59},
+{2548.48,2823.74,10.82,270.6},
+{215.15,1874.06,13.14,177.55},
+{1168.51,1360.11,10.93,196.59},
+{-1658.17,1215.0,7.25,103.91},
+{-1961.63,295.24,35.47,264.49}
 };
 
-new locID[86][1] = {
+new locID[146][1] = {
 {1},
 {1},
 {1},
@@ -268,10 +388,70 @@ new locID[86][1] = {
 {6},
 {7},
 {7},
-{7}
+{7},
+{8},
+{8},
+{8},
+{9},
+{9},
+{9},
+{9},
+{9},
+{10},
+{10},
+{10},
+{10},
+{10},
+{10},
+{10},
+{10},
+{10},
+{11},
+{11},
+{11},
+{12},
+{12},
+{12},
+{12},
+{14},
+{14},
+{14},
+{14},
+{14},
+{15},
+{15},
+{15},
+{15},
+{15},
+{16},
+{16},
+{16},
+{17},
+{17},
+{17},
+{17},
+{17},
+{18},
+{18},
+{18},
+{18},
+{18},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0}
 };
 
-new locName[86][] = {
+new locName[146][] = {
 "Warehouse 2",
 "TransFender",
 "World of Coq",
@@ -357,5 +537,65 @@ new locName[86][] = {
 "Fanny Batter's Whore House",
 "Ammu-Nation",
 "Below the Belt Gym",
-"8-Track Stadium"
+"8-Track Stadium",
+"Colonel Furhberger's",
+"Verdant Bluffs Safehouse",
+"Burglary House 21",
+"Safe House Group 3",
+"Cluckin' Bell",
+"Andromada",
+"Burglary House 22",
+"Burglary House 23",
+"San Fierro Police Department HQ",
+"24/7 (v2)",
+"Four Dragons Casino",
+"RC Battlefield",
+"Burger Shot",
+"Abandoned AC Tower",
+"Safe House Group 4",
+"Burglary House 14",
+"Four Dragons Janitor's Office",
+"Four Dragons Managerial Suite",
+"Bar",
+"Willowfield Safehouse",
+"Casino (Redsands West)",
+"Budget Inn Motel Room",
+"Unused Safe House",
+"Barber Shop",
+"Wardrobe/Changing Room",
+"Didier Sachs",
+"Kickstart Stadium",
+"Los Santos Airport",
+"Francis International Airport",
+"Jefferson Motel",
+"Binco",
+"4 Burglary Houses",
+"Blood Bowl Stadium",
+"Burglary House 20",
+"Los Santos Tattoo Parlor",
+"24/7 (v4)",
+"Vice Stadium",
+"Lost San Fierro Tattoo",
+"24/7 (v1)",
+"Rusty Brown's Donuts",
+"Club",
+"Sherman Dam",
+"Warehouse 1",
+"24/7 (v3)",
+"Zip",
+"Atrium",
+"Lil' Probe Inn",
+"Palomino Creek Bank",
+"Palomino Creek Diner",
+"Dillimore Gas Station",
+"Torreno's Ranch",
+"Zombotech - Lobby Area",
+"Crypt in LS Cemetery",
+"Blueberry Liquor Store",
+"Warehouse 3",
+"K.A.C.C. Military Fuel Depot",
+"Area 69",
+"Bike School",
+"Otto's Autos",
+"Wang Cars"
 };
