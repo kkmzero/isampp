@@ -19,3 +19,17 @@
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
+
+
+stock ISAMPP_TELEPORT(playerid, locationID) {
+	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
+	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
+	SetPlayerInterior(playerid, locID[locationID][0]);
+}
+
+stock ISAMPP_TELEPORTEX(playerid, locationID) {
+	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
+	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
+	SetPlayerInterior(playerid, locID[locationID][0]);
+	SendClientMessage(playerid,COLOR_ORANGE,locName[locationID]);
+}
