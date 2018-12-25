@@ -27,20 +27,6 @@ main()
 
 #endif
 
-//CUSTOM FUNCTIONS
-ISAMPP_TELEPORT(playerid, locationID) {
-	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
-	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
-	SetPlayerInterior(playerid, locID[locationID][0]);
-}
-
-ISAMPP_TELEPORTEX(playerid, locationID) {
-	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
-	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
-	SetPlayerInterior(playerid, locID[locationID][0]);
-	SendClientMessage(playerid,COLOR_ORANGE,locName[locationID]);
-}
-
 //PICKUPS
 new pickupWeapBrassKnuckles;
 new pickupWeapGolfClub;
