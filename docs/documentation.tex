@@ -13,26 +13,50 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 
 
-\title{SA-MP Includes Library+ 1.0 Documentation}
+\title{SA-MP Includes Library+ 1.1 Documentation}
 \author{Ivan Kmeťo}
-\date{August 2018}
+\date{August 2020}
 
 
 \begin{document}
 
 \maketitle
 
+\newpage
+\tableofcontents
+
+\newpage
+\section{Changes in ISAMPP 1.1}
+\textbf{ISAMPP Library:}
+\\
+- New function \textit{ISAMPP\_SHOWPLAYERPOSITION}
+\\
+- Functions \textit{ISAMPP\_TELEPORT} and \textit{ISAMPP\_TELEPORTEX} are now part of library itself
+\\
+- Fixed some Location Identifier coordinates 
+\\
+- Updated documentation
+\\
+\\
+\textbf{ISAMPP Sandbox Game Mode:}
+\\
+- Changed in-game teleport commands to use \textit{ISAMPP\_TELEPORTEX} function
+\\
+- Changed in-game command \textit{"/teleport [ID]"} to \textit{"/tp [ID]"}
+\\
+- In-game command \textit{"/stringcols"} takes no additional parameters anymore
+\\
+- New in-game command \textit{"/showplayerpos"} works with \textit{ISAMPP\_SHOWPLAYERPOSITION} data
+
 
 \newpage
 \section{Introduction}
-San Andreas Multiplayer Includes Library+ or ISAMPP \textit{(Includes for San Andreas Multiplayer Plus)} is library of include files for SA-MP. Purpose of ISAMPP is to make development of game modes for SA-MP much easier. SA-MP by default uses most of the time numeric identifiers which are hard to remember and without enough experience you have to use SA-MP wiki a lot. I believe that word identifiers are much more easier to remember, they make much more sense (especially if you are familiar with modding of game Grand Theft Auto: San Andreas), which may have positive impact on your workflow. Except redefinitions of numeric identifiers ISAMPP contains other useful libraries - such as library of locations with coordinates, interior IDs and location names - or few related custom functions. ISAMPP is downloadable with sandbox-styled game mode where you can see everything implemented. You are free to modify source code accordingly to license and that might be helpful as well.
+San Andreas Multiplayer Includes Library+ or ISAMPP \textit{(Includes for San Andreas Multiplayer Plus)} is library of include files for San Andreas Multiplayer Mod SA-MP. Purpose of ISAMPP is to make development of game modes for SA-MP much easier. SA-MP by default uses in most cases numeric identifiers which are hard to remember and without enough experience you have to use SA-MP wiki a lot. I believe that word identifiers are much more easier to remember, they make much more sense (especially if you are familiar with modding the game Grand Theft Auto: San Andreas) and may also have positive impact on your workflow. Except re-definitions of numeric identifiers, ISAMPP also contains other useful libraries - such as library of locations with coordinates, interior identifiers and location names - or few related custom stock functions. ISAMPP is available with sandbox-styled game mode in which you can see everything implemented. You are free to modify and distribute the source code accordingly to its license.
 
 \textit{\\Note: ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar Games, Rockstar North or Take-Two Interactive Software Inc.}
-\textit{\\Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of
-Take-Two Interactive Software Inc.}
+\textit{\\Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive Software Inc.}
 
-\textit{\\ISAMPP License: MIT License} \url{http://opensource.org/licenses/mit-license}
-
+\textit{\\ISAMPP is licensed under MIT License} \\\url{http://opensource.org/licenses/mit-license}
 
 \section{Installation}
 Copy contents of \textit{include} folder to \textit{"[SA-MP Server folder]/include"} and also to \textit{"include"} folder for Pawno (by default \textit{"[SA-MP Server folder]/pawno/include"}).
@@ -53,19 +77,18 @@ or include header files as you wish separately:
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 \end{verbatim}
-If you wish to run included sandbox game mode, you have to add file testinc.pwn to your \textit{"gamemodes"} folder and compile it. 
-
+If you wish to run included sandbox game mode, you have to add file testinc.pwn to your \textit{"gamemodes"} folder and compile it.
 
 \newpage
 \section{Includes}
 Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind that ISAMPP may not be the only include with this prefix.
 \\
 \\
-\textit{colorlist} - List of definitions of colors
+\textit{colorlist} - List of color definitions
 \\
 \textit{iconids} - List of icon identifiers
 \\
-\textit{locationids} - List of location definitions with coordinates, identifiers and names
+\textit{locationids} - List of location definitions with coordinates, interior identifiers and names
 \\
 \textit{pickupids} - List of definitions for pickup identifiers
 \\
@@ -80,14 +103,14 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 
 \newpage
 \section{Color List}
-Color List contains definitions of some few common colors in two formats. Primary or Main color definitions have prefix \textit{COLOR\_} and are defined in 0xRRGGBBAA format. Secondary or String color definitions with prefix \textit{SCOL\_} are defined in more common hex format "\{RRGGBB\}" known for example in web development. The difference of these two formats can be explained by this example:
+Color List contains definitions of some few common colors in two formats. Primary or Main color definitions have prefix \textit{COLOR\_} and are defined in 0xRRGGBBAA format. Secondary or String color definitions with prefix \textit{SCOL\_} are defined in more common hex format "\{RRGGBB\}" without the alpha color transparency values. The difference of these two formats can be explained by this example:
 \begin{verbatim}
-SendClientMessage(playerid,COLOR_RED,"Hello "SCOL_BLUE"World");
+SendClientMessage(playerid, COLOR_RED, "Hello "SCOL_BLUE"World");
 \end{verbatim}
 where the output will print in game client message box string of text in this format:
 \textbf{\color{red}Hello \color{blue}World}\\
 \\
-Secondary/String colors can be used simply in strings while Primary/Main colors would be recommended to be used as parameters. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols[0-1]}. Screenshot of colors strings printed out in client message box is located in \textit{"docs/i\_colorlist.png"}.
+Secondary or String colors can be used simply in strings while Primary/Main colors would be recommended to be used as parameters. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/i\_colorlist.png"}.
 
 
 \section{Icon Identifiers}
@@ -95,52 +118,15 @@ There are total 64 icons in total included as macro defines with prefix \textit{
 
 
 \section{Location Identifiers}
-Locations, mainly interior ones are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed.\\
+Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed.\\
 \\
-Please note that if you wish to add new location, you have to do it in correct order. Also, not every location has hitboxes because it was used only in cutscene, so in certain interiors you may just fall through ground.
-
-
-\section{Teleport Functions}
-In ISAMPP sandbox game mode you can see examples of two functions which may make the teleporting of player much easier, especially if you wish to implement a lot of locations to your game mode. Function \textit{ISAMPP\_TELEPORT(playerid, locationID)} simply reads the data from include file \textit{i\_locationids.inc} and teleports player to desired location. Function \textit{ISAMPP\_TELEPORTEX(playerid, locationID)} does exactly the same thing but it also displays in client message box the name of location from array \textit{locName}. You can do any changes to this code as you wish. Maybe you want to display message in second function in different color or format, etc.\\
-\\
-\textbf{ISAMPP\_TELEPORT(playerid, locationID):}
-\begin{verbatim}
-ISAMPP_TELEPORT(playerid, locationID) {
-  SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
-  SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
-  SetPlayerInterior(playerid, locID[locationID][0]);
-}
-\end{verbatim}
-\textbf{Example of usage:}
-\begin{verbatim}
-if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
-  ISAMPP_TELEPORT(playerid, LOC_BARBERSHOP);
-  return 1;
-}
-\end{verbatim}
-\textbf{ISAMPP\_TELEPORTEX(playerid, locationID):}
-\begin{verbatim}
-ISAMPP_TELEPORTEX(playerid, locationID) {
-  SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
-  SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
-  SetPlayerInterior(playerid, locID[locationID][0]);
-  SendClientMessage(playerid,COLOR_ORANGE,locName[locationID]);
-}
-\end{verbatim}
-\textbf{Example of usage:}
-\begin{verbatim}
-if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
-    ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP);
-    return 1;
-}
-\end{verbatim}
-
+Please note that if you wish to add new location to this list, you have to do it in correct order. Not every location has hitboxes because it was used only in cutscene, so in certain interiors you may just fall through ground.
 
 \section{Pickup Identifiers}
 Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup is placed on map in ISAMPP sandbox game mode.
 
 \section{Skin/Playermodel Identifiers}
-Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, the ped models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers and this is exactly the reason why ISAMPP uses this format as well.
+Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers SA-MP uses by default.
 
 \section{Vehicle Identifiers}
 Vehicle identifiers are included as macro defines with prefix \textit{VEH\_} followed by the name of vehicle in game with capital letters \textit{(motorcycles, bicycles, boats, planes, helicopters, trailers, trains, etc. are included in this format as well)}. For better orientation in list, defines are sorted by vehicle type.
@@ -150,5 +136,51 @@ Weapon identifiers are included as macro defines with prefix \textit{WEAP\_}. In
 
 \section{Weather Identifiers}
 Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}. In ISAMPP sandbox game mode you can test weather settings with command \textbf{/w [ID]}.
+
+
+\newpage
+\section{Custom Functions}
+
+ISAMPP uses various stock functions which may be useful in creating your custom game modes for SA-MP or simply for debugging purposes. These stock functions are located in \textit{i\_sampp.inc} file.
+\\
+\subsection{ISAMPP\_TELEPORT(playerid, locationid):}
+\\
+\\\textit{Teleports player to desired location passed as parameter 'locationid'.}
+\\
+\\
+\textbf{Example of implementation:}
+\begin{verbatim}
+if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
+  ISAMPP_TELEPORT(playerid, LOC_BARBERSHOP);
+  return 1;
+}
+\end{verbatim}
+
+\subsection{ISAMPP\_TELEPORTEX(playerid, locationid):}
+\\
+\\\textit{Same as ISAMPP\_TELEPORT, plus outputs location name to in-game chat window.}
+\\
+\\
+\textbf{Example of implementation:}
+\begin{verbatim}
+if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
+    ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP);
+    return 1;
+}
+\end{verbatim}
+
+\subsection{ISAMPP\_SHOWPLAYERPOSITION(playerid):}
+\\
+\\\textit{Outputs current player location coordinates and interior identifier to in-game chat window.}
+\\
+\\
+\textbf{Example of implementation:}
+\begin{verbatim}
+if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
+    ISAMPP_SHOWPLAYERPOSITION(playerid);
+    return 1;
+}
+\end{verbatim}
+
 
 \end{document}
