@@ -10,7 +10,7 @@
 	public OnFilterScriptInit()
 	{
 		print("\n---------------------------------------------");
-		print(" SA-MP Includes Library+ 1.1 Sandbox GameMode");
+		print(" SA-MP Includes Library+ 1.2 Sandbox GameMode");
 		print("---------------------------------------------\n");
 		return 1;
 	}
@@ -22,7 +22,7 @@
 	main()
 	{
 		print("\n---------------------------------------------");
-		print(" SA-MP Includes Library+ 1.1 Sandbox GameMode");
+		print(" SA-MP Includes Library+ 1.2 Sandbox GameMode");
 		print("---------------------------------------------\n");
 	}
 #endif
@@ -72,13 +72,14 @@ new pickupWeapCamera;
 new pickupWeapNGoggles;
 new pickupWeapTGoggles;
 new pickupWeapParachute;
+new pickupArmor;
 
 
 public OnGameModeInit()
 {
 	SetWorldTime(12);
 	// Don't use these lines if it's a filterscript
-	SetGameModeText("ISAMPP 1.1 Sandbox GameMode");
+	SetGameModeText("ISAMPP 1.2 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
@@ -446,7 +447,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_INFO, 1, 415.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_HEART, 1, 410.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_PILL, 1, 405.5590,2486.2830,16.4844, -1);
-	CreatePickup(PICKUP_ARMOR, 1, 400.5590,2486.2830,16.4844, -1);
+	pickupArmor = CreatePickup(PICKUP_ARMOR, 2, 400.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_BRIBE, 1, 395.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_GTA3LOGO, 1, 390.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_GREYBOMB, 1, 385.5590,2486.2830,16.4844, -1);
@@ -478,7 +479,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_APMINE, 1, 255.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_STRIPEDQUESTIONM, 1, 250.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_MEDCASE, 1, 245.5590,2486.2830,16.4844, -1);
-	CreatePickup(PICKUP_LARMOR, 1, 240.5590,2486.2830,16.4844, -1);
+	pickupArmor = CreatePickup(PICKUP_LARMOR, 2, 240.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_DYNAMITE, 1, 235.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_AIDKIT, 1, 230.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_AMMOBOX, 1, 225.5590,2486.2830,16.4844, -1);
@@ -2023,6 +2024,9 @@ public OnPlayerPickUpPickup(playerid, pickupid)
     else if(pickupid == pickupWeapTec9) {
         GivePlayerWeapon(playerid, WEAP_TEC9, 100);
     }
+	else if(pickupid == pickupArmor) {
+		SetPlayerArmour(playerid, 100);
+	}
     
 	return 1;
 }
