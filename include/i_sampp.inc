@@ -1,10 +1,10 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 Ivan Kmeto
+ * Copyright (c) 2018 - 2020 Ivan Kmeťo
  *
  * Licensed under the MIT License.
  * http://opensource.org/licenses/mit-license
-*/
+ */
 
 #if defined _I_SAMPP
     #endinput
@@ -32,4 +32,14 @@ stock ISAMPP_TELEPORTEX(playerid, locationID) {
 	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
 	SetPlayerInterior(playerid, locID[locationID][0]);
 	SendClientMessage(playerid,COLOR_ORANGE,locName[locationID]);
+}
+
+stock ISAMPP_SHOWPLAYERPOSITION(playerid) {
+	new Float:x, Float:y, Float:z;
+	GetPlayerPos(playerid, x, y, z);
+
+	new pos[128];
+	format(pos, sizeof(pos), "Your Coordinates are [X]: %f [Y]: %f [Z]: %f [Interior ID]:  %i", x, y, z, GetPlayerInterior(playerid));
+
+	SendClientMessage(playerid, COLOR_LIGHTRED, pos);
 }
