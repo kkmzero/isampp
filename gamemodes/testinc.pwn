@@ -1,31 +1,32 @@
+/*
+ * This file is part of San Andreas Multiplayer Includes Library+
+ * as its sandbox game mode for San Andreas Multiplayer Mod (SA-MP)
+ */
+
 #include <a_samp>
 #include <i_sampp>
 
 #if defined FILTERSCRIPT
-
-public OnFilterScriptInit()
-{
-	print("\n-----------------------------------------------");
-	print(" SA-MP Includes Library+ Test Sandbox GameMode");
-	print("-----------------------------------------------\n");
-	return 1;
-}
-
-public OnFilterScriptExit()
-{
-	return 1;
-}
-
+	public OnFilterScriptInit()
+	{
+		print("\n---------------------------------------------");
+		print(" SA-MP Includes Library+ 1.1 Sandbox GameMode");
+		print("---------------------------------------------\n");
+		return 1;
+	}
+	public OnFilterScriptExit()
+	{
+		return 1;
+	}
 #else
-
-main()
-{
-	print("\n-----------------------------------------------");
-	print(" SA-MP Includes Library+ Test Sandbox GameMode");
-	print("-----------------------------------------------\n");
-}
-
+	main()
+	{
+		print("\n---------------------------------------------");
+		print(" SA-MP Includes Library+ 1.1 Sandbox GameMode");
+		print("---------------------------------------------\n");
+	}
 #endif
+
 
 //PICKUPS
 new pickupWeapBrassKnuckles;
@@ -72,11 +73,12 @@ new pickupWeapNGoggles;
 new pickupWeapTGoggles;
 new pickupWeapParachute;
 
+
 public OnGameModeInit()
 {
 	SetWorldTime(12);
 	// Don't use these lines if it's a filterscript
-	SetGameModeText("SA-MP Includes Library+ Test GameMode");
+	SetGameModeText("ISAMPP 1.1 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
@@ -718,7 +720,7 @@ public OnPlayerRequestClass(playerid, classid)
 
 public OnPlayerConnect(playerid)
 {
-	SendClientMessage(playerid,COLOR_WHITE,"Use command /help for list of available commands");
+	SendClientMessage(playerid, COLOR_ORANGE, "Use command /help for list of available commands");
 	return 1;
 }
 
@@ -755,18 +757,18 @@ public OnPlayerText(playerid, text[])
 public OnPlayerCommandText(playerid, cmdtext[])
 {
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid,COLOR_WHITE,"/defcols[0-14]; /stringcols[0-1]");
-		SendClientMessage(playerid,COLOR_WHITE,"/w [ID] (type /w help for id list); /teleport [ID]");
+		SendClientMessage(playerid,COLOR_ORANGE,"/defcols[0-14]; /stringcols[0-1]");
+		SendClientMessage(playerid,COLOR_ORANGE,"/w [ID] (type /w help for id list); /teleport [ID]");
 		return 1;
 	}
 	
 	if (strcmp("/w help", cmdtext, true, 10) == 0) {
-	    SendClientMessage(playerid, COLOR_BLUE, "/w [ID]");
-	    SendClientMessage(playerid, COLOR_BLUE, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
-	    SendClientMessage(playerid, COLOR_BLUE, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
-	    SendClientMessage(playerid, COLOR_BLUE, "sunnyvegas, extrasunnyvegas, cloudyvegas");
-	    SendClientMessage(playerid, COLOR_BLUE, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
-	    SendClientMessage(playerid, COLOR_BLUE, "extrasunnydesert, sunnydesert, sandstorm, underwater");
+	    SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
+	    SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
+	    SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
+	    SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
+	    SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
+	    SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
 		return 1;
 	}
 	
