@@ -18,6 +18,7 @@
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_vehhealth>
+#include <i_sampp/i_carcols>
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 
