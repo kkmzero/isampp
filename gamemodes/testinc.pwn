@@ -757,8 +757,9 @@ public OnPlayerText(playerid, text[])
 public OnPlayerCommandText(playerid, cmdtext[])
 {
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid,COLOR_ORANGE, "/defcols[0-14]; /stringcols");
-		SendClientMessage(playerid,COLOR_ORANGE, "/w [ID] (type /w help for id list); /tp [ID]");
+		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
+		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for id list); /tp [ID]");
+		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos");
 		return 1;
 	}
 	
@@ -1568,7 +1569,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 	
 	if (strcmp("/tp sfpdhq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SFPDHQ);
+    	ISAMPP_TELEPORTEX(playerid, LOC_SFPDHQ);
 	    return 1;
 	}
 
@@ -1825,6 +1826,12 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	if (strcmp("/tp wangcars", cmdtext, true, 20) == 0) {
     	ISAMPP_TELEPORTEX(playerid, LOC_WANGCARS);
 	    return 1;
+	}
+	
+	//SHOW PLAYER POSITION COORDINATES
+	if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
+		ISAMPP_SHOWPLAYERPOSITION(playerid);
+		return 1;
 	}
 	
 	return 0;
