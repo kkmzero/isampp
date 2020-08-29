@@ -1,10 +1,10 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 Ivan Kmeto
+ * Copyright (c) 2018 - 2020 Ivan Kmeto
  *
  * Licensed under the MIT License.
  * http://opensource.org/licenses/mit-license
-*/
+ */
 
 #define LOC_WAREHOUSE2             0
 #define LOC_TRANSFENDER            1
@@ -33,7 +33,7 @@
 #define LOC_BSCRACKPALACE          24
 #define LOC_BURGH2                 25
 #define LOC_PAIRBURGH              26
-#define LOC_CALIGOFFICE            27  //[!] No Collisions
+#define LOC_CALIGOFFICE            27 //[!] No Collisions
 #define LOC_STRIPCASINO            28
 #define LOC_LOCOLOWCO              29
 #define LOC_BROTHEL1               30
@@ -65,7 +65,7 @@
 #define LOC_DIRTBIKE               56
 #define LOC_BURGH15                57
 #define LOC_GANTONGYM              58
-#define LOC_DINER1                 59  //[!] No Collisions
+#define LOC_DINER1                 59 //[!] No Collisions
 #define LOC_PIZZASTACK             60
 #define LOC_VICTIM                 61
 #define LOC_BARBARASNEST           62
@@ -73,11 +73,11 @@
 #define LOC_BURNINGDESIREB         64
 #define LOC_SAFEHOUSE1             65
 #define LOC_BURGH4                 66
-#define LOC_CRACKDEN               67  //[?] TODO: CIV
+#define LOC_CRACKDEN               67
 #define LOC_BURGH11                68
 #define LOC_BURGH16                69
 #define LOC_BURGH17                70
-#define LOC_SAFEHOUSE2             71  //[!] No Collisions
+#define LOC_SAFEHOUSE2             71 //[!] No Collisions
 #define LOC_MILLIESROOM            72
 #define LOC_COBRAGYM               73
 #define LOC_LSPDHQ                 74
@@ -87,7 +87,7 @@
 #define LOC_AMMUNATION4            78
 #define LOC_AMMUNATION5            79
 #define LOC_247V6                  80
-#define LOC_VALLEYDINER            81  //[!] No Collisions
+#define LOC_VALLEYDINER            81 //[!] No Collisions
 #define LOC_WHOREHOUSE             82
 #define LOC_AMMUNATION             83
 #define LOC_BBELTGYM               84
@@ -111,7 +111,7 @@
 #define LOC_CFDJANITOR             102
 #define LOC_CFDSUITE               103 //[!] No Collisions
 #define LOC_BAR                    104
-#define LOC_SHWFIELD               105 //[?] TODO: CIV
+#define LOC_SHWFIELD               105 //[!] No Collisions
 #define LOC_CASINO                 106
 #define LOC_BUDGETMOTEL            107
 #define LOC_USAFEHOUSE             108
@@ -129,10 +129,10 @@
 #define LOC_LSTATTOO               120
 #define LOC_247V4                  121
 #define LOC_VICESTADIUM            122
-#define LOC_LSFTATTOO              123 //[!] Causes Client Crash
+#define LOC_LSFTATTOO              123
 #define LOC_247V1                  124
 #define LOC_RUSTYBDONUTS           125
-#define LOC_CLUB                   126 //[?] Coords are not exact
+#define LOC_CLUB                   126
 #define LOC_SHERMANDAM             127
 #define LOC_WAREHOUSE1             128
 #define LOC_247V3                  129
@@ -173,7 +173,7 @@ new Float:locCoords[146][4] = {
 {2216.13,-1076.31,1050.48,86.43},
 {2268.52,1647.77,1084.23,99.73},
 {1523.51,-47.82,1002.27,262.7},
-{1204.67,-13.54,1000.92,350.02},
+{1205.313,-8.02,1000.921,350.02},
 {2447.87,-1704.45,1013.51,314.53},
 {269.64,305.95,999.15,215.66},
 {414.3,-18.8,1001.8,41.43},
@@ -221,7 +221,7 @@ new Float:locCoords[146][4] = {
 {2350.16,-1181.07,1027.98,99.19},
 {2233.69,-1112.81,1050.88,8.65},
 {239.28,1114.2,1080.99,270.27},
-{227.39,1114.66,1081.0,267.46},
+{318.565,1118.209,1083.88,267.46},
 {227.76,1114.38,1080.99,266.26},
 {22.86,1404.92,1084.43,349.62},
 {140.37,1367.88,1083.86,349.24},
@@ -257,7 +257,7 @@ new Float:locCoords[146][4] = {
 {2261.1,-1137.88,1050.63,266.88},
 {24.38,1341.18,1084.38,8.33},
 {1893.07,1017.9,31.88,86.1},
-{2003.12,1015.19,33.01,351.58},
+{2003.12,1015.19,33.01,359.58},//CDFSUITE
 {501.96,-70.56,998.76,171.57},
 {2283.31,1139.31,1050.9,19.7},
 {1133.35,-7.85,1000.68,165.85},
@@ -280,7 +280,7 @@ new Float:locCoords[146][4] = {
 {-202.94,-6.7,1002.27,204.27},
 {-25.72,-187.82,1003.55,5.08},
 {378.03,-190.52,1000.63,141.02},
-{493.14,-24.26,1000.68,356.99},
+{491.77,-20.598,1000.679,356.99},
 {-944.24,1886.15,5.01,179.85},
 {1290.41,1.95,1001.02,179.94},
 {-30.99,-89.68,1003.55,359.84},
@@ -480,7 +480,7 @@ new locName[146][] = {
 "Burglary House 2",
 "Pair of Burglary Houses",
 "Caligula's Casino Office",
-"Old Venturas Strip Casino",
+"Old Venturas Strip Casino Safehouse",
 "Loco Low Co",
 "Brothel 1",
 "Brothel 2",
