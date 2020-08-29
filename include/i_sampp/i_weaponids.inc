@@ -1,10 +1,10 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 Ivan Kmeto
+ * Copyright (c) 2018 Ivan Kmeťo
  *
  * Licensed under the MIT License.
  * http://opensource.org/licenses/mit-license
-*/
+ */
 
 //Weapon Slot 0
 #define WEAP_FIST                  0
