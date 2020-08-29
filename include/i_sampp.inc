@@ -21,17 +21,17 @@
 #include <i_sampp/i_weatherids>
 
 
-stock ISAMPP_TELEPORT(playerid, locationID) {
-	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
-	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
-	SetPlayerInterior(playerid, locID[locationID][0]);
+stock ISAMPP_TELEPORT(playerid, locationid) {
+	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
+	SetPlayerFacingAngle(playerid, locCoords[locationid][3]);
+	SetPlayerInterior(playerid, locID[locationid][0]);
 }
 
-stock ISAMPP_TELEPORTEX(playerid, locationID) {
-	SetPlayerPos(playerid, locCoords[locationID][0], locCoords[locationID][1], locCoords[locationID][2]);
-	SetPlayerFacingAngle(playerid, locCoords[locationID][3]);
-	SetPlayerInterior(playerid, locID[locationID][0]);
-	SendClientMessage(playerid,COLOR_ORANGE,locName[locationID]);
+stock ISAMPP_TELEPORTEX(playerid, locationid) {
+	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
+	SetPlayerFacingAngle(playerid, locCoords[locationid][3]);
+	SetPlayerInterior(playerid, locID[locationid][0]);
+	SendClientMessage(playerid, COLOR_ORANGE, locName[locationid]);
 }
 
 stock ISAMPP_SHOWPLAYERPOSITION(playerid) {
