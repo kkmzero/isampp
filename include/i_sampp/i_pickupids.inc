@@ -1,6 +1,6 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 Ivan Kmeťo
+ * Copyright (c) 2018 - 2020 Ivan Kmeťo
  *
  * Licensed under the MIT License.
  * http://opensource.org/licenses/mit-license
@@ -44,7 +44,6 @@
 #define PICKUP_APMINE              19602
 #define PICKUP_STRIPEDQUESTIONM    18631
 #define PICKUP_MEDCASE             11738
-#define PICKUP_LARMOR              1242
 #define PICKUP_DYNAMITE            1654
 #define PICKUP_AIDKIT              11736
 #define PICKUP_AMMOBOX             19832
@@ -95,6 +94,17 @@
 #define PICKUP_HEARTBED            11731
 #define PICKUP_CJCAMMONET          2068
 #define PICKUP_ALTCHAINSAW         14673
+
+#define PICKUP_GIFTSMALL           327
+#define PICKUP_GIFTBIG             328
+#define PICKUP_BEERBOTTLE1         1484
+#define PICKUP_BEERBOTTLE2         1486
+#define PICKUP_BEERBOTTLE3         1543
+#define PICKUP_NAVALMINE           2918
+#define PICKUP_DONUTS              2222
+#define PICKUP_NITRO1              1008
+#define PICKUP_NITRO2              1009
+#define PICKUP_NITRO3              1010
 
 #define PICKUP_WEAP_RDILDO         321
 #define PICKUP_WEAP_WDILDO         322
