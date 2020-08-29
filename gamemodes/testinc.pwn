@@ -479,11 +479,20 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_APMINE, 1, 255.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_STRIPEDQUESTIONM, 1, 250.5590,2486.2830,16.4844, -1);
 	CreatePickup(PICKUP_MEDCASE, 1, 245.5590,2486.2830,16.4844, -1);
-	pickupArmor = CreatePickup(PICKUP_LARMOR, 2, 240.5590,2486.2830,16.4844, -1);
-	CreatePickup(PICKUP_DYNAMITE, 1, 235.5590,2486.2830,16.4844, -1);
-	CreatePickup(PICKUP_AIDKIT, 1, 230.5590,2486.2830,16.4844, -1);
-	CreatePickup(PICKUP_AMMOBOX, 1, 225.5590,2486.2830,16.4844, -1);
-	CreatePickup(PICKUP_PETROLCAN, 1, 220.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_DYNAMITE, 1, 240.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_AIDKIT, 1, 235.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_AMMOBOX, 1, 230.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_PETROLCAN, 1, 225.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_GIFTSMALL, 1, 220.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_GIFTBIG, 1, 215.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_BEERBOTTLE1, 1, 210.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_BEERBOTTLE2, 1, 205.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_BEERBOTTLE3, 1, 200.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_NAVALMINE, 1, 195.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_DONUTS, 1, 190.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_NITRO1, 1, 185.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_NITRO2, 1, 180.5590,2486.2830,16.4844, -1);
+	CreatePickup(PICKUP_NITRO3, 1, 175.5590,2486.2830,16.4844, -1);
 	
 	//PICKUPS - ROW 3
 	CreatePickup(PICKUP_WDRUGS, 1, 425.5590,2492.2830,16.4844, -1);
@@ -759,8 +768,9 @@ public OnPlayerCommandText(playerid, cmdtext[])
 {
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
-		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for id list); /tp [ID]");
+		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]");
 		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos");
+		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
 		return 1;
 	}
 	
@@ -1835,6 +1845,67 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 	
+	//SET VEHICLE HEALTH
+	if (strcmp("/setvehiclehealth help", cmdtext, true, 35) == 0) {
+		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID]: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
+		return 1;
+	}
+
+	if (strcmp("/setvehiclehealth full", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_FULL);
+		return 1;
+	}
+	
+	if (strcmp("/setvehiclehealth fulllow", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_FULL_LOW);
+		return 1;
+	}
+	
+	if (strcmp("/setvehiclehealth whitesmoke", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE);
+		return 1;
+	}
+	
+	if (strcmp("/setvehiclehealth whitesmokelow", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE_LOW);
+		return 1;
+	}
+	
+	if (strcmp("/setvehiclehealth greysmoke", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE);
+		return 1;
+	}
+
+	if (strcmp("/setvehiclehealth greysmokelow", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE_LOW);
+		return 1;
+	}
+	
+	if (strcmp("/setvehiclehealth blacksmoke", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE);
+		return 1;
+	}
+
+	if (strcmp("/setvehiclehealth blacksmokelow", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE_LOW);
+		return 1;
+	}
+	
+	if (strcmp("/setvehiclehealth onfire", cmdtext, true, 35) == 0) {
+		new vehicleid = GetPlayerVehicleID(playerid);
+		SetVehicleHealth(vehicleid, VEH_HEALTH_ONFIRE);
+		return 1;
+	}
+
+
 	return 0;
 }
 
