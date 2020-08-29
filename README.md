@@ -15,6 +15,7 @@ are free to modify and distribute the source code accordingly to its license.
 Games, Rockstar North or Take-Two Interactive Software Inc.*
 *Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive
 Software Inc.*
+
 *ISAMPP is licensed under [MIT License](LICENSE)*
 
 # Installation
