@@ -1,10 +1,10 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 Ivan Kmeto
+ * Copyright (c) 2018 Ivan Kmeťo
  *
  * Licensed under the MIT License.
  * http://opensource.org/licenses/mit-license
-*/
+ */
 
 #define WEATHER_EXSUNNY_LA         0
 #define WEATHER_SUNNY_LA           1
