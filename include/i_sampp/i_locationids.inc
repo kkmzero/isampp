@@ -1,6 +1,6 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 - 2020 Ivan Kmeto
+ * Copyright (c) 2018 - 2020 Ivan Kmeťo
  *
  * Licensed under the MIT License.
  * http://opensource.org/licenses/mit-license
