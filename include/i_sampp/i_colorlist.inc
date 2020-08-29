@@ -1,10 +1,10 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 Ivan Kmeto
+ * Copyright (c) 2018 Ivan Kmeťo
  *
  * Licensed under the MIT License.
  * http://opensource.org/licenses/mit-license
-*/
+ */
 
 #define COLOR_WHITE                0xFFFFFFFF
 #define COLOR_BLACK                0x000000FF
