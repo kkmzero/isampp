@@ -757,8 +757,8 @@ public OnPlayerText(playerid, text[])
 public OnPlayerCommandText(playerid, cmdtext[])
 {
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid,COLOR_ORANGE,"/defcols[0-14]; /stringcols[0-1]");
-		SendClientMessage(playerid,COLOR_ORANGE,"/w [ID] (type /w help for id list); /teleport [ID]");
+		SendClientMessage(playerid,COLOR_ORANGE, "/defcols[0-14]; /stringcols");
+		SendClientMessage(playerid,COLOR_ORANGE, "/w [ID] (type /w help for id list); /tp [ID]");
 		return 1;
 	}
 	
@@ -975,22 +975,18 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 	
-	if (strcmp("/stringcols0", cmdtext, true, 15) == 0) {
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_BLACK"X"SCOL_WHITE"X"SCOL_RED"X"SCOL_GREEN"X"SCOL_BLUE"X"SCOL_CYAN"X"SCOL_MAGENTA"X"SCOL_YELLOW"X"SCOL_DARKRED"X"SCOL_DARKGREEN"X"SCOL_DARKBLUE"X"SCOL_DARKCYAN"X"SCOL_DARKMAGENTA"X"SCOL_DARKYELLOW"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_LIGHTRED"X"SCOL_LIGHTGREEN"X"SCOL_LIGHTBLUE"X"SCOL_LIGHTCYAN"X"SCOL_LIGHTMAGENTA"X"SCOL_LIGHTYELLOW"X"SCOL_ALICEBLUE"X"SCOL_ANTIQUEWHITE"X"SCOL_AQUA"X"SCOL_AQUAMARINE"X"SCOL_AZURE"X"SCOL_BEIGE"X"SCOL_BISQUE"X"SCOL_BLANCHEDALMOND"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_BLUEVIOLET"X"SCOL_BROWN"X"SCOL_BURLYWOOD"X"SCOL_CADETBLUE"X"SCOL_CHARTEREUSE"X"SCOL_CHOCOLATE"X"SCOL_CORAL"X"SCOL_CORNFLOWERBLUE"X"SCOL_CORNSILK"X"SCOL_CRIMSON"X"SCOL_DARKGOLDENROD"X"SCOL_DARKGRAY"X"SCOL_DARKKHAKI"X"SCOL_DARKOLIVEGREEN"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_DARKORANGE"X"SCOL_DARKORCHID"X"SCOL_DARKSALMON"X"SCOL_DARKSEAGREEN"X"SCOL_DARKSLATEBLUE"X"SCOL_DARKSLATEGRAY"X"SCOL_DARKTURQUOISE"X"SCOL_DARKVIOLET"X"SCOL_DEEPPINK"X"SCOL_DEEPSKYBLUE"X"SCOL_DIMGRAY"X"SCOL_DODGERBLUE"X"SCOL_FIREBRICK"X"SCOL_FLORALWHITE"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_FORESTGREEN"X"SCOL_GAINSBORO"X"SCOL_GHOSTWHITE"X"SCOL_GOLD"X"SCOL_GOLDENROD"X"SCOL_DARKERGREEN"X"SCOL_GREENYELLOW"X"SCOL_HONEYDEW"X"SCOL_HOTPINK"X"SCOL_INDIANRED"X"SCOL_INDIGO"X"SCOL_IVORY"X"SCOL_KHAKI"X"SCOL_LAVENDER"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_LAVENDERBLUSH"X"SCOL_LAWNGREEN"X"SCOL_LEMONCHIFFON"X"SCOL_LIGHTCORAL"X"SCOL_LIGHTGOLDENRODYELLOW"X"SCOL_LIGHTGRAY"X"SCOL_LIGHTPINK"X"SCOL_LIGHTSALMON"X"SCOL_LIGHTSEAGREEN"X"SCOL_LIGHTSKYBLUE"X"SCOL_LIGHTSLATEGRAY"X"SCOL_LIGHTSTEELBLUE"X"SCOL_LIME"X"SCOL_LIMEGREEN"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_LINEN"X"SCOL_MAROON"X"SCOL_MEDIUMAQUAMARINE"X"SCOL_MEDIUMBLUE"X"SCOL_MEDIUMORCHID"X"SCOL_MEDIUMPURPLE"X"SCOL_MEDIUMSEAGREEN"X"SCOL_MEDIUMSLATEBLUE"X"SCOL_MEDIUMSPRINGGREEN"X"SCOL_MEDIUMTURQUOISE"X"SCOL_MEDIUMVIOLETRED"X"SCOL_MIDNIGHTBLUE"X"SCOL_MINTCREAM"X"SCOL_MISTYROSE"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_MOCCASIN"X"SCOL_NAVAJOWHITE"X"SCOL_NAVY"X"SCOL_OLDLACE"X"SCOL_OLIVE"X"SCOL_OLIVEDRAB"X"SCOL_ORANGE"X"SCOL_ORANGERED"X"SCOL_ORCHID"X"SCOL_PALEGOLDENROD"X"SCOL_PALEGREEN"X"SCOL_PALETURQUOISE"X"SCOL_PALEVIOLETRED"X"SCOL_PAPAYAWHIP"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_PEACHPUFF"X"SCOL_PERU"X"SCOL_PINK"X"SCOL_PLUM"X"SCOL_POWDERBLUE"X"SCOL_PURPLE"X"SCOL_REBECCAPURPLE"X"SCOL_ROSYBROWN"X"SCOL_ROYALBLUE"X"SCOL_SADDLEBROWN"X"SCOL_SALMON"X"SCOL_SANDYBROWN"X"SCOL_SEAGREEN"X"SCOL_SEASHELL"X");
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_SIENNA"X"SCOL_SILVER"X"SCOL_SKYBLUE"X"SCOL_SLATEBLUE"X"SCOL_SLATEGRAY"X"SCOL_SNOW"X"SCOL_SPRINGGREEN"X"SCOL_STEELBLUE"X"SCOL_TAN"X"SCOL_TEAL"X"SCOL_THISTLE"X"SCOL_TOMATO"X"SCOL_TURQUOISE"X"SCOL_VIOLET"X");
-		return 1;
-	}
-	
-	if (strcmp("/stringcols1", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid,COLOR_WHITE,""SCOL_WHEAT"X"SCOL_WHITESMOKE"X"SCOL_YELLOWGREEN"X");
+	//STRINGCOLS COMMAND
+	if (strcmp("/stringcols", cmdtext, true, 15) == 0) {
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_BLACK"X"SCOL_WHITE"X"SCOL_RED"X"SCOL_GREEN"X"SCOL_BLUE"X"SCOL_CYAN"X"SCOL_MAGENTA"X"SCOL_YELLOW"X"SCOL_DARKRED"X"SCOL_DARKGREEN"X"SCOL_DARKBLUE"X"SCOL_DARKCYAN"X"SCOL_DARKMAGENTA"X"SCOL_DARKYELLOW"X"SCOL_LIGHTRED"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_LIGHTGREEN"X"SCOL_LIGHTBLUE"X"SCOL_LIGHTCYAN"X"SCOL_LIGHTMAGENTA"X"SCOL_LIGHTYELLOW"X"SCOL_ALICEBLUE"X"SCOL_ANTIQUEWHITE"X"SCOL_AQUA"X"SCOL_AQUAMARINE"X"SCOL_AZURE"X"SCOL_BEIGE"X"SCOL_BISQUE"X"SCOL_BLANCHEDALMOND"X"SCOL_BLUEVIOLET"X"SCOL_BROWN"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_BURLYWOOD"X"SCOL_CADETBLUE"X"SCOL_CHARTEREUSE"X"SCOL_CHOCOLATE"X"SCOL_CORAL"X"SCOL_CORNFLOWERBLUE"X"SCOL_CORNSILK"X"SCOL_CRIMSON"X"SCOL_DARKGOLDENROD"X"SCOL_DARKGRAY"X"SCOL_DARKKHAKI"X"SCOL_DARKOLIVEGREEN"X"SCOL_DARKORANGE"X"SCOL_DARKORCHID"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_DARKSALMON"X"SCOL_DARKSEAGREEN"X"SCOL_DARKSLATEBLUE"X"SCOL_DARKSLATEGRAY"X"SCOL_DARKTURQUOISE"X"SCOL_DARKVIOLET"X"SCOL_DEEPPINK"X"SCOL_DEEPSKYBLUE"X"SCOL_DIMGRAY"X"SCOL_DODGERBLUE"X"SCOL_FIREBRICK"X"SCOL_FLORALWHITE"X"SCOL_FORESTGREEN"X"SCOL_GAINSBORO"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_GHOSTWHITE"X"SCOL_GOLD"X"SCOL_GOLDENROD"X"SCOL_DARKERGREEN"X"SCOL_GREENYELLOW"X"SCOL_HONEYDEW"X"SCOL_HOTPINK"X"SCOL_INDIANRED"X"SCOL_INDIGO"X"SCOL_IVORY"X"SCOL_KHAKI"X"SCOL_LAVENDER"X"SCOL_LAVENDERBLUSH"X"SCOL_LAWNGREEN"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_LEMONCHIFFON"X"SCOL_LIGHTCORAL"X"SCOL_LIGHTGOLDENRODYELLOW"X"SCOL_LIGHTGRAY"X"SCOL_LIGHTPINK"X"SCOL_LIGHTSALMON"X"SCOL_LIGHTSEAGREEN"X"SCOL_LIGHTSKYBLUE"X"SCOL_LIGHTSLATEGRAY"X"SCOL_LIGHTSTEELBLUE"X"SCOL_LIME"X"SCOL_LIMEGREEN"X"SCOL_LINEN"X"SCOL_MAROON"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_MEDIUMAQUAMARINE"X"SCOL_MEDIUMBLUE"X"SCOL_MEDIUMORCHID"X"SCOL_MEDIUMPURPLE"X"SCOL_MEDIUMSEAGREEN"X"SCOL_MEDIUMSLATEBLUE"X"SCOL_MEDIUMSPRINGGREEN"X"SCOL_MEDIUMTURQUOISE"X"SCOL_MEDIUMVIOLETRED"X"SCOL_MIDNIGHTBLUE"X"SCOL_MINTCREAM"X"SCOL_MISTYROSE"X"SCOL_MOCCASIN"X"SCOL_NAVAJOWHITE"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_NAVY"X"SCOL_OLDLACE"X"SCOL_OLIVE"X"SCOL_OLIVEDRAB"X"SCOL_ORANGE"X"SCOL_ORANGERED"X"SCOL_ORCHID"X"SCOL_PALEGOLDENROD"X"SCOL_PALEGREEN"X"SCOL_PALETURQUOISE"X"SCOL_PALEVIOLETRED"X"SCOL_PAPAYAWHIP"X"SCOL_PEACHPUFF"X"SCOL_PERU"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_PINK"X"SCOL_PLUM"X"SCOL_POWDERBLUE"X"SCOL_PURPLE"X"SCOL_REBECCAPURPLE"X"SCOL_ROSYBROWN"X"SCOL_ROYALBLUE"X"SCOL_SADDLEBROWN"X"SCOL_SALMON"X"SCOL_SANDYBROWN"X"SCOL_SEAGREEN"X"SCOL_SEASHELL"X"SCOL_SIENNA"X"SCOL_SILVER"X");
+		SendClientMessage(playerid,COLOR_WHITE,""SCOL_SKYBLUE"X"SCOL_SLATEBLUE"X"SCOL_SLATEGRAY"X"SCOL_SNOW"X"SCOL_SPRINGGREEN"X"SCOL_STEELBLUE"X"SCOL_TAN"X"SCOL_TEAL"X"SCOL_THISTLE"X"SCOL_TOMATO"X"SCOL_TURQUOISE"X"SCOL_VIOLET"X"SCOL_WHEAT"X"SCOL_WHITESMOKE"X"SCOL_YELLOWGREEN"X");
 		return 1;
 	}
 
@@ -1101,733 +1097,733 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 
 	//TELEPORT COMMANDS
-	if (strcmp("/teleport warehouse2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WAREHOUSE2);
+	if (strcmp("/tp warehouse2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE2);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport transfenders", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_TRANSFENDER);
+	if (strcmp("/tp transfenders", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_TRANSFENDER);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport worldofcoq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WORLDOFCOQ);
+	if (strcmp("/tp worldofcoq", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WORLDOFCOQ);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport ammunation2", cmdtext, true, 30) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION2);
+	if (strcmp("/tp ammunation2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION2);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport suburban", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SUBURBAN);
+	if (strcmp("/tp suburban", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SUBURBAN);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport denise", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_DENISEBEDROOM);
+	if (strcmp("/tp denise", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_DENISEBEDROOM);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport sfgarage", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SFGARAGE);
+	if (strcmp("/tp sfgarage", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SFGARAGE);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport ovalstadium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_OVALSTADIUM);
+	if (strcmp("/tp ovalstadium", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_OVALSTADIUM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport libertycity", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LIBERTYCITY);
+	if (strcmp("/tp libertycity", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LIBERTYCITY);
 	    return 1;
 	}
 
-	if (strcmp("/teleport sweet", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SWEETSHOUSE);
+	if (strcmp("/tp sweet", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SWEETSHOUSE);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport caligulas", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CALIGULAS);
+	if (strcmp("/tp caligulas", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CALIGULAS);
 	    return 1;
 	}
 
-	if (strcmp("/teleport wuzimu", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WUZIMU);
+	if (strcmp("/tp wuzimu", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WUZIMU);
 	    return 1;
 	}
 
-	if (strcmp("/teleport jet", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_JET);
+	if (strcmp("/tp jet", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_JET);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport welcomepump", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WELCOMEPUMP);
+	if (strcmp("/tp welcomepump", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WELCOMEPUMP);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport burgh3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH3);
+	if (strcmp("/tp burgh3", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH3);
 	    return 1;
 	}
 
-	if (strcmp("/teleport abattoir", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ABATTOIR);
+	if (strcmp("/tp abattoir", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ABATTOIR);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport shcameltoe", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SHCAMELTOE);
+	if (strcmp("/tp shcameltoe", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SHCAMELTOE);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport caligroof", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CALIGROOF);
+	if (strcmp("/tp caligroof", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CALIGROOF);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport bduppalace", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BDUPPALACE);
+	if (strcmp("/tp bduppalace", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BDUPPALACE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport pigpen", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_THEPIGPEN);
+	if (strcmp("/tp pigpen", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_THEPIGPEN);
 	    return 1;
 	}
 
-	if (strcmp("/teleport ryder", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_RYDERSHOUSE);
+	if (strcmp("/tp ryder", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_RYDERSHOUSE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport katiesnest", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_KATIESNEST);
+	if (strcmp("/tp katiesnest", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_KATIESNEST);
 	    return 1;
 	}
 
-	if (strcmp("/teleport reece", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_REECES);
+	if (strcmp("/tp reece", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_REECES);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport aptrailer", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_APTRAILER);
+	if (strcmp("/tp aptrailer", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_APTRAILER);
 	    return 1;
 	}
 
-	if (strcmp("/teleport crackpalace", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BSCRACKPALACE);
+	if (strcmp("/tp crackpalace", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BSCRACKPALACE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH2);
+	if (strcmp("/tp burgh2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH2);
 	    return 1;
 	}
 
-	if (strcmp("/teleport pairburgh", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_PAIRBURGH);
+	if (strcmp("/tp pairburgh", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_PAIRBURGH);
 	    return 1;
 	}
 
-	if (strcmp("/teleport caligoffice", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CALIGOFFICE);
+	if (strcmp("/tp caligoffice", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CALIGOFFICE);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport stripcasino", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_STRIPCASINO);
+	if (strcmp("/tp stripcasino", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_STRIPCASINO);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport locolowco", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LOCOLOWCO);
+	if (strcmp("/tp locolowco", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LOCOLOWCO);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport brothel1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BROTHEL1);
+	if (strcmp("/tp brothel1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BROTHEL1);
 	    return 1;
 	}
 
-	if (strcmp("/teleport brothel2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BROTHEL2);
+	if (strcmp("/tp brothel2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BROTHEL2);
 	    return 1;
 	}
 
-	if (strcmp("/teleport insidetrack", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ITBETTING);
+	if (strcmp("/tp insidetrack", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ITBETTING);
 	    return 1;
 	}
 
-	if (strcmp("/teleport bfrecords", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BFRECORDS);
+	if (strcmp("/tp bfrecords", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BFRECORDS);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport bsranch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BSRANCH);
+	if (strcmp("/tp bsranch", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BSRANCH);
 	    return 1;
 	}
 
-	if (strcmp("/teleport bdupapt", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BDUPAPT);
+	if (strcmp("/tp bdupapt", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BDUPAPT);
 	    return 1;
 	}
 
-	if (strcmp("/teleport wheelarch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WARCHANGELS);
+	if (strcmp("/tp wheelarch", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WARCHANGELS);
 	    return 1;
 	}
 
-	if (strcmp("/teleport oglochouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_OGLOCHOUSE);
+	if (strcmp("/tp oglochouse", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_OGLOCHOUSE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BARBERSHOP);
+	if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport planningdpt", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_PLANNINGDPT);
+	if (strcmp("/tp planningdpt", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_PLANNINGDPT);
 	    return 1;
 	}
 
-	if (strcmp("/teleport lvpdhq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LVPDHQ);
+	if (strcmp("/tp lvpdhq", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LVPDHQ);
 	    return 1;
 	}
 
-	if (strcmp("/teleport prolaps", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_PROLAPS);
+	if (strcmp("/tp prolaps", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_PROLAPS);
 	    return 1;
 	}
 
-	if (strcmp("/teleport sexshop", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SEXSHOP);
+	if (strcmp("/tp sexshop", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SEXSHOP);
 	    return 1;
 	}
 
-	if (strcmp("/teleport lvtattoo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LVTATTOO);
+	if (strcmp("/tp lvtattoo", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LVTATTOO);
 	    return 1;
 	}
 
-	if (strcmp("/teleport helenasbarn", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_HELENASBARN);
+	if (strcmp("/tp helenasbarn", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_HELENASBARN);
 	    return 1;
 	}
 
-	if (strcmp("/teleport johnsonhouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_JOHNSONHOUSE);
+	if (strcmp("/tp johnsonhouse", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_JOHNSONHOUSE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport pleasuredomes", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_PLEASUREDOMES);
+	if (strcmp("/tp pleasuredomes", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_PLEASUREDOMES);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport burgh1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH1);
+	if (strcmp("/tp burgh1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH1);
 	    return 1;
 	}
 
-	if (strcmp("/teleport bikeschool", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BIKESCHOOL);
+	if (strcmp("/tp bikeschool", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BIKESCHOOL);
 	    return 1;
 	}
 
-	if (strcmp("/teleport drivingschool", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_DRIVESCHOOL);
+	if (strcmp("/tp drivingschool", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_DRIVESCHOOL);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport burgh12", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH12);
+	if (strcmp("/tp burgh12", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH12);
 	    return 1;
 	}
 
-	if (strcmp("/teleport ammunation3", cmdtext, true, 30) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION3);
+	if (strcmp("/tp ammunation3", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION3);
 	    return 1;
 	}
 
-	if (strcmp("/teleport jaysdinner", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_JAYSDINER);
+	if (strcmp("/tp jaysdinner", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_JAYSDINER);
 	    return 1;
 	}
 
-	if (strcmp("/teleport 247v5", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_247V5);
+	if (strcmp("/tp 247v5", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_247V5);
 	    return 1;
 	}
 
-	if (strcmp("/teleport michelle", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_MICHELLESNEST);
+	if (strcmp("/tp michelle", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_MICHELLESNEST);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh13", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH13);
+	if (strcmp("/tp burgh13", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH13);
 	    return 1;
 	}
 
-	if (strcmp("/teleport dirtbike", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_DIRTBIKE);
+	if (strcmp("/tp dirtbike", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_DIRTBIKE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh15", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH15);
+	if (strcmp("/tp burgh15", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH15);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport gantongym", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_GANTONGYM);
+	if (strcmp("/tp gantongym", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_GANTONGYM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport diner1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_DINER1);
+	if (strcmp("/tp diner1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_DINER1);
 	    return 1;
 	}
 
-	if (strcmp("/teleport pizzastack", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_PIZZASTACK);
+	if (strcmp("/tp pizzastack", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_PIZZASTACK);
 	    return 1;
 	}
 
-	if (strcmp("/teleport victim", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_VICTIM);
+	if (strcmp("/tp victim", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_VICTIM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport barbara", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BARBARASNEST);
+	if (strcmp("/tp barbara", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BARBARASNEST);
 	    return 1;
 	}
 
-	if (strcmp("/teleport madddogg", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_MADDDOGGMANSION);
+	if (strcmp("/tp madddogg", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_MADDDOGGMANSION);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burningdesire", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURNINGDESIREB);
+	if (strcmp("/tp burningdesire", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURNINGDESIREB);
 	    return 1;
 	}
 
-	if (strcmp("/teleport safehouse1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SAFEHOUSE1);
+	if (strcmp("/tp safehouse1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE1);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport burgh4", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH4);
+	if (strcmp("/tp burgh4", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH4);
 	    return 1;
 	}
 
-	if (strcmp("/teleport crackden", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CRACKDEN);
+	if (strcmp("/tp crackden", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CRACKDEN);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh11", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH11);
+	if (strcmp("/tp burgh11", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH11);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh16", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH16);
+	if (strcmp("/tp burgh16", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH16);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh17", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH17);
+	if (strcmp("/tp burgh17", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH17);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport safehouse2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SAFEHOUSE2);
+	if (strcmp("/tp safehouse2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE2);
 	    return 1;
 	}
 
-	if (strcmp("/teleport millie", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_MILLIESROOM);
+	if (strcmp("/tp millie", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_MILLIESROOM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport cobragym", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_COBRAGYM);
+	if (strcmp("/tp cobragym", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_COBRAGYM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport lspdhq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LSPDHQ);
+	if (strcmp("/tp lspdhq", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LSPDHQ);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport burgh18", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH18);
+	if (strcmp("/tp burgh18", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH18);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh19", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH19);
+	if (strcmp("/tp burgh19", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH19);
 	    return 1;
 	}
 
-	if (strcmp("/teleport zerorc", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ZERORCSHOP);
+	if (strcmp("/tp zerorc", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ZERORCSHOP);
 	    return 1;
 	}
 
-	if (strcmp("/teleport ammunation4", cmdtext, true, 30) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION4);
+	if (strcmp("/tp ammunation4", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION4);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport ammunation5", cmdtext, true, 30) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION5);
+	if (strcmp("/tp ammunation5", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION5);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport 247v6", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_247V6);
+	if (strcmp("/tp 247v6", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_247V6);
 	    return 1;
 	}
 
-	if (strcmp("/teleport valleydiner", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_VALLEYDINER);
+	if (strcmp("/tp valleydiner", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_VALLEYDINER);
 	    return 1;
 	}
 
-	if (strcmp("/teleport whorehouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WHOREHOUSE);
+	if (strcmp("/tp whorehouse", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WHOREHOUSE);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport ammunation", cmdtext, true, 30) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_AMMUNATION);
+	if (strcmp("/tp ammunation", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION);
 	    return 1;
 	}
 
-	if (strcmp("/teleport belowbeltgym", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BBELTGYM);
+	if (strcmp("/tp belowbeltgym", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BBELTGYM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport 8track", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_8TSTADIUM);
+	if (strcmp("/tp 8track", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_8TSTADIUM);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport colonels", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_COLONELS);
+	if (strcmp("/tp colonels", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_COLONELS);
 	    return 1;
 	}
 
-	if (strcmp("/teleport verdantbluffs", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SHVBLUFFS);
+	if (strcmp("/tp verdantbluffs", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SHVBLUFFS);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport burgh21", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH21);
+	if (strcmp("/tp burgh21", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH21);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport safehouse3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SAFEHOUSE3);
+	if (strcmp("/tp safehouse3", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE3);
 	    return 1;
 	}
 
-	if (strcmp("/teleport cbell", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CBELL);
+	if (strcmp("/tp cbell", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CBELL);
 	    return 1;
 	}
 
-	if (strcmp("/teleport andromada", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ANDROMADA);
+	if (strcmp("/tp andromada", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ANDROMADA);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh22", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH22);
+	if (strcmp("/tp burgh22", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH22);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh23", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH23);
+	if (strcmp("/tp burgh23", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH23);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport sfpdhq", cmdtext, true, 20) == 0) {
+	if (strcmp("/tp sfpdhq", cmdtext, true, 20) == 0) {
     	ISAMPP_TELEPORT(playerid, LOC_SFPDHQ);
 	    return 1;
 	}
 
-	if (strcmp("/teleport 247v2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_247V2);
+	if (strcmp("/tp 247v2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_247V2);
 	    return 1;
 	}
 
-	if (strcmp("/teleport fourdragons", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_FOURDRAGONS);
+	if (strcmp("/tp fourdragons", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_FOURDRAGONS);
 	    return 1;
 	}
 
-	if (strcmp("/teleport rcbattlefield", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_RCBATTLEFIELD);
+	if (strcmp("/tp rcbattlefield", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_RCBATTLEFIELD);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgershot", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGERSHOT);
+	if (strcmp("/tp burgershot", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGERSHOT);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport actower", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ACTOWER);
+	if (strcmp("/tp actower", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ACTOWER);
 	    return 1;
 	}
 
-	if (strcmp("/teleport safehouse4", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SAFEHOUSE4);
+	if (strcmp("/tp safehouse4", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE4);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh14", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH14);
+	if (strcmp("/tp burgh14", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH14);
 	    return 1;
 	}
 
-	if (strcmp("/teleport cfdjanitor", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CFDJANITOR);
+	if (strcmp("/tp cfdjanitor", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CFDJANITOR);
 	    return 1;
 	}
 
-	if (strcmp("/teleport cfdsuite", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CFDSUITE);
+	if (strcmp("/tp cfdsuite", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CFDSUITE);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport bar", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BAR);
+	if (strcmp("/tp bar", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BAR);
 	    return 1;
 	}
 
-	if (strcmp("/teleport shwfield", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SHWFIELD);
+	if (strcmp("/tp shwfield", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SHWFIELD);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport casino", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CASINO);
+	if (strcmp("/tp casino", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CASINO);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport budgetmotel", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BUDGETMOTEL);
+	if (strcmp("/tp budgetmotel", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BUDGETMOTEL);
 	    return 1;
 	}
 
-	if (strcmp("/teleport usafehouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_USAFEHOUSE);
+	if (strcmp("/tp usafehouse", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_USAFEHOUSE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport barber2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BARBERSHOP2);
+	if (strcmp("/tp barber2", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP2);
 	    return 1;
 	}
 
-	if (strcmp("/teleport wardrobe", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WARDROBE);
+	if (strcmp("/tp wardrobe", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WARDROBE);
 	    return 1;
 	}
 
-	if (strcmp("/teleport didersachs", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_DIDERSACHS);
+	if (strcmp("/tp didersachs", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_DIDERSACHS);
 	    return 1;
 	}
 
-	if (strcmp("/teleport kickstartstadium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_KICKSTADIUM);
+	if (strcmp("/tp kickstartstadium", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_KICKSTADIUM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport lsairport", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LSAIRPORT);
+	if (strcmp("/tp lsairport", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LSAIRPORT);
 	    return 1;
 	}
 
-	if (strcmp("/teleport francisintl", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_FRANCISINTL);
+	if (strcmp("/tp francisintl", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_FRANCISINTL);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport jeffersonmotel", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_JEFFERSONM);
+	if (strcmp("/tp jeffersonmotel", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_JEFFERSONM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport binco", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BINCO);
+	if (strcmp("/tp binco", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BINCO);
 	    return 1;
 	}
 
-	if (strcmp("/teleport 4burgh", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_4BURGH);
+	if (strcmp("/tp 4burgh", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_4BURGH);
 	    return 1;
 	}
 
-	if (strcmp("/teleport bloodbowl", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BLOODBOWL);
+	if (strcmp("/tp bloodbowl", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BLOODBOWL);
 	    return 1;
 	}
 
-	if (strcmp("/teleport burgh20", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BURGH20);
+	if (strcmp("/tp burgh20", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH20);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport lstattoo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LSTATTOO);
+	if (strcmp("/tp lstattoo", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LSTATTOO);
 	    return 1;
 	}
 
-	if (strcmp("/teleport 247v4", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_247V4);
+	if (strcmp("/tp 247v4", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_247V4);
 	    return 1;
 	}
 
-	if (strcmp("/teleport vicestadium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_VICESTADIUM);
+	if (strcmp("/tp vicestadium", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_VICESTADIUM);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport lsftattoo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LSFTATTOO);
+	if (strcmp("/tp lsftattoo", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LSFTATTOO);
 	    return 1;
 	}
 
-	if (strcmp("/teleport 247v1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_247V1);
+	if (strcmp("/tp 247v1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_247V1);
 	    return 1;
 	}
 
-	if (strcmp("/teleport donutshop", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_RUSTYBDONUTS);
+	if (strcmp("/tp donutshop", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_RUSTYBDONUTS);
 	    return 1;
 	}
 
-	if (strcmp("/teleport club", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_CLUB);
+	if (strcmp("/tp club", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_CLUB);
 	    return 1;
 	}
 
-	if (strcmp("/teleport shermandam", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_SHERMANDAM);
+	if (strcmp("/tp shermandam", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_SHERMANDAM);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport warehouse1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WAREHOUSE1);
+	if (strcmp("/tp warehouse1", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE1);
 	    return 1;
 	}
 
-	if (strcmp("/teleport 247v3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_247V3);
+	if (strcmp("/tp 247v3", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_247V3);
 	    return 1;
 	}
 
-	if (strcmp("/teleport zip", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ZIP);
+	if (strcmp("/tp zip", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ZIP);
 	    return 1;
 	}
 
-	if (strcmp("/teleport atrium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ATRIUM);
+	if (strcmp("/tp atrium", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ATRIUM);
 	    return 1;
 	}
 
-	if (strcmp("/teleport lilprobeinn", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LILPROBEINN);
+	if (strcmp("/tp lilprobeinn", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LILPROBEINN);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport palobank", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_PALOBANK);
+	if (strcmp("/tp palobank", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_PALOBANK);
 	    return 1;
 	}
 
-	if (strcmp("/teleport palodiner", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_PALODINER);
+	if (strcmp("/tp palodiner", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_PALODINER);
 	    return 1;
 	}
 
-	if (strcmp("/teleport dilligast", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_DILLIGASST);
+	if (strcmp("/tp dilligast", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_DILLIGASST);
 	    return 1;
 	}
 
-	if (strcmp("/teleport ranch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_TORRENOR);
+	if (strcmp("/tp ranch", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_TORRENOR);
 	    return 1;
 	}
 
-	if (strcmp("/teleport zombotech", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_ZOMBOTECH);
+	if (strcmp("/tp zombotech", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_ZOMBOTECH);
 	    return 1;
 	}
 
-	if (strcmp("/teleport cemetery", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_LSCEMETC);
+	if (strcmp("/tp cemetery", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_LSCEMETC);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport liqorstore", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BLUEBLIQ);
+	if (strcmp("/tp liqorstore", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BLUEBLIQ);
 	    return 1;
 	}
 
-	if (strcmp("/teleport warehouse3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WAREHOUSE3);
+	if (strcmp("/tp warehouse3", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE3);
 	    return 1;
 	}
 
-	if (strcmp("/teleport militarydepo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_MILITARYDEPO);
+	if (strcmp("/tp militarydepo", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_MILITARYDEPO);
 	    return 1;
 	}
 
-	if (strcmp("/teleport area69", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_AREA69);
+	if (strcmp("/tp area69", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_AREA69);
 	    return 1;
 	}
 
-	if (strcmp("/teleport bikesch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_BIKESCH);
+	if (strcmp("/tp bikesch", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_BIKESCH);
 	    return 1;
 	}
 
-	if (strcmp("/teleport ottoautos", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_OTTOAUTOS);
+	if (strcmp("/tp ottoautos", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_OTTOAUTOS);
 	    return 1;
 	}
 	
-	if (strcmp("/teleport wangcars", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORT(playerid, LOC_WANGCARS);
+	if (strcmp("/tp wangcars", cmdtext, true, 20) == 0) {
+    	ISAMPP_TELEPORTEX(playerid, LOC_WANGCARS);
 	    return 1;
 	}
 	
