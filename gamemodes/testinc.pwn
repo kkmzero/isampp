@@ -28,7 +28,7 @@
 #endif
 
 
-//PICKUPS
+//ACTIVE PICKUPS
 new pickupWeapBrassKnuckles;
 new pickupWeapGolfClub;
 new pickupWeapKnife;
@@ -538,146 +538,144 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_ENEXMARKERBLUE, 1, 225.5590,2492.2830,16.4844, -1);
 	CreatePickup(PICKUP_CJFIELDGUN, 1, 220.5590,2492.2830,16.4844, -1);
 	CreatePickup(PICKUP_PUMPKIN, 1, 215.5590,2492.2830,16.4844, -1);
-	CreatePickup(PICKUP_HEARTBED, 1, 210.5590,2492.2830,16.4844, -1);
-	CreatePickup(PICKUP_CJCAMMONET, 1, 205.5590,2492.2830,16.4844, -1);
-	CreatePickup(PICKUP_ALTCHAINSAW, 1, 200.5590,2492.2830,16.4844, -1);
+	CreatePickup(PICKUP_ALTCHAINSAW, 1, 210.5590,2492.2830,16.4844, -1);
 	
 	//VEHICLES - ROW1
 	//[!]WARNING: Do not use more than 1 row of vehicles otherwise the game client might crash
-	AddStaticVehicle(VEH_LANDSTALKER,425.7991,2523.3472,16.5794,180,0,0);
-	AddStaticVehicle(VEH_BRAVURA,420.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BUFFALO,415.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_LINERUNNER,410.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_PERENNIAL,405.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SENTINEL,400.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_LANDSTALKER,425.7991,2523.3472,16.5794,180,CARCOL_SAMP_BRIGHTGREEN,0);
+	AddStaticVehicle(VEH_BRAVURA,420.7991,2523.3472,16.5764,180,CARCOL_SAMP_BRIGHTBEIGE,0);
+	AddStaticVehicle(VEH_BUFFALO,415.7991,2523.3472,16.5764,180,CARCOL_SAMP_BRIGHTINDIGO,0);
+	AddStaticVehicle(VEH_LINERUNNER,410.7991,2523.3472,16.5764,180,CARCOL_SAMP_BEIGE,0);
+	AddStaticVehicle(VEH_PERENNIAL,405.7991,2523.3472,16.5764,180,CARCOL_SAMP_BRONZE,0);
+	AddStaticVehicle(VEH_SENTINEL,400.7991,2523.3472,16.5764,180,CARCOL_SAMP_GOLD,0);
 	AddStaticVehicle(VEH_DUMPER,395.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FIRETRUCK,390.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TRASHMASTER,385.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_STRETCH,380.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MANANA,375.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_INFERNUS,370.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_VOODOO,365.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_PONY,360.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MULE,355.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_CHEETAH,350.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_AMBULANCE,345.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MOONBEAM,340.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ESPERANTO,335.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TAXI,330.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_WASHINGTON,325.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BOBCAT,320.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MRWHOOPEE,315.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BFINJECTION,310.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_PREMIER,305.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ENFORCER,300.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SECURICAR,295.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BANSHEE,290.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BUS,285.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_FIRETRUCK,390.7991,2523.3472,16.5764,180,CARCOL_SAMP_LIGHTPURPLE,0);
+	AddStaticVehicle(VEH_TRASHMASTER,385.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKPURPLE,0);
+	AddStaticVehicle(VEH_STRETCH,380.7991,2523.3472,16.5764,180,CARCOL_SAMP_LIME,0);
+	AddStaticVehicle(VEH_MANANA,375.7991,2523.3472,16.5764,180,CARCOL_SAMP_LIGHTPINK,0);
+	AddStaticVehicle(VEH_INFERNUS,370.7991,2523.3472,16.5764,180,CARCOL_SAMP_DEEPPURPLE,0);
+	AddStaticVehicle(VEH_VOODOO,365.7991,2523.3472,16.5764,180,CARCOL_SAMP_SMOKEGREEN,0);
+	AddStaticVehicle(VEH_PONY,360.7991,2523.3472,16.5764,180,CARCOL_SAMP_GREENBROWN,0);
+	AddStaticVehicle(VEH_MULE,355.7991,2523.3472,16.5764,180,CARCOL_SAMP_PINE,0);
+	AddStaticVehicle(VEH_CHEETAH,350.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKENGREEN,0);
+	AddStaticVehicle(VEH_AMBULANCE,345.7991,2523.3472,16.5764,180,CARCOL_SAMP_BLUE,0);
+	AddStaticVehicle(VEH_MOONBEAM,340.7991,2523.3472,16.5764,180,CARCOL_SAMP_GREEN,0);
+	AddStaticVehicle(VEH_ESPERANTO,335.7991,2523.3472,16.5764,180,CARCOL_SAMP_NEONGREEN,0);
+	AddStaticVehicle(VEH_TAXI,330.7991,2523.3472,16.5764,180,CARCOL_SAMP_NEONCYAN,0);
+	AddStaticVehicle(VEH_WASHINGTON,325.7991,2523.3472,16.5764,180,CARCOL_SAMP_LIGHTBEIGE,0);
+	AddStaticVehicle(VEH_BOBCAT,320.7991,2523.3472,16.5764,180,CARCOL_SAMP_WHITESMOKE,0);
+	AddStaticVehicle(VEH_MRWHOOPEE,315.7991,2523.3472,16.5764,180,CARCOL_SAMP_DEEPORANGE,0);
+	AddStaticVehicle(VEH_BFINJECTION,310.7991,2523.3472,16.5764,180,CARCOL_SAMP_DEEPBROWN,0);
+	AddStaticVehicle(VEH_PREMIER,305.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKFOREST,0);
+	AddStaticVehicle(VEH_ENFORCER,300.7991,2523.3472,16.5764,180,CARCOL_SAMP_WASHEDRED,0);
+	AddStaticVehicle(VEH_SECURICAR,295.7991,2523.3472,16.5764,180,CARCOL_SAMP_SKYBLUE,0);
+	AddStaticVehicle(VEH_BANSHEE,290.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKENCYAN,0);
+	AddStaticVehicle(VEH_BUS,285.7991,2523.3472,16.5764,180,CARCOL_SAMP_BLUESMOKE,0);
 	AddStaticVehicle(VEH_RHINO,280.7991,2523.3472,16.5764,180,0,0);
 	AddStaticVehicle(VEH_BARRACKS,275.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_HOTKNIFE,270.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_PREVION,265.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HOTKNIFE,270.7991,2523.3472,16.5764,180,CARCOL_SAMP_CYAN,0);
+	AddStaticVehicle(VEH_PREVION,265.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKENBLUE,0);
 	AddStaticVehicle(VEH_COACH,260.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_CABBIE,255.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_STALLION,250.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_RUMPO,245.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ROMERO,240.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_PACKER,235.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MONSTER,230.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ADMIRAL,225.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TURISMO,220.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FLATBED,215.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_YANKEE,210.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_CADDY,205.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SOLAIR,200.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TOPFUN,195.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_GLENDALE,190.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_OCEANIC,185.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_CABBIE,255.7991,2523.3472,16.5764,180,CARCOL_SAMP_PURPLE,0);
+	AddStaticVehicle(VEH_STALLION,250.7991,2523.3472,16.5764,180,CARCOL_SAMP_WOODBROWN,0);
+	AddStaticVehicle(VEH_RUMPO,245.7991,2523.3472,16.5764,180,CARCOL_SAMP_WHITEPINK,0);
+	AddStaticVehicle(VEH_ROMERO,240.7991,2523.3472,16.5764,180,CARCOL_SAMP_WHITEPINK2,0);
+	AddStaticVehicle(VEH_PACKER,235.7991,2523.3472,16.5764,180,CARCOL_SAMP_WASHEDPURPLE,0);
+	AddStaticVehicle(VEH_MONSTER,230.7991,2523.3472,16.5764,180,CARCOL_SAMP_GREENBROWN2,0);
+	AddStaticVehicle(VEH_ADMIRAL,225.7991,2523.3472,16.5764,180,CARCOL_SAMP_BROWN2,0);
+	AddStaticVehicle(VEH_TURISMO,220.7991,2523.3472,16.5764,180,CARCOL_SAMP_BROWN3,0);
+	AddStaticVehicle(VEH_FLATBED,215.7991,2523.3472,16.5764,180,CARCOL_SAMP_ORANGERED,0);
+	AddStaticVehicle(VEH_YANKEE,210.7991,2523.3472,16.5764,180,CARCOL_SAMP_GLOSSPURPLE,0);
+	AddStaticVehicle(VEH_CADDY,205.7991,2523.3472,16.5764,180,CARCOL_SAMP_LIGHTPINK2,0);
+	AddStaticVehicle(VEH_SOLAIR,200.7991,2523.3472,16.5764,180,CARCOL_SAMP_DEEPPINK,0);
+	AddStaticVehicle(VEH_TOPFUN,195.7991,2523.3472,16.5764,180,CARCOL_SAMP_OXBLOOD,0);
+	AddStaticVehicle(VEH_GLENDALE,190.7991,2523.3472,16.5764,180,CARCOL_SAMP_BROWN4,0);
+	AddStaticVehicle(VEH_OCEANIC,185.7991,2523.3472,16.5764,180,CARCOL_SAMP_ORANGERED2,0);
 	AddStaticVehicle(VEH_PATRIOT,180.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_HERMES,175.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SABRE,170.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ZR350,165.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_WALTON,160.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_REGINA,155.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_COMET,150.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BURRITO,145.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_CAMPER,140.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BAGGAGE,135.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_DOZER,130.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_RANCHER,125.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FBIRANCHER,120.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_VIRGO,115.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_GREENWOOD,110.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_HOTRING,105.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SANDKING,100.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_HERMES,175.7991,2523.3472,16.5764,180,CARCOL_SAMP_COPPER,0);
+	AddStaticVehicle(VEH_SABRE,170.7991,2523.3472,16.5764,180,CARCOL_SAMP_ORANGE,0);
+	AddStaticVehicle(VEH_ZR350,165.7991,2523.3472,16.5764,180,CARCOL_SAMP_WASHEDPINK,0);
+	AddStaticVehicle(VEH_WALTON,160.7991,2523.3472,16.5764,180,CARCOL_SAMP_WHITESMOKE2,0);
+	AddStaticVehicle(VEH_REGINA,155.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKGREEN,0);
+	AddStaticVehicle(VEH_COMET,150.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKGREEN2,0);
+	AddStaticVehicle(VEH_BURRITO,145.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKGREEN3,0);
+	AddStaticVehicle(VEH_CAMPER,140.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKGREEN4,0);
+	AddStaticVehicle(VEH_BAGGAGE,135.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKENPURPLE,0);
+	AddStaticVehicle(VEH_DOZER,130.7991,2523.3472,16.5764,180,CARCOL_SAMP_GREENLIME,0);
+	AddStaticVehicle(VEH_RANCHER,125.7991,2523.3472,16.5764,180,CARCOL_SAMP_CREAM,0);
+	AddStaticVehicle(VEH_FBIRANCHER,120.7991,2523.3472,16.5764,180,CARCOL_SAMP_WHITESMOKE3,0);
+	AddStaticVehicle(VEH_VIRGO,115.7991,2523.3472,16.5764,180,CARCOL_SAMP_DEEPYELLOW,0);
+	AddStaticVehicle(VEH_GREENWOOD,110.7991,2523.3472,16.5764,180,CARCOL_SAMP_LIME2,0);
+	AddStaticVehicle(VEH_HOTRING,105.7991,2523.3472,16.5764,180,CARCOL_SAMP_WHITESMOKE4,0);
+	AddStaticVehicle(VEH_SANDKING,100.7991,2523.3472,16.5764,180,CARCOL_SAMP_DEEPLIME,0);
 	
 	//VEHICLES - ROW2
-	/*AddStaticVehicle(VEH_BLISTA,425.7991,2513.3472,16.5794,180,0,0);
-	AddStaticVehicle(VEH_BOXVILLE,420.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BENSON,415.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MESA,410.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_HOTRINGA,405.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_HOTRINGB,400.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BLOODRING,395.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_RANCHERLURE,390.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SUPERGT,385.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ELEGANT,380.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_JOURNEY,375.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TANKER,370.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ROADTRAIN,365.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_NEBULA,360.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MAJESTIC,355.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BUCCANEER,350.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_CEMENTTRUCK,345.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TOWTRUCK,340.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FORTUNE,335.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_CADRONA,330.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FBITRUCK,325.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_WILLARD,320.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FORKLIFT,315.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TRACTOR,310.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_COMBINE,305.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FELTZER,300.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_REMINGTON,295.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SLAMVAN,290.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BLADE,285.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_VORTEX,280.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_VINCENT,275.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BULLET,270.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_CLOVER,265.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SADLER,260.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FIRETRUCKLA,255.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_HUSTLER,250.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_INTRUDER,245.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_PRIMO,240.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TAMPA,235.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SUNRISE,230.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MERIT,225.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_UTILITY,220.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_YOSEMITE,215.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_WINDSOR,210.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MONSTERA,205.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MONSTERB,200.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_URANUS,195.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_JESTER,190.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SULTAN,185.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_STRATUM,180.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_ELEGY,175.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FLASH,170.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TAHOMA,165.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SAVANNA,160.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BANDITO,155.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_KART,150.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MOWER,145.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_DUNE,140.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SWEEPER,135.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BROADWAY,130.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TORNADO,125.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_DFT30,120.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_HUNTLEY,115.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_STAFFORD,110.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_NEWSVAN,105.7991,2513.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_TUG,100.7991,2513.3472,16.5764,180,0,0);*/
+	/*AddStaticVehicle(VEH_BLISTA,425.7991,2513.3472,16.5794,180,CARCOL_SAMP_SEABLUE,0);
+	AddStaticVehicle(VEH_BOXVILLE,420.7991,2513.3472,16.5764,180,CARCOL_SAMP_SEABLUE2,0);
+	AddStaticVehicle(VEH_BENSON,415.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKSEABLUE,0);
+	AddStaticVehicle(VEH_MESA,410.7991,2513.3472,16.5764,180,CARCOL_SAMP_DEEPPURPLE2,0);
+	AddStaticVehicle(VEH_HOTRINGA,405.7991,2513.3472,16.5764,180,CARCOL_SAMP_REDCOPPER,0);
+	AddStaticVehicle(VEH_HOTRINGB,400.7991,2513.3472,16.5764,180,CARCOL_SAMP_WHITECREAM,0);
+	AddStaticVehicle(VEH_BLOODRING,395.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKLIME,0);
+	AddStaticVehicle(VEH_RANCHERLURE,390.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKFOREST2,0);
+	AddStaticVehicle(VEH_SUPERGT,385.7991,2513.3472,16.5764,180,CARCOL_SAMP_LIGHTORANGE,0);
+	AddStaticVehicle(VEH_ELEGANT,380.7991,2513.3472,16.5764,180,CARCOL_SAMP_LIGHTCYAN,0);
+	AddStaticVehicle(VEH_JOURNEY,375.7991,2513.3472,16.5764,180,CARCOL_SAMP_LIGHTORANGE2,0);
+	AddStaticVehicle(VEH_TANKER,370.7991,2513.3472,16.5764,180,CARCOL_SAMP_ORANGE2,0);
+	AddStaticVehicle(VEH_ROADTRAIN,365.7991,2513.3472,16.5764,180,CARCOL_SAMP_PINKPURPLE,0);
+	AddStaticVehicle(VEH_NEBULA,360.7991,2513.3472,16.5764,180,CARCOL_SAMP_YELLOWBEIGE,0);
+	AddStaticVehicle(VEH_MAJESTIC,355.7991,2513.3472,16.5764,180,CARCOL_SAMP_ORANGE3,0);
+	AddStaticVehicle(VEH_BUCCANEER,350.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKBLUE4,0);
+	AddStaticVehicle(VEH_CEMENTTRUCK,345.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKWOOD,0);
+	AddStaticVehicle(VEH_TOWTRUCK,340.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKSLIME,0);
+	AddStaticVehicle(VEH_FORTUNE,335.7991,2513.3472,16.5764,180,CARCOL_SAMP_NEONSLIME,0);
+	AddStaticVehicle(VEH_CADRONA,330.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKFOREST3,0);
+	AddStaticVehicle(VEH_FBITRUCK,325.7991,2513.3472,16.5764,180,CARCOL_SAMP_GOLD2,0);
+	AddStaticVehicle(VEH_WILLARD,320.7991,2513.3472,16.5764,180,CARCOL_SAMP_DEEPGREEN2,0);
+	AddStaticVehicle(VEH_FORKLIFT,315.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKRED,0);
+	AddStaticVehicle(VEH_TRACTOR,310.7991,2513.3472,16.5764,180,CARCOL_SAMP_BROWN5,0);
+	AddStaticVehicle(VEH_COMBINE,305.7991,2513.3472,16.5764,180,CARCOL_SAMP_LIGHTMAGENTA,0);
+	AddStaticVehicle(VEH_FELTZER,300.7991,2513.3472,16.5764,180,CARCOL_SAMP_MAGENTA,0);
+	AddStaticVehicle(VEH_REMINGTON,295.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKGREEN6,0);
+	AddStaticVehicle(VEH_SLAMVAN,290.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKENGREEN2,0);
+	AddStaticVehicle(VEH_BLADE,285.7991,2513.3472,16.5764,180,CARCOL_SAMP_BLUESMOKE2,0);
+	AddStaticVehicle(VEH_VORTEX,280.7991,2513.3472,16.5764,180,CARCOL_SAMP_WASHEDPINK2,0);
+	AddStaticVehicle(VEH_VINCENT,275.7991,2513.3472,16.5764,180,CARCOL_SAMP_LIGHTBROWN,0);
+	AddStaticVehicle(VEH_BULLET,270.7991,2513.3472,16.5764,180,CARCOL_SAMP_COPPERRED,0);
+	AddStaticVehicle(VEH_CLOVER,265.7991,2513.3472,16.5764,180,CARCOL_SAMP_BLUESLIME,0);
+	AddStaticVehicle(VEH_SADLER,260.7991,2513.3472,16.5764,180,CARCOL_SAMP_GREENSLIME,0);
+	AddStaticVehicle(VEH_FIRETRUCKLA,255.7991,2513.3472,16.5764,180,CARCOL_SAMP_OXBLOOD2,0);
+	AddStaticVehicle(VEH_HUSTLER,250.7991,2513.3472,16.5764,180,CARCOL_SAMP_DEEPGREEN3,0);
+	AddStaticVehicle(VEH_INTRUDER,245.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKBROWN3,0);
+	AddStaticVehicle(VEH_PRIMO,240.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKFOREST4,0);
+	AddStaticVehicle(VEH_TAMPA,235.7991,2513.3472,16.5764,180,CARCOL_SAMP_SKYBLUE2,0);
+	AddStaticVehicle(VEH_SUNRISE,230.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKENBLUE3,0);
+	AddStaticVehicle(VEH_MERIT,225.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKENOXBLOOD,0);
+	AddStaticVehicle(VEH_UTILITY,220.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKENMAGENTA,0);
+	AddStaticVehicle(VEH_YOSEMITE,215.7991,2513.3472,16.5764,180,CARCOL_SAMP_WHITESMOKE5,0);
+	AddStaticVehicle(VEH_WINDSOR,210.7991,2513.3472,16.5764,180,CARCOL_SAMP_GREY,0);
+	AddStaticVehicle(VEH_MONSTERA,205.7991,2513.3472,16.5764,180,CARCOL_SAMP_GREY2,0);
+	AddStaticVehicle(VEH_MONSTERB,200.7991,2513.3472,16.5764,180,CARCOL_SAMP_WHITESMOKE6,0);
+	AddStaticVehicle(VEH_URANUS,195.7991,2513.3472,16.5764,180,CARCOL_SAMP_SMOKE,0);
+	AddStaticVehicle(VEH_JESTER,190.7991,2513.3472,16.5764,180,CARCOL_SAMP_BLUESMOKE3,0);
+	AddStaticVehicle(VEH_SULTAN,185.7991,2513.3472,16.5764,180,CARCOL_DARKENBROWN4,0);
+	AddStaticVehicle(VEH_STRATUM,180.7991,2513.3472,16.5764,180,CARCOL_LIGHTBROWN7,0);
+	AddStaticVehicle(VEH_ELEGY,175.7991,2513.3472,16.5764,180,CARCOL_DEEPROSE2,0);
+	AddStaticVehicle(VEH_FLASH,170.7991,2513.3472,16.5764,180,CARCOL_SMOKE4,0);
+	AddStaticVehicle(VEH_TAHOMA,165.7991,2513.3472,16.5764,180,CARCOL_BROWN,0);
+	AddStaticVehicle(VEH_SAVANNA,160.7991,2513.3472,16.5764,180,CARCOL_ROSARED,0);
+	AddStaticVehicle(VEH_BANDITO,155.7991,2513.3472,16.5764,180,CARCOL_DEEPBLUE3,0);
+	AddStaticVehicle(VEH_KART,150.7991,2513.3472,16.5764,180,CARCOL_PINK,0);
+	AddStaticVehicle(VEH_MOWER,145.7991,2513.3472,16.5764,180,CARCOL_BLACK4,0);
+	AddStaticVehicle(VEH_DUNE,140.7991,2513.3472,16.5764,180,CARCOL_SAMP_DEEPGREEN,0);
+	AddStaticVehicle(VEH_SWEEPER,135.7991,2513.3472,16.5764,180,CARCOL_SAMP_DARKBROWN,0);
+	AddStaticVehicle(VEH_BROADWAY,130.7991,2513.3472,16.5764,180,CARCOL_SAMP_WASHEDBLUE,0);
+	AddStaticVehicle(VEH_TORNADO,125.7991,2513.3472,16.5764,180,CARCOL_SAMP_BROWN,0);
+	AddStaticVehicle(VEH_DFT30,120.7991,2513.3472,16.5764,180,CARCOL_SAMP_MAROON,0);
+	AddStaticVehicle(VEH_HUNTLEY,115.7991,2513.3472,16.5764,180,CARCOL_SAMP_BLACK,0);
+	AddStaticVehicle(VEH_STAFFORD,110.7991,2513.3472,16.5764,180,CARCOL_SAMP_INDIGO,0);
+	AddStaticVehicle(VEH_NEWSVAN,105.7991,2513.3472,16.5764,180,CARCOL_SAMP_LIGHTBLUE,0);
+	AddStaticVehicle(VEH_TUG,100.7991,2513.3472,16.5764,180,CARCOL_SAMP_BRIGHTPURPLE,0);*/
 	
 	//VEHICLES - ROW3
 	/*AddStaticVehicle(VEH_EMPEROR,425.7991,2503.3472,16.5794,180,0,0);
@@ -697,20 +695,20 @@ public OnGameModeInit()
 	AddStaticVehicle(VEH_BOXVILLEBURG,355.7991,2503.3472,16.5764,180,0,0);*/
 	
 	//Motorbikes + Bicycles
-	AddStaticVehicle(VEH_PIZZABOY,95.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_PCJ600,90.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FAGGIO,85.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FREEWAY,80.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_SANCHEZ,75.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_QUAD,70.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_FCR900,65.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_NRG500,60.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_PIZZABOY,95.7991,2523.3472,16.5764,180,CARCOL_SAMP_INDIGO2,0);
+	AddStaticVehicle(VEH_PCJ600,90.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKBROWN2,0);
+	AddStaticVehicle(VEH_FAGGIO,85.7991,2523.3472,16.5764,180,CARCOL_SAMP_BEIGE2,0);
+	AddStaticVehicle(VEH_FREEWAY,80.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKBLUE,0);
+	AddStaticVehicle(VEH_SANCHEZ,75.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKGREEN5,0);
+	AddStaticVehicle(VEH_QUAD,70.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKENBLUE2,0);
+	AddStaticVehicle(VEH_FCR900,65.7991,2523.3472,16.5764,180,CARCOL_SAMP_SMOKEBLUE,0);
+	AddStaticVehicle(VEH_NRG500,60.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKBLUE2,0);
 	AddStaticVehicle(VEH_COPBIKE,55.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BF400,50.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_WAYFARER,45.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BMX,40.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_BIKE,35.7991,2523.3472,16.5764,180,0,0);
-	AddStaticVehicle(VEH_MTBIKE,30.7991,2523.3472,16.5764,180,0,0);
+	AddStaticVehicle(VEH_BF400,50.7991,2523.3472,16.5764,180,CARCOL_SAMP_DARKBLUE3,0);
+	AddStaticVehicle(VEH_WAYFARER,45.7991,2523.3472,16.5764,180,CARCOL_SAMP_SMOKEBLUE2,0);
+	AddStaticVehicle(VEH_BMX,40.7991,2523.3472,16.5764,180,CARCOL_SMOKE2,0);
+	AddStaticVehicle(VEH_BIKE,35.7991,2523.3472,16.5764,180,CARCOL_LIGHTLIME,0);
+	AddStaticVehicle(VEH_MTBIKE,30.7991,2523.3472,16.5764,180,CARCOL_CORAL,0);
 	
 	return 1;
 }
@@ -730,6 +728,14 @@ public OnPlayerRequestClass(playerid, classid)
 
 public OnPlayerConnect(playerid)
 {
+	if(ISAMPP_VERSION == 202012) {
+		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.2");
+	}
+	else
+	{
+		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
+	}
+
 	SendClientMessage(playerid, COLOR_ORANGE, "Use command /help for list of available commands");
 	return 1;
 }
@@ -769,18 +775,18 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
 		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]");
-		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos");
+		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /changeskin");
 		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
 		return 1;
 	}
 	
 	if (strcmp("/w help", cmdtext, true, 10) == 0) {
-	    SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
-	    SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
-	    SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
-	    SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
-	    SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
-	    SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
+		SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
+		SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
+		SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
+		SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
+		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
+		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
 		return 1;
 	}
 	
@@ -1004,839 +1010,839 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//WEATHER COMMANDS
 	if (strcmp("/w extrasunnyla", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_EXSUNNY_LA);
-	    return 1;
+		SetWeather(WEATHER_EXSUNNY_LA);
+		return 1;
 	}
 	
 	if (strcmp("/w sunnyla", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_SUNNY_LA);
-	    return 1;
+		SetWeather(WEATHER_SUNNY_LA);
+		return 1;
 	}
 	
 	if (strcmp("/w extrasunnysmogla", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_EXSUNNY_SMOG_LA);
-	    return 1;
+		SetWeather(WEATHER_EXSUNNY_SMOG_LA);
+		return 1;
 	}
 	
 	if (strcmp("/w sunnysmogla", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_SUNNY_SMOG_LA);
-	    return 1;
+		SetWeather(WEATHER_SUNNY_SMOG_LA);
+		return 1;
 	}
 	
 	if (strcmp("/w cloudyla", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_CLOUDY_LA);
-	    return 1;
+		SetWeather(WEATHER_CLOUDY_LA);
+		return 1;
 	}
 	
 	if (strcmp("/w sunnysf", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_SUNNY_SF);
-	    return 1;
+		SetWeather(WEATHER_SUNNY_SF);
+		return 1;
 	}
 	
 	if (strcmp("/w extrasunnysf", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_EXSUNNY_SF);
-	    return 1;
+		SetWeather(WEATHER_EXSUNNY_SF);
+		return 1;
 	}
 	
 	if (strcmp("/w cloudysf", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_CLOUDY_SF);
-	    return 1;
+		SetWeather(WEATHER_CLOUDY_SF);
+		return 1;
 	}
 	
 	if (strcmp("/w rainysf", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_RAINY_SF);
-	    return 1;
+		SetWeather(WEATHER_RAINY_SF);
+		return 1;
 	}
 	
 	if (strcmp("/w foggysf", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_FOGGY_SF);
-	    return 1;
+		SetWeather(WEATHER_FOGGY_SF);
+		return 1;
 	}
 	
 	if (strcmp("/w sunnyvegas", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_SUNNY_VEGAS);
-	    return 1;
+		SetWeather(WEATHER_SUNNY_VEGAS);
+		return 1;
 	}
 	
 	if (strcmp("/w extrasunnyvegas", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_EXSUNNY_VEGAS);
-	    return 1;
+		SetWeather(WEATHER_EXSUNNY_VEGAS);
+		return 1;
 	}
 	
 	if (strcmp("/w cloudyvegas", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_CLOUDY_VEGAS);
-	    return 1;
+		SetWeather(WEATHER_CLOUDY_VEGAS);
+		return 1;
 	}
 	
 	if (strcmp("/w extrasunnycountry", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_EXSUNNY_CTRYSIDE);
-	    return 1;
+		SetWeather(WEATHER_EXSUNNY_CTRYSIDE);
+		return 1;
 	}
 	
 	if (strcmp("/w sunnycountry", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_SUNNY_CTRYSIDE);
-	    return 1;
+		SetWeather(WEATHER_SUNNY_CTRYSIDE);
+		return 1;
 	}
 	
 	if (strcmp("/w cloudycountry", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_CLOUDY_CTRYSIDE);
-	    return 1;
+		SetWeather(WEATHER_CLOUDY_CTRYSIDE);
+		return 1;
 	}
 	
 	if (strcmp("/w rainycountry", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_RAINY_CTRYSIDE);
-	    return 1;
+		SetWeather(WEATHER_RAINY_CTRYSIDE);
+		return 1;
 	}
 	
 	if (strcmp("/w extrasunnydesert", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_EXSUNNY_DESERT);
-	    return 1;
+		SetWeather(WEATHER_EXSUNNY_DESERT);
+		return 1;
 	}
 	
 	if (strcmp("/w sunnydesert", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_SUNNY_DESERT);
-	    return 1;
+		SetWeather(WEATHER_SUNNY_DESERT);
+		return 1;
 	}
 	
 	if (strcmp("/w sandstorm", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_SANDSTORM_DESERT);
-	    return 1;
+		SetWeather(WEATHER_SANDSTORM_DESERT);
+		return 1;
 	}
 	
 	if (strcmp("/w underwater", cmdtext, true, 10) == 0) {
-	    SetWeather(WEATHER_UNDERWATER);
-	    return 1;
+		SetWeather(WEATHER_UNDERWATER);
+		return 1;
 	}
 
 	//TELEPORT COMMANDS
 	if (strcmp("/tp warehouse2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE2);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE2);
+		return 1;
 	}
 	
 	if (strcmp("/tp transfenders", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_TRANSFENDER);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_TRANSFENDER);
+		return 1;
 	}
 	
 	if (strcmp("/tp worldofcoq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WORLDOFCOQ);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WORLDOFCOQ);
+		return 1;
 	}
 	
 	if (strcmp("/tp ammunation2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION2);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION2);
+		return 1;
 	}
 	
 	if (strcmp("/tp suburban", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SUBURBAN);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SUBURBAN);
+		return 1;
 	}
 	
 	if (strcmp("/tp denise", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_DENISEBEDROOM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_DENISEBEDROOM);
+		return 1;
 	}
 	
 	if (strcmp("/tp sfgarage", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SFGARAGE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SFGARAGE);
+		return 1;
 	}
 	
 	if (strcmp("/tp ovalstadium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_OVALSTADIUM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_OVALSTADIUM);
+		return 1;
 	}
 
 	if (strcmp("/tp libertycity", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LIBERTYCITY);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LIBERTYCITY);
+		return 1;
 	}
 
 	if (strcmp("/tp sweet", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SWEETSHOUSE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SWEETSHOUSE);
+		return 1;
 	}
 	
 	if (strcmp("/tp caligulas", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CALIGULAS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CALIGULAS);
+		return 1;
 	}
 
 	if (strcmp("/tp wuzimu", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WUZIMU);
-	    return 1;
+ 		ISAMPP_TELEPORTEX(playerid, LOC_WUZIMU);
+		return 1;
 	}
 
 	if (strcmp("/tp jet", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_JET);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_JET);
+		return 1;
 	}
 	
 	if (strcmp("/tp welcomepump", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WELCOMEPUMP);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WELCOMEPUMP);
+		return 1;
 	}
 	
 	if (strcmp("/tp burgh3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH3);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH3);
+		return 1;
 	}
 
 	if (strcmp("/tp abattoir", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ABATTOIR);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ABATTOIR);
+		return 1;
 	}
 	
 	if (strcmp("/tp shcameltoe", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SHCAMELTOE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SHCAMELTOE);
+		return 1;
 	}
 	
 	if (strcmp("/tp caligroof", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CALIGROOF);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CALIGROOF);
+		return 1;
 	}
 	
 	if (strcmp("/tp bduppalace", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BDUPPALACE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BDUPPALACE);
+		return 1;
 	}
 
 	if (strcmp("/tp pigpen", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_THEPIGPEN);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_THEPIGPEN);
+		return 1;
 	}
 
 	if (strcmp("/tp ryder", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_RYDERSHOUSE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_RYDERSHOUSE);
+		return 1;
 	}
 
 	if (strcmp("/tp katiesnest", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_KATIESNEST);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_KATIESNEST);
+		return 1;
 	}
 
 	if (strcmp("/tp reece", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_REECES);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_REECES);
+		return 1;
 	}
 	
 	if (strcmp("/tp aptrailer", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_APTRAILER);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_APTRAILER);
+		return 1;
 	}
 
 	if (strcmp("/tp crackpalace", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BSCRACKPALACE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BSCRACKPALACE);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH2);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH2);
+		return 1;
 	}
 
 	if (strcmp("/tp pairburgh", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_PAIRBURGH);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_PAIRBURGH);
+		return 1;
 	}
 
 	if (strcmp("/tp caligoffice", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CALIGOFFICE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CALIGOFFICE);
+		return 1;
 	}
 	
 	if (strcmp("/tp stripcasino", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_STRIPCASINO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_STRIPCASINO);
+		return 1;
 	}
 	
 	if (strcmp("/tp locolowco", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LOCOLOWCO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LOCOLOWCO);
+		return 1;
 	}
 	
 	if (strcmp("/tp brothel1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BROTHEL1);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BROTHEL1);
+		return 1;
 	}
 
 	if (strcmp("/tp brothel2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BROTHEL2);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BROTHEL2);
+		return 1;
 	}
 
 	if (strcmp("/tp insidetrack", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ITBETTING);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ITBETTING);
+		return 1;
 	}
 
 	if (strcmp("/tp bfrecords", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BFRECORDS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BFRECORDS);
+		return 1;
 	}
 	
 	if (strcmp("/tp bsranch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BSRANCH);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BSRANCH);
+		return 1;
 	}
 
 	if (strcmp("/tp bdupapt", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BDUPAPT);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BDUPAPT);
+		return 1;
 	}
 
 	if (strcmp("/tp wheelarch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WARCHANGELS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WARCHANGELS);
+		return 1;
 	}
 
 	if (strcmp("/tp oglochouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_OGLOCHOUSE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_OGLOCHOUSE);
+		return 1;
 	}
 
 	if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP);
+		return 1;
 	}
 	
 	if (strcmp("/tp planningdpt", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_PLANNINGDPT);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_PLANNINGDPT);
+		return 1;
 	}
 
 	if (strcmp("/tp lvpdhq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LVPDHQ);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LVPDHQ);
+		return 1;
 	}
 
 	if (strcmp("/tp prolaps", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_PROLAPS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_PROLAPS);
+		return 1;
 	}
 
 	if (strcmp("/tp sexshop", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SEXSHOP);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SEXSHOP);
+		return 1;
 	}
 
 	if (strcmp("/tp lvtattoo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LVTATTOO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LVTATTOO);
+		return 1;
 	}
 
 	if (strcmp("/tp helenasbarn", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_HELENASBARN);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_HELENASBARN);
+		return 1;
 	}
 
 	if (strcmp("/tp johnsonhouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_JOHNSONHOUSE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_JOHNSONHOUSE);
+		return 1;
 	}
 
 	if (strcmp("/tp pleasuredomes", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_PLEASUREDOMES);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_PLEASUREDOMES);
+		return 1;
 	}
 	
 	if (strcmp("/tp burgh1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH1);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH1);
+		return 1;
 	}
 
 	if (strcmp("/tp bikeschool", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BIKESCHOOL);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BIKESCHOOL);
+		return 1;
 	}
 
 	if (strcmp("/tp drivingschool", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_DRIVESCHOOL);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_DRIVESCHOOL);
+		return 1;
 	}
 	
 	if (strcmp("/tp burgh12", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH12);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH12);
+		return 1;
 	}
 
 	if (strcmp("/tp ammunation3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION3);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION3);
+		return 1;
 	}
 
 	if (strcmp("/tp jaysdinner", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_JAYSDINER);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_JAYSDINER);
+		return 1;
 	}
 
 	if (strcmp("/tp 247v5", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_247V5);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_247V5);
+		return 1;
 	}
 
 	if (strcmp("/tp michelle", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_MICHELLESNEST);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_MICHELLESNEST);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh13", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH13);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH13);
+		return 1;
 	}
 
 	if (strcmp("/tp dirtbike", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_DIRTBIKE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_DIRTBIKE);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh15", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH15);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH15);
+		return 1;
 	}
 	
 	if (strcmp("/tp gantongym", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_GANTONGYM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_GANTONGYM);
+		return 1;
 	}
 
 	if (strcmp("/tp diner1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_DINER1);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_DINER1);
+		return 1;
 	}
 
 	if (strcmp("/tp pizzastack", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_PIZZASTACK);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_PIZZASTACK);
+		return 1;
 	}
 
 	if (strcmp("/tp victim", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_VICTIM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_VICTIM);
+		return 1;
 	}
 
 	if (strcmp("/tp barbara", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BARBARASNEST);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BARBARASNEST);
+		return 1;
 	}
 
 	if (strcmp("/tp madddogg", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_MADDDOGGMANSION);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_MADDDOGGMANSION);
+		return 1;
 	}
 
 	if (strcmp("/tp burningdesire", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURNINGDESIREB);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURNINGDESIREB);
+		return 1;
 	}
 
 	if (strcmp("/tp safehouse1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE1);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE1);
+		return 1;
 	}
 	
 	if (strcmp("/tp burgh4", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH4);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH4);
+		return 1;
 	}
 
 	if (strcmp("/tp crackden", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CRACKDEN);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CRACKDEN);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh11", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH11);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH11);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh16", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH16);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH16);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh17", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH17);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH17);
+		return 1;
 	}
 	
 	if (strcmp("/tp safehouse2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE2);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE2);
+		return 1;
 	}
 
 	if (strcmp("/tp millie", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_MILLIESROOM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_MILLIESROOM);
+		return 1;
 	}
 
 	if (strcmp("/tp cobragym", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_COBRAGYM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_COBRAGYM);
+		return 1;
 	}
 
 	if (strcmp("/tp lspdhq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LSPDHQ);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LSPDHQ);
+		return 1;
 	}
 	
 	if (strcmp("/tp burgh18", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH18);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH18);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh19", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH19);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH19);
+		return 1;
 	}
 
 	if (strcmp("/tp zerorc", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ZERORCSHOP);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ZERORCSHOP);
+		return 1;
 	}
 
 	if (strcmp("/tp ammunation4", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION4);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION4);
+		return 1;
 	}
 	
 	if (strcmp("/tp ammunation5", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION5);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION5);
+		return 1;
 	}
 	
 	if (strcmp("/tp 247v6", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_247V6);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_247V6);
+		return 1;
 	}
 
 	if (strcmp("/tp valleydiner", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_VALLEYDINER);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_VALLEYDINER);
+		return 1;
 	}
 
 	if (strcmp("/tp whorehouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WHOREHOUSE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WHOREHOUSE);
+		return 1;
 	}
 	
 	if (strcmp("/tp ammunation", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_AMMUNATION);
+		return 1;
 	}
 
 	if (strcmp("/tp belowbeltgym", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BBELTGYM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BBELTGYM);
+		return 1;
 	}
 
 	if (strcmp("/tp 8track", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_8TSTADIUM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_8TSTADIUM);
+		return 1;
 	}
 	
 	if (strcmp("/tp colonels", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_COLONELS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_COLONELS);
+		return 1;
 	}
 
 	if (strcmp("/tp verdantbluffs", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SHVBLUFFS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SHVBLUFFS);
+		return 1;
 	}
 	
 	if (strcmp("/tp burgh21", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH21);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH21);
+		return 1;
 	}
 	
 	if (strcmp("/tp safehouse3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE3);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE3);
+		return 1;
 	}
 
 	if (strcmp("/tp cbell", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CBELL);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CBELL);
+		return 1;
 	}
 
 	if (strcmp("/tp andromada", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ANDROMADA);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ANDROMADA);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh22", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH22);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH22);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh23", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH23);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH23);
+		return 1;
 	}
 	
 	if (strcmp("/tp sfpdhq", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SFPDHQ);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SFPDHQ);
+		return 1;
 	}
 
 	if (strcmp("/tp 247v2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_247V2);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_247V2);
+		return 1;
 	}
 
 	if (strcmp("/tp fourdragons", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_FOURDRAGONS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_FOURDRAGONS);
+		return 1;
 	}
 
 	if (strcmp("/tp rcbattlefield", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_RCBATTLEFIELD);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_RCBATTLEFIELD);
+		return 1;
 	}
 
 	if (strcmp("/tp burgershot", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGERSHOT);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGERSHOT);
+		return 1;
 	}
 	
 	if (strcmp("/tp actower", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ACTOWER);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ACTOWER);
+		return 1;
 	}
 
 	if (strcmp("/tp safehouse4", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE4);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SAFEHOUSE4);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh14", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH14);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH14);
+		return 1;
 	}
 
 	if (strcmp("/tp cfdjanitor", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CFDJANITOR);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CFDJANITOR);
+		return 1;
 	}
 
 	if (strcmp("/tp cfdsuite", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CFDSUITE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CFDSUITE);
+		return 1;
 	}
 	
 	if (strcmp("/tp bar", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BAR);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BAR);
+		return 1;
 	}
 
 	if (strcmp("/tp shwfield", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SHWFIELD);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SHWFIELD);
+		return 1;
 	}
 	
 	if (strcmp("/tp casino", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CASINO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CASINO);
+		return 1;
 	}
 	
 	if (strcmp("/tp budgetmotel", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BUDGETMOTEL);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BUDGETMOTEL);
+		return 1;
 	}
 
 	if (strcmp("/tp usafehouse", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_USAFEHOUSE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_USAFEHOUSE);
+		return 1;
 	}
 
 	if (strcmp("/tp barber2", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP2);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP2);
+		return 1;
 	}
 
 	if (strcmp("/tp wardrobe", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WARDROBE);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WARDROBE);
+		return 1;
 	}
 
 	if (strcmp("/tp didersachs", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_DIDERSACHS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_DIDERSACHS);
+		return 1;
 	}
 
 	if (strcmp("/tp kickstartstadium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_KICKSTADIUM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_KICKSTADIUM);
+		return 1;
 	}
 
 	if (strcmp("/tp lsairport", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LSAIRPORT);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LSAIRPORT);
+		return 1;
 	}
 
 	if (strcmp("/tp francisintl", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_FRANCISINTL);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_FRANCISINTL);
+		return 1;
 	}
 	
 	if (strcmp("/tp jeffersonmotel", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_JEFFERSONM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_JEFFERSONM);
+		return 1;
 	}
 
 	if (strcmp("/tp binco", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BINCO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BINCO);
+		return 1;
 	}
 
 	if (strcmp("/tp 4burgh", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_4BURGH);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_4BURGH);
+		return 1;
 	}
 
 	if (strcmp("/tp bloodbowl", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BLOODBOWL);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BLOODBOWL);
+		return 1;
 	}
 
 	if (strcmp("/tp burgh20", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BURGH20);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BURGH20);
+		return 1;
 	}
 	
 	if (strcmp("/tp lstattoo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LSTATTOO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LSTATTOO);
+		return 1;
 	}
 
 	if (strcmp("/tp 247v4", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_247V4);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_247V4);
+		return 1;
 	}
 
 	if (strcmp("/tp vicestadium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_VICESTADIUM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_VICESTADIUM);
+		return 1;
 	}
 	
 	if (strcmp("/tp lsftattoo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LSFTATTOO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LSFTATTOO);
+		return 1;
 	}
 
 	if (strcmp("/tp 247v1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_247V1);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_247V1);
+		return 1;
 	}
 
 	if (strcmp("/tp donutshop", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_RUSTYBDONUTS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_RUSTYBDONUTS);
+		return 1;
 	}
 
 	if (strcmp("/tp club", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_CLUB);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_CLUB);
+		return 1;
 	}
 
 	if (strcmp("/tp shermandam", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_SHERMANDAM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_SHERMANDAM);
+		return 1;
 	}
 	
 	if (strcmp("/tp warehouse1", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE1);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE1);
+		return 1;
 	}
 
 	if (strcmp("/tp 247v3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_247V3);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_247V3);
+		return 1;
 	}
 
 	if (strcmp("/tp zip", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ZIP);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ZIP);
+		return 1;
 	}
 
 	if (strcmp("/tp atrium", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ATRIUM);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ATRIUM);
+		return 1;
 	}
 
 	if (strcmp("/tp lilprobeinn", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LILPROBEINN);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LILPROBEINN);
+		return 1;
 	}
 	
 	if (strcmp("/tp palobank", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_PALOBANK);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_PALOBANK);
+		return 1;
 	}
 
 	if (strcmp("/tp palodiner", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_PALODINER);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_PALODINER);
+		return 1;
 	}
 
 	if (strcmp("/tp dilligast", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_DILLIGASST);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_DILLIGASST);
+		return 1;
 	}
 
 	if (strcmp("/tp ranch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_TORRENOR);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_TORRENOR);
+		return 1;
 	}
 
 	if (strcmp("/tp zombotech", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_ZOMBOTECH);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_ZOMBOTECH);
+		return 1;
 	}
 
 	if (strcmp("/tp cemetery", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_LSCEMETC);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_LSCEMETC);
+		return 1;
 	}
 	
 	if (strcmp("/tp liqorstore", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BLUEBLIQ);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BLUEBLIQ);
+		return 1;
 	}
 
 	if (strcmp("/tp warehouse3", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE3);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WAREHOUSE3);
+		return 1;
 	}
 
 	if (strcmp("/tp militarydepo", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_MILITARYDEPO);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_MILITARYDEPO);
+		return 1;
 	}
 
 	if (strcmp("/tp area69", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_AREA69);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_AREA69);
+		return 1;
 	}
 
 	if (strcmp("/tp bikesch", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_BIKESCH);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_BIKESCH);
+		return 1;
 	}
 
 	if (strcmp("/tp ottoautos", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_OTTOAUTOS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_OTTOAUTOS);
+		return 1;
 	}
 	
 	if (strcmp("/tp wangcars", cmdtext, true, 20) == 0) {
-    	ISAMPP_TELEPORTEX(playerid, LOC_WANGCARS);
-	    return 1;
+		ISAMPP_TELEPORTEX(playerid, LOC_WANGCARS);
+		return 1;
 	}
 	
 	//SHOW PLAYER POSITION COORDINATES
@@ -1847,7 +1853,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	
 	//SET VEHICLE HEALTH
 	if (strcmp("/setvehiclehealth help", cmdtext, true, 35) == 0) {
-		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID]: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
+		SendClientMessage(playerid, COLOR_MAGENTA, "/setvehiclehealth [ID]: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
 		return 1;
 	}
 
@@ -1902,6 +1908,16 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	if (strcmp("/setvehiclehealth onfire", cmdtext, true, 35) == 0) {
 		new vehicleid = GetPlayerVehicleID(playerid);
 		SetVehicleHealth(vehicleid, VEH_HEALTH_ONFIRE);
+		return 1;
+	}
+
+
+
+	//CHANGE PLAYER CLASS/PLAYER SKIN
+	if (strcmp("/changeskin", cmdtext, true, 15) == 0) {
+		ForceClassSelection(playerid);
+        TogglePlayerSpectating(playerid, true);
+        TogglePlayerSpectating(playerid, false);
 		return 1;
 	}
 
@@ -1966,139 +1982,139 @@ public OnPlayerObjectMoved(playerid, objectid)
 
 public OnPlayerPickUpPickup(playerid, pickupid)
 {
-    if(pickupid == pickupWeapRdildo) {
-        GivePlayerWeapon(playerid, WEAP_RDILDO, 1);
-    }
-    else if(pickupid == pickupWeapWdildo) {
-        GivePlayerWeapon(playerid, WEAP_WDILDO, 1);
-    }
-    else if(pickupid == pickupWeapVibrator) {
-        GivePlayerWeapon(playerid, WEAP_VIBRATOR, 1);
-    }
-    else if(pickupid == pickupWeapVibrator2) {
-        GivePlayerWeapon(playerid, WEAP_VIBRATOR2, 1);
-    }
-    else if(pickupid == pickupWeapFlowers) {
-        GivePlayerWeapon(playerid, WEAP_FLOWERS, 1);
-    }
+	if(pickupid == pickupWeapRdildo) {
+		GivePlayerWeapon(playerid, WEAP_RDILDO, 1);
+	}
+	else if(pickupid == pickupWeapWdildo) {
+		GivePlayerWeapon(playerid, WEAP_WDILDO, 1);
+	}
+	else if(pickupid == pickupWeapVibrator) {
+		GivePlayerWeapon(playerid, WEAP_VIBRATOR, 1);
+	}
+	else if(pickupid == pickupWeapVibrator2) {
+		GivePlayerWeapon(playerid, WEAP_VIBRATOR2, 1);
+	}
+	else if(pickupid == pickupWeapFlowers) {
+		GivePlayerWeapon(playerid, WEAP_FLOWERS, 1);
+	}
 	else if(pickupid == pickupWeapCane) {
-        GivePlayerWeapon(playerid, WEAP_CANE, 1);
-    }
-    else if(pickupid == pickupWeapBrassKnuckles) {
-        GivePlayerWeapon(playerid, WEAP_BRASSKNUCKLES, 1);
-    }
-    else if(pickupid == pickupWeapGolfClub) {
-        GivePlayerWeapon(playerid, WEAP_GOLFCLUB, 1);
-    }
-    else if(pickupid == pickupWeapNightStick) {
-        GivePlayerWeapon(playerid, WEAP_NIGHTSTICK, 1);
-    }
-    else if(pickupid == pickupWeapKnife) {
-        GivePlayerWeapon(playerid, WEAP_KNIFE, 1);
-    }
-    else if(pickupid == pickupWeapBaseballBat) {
-        GivePlayerWeapon(playerid, WEAP_BASEBALLBAT, 1);
-    }
-    else if(pickupid == pickupWeapShovel) {
-        GivePlayerWeapon(playerid, WEAP_SHOVEL, 1);
-    }
-    else if(pickupid == pickupWeapPoolCue) {
-        GivePlayerWeapon(playerid, WEAP_POOLCUE, 1);
-    }
-    else if(pickupid == pickupWeapKatana) {
-        GivePlayerWeapon(playerid, WEAP_KATANA, 1);
-    }
-    else if(pickupid == pickupWeapChainsaw) {
-        GivePlayerWeapon(playerid, WEAP_CHAINSAW, 1);
-    }
-    else if(pickupid == pickupWeapGrenade) {
-        GivePlayerWeapon(playerid, WEAP_GRENADE, 10);
-    }
-    else if(pickupid == pickupWeapTeargas) {
-        GivePlayerWeapon(playerid, WEAP_TEARGAS, 10);
-    }
-    else if(pickupid == pickupWeapMolotov) {
-        GivePlayerWeapon(playerid, WEAP_MOLOTOV, 10);
-    }
-    else if(pickupid == pickupWeapPistol) {
-        GivePlayerWeapon(playerid, WEAP_PISTOL, 100);
-    }
-    else if(pickupid == pickupWeapSilencedPistol) {
-        GivePlayerWeapon(playerid, WEAP_SILENCEDPISTOL, 100);
-    }
-    else if(pickupid == pickupWeapDeagle) {
-        GivePlayerWeapon(playerid, WEAP_DEAGLE, 100);
-    }
-    else if(pickupid == pickupWeapShotgun) {
-        GivePlayerWeapon(playerid, WEAP_SHOTGUN, 50);
-    }
-    else if(pickupid == pickupWeapSawedoff) {
-        GivePlayerWeapon(playerid, WEAP_SAWEDOFF, 50);
-    }
-    else if(pickupid == pickupWeapAutoshotgun) {
-        GivePlayerWeapon(playerid, WEAP_AUTOSHOTGUN, 50);
-    }
-    else if(pickupid == pickupWeapMicroUzi) {
-        GivePlayerWeapon(playerid, WEAP_MICROUZI, 100);
-    }
-    else if(pickupid == pickupWeapMP5) {
-        GivePlayerWeapon(playerid, WEAP_MP5, 100);
-    }
-    else if(pickupid == pickupWeapAK47) {
-        GivePlayerWeapon(playerid, WEAP_AK47, 100);
-    }
-    else if(pickupid == pickupWeapM4) {
-        GivePlayerWeapon(playerid, WEAP_M4, 100);
-    }
-    else if(pickupid == pickupWeapRifle) {
-        GivePlayerWeapon(playerid, WEAP_RIFLE, 25);
-    }
-    else if(pickupid == pickupWeapSniperRifle) {
-        GivePlayerWeapon(playerid, WEAP_SNIPERRIFLE, 25);
-    }
-    else if(pickupid == pickupWeapRPG) {
-        GivePlayerWeapon(playerid, WEAP_RPG, 10);
-    }
-    else if(pickupid == pickupWeapHeatRPG) {
-        GivePlayerWeapon(playerid, WEAP_HEATRPG, 10);
-    }
-    else if(pickupid == pickupWeapFlamethrower) {
-        GivePlayerWeapon(playerid, WEAP_FLAMETHROWER, 200);
-    }
-    else if(pickupid == pickupWeapMinigun) {
-        GivePlayerWeapon(playerid, WEAP_MINIGUN, 500);
-    }
-    else if(pickupid == pickupWeapSatchel) {
-        GivePlayerWeapon(playerid, WEAP_SATCHEL, 10);
-    }
-    else if(pickupid == pickupWeapDetonator) {
-        GivePlayerWeapon(playerid, WEAP_DETONATOR, 1);
-    }
-    else if(pickupid == pickupWeapSpray) {
-        GivePlayerWeapon(playerid, WEAP_SPRAY, 100);
-    }
-    else if(pickupid == pickupWeapExtinguisher) {
-        GivePlayerWeapon(playerid, WEAP_EXTINGUISHER, 100);
-    }
-    else if(pickupid == pickupWeapCamera) {
-        GivePlayerWeapon(playerid, WEAP_CAMERA, 25);
-    }
-    else if(pickupid == pickupWeapNGoggles) {
-        GivePlayerWeapon(playerid, WEAP_NGOGGLES, 1);
-    }
-    else if(pickupid == pickupWeapTGoggles) {
-        GivePlayerWeapon(playerid, WEAP_TGOGGLES, 1);
-    }
-    else if(pickupid == pickupWeapParachute) {
-        GivePlayerWeapon(playerid, WEAP_PARACHUTE, 1);
-    }
-    else if(pickupid == pickupWeapTec9) {
-        GivePlayerWeapon(playerid, WEAP_TEC9, 100);
-    }
+		GivePlayerWeapon(playerid, WEAP_CANE, 1);
+	}
+	else if(pickupid == pickupWeapBrassKnuckles) {
+		GivePlayerWeapon(playerid, WEAP_BRASSKNUCKLES, 1);
+	}
+	else if(pickupid == pickupWeapGolfClub) {
+		GivePlayerWeapon(playerid, WEAP_GOLFCLUB, 1);
+	}
+	else if(pickupid == pickupWeapNightStick) {
+		GivePlayerWeapon(playerid, WEAP_NIGHTSTICK, 1);
+	}
+	else if(pickupid == pickupWeapKnife) {
+		GivePlayerWeapon(playerid, WEAP_KNIFE, 1);
+	}
+	else if(pickupid == pickupWeapBaseballBat) {
+		GivePlayerWeapon(playerid, WEAP_BASEBALLBAT, 1);
+	}
+	else if(pickupid == pickupWeapShovel) {
+		GivePlayerWeapon(playerid, WEAP_SHOVEL, 1);
+	}
+	else if(pickupid == pickupWeapPoolCue) {
+		GivePlayerWeapon(playerid, WEAP_POOLCUE, 1);
+	}
+	else if(pickupid == pickupWeapKatana) {
+		GivePlayerWeapon(playerid, WEAP_KATANA, 1);
+	}
+	else if(pickupid == pickupWeapChainsaw) {
+		GivePlayerWeapon(playerid, WEAP_CHAINSAW, 1);
+	}
+	else if(pickupid == pickupWeapGrenade) {
+		GivePlayerWeapon(playerid, WEAP_GRENADE, 10);
+	}
+	else if(pickupid == pickupWeapTeargas) {
+		GivePlayerWeapon(playerid, WEAP_TEARGAS, 10);
+	}
+	else if(pickupid == pickupWeapMolotov) {
+		GivePlayerWeapon(playerid, WEAP_MOLOTOV, 10);
+	}
+	else if(pickupid == pickupWeapPistol) {
+		GivePlayerWeapon(playerid, WEAP_PISTOL, 100);
+	}
+	else if(pickupid == pickupWeapSilencedPistol) {
+		GivePlayerWeapon(playerid, WEAP_SILENCEDPISTOL, 100);
+	}
+	else if(pickupid == pickupWeapDeagle) {
+		GivePlayerWeapon(playerid, WEAP_DEAGLE, 100);
+	}
+	else if(pickupid == pickupWeapShotgun) {
+		GivePlayerWeapon(playerid, WEAP_SHOTGUN, 50);
+	}
+	else if(pickupid == pickupWeapSawedoff) {
+		GivePlayerWeapon(playerid, WEAP_SAWEDOFF, 50);
+	}
+	else if(pickupid == pickupWeapAutoshotgun) {
+		GivePlayerWeapon(playerid, WEAP_AUTOSHOTGUN, 50);
+	}
+	else if(pickupid == pickupWeapMicroUzi) {
+		GivePlayerWeapon(playerid, WEAP_MICROUZI, 100);
+	}
+	else if(pickupid == pickupWeapMP5) {
+		GivePlayerWeapon(playerid, WEAP_MP5, 100);
+	}
+	else if(pickupid == pickupWeapAK47) {
+		GivePlayerWeapon(playerid, WEAP_AK47, 100);
+	}
+	else if(pickupid == pickupWeapM4) {
+		GivePlayerWeapon(playerid, WEAP_M4, 100);
+	}
+	else if(pickupid == pickupWeapRifle) {
+		GivePlayerWeapon(playerid, WEAP_RIFLE, 25);
+	}
+	else if(pickupid == pickupWeapSniperRifle) {
+		GivePlayerWeapon(playerid, WEAP_SNIPERRIFLE, 25);
+	}
+	else if(pickupid == pickupWeapRPG) {
+		GivePlayerWeapon(playerid, WEAP_RPG, 10);
+	}
+	else if(pickupid == pickupWeapHeatRPG) {
+		GivePlayerWeapon(playerid, WEAP_HEATRPG, 10);
+	}
+	else if(pickupid == pickupWeapFlamethrower) {
+		GivePlayerWeapon(playerid, WEAP_FLAMETHROWER, 200);
+	}
+	else if(pickupid == pickupWeapMinigun) {
+		GivePlayerWeapon(playerid, WEAP_MINIGUN, 500);
+	}
+	else if(pickupid == pickupWeapSatchel) {
+		GivePlayerWeapon(playerid, WEAP_SATCHEL, 10);
+	}
+	else if(pickupid == pickupWeapDetonator) {
+		GivePlayerWeapon(playerid, WEAP_DETONATOR, 1);
+	}
+	else if(pickupid == pickupWeapSpray) {
+		GivePlayerWeapon(playerid, WEAP_SPRAY, 100);
+ 	}
+ 	else if(pickupid == pickupWeapExtinguisher) {
+		GivePlayerWeapon(playerid, WEAP_EXTINGUISHER, 100);
+	}
+	else if(pickupid == pickupWeapCamera) {
+		GivePlayerWeapon(playerid, WEAP_CAMERA, 25);
+	}
+	else if(pickupid == pickupWeapNGoggles) {
+		GivePlayerWeapon(playerid, WEAP_NGOGGLES, 1);
+	}
+	else if(pickupid == pickupWeapTGoggles) {
+		GivePlayerWeapon(playerid, WEAP_TGOGGLES, 1);
+	}
+	else if(pickupid == pickupWeapParachute) {
+		GivePlayerWeapon(playerid, WEAP_PARACHUTE, 1);
+	}
+	else if(pickupid == pickupWeapTec9) {
+		GivePlayerWeapon(playerid, WEAP_TEC9, 100);
+	}
 	else if(pickupid == pickupArmor) {
 		SetPlayerArmour(playerid, 100);
 	}
-    
+
 	return 1;
 }
 
