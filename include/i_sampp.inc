@@ -22,6 +22,8 @@
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 
+new ISAMPP_VERSION = 202012;
+
 
 stock ISAMPP_TELEPORT(playerid, locationid) {
 	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
