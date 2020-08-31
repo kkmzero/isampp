@@ -45,16 +45,16 @@ If you wish to run included sandbox game mode, you have to add file ```testinc.p
 
 Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only include with this prefix.
 
-*colorlist* - List of color definitions
-*iconids* - List of icon identifiers
-*locationids* - List of location definitions with coordinates, interior identifiers and names
-*pickupids* - List of definitions for pickup identifiers
-*skinids* - List of definitions for character skin/model identifiers
-*vehids* - List of definitions for all available vehicles
-*vehhealth* - Vehicle Health configurations
-*carcols* - List of definitions for all available vehicle colors
-*weaponids* - List of definitions for weapon identifiers, sorted by weapon slot IDs
-*weatherids* - List of definitions for weather identifiers
+*colorlist* - List of color definitions</br>
+*iconids* - List of icon identifiers</br>
+*locationids* - List of location definitions with coordinates, interior identifiers and names</br>
+*pickupids* - List of definitions for pickup identifiers</br>
+*skinids* - List of definitions for character skin/model identifiers</br>
+*vehids* - List of definitions for all available vehicles</br>
+*vehhealth* - Vehicle Health configurations</br>
+*carcols* - List of definitions for all available vehicle colors</br>
+*weaponids* - List of definitions for weapon identifiers, sorted by weapon slot IDs</br>
+*weatherids* - List of definitions for weather identifiers</br>
 
 # Custom Functions
 
