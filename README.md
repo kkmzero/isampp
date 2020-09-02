@@ -61,6 +61,9 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 ISAMPP uses various stock functions which may be useful in creating your custom game modes for SA-MP 
 or simply for debugging purposes. These stock functions are located in *i_sampp.inc* file.
 
+### isampp_console_output_version()
+*Outputs ISAMPP version to server console.*
+
 ### ISAMPP_TELEPORT(playerid, locationid)
 *Teleports player to desired location passed as parameter ’locationid’*
 
