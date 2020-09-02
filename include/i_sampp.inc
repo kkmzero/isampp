@@ -24,6 +24,11 @@
 
 new ISAMPP_VERSION = 202012;
 
+stock isampp_console_output_version() {
+	printf("ISAMPP v1.2 (%i)", ISAMPP_VERSION);
+	return 1;
+}
+
 
 stock ISAMPP_TELEPORT(playerid, locationid) {
 	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
