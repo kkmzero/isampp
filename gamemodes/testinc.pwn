@@ -21,6 +21,8 @@
 #else
 	main()
 	{
+        isampp_console_output_version();
+
 		print("\n---------------------------------------------");
 		print(" SA-MP Includes Library+ 1.2 Sandbox GameMode");
 		print("---------------------------------------------\n");
