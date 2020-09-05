@@ -54,14 +54,14 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 *vehhealth* - Vehicle Health configurations</br>
 *carcols* - List of definitions for all available vehicle colors</br>
 *weaponids* - List of definitions for weapon identifiers, sorted by weapon slot IDs</br>
-*weatherids* - List of definitions for weather identifiers</br>
+*weatherids* - List of definitions for weather identifiers
 
 # Custom Functions
 
 ISAMPP uses various stock functions which may be useful in creating your custom game modes for SA-MP 
 or simply for debugging purposes. These stock functions are located in *i_sampp.inc* file.
 
-### isampp_console_output_version()
+### isampp_console_printversion()
 *Outputs ISAMPP version to server console.*
 
 ### ISAMPP_TELEPORT(playerid, locationid)
