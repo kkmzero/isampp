@@ -52,13 +52,20 @@ stock ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor) {
 
 stock ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor) {
 	new Float:x, Float:y, Float:z, Float:rotation;
+	new Float:camx, Float:camy, Float:camz;
+
 	GetPlayerPos(playerid, x, y, z);
 	GetPlayerFacingAngle(playerid, rotation);
 
+	GetPlayerCameraPos(playerid, camx, camy, camz);
+
 	new splayerpos[256];
+	new scampos[256];
 	format(splayerpos, sizeof(splayerpos), "Position [X]: %f [Y]: %f [Z]: %f [Interior ID]:  %i | Facing Angle: %0.2f", x, y, z, GetPlayerInterior(playerid), rotation);
+	format(scampos, sizeof(scampos), "Camera Position [X] %f [Y]: %f [Z]: %f", camx, camy, camz);
 
 	SendClientMessage(playerid, pstringcolor, splayerpos);
+	SendClientMessage(playerid, pstringcolor, scampos);
 
 	return 1;
 }
