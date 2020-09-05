@@ -733,6 +733,7 @@ public OnPlayerRequestClass(playerid, classid)
 public OnPlayerConnect(playerid)
 {
 	if(ISAMPP_VERID == 202012) {
+		GameTextForPlayer(playerid,"~p~ISAMPP Sandbox GameMode 1.2", 3500, GMTEXT_STYLE_SLIM2);
 		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.2");
 	}
 	else {
@@ -779,6 +780,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
 		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]");
 		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
+		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list");
 		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /changeskin");
 		return 1;
 	}
@@ -792,7 +794,50 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
 		return 1;
 	}
-	
+
+	if (strcmp("/gametext help", cmdtext, true, 20) == 0) {
+		SendClientMessage(playerid, COLOR_MAGENTA, "/gametext [ID]");
+		SendClientMessage(playerid, COLOR_MAGENTA, "pricedown, rpricedown, sa, slim, slim2, slimw, bpricedown");
+		return 1;
+	}
+
+
+    //GAME TEXT TEST COMMANDS
+	if (strcmp("/gametext pricedown", cmdtext, true, 20) == 0) {
+		GameTextForPlayer(playerid,"GMTEXT_STYLE_PRICEDOWN", 2000, GMTEXT_STYLE_PRICEDOWN);
+		return 1;
+	}
+
+	if (strcmp("/gametext rpricedown", cmdtext, true, 20) == 0) {
+		GameTextForPlayer(playerid,"GMTEXT_STYLE_RPRICEDOWN", 2000, GMTEXT_STYLE_RPRICEDOWN);
+		return 1;
+	}
+
+	if (strcmp("/gametext sa", cmdtext, true, 20) == 0) {
+		GameTextForPlayer(playerid,"GMTEXT_STYLE_SA", 2000, GMTEXT_STYLE_SA);
+		return 1;
+	}
+
+	if (strcmp("/gametext slim", cmdtext, true, 20) == 0) {
+		GameTextForPlayer(playerid,"GMTEXT_STYLE_SLIM", 2000, GMTEXT_STYLE_SLIM);
+		return 1;
+	}
+
+	if (strcmp("/gametext slim2", cmdtext, true, 20) == 0) {
+		GameTextForPlayer(playerid,"GMTEXT_STYLE_SLIM2", 2000, GMTEXT_STYLE_SLIM2);
+		return 1;
+	}
+
+	if (strcmp("/gametext slimw", cmdtext, true, 20) == 0) {
+		GameTextForPlayer(playerid,"GMTEXT_STYLE_SLIMW", 2000, GMTEXT_STYLE_SLIMW);
+		return 1;
+	}
+
+	if (strcmp("/gametext bpricedown", cmdtext, true, 20) == 0) {
+		GameTextForPlayer(playerid,"GMTEXT_STYLE_BPRICEDOWN", 2000, GMTEXT_STYLE_BPRICEDOWN);
+		return 1;
+	}
+
 	//COLOR TEXT TEST COMMANDS
 	if (strcmp("/defcols0", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid,COLOR_WHITE,"White");
