@@ -21,7 +21,7 @@
 #else
 	main()
 	{
-        isampp_console_output_version();
+        isampp_console_printversion();
 
 		print("\n---------------------------------------------");
 		print(" SA-MP Includes Library+ 1.2 Sandbox GameMode");
@@ -732,11 +732,10 @@ public OnPlayerRequestClass(playerid, classid)
 
 public OnPlayerConnect(playerid)
 {
-	if(ISAMPP_VERSION == 202012) {
+	if(ISAMPP_VERID == 202012) {
 		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.2");
 	}
-	else
-	{
+	else {
 		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
 	}
 
