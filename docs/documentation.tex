@@ -31,12 +31,13 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \textbf{ISAMPP Library:}
 \\- New stock functions \textit{isampp\_console\_printversion()} and \textit{ISAMPP\_SHOWVEHICLEINFO}
 \\- Functions \textit{ISAMPP\_SHOWPLAYERPOSITION} and \textit{ISAMPP\_TELEPORTEX} now take additional parameter \textit{pstringcolor}
-\\- Function \textit{ISAMPP\_SHOWPLAYERPOSITION} now displays Player Facing Angle
+\\- Function \textit{ISAMPP\_SHOWPLAYERPOSITION} now displays Player Facing Angle and Player Camera Position
 \\- Removed duplicate pickup definition for Armor
 \\- Removed pickups: \textit{PICKUP\_CJCAMMONET, PICKUP\_HEARTBED}
 \\- New pickups: \textit{PICKUP\_GIFTSMALL, PICKUP\_GIFTBIG, PICKUP\_BEERBOTTLE1, PICKUP\_BEERBOTTLE2, PICKUP\_BEERBOTTLE3, PICKUP\_NAVALMINE, PICKUP\_DONUTS, PICKUP\_NITRO1, PICKUP\_NITRO2, PICKUP\_NITRO3}
 \\- New definitions for vehicle health \textit{(i\_vehhealth.inc)}
 \\- New definitions for vehicle colors \textit{(i\_carcols.inc)}
+\\- New definitions for GameText styles \textit{(i\_textstyle)}
 \\- New definitions for vehicle name strings \textit{(i\_vehids.inc)}
 \\- Variables ISAMPP\_VERSION and ISAMPP\_VERID added \textit{(i\_sampp.inc)}
 \\- Updated documentation
@@ -45,7 +46,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \textbf{ISAMPP Sandbox Game Mode:}
 \\- Armor pickups now work
 \\- New pickups placed on map
-\\- New in-game commands \textit{/setvehiclehealth}, \textit{/showvehicleinfo} and \textit{/changeskin}
+\\- New in-game commands \textit{/gametext}, \textit{/setvehiclehealth}, \textit{/showvehicleinfo} and \textit{/changeskin}
 \\- Updated fixed vehicle spawns with new vehicle color definitions
 \\- Other minor tweaks
 
@@ -88,6 +89,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_locationids>
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_skinids>
+#include <i_sampp/i_textstyle>
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_carcols>
@@ -110,6 +112,8 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \textit{pickupids} - List of definitions for pickup identifiers
 \\
 \textit{skinids} - List of definitions for character skin/model identifiers
+\\
+\textit{textstyle} - List of definitions for GameText styles
 \\
 \textit{vehids} - List of definitions for all available vehicles
 \\
@@ -148,6 +152,9 @@ Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. 
 
 \section{Skin/Playermodel Identifiers}
 Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers SA-MP uses by default.
+
+\section{GameText Styles}
+List of definitions for SA-MP function \textit{GameTextForPlayer(playerid, const string[], time, \textbf{style})}.
 
 \section{Vehicle Identifiers}
 Vehicle identifiers are included as macro defines with prefix \textit{VEH\_} followed by the name of vehicle in game with capital letters \textit{(motorcycles, bicycles, boats, planes, helicopters, trailers, trains, etc. are included in this format as well)}. For better orientation in list, defines are sorted by vehicle type.
@@ -236,7 +243,7 @@ if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
 
 \subsection{ISAMPP\_SHOWPLAYERPOSITION(playerid, pstringcolor)}
 
-\textit{Outputs current player location coordinates, interior identifier and facing angle to in-game chat window.
+\textit{Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.
 \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
 \\This function might not work properly if player is in a vehicle.}
 \\
