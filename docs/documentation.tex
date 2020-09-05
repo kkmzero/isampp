@@ -12,10 +12,9 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \fi
 
 
-
-\title{SA-MP Includes Library+ 1.1 Documentation}
+\title{SA-MP Includes Library+ 1.2 Documentation}
 \author{Ivan Kmeťo}
-\date{August 2020}
+\date{September 2020}
 
 
 \begin{document}
@@ -26,27 +25,43 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \tableofcontents
 
 \newpage
-\section{Changes in ISAMPP 1.1}
+\section{Changelog}
+
+\subsection{Changes in ISAMPP 1.2}
 \textbf{ISAMPP Library:}
-\\
-- New function \textit{ISAMPP\_SHOWPLAYERPOSITION}
-\\
-- Functions \textit{ISAMPP\_TELEPORT} and \textit{ISAMPP\_TELEPORTEX} are now part of library itself
-\\
-- Fixed some Location Identifier coordinates 
-\\
-- Updated documentation
+\\- New stock functions \textit{isampp\_console\_printversion()} and \textit{ISAMPP\_SHOWVEHICLEINFO}
+\\- Functions \textit{ISAMPP\_SHOWPLAYERPOSITION} and \textit{ISAMPP\_TELEPORTEX} now take additional parameter \textit{pstringcolor}
+\\- Function \textit{ISAMPP\_SHOWPLAYERPOSITION} now displays Player Facing Angle
+\\- Removed duplicate pickup definition for Armor
+\\- Removed pickups: \textit{PICKUP\_CJCAMMONET, PICKUP\_HEARTBED}
+\\- New pickups: \textit{PICKUP\_GIFTSMALL, PICKUP\_GIFTBIG, PICKUP\_BEERBOTTLE1, PICKUP\_BEERBOTTLE2, PICKUP\_BEERBOTTLE3, PICKUP\_NAVALMINE, PICKUP\_DONUTS, PICKUP\_NITRO1, PICKUP\_NITRO2, PICKUP\_NITRO3}
+\\- New definitions for vehicle health \textit{(i\_vehhealth.inc)}
+\\- New definitions for vehicle colors \textit{(i\_carcols.inc)}
+\\- New definitions for vehicle name strings \textit{(i\_vehids.inc)}
+\\- Variables ISAMPP\_VERSION and ISAMPP\_VERID added \textit{(i\_sampp.inc)}
+\\- Updated documentation
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
+\\- Armor pickups now work
+\\- New pickups placed on map
+\\- New in-game commands \textit{/setvehiclehealth}, \textit{/showvehicleinfo} and \textit{/changeskin}
+\\- Updated fixed vehicle spawns with new vehicle color definitions
+\\- Other minor tweaks
+
+\subsection{Changes in ISAMPP 1.1}
+\textbf{ISAMPP Library:}
+\\- New function \textit{ISAMPP\_SHOWPLAYERPOSITION}
+\\- Functions \textit{ISAMPP\_TELEPORT} and \textit{ISAMPP\_TELEPORTEX} are now part of library itself
+\\- Fixed some Location Identifier coordinates 
+\\- Updated documentation
 \\
-- Changed in-game teleport commands to use \textit{ISAMPP\_TELEPORTEX} function
 \\
-- Changed in-game command \textit{"/teleport [ID]"} to \textit{"/tp [ID]"}
-\\
-- In-game command \textit{"/stringcols"} takes no additional parameters anymore
-\\
-- New in-game command \textit{"/showplayerpos"} works with \textit{ISAMPP\_SHOWPLAYERPOSITION} data
+\textbf{ISAMPP Sandbox Game Mode:}
+\\- Changed in-game teleport commands to use \textit{ISAMPP\_TELEPORTEX} function
+\\- Changed in-game command \textit{"/teleport [ID]"} to \textit{"/tp [ID]"}
+\\- In-game command \textit{"/stringcols"} takes no additional parameters anymore
+\\- New in-game command \textit{"/showplayerpos"} works with \textit{ISAMPP\_SHOWPLAYERPOSITION} data
 
 
 \newpage
@@ -74,6 +89,8 @@ or include header files as you wish separately:
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_vehids>
+#include <i_sampp/i_vehhealth>
+#include <i_sampp/i_carcols>
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 \end{verbatim}
@@ -95,6 +112,10 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \textit{skinids} - List of definitions for character skin/model identifiers
 \\
 \textit{vehids} - List of definitions for all available vehicles
+\\
+\textit{vehhealth} - Vehicle Health configurations
+\\
+\textit{carcols} - List of definitions for all available vehicle colors
 \\
 \textit{weaponids} - List of definitions for weapon identifiers, sorted by weapon slot IDs
 \\
@@ -131,6 +152,34 @@ Skins are included as macro defines with prefix \textit{SKIN\_}, followed by nam
 \section{Vehicle Identifiers}
 Vehicle identifiers are included as macro defines with prefix \textit{VEH\_} followed by the name of vehicle in game with capital letters \textit{(motorcycles, bicycles, boats, planes, helicopters, trailers, trains, etc. are included in this format as well)}. For better orientation in list, defines are sorted by vehicle type.
 
+\section{Vehicle Health}
+Vehicle Health configurations are included as macro defines with prefix \textit{VEH\_HEALTH\_} followed by the desired pre-defined identifier. These values are only related to engine condition and do not change visual damage of vehicle model.
+\\
+\\
+\begin{tabular}{ |l|c|l| } 
+\hline
+Identifier & Exact Value & Description \\
+\hline
+VEH\_HEALTH\_FULL & 1000 & Full vehicle health \\ 
+VEH\_HEALTH\_FULL\_LOW & 650 &  Lowest value for undamaged vehicle \\ 
+VEH\_HEALTH\_WHITESMOKE & 649 & White smoke from engine \\ 
+VEH\_HEALTH\_WHITESMOKE\_LOW & 550 & Lowest value for white engine smoke \\ 
+VEH\_HEALTH\_GREYSMOKE & 549 & Grey smoke from engine \\ 
+VEH\_HEALTH\_GREYSMOKE\_LOW & 390 & Lowest value for grey engine smoke\\ 
+VEH\_HEALTH\_BLACKSMOKE & 389 & Black smoke from engine \\ 
+VEH\_HEALTH\_BLACKSMOKE\_LOW & 250 & Lowest value for black engine smoke \\ 
+VEH\_HEALTH\_ONFIRE & 249 & Sets car on fire \\
+\hline
+\end{tabular}
+\\
+\\
+You can test this in ISAMPP sandbox game mode with command \textbf{/setvehiclehealth [ID]} while being in any vehicle.
+
+\section{Vehicle Colors}
+List of all available colors for vehicles in game. Color names using prefix \textit{CARCOL\_SAMP\_} are supported only in SA-MP version 0.3x.
+\\
+\\More information is available on SA-MP Wiki: \url{https://wiki.sa-mp.com/wiki/Vehicle_Color_IDs}
+
 \section{Weapon Identifiers}
 Weapon identifiers are included as macro defines with prefix \textit{WEAP\_}. In ISAMPP sandbox game mode weapon pickups are fully functional. Every weapon in game can be used only for certain weapon slot and weapon identifiers are ordered in file \textit{i\_weaponids.inc} by weapon slot number.
 
@@ -141,11 +190,25 @@ Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}
 \newpage
 \section{Custom Functions}
 
-ISAMPP uses various stock functions which may be useful in creating your custom game modes for SA-MP or simply for debugging purposes. These stock functions are located in \textit{i\_sampp.inc} file.
+ISAMPP uses various stock functions which may be useful in creating your own game modes for SA-MP or simply for debugging purposes. These stock functions are located in \textit{i\_sampp.inc} file.
 \\
-\subsection{ISAMPP\_TELEPORT(playerid, locationid):}
+\subsection{isampp\_console\_printversion()}
+
+\textit{Outputs ISAMPP version to server console.}
 \\
-\\\textit{Teleports player to desired location passed as parameter 'locationid'.}
+\\
+\textbf{Example of implementation:}
+\begin{verbatim}
+main() {
+    isampp_console_printversion();
+}
+\end{verbatim}
+
+
+
+\subsection{ISAMPP\_TELEPORT(playerid, locationid)}
+
+\textit{Teleports player to desired location passed as parameter 'locationid'.}
 \\
 \\
 \textbf{Example of implementation:}
@@ -156,28 +219,70 @@ if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
 }
 \end{verbatim}
 
-\subsection{ISAMPP\_TELEPORTEX(playerid, locationid):}
-\\
-\\\textit{Same as ISAMPP\_TELEPORT, plus outputs location name to in-game chat window.}
+
+\subsection{ISAMPP\_TELEPORTEX(playerid, locationid, pstringcolor)}
+
+\textit{Same as ISAMPP\_TELEPORT, plus outputs location name to in-game chat window. \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.}
 \\
 \\
 \textbf{Example of implementation:}
 \begin{verbatim}
 if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
-    ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP);
+    ISAMPP_TELEPORTEX(playerid, LOC_BARBERSHOP, COLOR_LIMEGREEN);
     return 1;
 }
 \end{verbatim}
 
-\subsection{ISAMPP\_SHOWPLAYERPOSITION(playerid):}
-\\
-\\\textit{Outputs current player location coordinates and interior identifier to in-game chat window.}
+
+\subsection{ISAMPP\_SHOWPLAYERPOSITION(playerid, pstringcolor)}
+
+\textit{Outputs current player location coordinates, interior identifier and facing angle to in-game chat window.
+\\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
+\\This function might not work properly if player is in a vehicle.}
 \\
 \\
 \textbf{Example of implementation:}
 \begin{verbatim}
 if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
-    ISAMPP_SHOWPLAYERPOSITION(playerid);
+    ISAMPP_SHOWPLAYERPOSITION(playerid, COLOR_LIGHTRED);
+    return 1;
+}
+\end{verbatim}
+
+
+\newpage
+\subsection{ISAMPP\_SHOWVEHICLEINFO(playerid, vehicleid, pstringcolor)}
+
+\textit{Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.
+\\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
+\\Note: You must pass vehicleid parameter if you want to get model name else function returns '0 Unknown'.}
+\\
+\\
+\textbf{Example of implementation:}
+\begin{verbatim}
+new VehicleModelID = 0;
+
+public OnPlayerCommandText(playerid, cmdtext[])
+{
+    if (strcmp("/showvehicleinfo", cmdtext, true, 15) == 0) {
+        ISAMPP_SHOWVEHICLEINFO(playerid, VehicleModelID, COLOR_LIGHTBLUE);
+        return 1;
+    }
+
+    return 0;
+}
+
+public OnPlayerEnterVehicle(playerid, vehicleid, ispassenger)
+{
+    VehicleModelID = GetVehicleModel(vehicleid);
+
+    return 1;
+}
+
+public OnPlayerExitVehicle(playerid, vehicleid)
+{
+    VehicleModelID = 0;
+
     return 1;
 }
 \end{verbatim}
