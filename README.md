@@ -67,13 +67,13 @@ or simply for debugging purposes. These stock functions are located in *i_sampp.
 *Outputs ISAMPP version to server console.*
 
 ### ISAMPP_TELEPORT(playerid, locationid)
-*Teleports player to desired location passed as parameter ’locationid’*
+*Teleports player to desired location passed as parameter ’locationid’.*
 
 ### ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor)
 *Same as ISAMPP_TELEPORT, plus outputs location name to in-game chat window.*
 
 ### ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor)
-*Outputs current player location coordinates, interior identifier and facing angle to in-game chat window.*
+*Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.*
 
 ### ISAMPP_SHOWVEHICLEINFO(playerid, vehicleid, pstringcolor)
 *Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.*
