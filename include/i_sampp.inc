@@ -22,10 +22,12 @@
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 
-new ISAMPP_VERSION = 202012;
+new ISAMPP_VERSION[5] = "v1.2";
+new ISAMPP_VERID = 202012;
 
-stock isampp_console_output_version() {
-	printf("ISAMPP v1.2 (%i)", ISAMPP_VERSION);
+
+stock isampp_console_printversion() {
+	printf("ISAMPP %s (%i)", ISAMPP_VERSION, ISAMPP_VERID);
 	return 1;
 }
 
@@ -34,6 +36,8 @@ stock ISAMPP_TELEPORT(playerid, locationid) {
 	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
 	SetPlayerFacingAngle(playerid, locCoords[locationid][3]);
 	SetPlayerInterior(playerid, locID[locationid][0]);
+
+	return 1;
 }
 
 stock ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor) {
@@ -41,6 +45,8 @@ stock ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor) {
 	SetPlayerFacingAngle(playerid, locCoords[locationid][3]);
 	SetPlayerInterior(playerid, locID[locationid][0]);
 	SendClientMessage(playerid, pstringcolor, locName[locationid]);
+
+	return 1;
 }
 
 stock ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor) {
@@ -52,6 +58,8 @@ stock ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor) {
 	format(splayerpos, sizeof(splayerpos), "Position [X]: %f [Y]: %f [Z]: %f [Interior ID]:  %i | Facing Angle: %0.2f", x, y, z, GetPlayerInterior(playerid), rotation);
 
 	SendClientMessage(playerid, pstringcolor, splayerpos);
+
+	return 1;
 }
 
 stock ISAMPP_SHOWVEHICLEINFO(playerid, vehicleid, pstringcolor) {
@@ -78,4 +86,6 @@ stock ISAMPP_SHOWVEHICLEINFO(playerid, vehicleid, pstringcolor) {
 	SendClientMessage(playerid, pstringcolor, svehinfo);
 	SendClientMessage(playerid, pstringcolor, svehpos);
 	SendClientMessage(playerid, pstringcolor, svehrot);
+
+	return 1;
 }
