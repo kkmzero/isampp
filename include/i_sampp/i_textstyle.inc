@@ -6,7 +6,6 @@
  * http://opensource.org/licenses/mit-license
  */
 
-
 //GameText Styles
 #define GMTEXT_STYLE_PRICEDOWN     0
 #define GMTEXT_STYLE_RPRICEDOWN    1
