@@ -16,6 +16,7 @@
 #include <i_sampp/i_locationids>
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_skinids>
+#include <i_sampp/i_textstyle>
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_carcols>
