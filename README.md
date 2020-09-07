@@ -72,6 +72,9 @@ or simply for debugging purposes. These stock functions are located in *i_sampp.
 ### ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor)
 *Same as ISAMPP_TELEPORT, plus outputs location name to in-game chat window.*
 
+### ISAMPP_TELEPORT_TO_COORDS(playerid, x, y, z, interiorid, facingangle)
+*Teleports player to specified xyz coordinates with interior identifier and facing angle.*
+
 ### ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor)
 *Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.*
 
