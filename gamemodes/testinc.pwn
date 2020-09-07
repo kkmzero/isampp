@@ -778,7 +778,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 {
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
-		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]");
+		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]; /tpcoord");
 		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list");
 		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /changeskin");
@@ -1892,6 +1892,11 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+	//TELEPORT TO COORDINATES
+	if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
+		ISAMPP_TELEPORT_TO_COORDS(playerid, 49.4172, 2512.4282, 16.4844, 0, 272);
+		return 1;
+	}
 	
 	//SET VEHICLE HEALTH
 	if (strcmp("/setvehiclehealth help", cmdtext, true, 35) == 0) {
