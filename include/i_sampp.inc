@@ -50,6 +50,14 @@ stock ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor) {
 	return 1;
 }
 
+stock ISAMPP_TELEPORT_TO_COORDS(playerid, Float:x, Float:y, Float:z, interiorid, Float:facingangle) {
+	SetPlayerPos(playerid, x, y, z);
+	SetPlayerFacingAngle(playerid, facingangle);
+	SetPlayerInterior(playerid, interiorid);
+
+	return 1;
+}
+
 stock ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor) {
 	new Float:x, Float:y, Float:z, Float:rotation;
 	new Float:camx, Float:camy, Float:camz;
