@@ -1,0 +1,13 @@
+Changes in ISAMPP 1.1
+
+* ISAMPP Library *
+- New function ISAMPP_SHOWPLAYERPOSITION
+- Functions ISAMPP_TELEPORT and ISAMPP_TELEPORTEX are now part of library itself
+- Fixed some Location Identifier coordinates
+- Updated documentation
+
+* ISAMPP Sandbox Game Mode *
+- Changed in-game teleport commands to use ISAMPP_TELEPORTEX function
+- Changed in-game command "/teleport [ID]" to "/tp [ID]"
+- In-game command "/stringcols" takes no additional parameters anymore
+- New in-game command "/showplayerpos" works with ISAMPP_SHOWPLAYERPOSITION data
