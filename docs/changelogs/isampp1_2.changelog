@@ -1,0 +1,24 @@
+Changes in ISAMPP 1.2
+
+* ISAMPP Library *
+- New stock function isampp_console_printversion()
+- New stock functions ISAMPP_TELEPORT_TO_COORDS and ISAMPP_SHOWVEHICLEINFO
+- Functions ISAMPP_SHOWPLAYERPOSITION and ISAMPP_TELEPORTEX now take additional parameter pstringcolor
+- Function ISAMPP_SHOWPLAYERPOSITION now displays Player Facing Angle and Player Camera Position
+- Removed duplicate pickup definition for Armor
+- Removed pickups: PICKUP_CJCAMMONET, PICKUP_HEARTBED
+- New pickups: PICKUP_GIFTSMALL, PICKUP_GIFTBIG, PICKUP_BEERBOTTLE1, PICKUP_BEERBOTTLE2,
+               PICKUP_BEERBOTTLE3, PICKUP_NAVALMINE, PICKUP_DONUTS, PICKUP_NITRO1, PICKUP_NITRO2, PICKUP_NITRO3
+- New definitions for vehicle health (i_vehhealth.inc)
+- New definitions for vehicle colors (i_carcols.inc)
+- New definitions for GameText styles (i_textstyle.inc)
+- New definitions for vehicle name strings (i_vehids.inc)
+- Variables ISAMPP_VERSION and ISAMPP_VERID added (i_sampp.inc)
+- Updated documentation
+
+* ISAMPP Sandbox Game Mode *
+- Armor pickups now work
+- New pickups placed on map
+- New in-game commands: /gametext, /setvehiclehealth, /showvehicleinfo, /changeskin and /tpcoord
+- Updated fixed vehicle spawns with new vehicle color definitions
+- Other minor tweaks
