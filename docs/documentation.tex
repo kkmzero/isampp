@@ -25,11 +25,10 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \tableofcontents
 
 \newpage
-\section{Changelog}
-
-\subsection{Changes in ISAMPP 1.2}
+\section{Changes in ISAMPP 1.2}
 \textbf{ISAMPP Library:}
-\\- New stock functions \textit{isampp\_console\_printversion()} and \textit{ISAMPP\_SHOWVEHICLEINFO}
+\\- New stock function \textit{isampp\_console\_printversion()}
+\\- New stock functions \textit{ISAMPP\_TELEPORT\_TO\_COORDS} and \textit{ISAMPP\_SHOWVEHICLEINFO}
 \\- Functions \textit{ISAMPP\_SHOWPLAYERPOSITION} and \textit{ISAMPP\_TELEPORTEX} now take additional parameter \textit{pstringcolor}
 \\- Function \textit{ISAMPP\_SHOWPLAYERPOSITION} now displays Player Facing Angle and Player Camera Position
 \\- Removed duplicate pickup definition for Armor
@@ -37,7 +36,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \\- New pickups: \textit{PICKUP\_GIFTSMALL, PICKUP\_GIFTBIG, PICKUP\_BEERBOTTLE1, PICKUP\_BEERBOTTLE2, PICKUP\_BEERBOTTLE3, PICKUP\_NAVALMINE, PICKUP\_DONUTS, PICKUP\_NITRO1, PICKUP\_NITRO2, PICKUP\_NITRO3}
 \\- New definitions for vehicle health \textit{(i\_vehhealth.inc)}
 \\- New definitions for vehicle colors \textit{(i\_carcols.inc)}
-\\- New definitions for GameText styles \textit{(i\_textstyle)}
+\\- New definitions for GameText styles \textit{(i\_textstyle.inc)}
 \\- New definitions for vehicle name strings \textit{(i\_vehids.inc)}
 \\- Variables ISAMPP\_VERSION and ISAMPP\_VERID added \textit{(i\_sampp.inc)}
 \\- Updated documentation
@@ -46,24 +45,11 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \textbf{ISAMPP Sandbox Game Mode:}
 \\- Armor pickups now work
 \\- New pickups placed on map
-\\- New in-game commands \textit{/gametext}, \textit{/setvehiclehealth}, \textit{/showvehicleinfo} and \textit{/changeskin}
+\\- New in-game commands: \textit{/gametext}, \textit{/setvehiclehealth}, \textit{/showvehicleinfo}, \textit{/changeskin} and \textit{/tpcoord}
 \\- Updated fixed vehicle spawns with new vehicle color definitions
 \\- Other minor tweaks
-
-\subsection{Changes in ISAMPP 1.1}
-\textbf{ISAMPP Library:}
-\\- New function \textit{ISAMPP\_SHOWPLAYERPOSITION}
-\\- Functions \textit{ISAMPP\_TELEPORT} and \textit{ISAMPP\_TELEPORTEX} are now part of library itself
-\\- Fixed some Location Identifier coordinates 
-\\- Updated documentation
 \\
-\\
-\textbf{ISAMPP Sandbox Game Mode:}
-\\- Changed in-game teleport commands to use \textit{ISAMPP\_TELEPORTEX} function
-\\- Changed in-game command \textit{"/teleport [ID]"} to \textit{"/tp [ID]"}
-\\- In-game command \textit{"/stringcols"} takes no additional parameters anymore
-\\- New in-game command \textit{"/showplayerpos"} works with \textit{ISAMPP\_SHOWPLAYERPOSITION} data
-
+\\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
 \newpage
 \section{Introduction}
@@ -135,7 +121,7 @@ SendClientMessage(playerid, COLOR_RED, "Hello "SCOL_BLUE"World");
 where the output will print in game client message box string of text in this format:
 \textbf{\color{red}Hello \color{blue}World}\\
 \\
-Secondary or String colors can be used simply in strings while Primary/Main colors would be recommended to be used as parameters. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/i\_colorlist.png"}.
+Secondary or String colors can be used simply in strings while Primary/Main colors would be recommended to be used as parameters. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
 
 
 \section{Icon Identifiers}
@@ -241,6 +227,21 @@ if (strcmp("/teleport barbershop", cmdtext, true, 20) == 0) {
 \end{verbatim}
 
 
+\subsection{ISAMPP\_TELEPORT\_TO\_COORDS(playerid, x, y, z, interiorid, facingangle)}
+
+\textit{Teleports player to specified xyz coordinates with interior identifier and facing angle.}
+\\
+\\
+\textbf{Example of implementation:}
+\begin{verbatim}
+if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
+    ISAMPP_TELEPORT_TO_COORDS(playerid, 49.4172, 2512.4282, 16.4844, 0, 272);
+    return 1;
+}
+\end{verbatim}
+
+
+\newpage
 \subsection{ISAMPP\_SHOWPLAYERPOSITION(playerid, pstringcolor)}
 
 \textit{Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.
@@ -257,7 +258,6 @@ if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 \end{verbatim}
 
 
-\newpage
 \subsection{ISAMPP\_SHOWVEHICLEINFO(playerid, vehicleid, pstringcolor)}
 
 \textit{Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.
