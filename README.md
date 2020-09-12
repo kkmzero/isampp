@@ -36,6 +36,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_carcols>
+#include <i_sampp/i_paintjob>
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 ```
@@ -55,6 +56,7 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 *vehids* - List of definitions for all available vehicles</br>
 *vehhealth* - Vehicle Health configurations</br>
 *carcols* - List of definitions for all available vehicle colors</br>
+*paintjob* - List of definitions for all available vehicle paintjobs</br>
 *weaponids* - List of definitions for weapon identifiers, sorted by weapon slot IDs</br>
 *weatherids* - List of definitions for weather identifiers
 
