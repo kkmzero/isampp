@@ -10,7 +10,7 @@
 	public OnFilterScriptInit()
 	{
 		print("\n---------------------------------------------");
-		print(" SA-MP Includes Library+ 1.2 Sandbox GameMode");
+		print(" SA-MP Includes Library+ 1.3 Sandbox GameMode");
 		print("---------------------------------------------\n");
 		return 1;
 	}
@@ -24,7 +24,7 @@
         isampp_console_printversion();
 
 		print("\n---------------------------------------------");
-		print(" SA-MP Includes Library+ 1.2 Sandbox GameMode");
+		print(" SA-MP Includes Library+ 1.3 Sandbox GameMode");
 		print("---------------------------------------------\n");
 	}
 #endif
@@ -83,7 +83,7 @@ public OnGameModeInit()
 {
 	SetWorldTime(12);
 	// Don't use these lines if it's a filterscript
-	SetGameModeText("ISAMPP 1.2 Sandbox GameMode");
+	SetGameModeText("ISAMPP 1.3 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
@@ -733,8 +733,10 @@ public OnPlayerRequestClass(playerid, classid)
 public OnPlayerConnect(playerid)
 {
 	if(ISAMPP_VERID == 202012) {
-		GameTextForPlayer(playerid,"~p~ISAMPP Sandbox GameMode 1.2", 3500, GMTEXT_STYLE_SLIM2);
 		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.2");
+	}
+	else if(ISAMPP_VERID == 202013) {
+		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.3");
 	}
 	else {
 		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
