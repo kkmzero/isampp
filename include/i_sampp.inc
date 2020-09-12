@@ -20,11 +20,12 @@
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_carcols>
+#include <i_sampp/i_paintjob>
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 
-new ISAMPP_VERSION[5] = "v1.2";
-new ISAMPP_VERID = 202012;
+new ISAMPP_VERSION[5] = "v1.3";
+new ISAMPP_VERID = 202013;
 
 
 stock isampp_console_printversion() {
