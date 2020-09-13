@@ -75,7 +75,7 @@ or simply for debugging purposes. These stock functions are defined in *i_sampp.
 *Same as MppTeleport, plus outputs location name to in-game chat window.*
 
 #### MppTeleportToCoords(playerid, x, y, z, interiorid, facingangle)
-*Teleports player to specified xyz coordinates with interior identifier and facing angle.*
+*Teleports player to specified xyz coordinates, supplied with interior identifier and player facing angle.*
 
 #### MppShowPlayerPosition(playerid, pstringcolor)
 *Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.*
