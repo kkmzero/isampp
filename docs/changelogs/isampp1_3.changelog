@@ -1,7 +1,9 @@
 Changes in ISAMPP 1.3
 
 * ISAMPP Library *
-- 
+- Changed format of scripting functions (i_sampp.inc)
+- New definitions for vehicle paintjobs (i_paintjob.inc)
+- Updated documentation
 
 * ISAMPP Sandbox Game Mode *
-- 
+- Changes related to new format of defined scripting functions
