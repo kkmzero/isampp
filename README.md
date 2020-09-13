@@ -63,22 +63,22 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 # Custom Functions
 
 ISAMPP uses various stock functions which may be useful in creating your custom game modes for SA-MP 
-or simply for debugging purposes. These stock functions are located in *i_sampp.inc* file.
+or simply for debugging purposes. These stock functions are defined in *i_sampp.inc* file.
 
 #### isampp_console_printversion()
 *Outputs ISAMPP version to server console.*
 
-#### ISAMPP_TELEPORT(playerid, locationid)
+#### MppTeleport(playerid, locationid)
 *Teleports player to desired location passed as parameter ’locationid’.*
 
-#### ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor)
-*Same as ISAMPP_TELEPORT, plus outputs location name to in-game chat window.*
+#### MppTeleportEx(playerid, locationid, pstringcolor)
+*Same as MppTeleport, plus outputs location name to in-game chat window.*
 
-#### ISAMPP_TELEPORT_TO_COORDS(playerid, x, y, z, interiorid, facingangle)
+#### MppTeleportToCoords(playerid, x, y, z, interiorid, facingangle)
 *Teleports player to specified xyz coordinates with interior identifier and facing angle.*
 
-#### ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor)
+#### MppShowPlayerPosition(playerid, pstringcolor)
 *Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.*
 
-#### ISAMPP_SHOWVEHICLEINFO(playerid, vehicleid, pstringcolor)
+#### MppShowVehicleInfo(playerid, vehicleid, pstringcolor)
 *Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.*
