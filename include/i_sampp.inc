@@ -34,7 +34,7 @@ stock isampp_console_printversion() {
 }
 
 
-stock ISAMPP_TELEPORT(playerid, locationid) {
+stock MppTeleport(playerid, locationid) {
 	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
 	SetPlayerFacingAngle(playerid, locCoords[locationid][3]);
 	SetPlayerInterior(playerid, locID[locationid][0]);
@@ -42,7 +42,7 @@ stock ISAMPP_TELEPORT(playerid, locationid) {
 	return 1;
 }
 
-stock ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor) {
+stock MppTeleportEx(playerid, locationid, pstringcolor) {
 	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
 	SetPlayerFacingAngle(playerid, locCoords[locationid][3]);
 	SetPlayerInterior(playerid, locID[locationid][0]);
@@ -51,7 +51,7 @@ stock ISAMPP_TELEPORTEX(playerid, locationid, pstringcolor) {
 	return 1;
 }
 
-stock ISAMPP_TELEPORT_TO_COORDS(playerid, Float:x, Float:y, Float:z, interiorid, Float:facingangle) {
+stock MppTeleportToCoords(playerid, Float:x, Float:y, Float:z, interiorid, Float:facingangle) {
 	SetPlayerPos(playerid, x, y, z);
 	SetPlayerFacingAngle(playerid, facingangle);
 	SetPlayerInterior(playerid, interiorid);
@@ -59,7 +59,7 @@ stock ISAMPP_TELEPORT_TO_COORDS(playerid, Float:x, Float:y, Float:z, interiorid,
 	return 1;
 }
 
-stock ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor) {
+stock MppShowPlayerPosition(playerid, pstringcolor) {
 	new Float:x, Float:y, Float:z, Float:rotation;
 	new Float:camx, Float:camy, Float:camz;
 
@@ -79,7 +79,7 @@ stock ISAMPP_SHOWPLAYERPOSITION(playerid, pstringcolor) {
 	return 1;
 }
 
-stock ISAMPP_SHOWVEHICLEINFO(playerid, vehicleid, pstringcolor) {
+stock MppShowVehicleInfo(playerid, vehicleid, pstringcolor) {
 	new vehicle, getvehiclename, Float:health;
 	new Float:vehx, Float:vehy, Float:vehz;
 	new Float:rotw, Float:rotx, Float:roty, Float:rotz;
