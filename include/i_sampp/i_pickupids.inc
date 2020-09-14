@@ -91,7 +91,6 @@
 #define PICKUP_ENEXMARKERBLUE      19607
 #define PICKUP_CJFIELDGUN          2064
 #define PICKUP_PUMPKIN             19320
-#define PICKUP_ALTCHAINSAW         14673
 
 #define PICKUP_GIFTSMALL           327
 #define PICKUP_GIFTBIG             328
