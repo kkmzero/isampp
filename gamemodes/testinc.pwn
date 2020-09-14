@@ -542,7 +542,6 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_ENEXMARKERBLUE, 1, 225.5590,2492.2830,16.4844, -1);
 	CreatePickup(PICKUP_CJFIELDGUN, 1, 220.5590,2492.2830,16.4844, -1);
 	CreatePickup(PICKUP_PUMPKIN, 1, 215.5590,2492.2830,16.4844, -1);
-	CreatePickup(PICKUP_ALTCHAINSAW, 1, 210.5590,2492.2830,16.4844, -1);
 	
 	//VEHICLES - ROW1
 	//[!]WARNING: Do not use more than 1 row of vehicles otherwise the game client might crash
