@@ -1,8 +1,14 @@
 Changes in ISAMPP 1.3
 
 * ISAMPP Library *
-- Changed format of scripting functions (i_sampp.inc)
+- Changed format of scripting functions (i_sampp.inc):
+----| ISAMPP_TELEPORT -> MppTeleport
+----| ISAMPP_TELEPORTEX -> MppTeleportEx
+----| ISAMPP_TELEPORT_TO_COORDS -> MppTeleportToCoords
+----| ISAMPP_SHOWPLAYERPOSITION -> MppShowPlayerPosition
+----| ISAMPP_SHOWVEHICLEINFO -> MppShowVehicleInfo
 - New definitions for vehicle paintjobs (i_paintjob.inc)
+- Removed pickup: PICKUP_ALTCHAINSAW
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
