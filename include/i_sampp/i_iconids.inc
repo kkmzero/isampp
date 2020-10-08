@@ -1,10 +1,11 @@
 /*
  * SA-MP Includes Library+
- * Copyright (c) 2018 Ivan Kmeťo
+ * 2018 - 2020, Ivan Kmeťo
  *
- * Licensed under the MIT License.
- * http://opensource.org/licenses/mit-license
+ * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+ * https://creativecommons.org/publicdomain/zero/1.0/
  */
+
 
 #define ICON_COLSQUARE             0
 #define ICON_WHITESQUARE           1
