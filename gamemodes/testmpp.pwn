@@ -1,7 +1,11 @@
 /*
  * This file is part of San Andreas Multiplayer Includes Library+
  * as its sandbox game mode for San Andreas Multiplayer Mod (SA-MP)
+ *
+ * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+ * https://creativecommons.org/publicdomain/zero/1.0/
  */
+
 
 #include <a_samp>
 #include <i_sampp>
