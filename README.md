@@ -8,15 +8,14 @@ modding the game Grand Theft Auto: San Andreas) and may also have positive impac
 
 Except re-definitions of numeric identifiers, ISAMPP also contains other useful libraries - such as library of 
 locations with coordinates, interior identifiers and location names - or few related custom stock functions. 
-ISAMPP is available with sandbox-styled game mode in which you can see everything implemented. You 
-are free to modify and distribute the source code accordingly to its license.
+ISAMPP is available with sandbox-styled game mode in which you can see everything implemented.
 
 *ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar
 Games, Rockstar North or Take-Two Interactive Software Inc.*
 *Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive
 Software Inc.*
 
-*ISAMPP is licensed under [MIT License](LICENSE)*
+*ISAMPP versions 1.3 or newer should be considered [public domain](LICENSE).*
 
 # Installation
 Copy contents of include folder to *”[SA-MP Server folder]/include”* and also to *”include”* folder for Pawno *(by default ”[SA-MP Server folder]/pawno/include”)*.
@@ -42,6 +41,7 @@ or include header files as you wish separately:
 ```
 
 If you wish to run included sandbox game mode, you have to add file ```testinc.pwn``` to your *”gamemodes”* folder and compile it.
+Alternatively, you can use pre-compiled file testmpp.amx.
 
 # Includes
 
