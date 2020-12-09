@@ -1,4 +1,4 @@
-# SA-MP Includes Library+
+# Includes for San Andreas Multiplayer+
 San Andreas Multiplayer Includes Library+ or ISAMPP (Includes for San Andreas Multiplayer Plus) is 
 library of include files for San Andreas Multiplayer Mod SA-MP. Purpose of ISAMPP is to make development 
 of game modes for SA-MP much easier. SA-MP by default uses in most cases numeric identifiers which are 
@@ -16,6 +16,8 @@ Games, Rockstar North or Take-Two Interactive Software Inc.*
 Software Inc.*
 
 *ISAMPP versions 1.3 or newer should be considered [public domain](LICENSE).*
+
+<img src="docs/logo/isampp_logo_250px.png" width="100">
 
 # Installation
 Copy contents of include folder to *”[SA-MP Server folder]/include”* and also to *”include”* folder for Pawno *(by default ”[SA-MP Server folder]/pawno/include”)*.
