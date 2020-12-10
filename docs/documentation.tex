@@ -18,7 +18,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \fi
 
 
-\title{SA-MP Includes Library+ 1.3 Documentation}
+\title{Includes for San Andreas Multiplayer Plus\\Version 1.4, Documentation}
 \author{Ivan Kmeťo}
 \date{October 2020}
 
@@ -31,27 +31,17 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \tableofcontents
 
 \newpage
-\section{Changes in ISAMPP 1.3}
-\textbf{License:}
-\\- ISAMPP versions 1.3 or newer are published as work under CC0 1.0 Universal (CC0 1.0) and should be considered public domain.
+\section{Changes in ISAMPP 1.4}
+\textbf{Project:}
+\\- 
 \\
 \\
 \textbf{ISAMPP Library:}
-\\- Changed format of scripting functions \textit{(i\_sampp.inc)}
-\\----| ISAMPP\_TELEPORT: MppTeleport
-\\----| ISAMPP\_TELEPORTEX: MppTeleportEx
-\\----| ISAMPP\_TELEPORT\_TO\_COORDS: MppTeleportToCoords
-\\----| ISAMPP\_SHOWPLAYERPOSITION: MppShowPlayerPosition
-\\----| ISAMPP\_SHOWVEHICLEINFO: MppShowVehicleInfo
-\\- New definitions for vehicle paintjobs \textit{(i\_paintjob.inc)}
-\\- Removed pickup: \textit{PICKUP\_ALTCHAINSAW}
-\\- Updated documentation
+\\- 
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
-\\- Changes related to new format of defined scripting functions
-\\- testinc.pwn renamed to testmpp.pwn
-\\- Added compiled file to repository (testmpp.amx)
+\\- 
 \\
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -95,7 +85,7 @@ If you wish to run included sandbox game mode, you have to add file testmpp.pwn 
 
 \newpage
 \section{Includes}
-Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind that ISAMPP may not be the only include with this prefix.
+Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 \\
 \\
 \textit{colorlist} - List of color definitions
@@ -132,7 +122,7 @@ SendClientMessage(playerid, COLOR_RED, "Hello "SCOL_BLUE"World");
 where the output will print in game client message box string of text in this format:
 \textbf{\color{red}Hello \color{blue}World}\\
 \\
-Secondary or String colors can be used simply in strings while Primary/Main colors would be recommended to be used as parameters. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
+Secondary or String colors can be used simply in strings while Primary/Main colors would be used mainly as parameters in SA-MP functions. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
 
 
 \section{Icon Identifiers}
@@ -145,7 +135,7 @@ Locations, in-game interiors and exteriors, are stored in file \textit{i\_locati
 Please note that if you wish to add new location to this list, you have to do it in correct order. Not every location has hitboxes because it was used only in cutscene, so in certain interiors you may just fall through ground.
 
 \section{Pickup Identifiers}
-Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup is placed on map in ISAMPP sandbox game mode.
+Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode.
 
 \section{Skin/Playermodel Identifiers}
 Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers SA-MP uses by default.
@@ -183,6 +173,8 @@ You can test this in ISAMPP sandbox game mode with command \textbf{/setvehiclehe
 List of all available colors for vehicles in game. Color names using prefix \textit{CARCOL\_SAMP\_} are supported only in SA-MP version 0.3x.
 \\
 \\More information is available on SA-MP Wiki: \url{https://wiki.sa-mp.com/wiki/Vehicle_Color_IDs}
+\\Or in OpenMP Documentation:
+\url{https://open.mp/docs/scripting/resources/vehiclecolorid}
 
 \section{Vehicle Paintjobs}
 List of all available paintjobs for vehicles in game. Use \textit{PAINTJOB\_REMOVE} to remove applied paintjob.
@@ -335,6 +327,7 @@ Identifier & Marker Mode \\
 \end{tabular}
 \\\\
 \\\url{https://wiki.sa-mp.com/wroot/index.php?title=ShowPlayerMarkers}
+\\\url{https://open.mp/docs/scripting/functions/ShowPlayerMarkers}
 
 
 
