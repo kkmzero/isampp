@@ -42,7 +42,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_weatherids>
 ```
 
-If you wish to run included sandbox game mode, you have to add file ```testinc.pwn``` to your *”gamemodes”* folder and compile it.
+If you wish to run included sandbox game mode, you have to add file ```testmpp.pwn``` to your *”gamemodes”* folder and compile it.
 Alternatively, you can use pre-compiled file testmpp.amx.
 
 # Includes
