@@ -47,7 +47,7 @@ Alternatively, you can use pre-compiled file testmpp.amx.
 
 # Includes
 
-Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only include with this prefix.
+Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 
 *colorlist* - List of color definitions</br>
 *iconids* - List of icon identifiers</br>
