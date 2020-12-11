@@ -1,5 +1,5 @@
 /*
- * SA-MP Includes Library+
+ * Includes for San Andreas Multiplayer+
  * 2018 - 2020, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
