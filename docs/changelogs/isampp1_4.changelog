@@ -8,4 +8,4 @@ Changes in ISAMPP 1.4
 - Updated documentation (external links to scripting resources now refer also to OpenMP Documentation)
 
 * ISAMPP Sandbox Game Mode *
--
+- Output messages now use string ISAMPP_VERSION
