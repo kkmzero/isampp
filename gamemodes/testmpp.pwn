@@ -1,5 +1,5 @@
 /*
- * This file is part of San Andreas Multiplayer Includes Library+
+ * This file is part of Includes for San Andreas Multiplayer+
  * as its sandbox game mode for San Andreas Multiplayer Mod (SA-MP)
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
@@ -13,9 +13,9 @@
 #if defined FILTERSCRIPT
 	public OnFilterScriptInit()
 	{
-		print("\n---------------------------------------------");
-		print(" SA-MP Includes Library+ 1.3 Sandbox GameMode");
-		print("---------------------------------------------\n");
+		print("\n----------------------------");
+		print("ISAMPP" ISAMPP_VERSION "Sandbox GameMode");
+		print("----------------------------\n");
 		return 1;
 	}
 	public OnFilterScriptExit()
@@ -27,9 +27,9 @@
 	{
         isampp_console_printversion();
 
-		print("\n---------------------------------------------");
-		print(" SA-MP Includes Library+ 1.3 Sandbox GameMode");
-		print("---------------------------------------------\n");
+		print("\n----------------------------");
+		printf("ISAMPP %s Sandbox GameMode", ISAMPP_VERSION);
+		print("----------------------------\n");
 	}
 #endif
 
@@ -87,7 +87,7 @@ public OnGameModeInit()
 {
 	SetWorldTime(12);
 	// Don't use these lines if it's a filterscript
-	SetGameModeText("ISAMPP 1.3 Sandbox GameMode");
+	SetGameModeText("ISAMPP 1.4 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
@@ -735,14 +735,11 @@ public OnPlayerRequestClass(playerid, classid)
 
 public OnPlayerConnect(playerid)
 {
-	if(ISAMPP_VERID == 202012) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.2");
-	}
-	else if(ISAMPP_VERID == 202013) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.3");
-	}
-	else {
-		SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
+	switch(ISAMPP_VERID) {
+		case 202012: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.2");
+		case 202013: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.3");
+		case 202114: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.4");
+		default: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
 	}
 
 	SendClientMessage(playerid, COLOR_ORANGE, "Use command /help for list of available commands");
@@ -807,7 +804,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 
 
-    //GAME TEXT TEST COMMANDS
+	//GAME TEXT TEST COMMANDS
 	if (strcmp("/gametext pricedown", cmdtext, true, 20) == 0) {
 		GameTextForPlayer(playerid,"GMTEXT_STYLE_PRICEDOWN", 2000, GMTEXT_STYLE_PRICEDOWN);
 		return 1;
