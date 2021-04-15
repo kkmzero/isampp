@@ -1,11 +1,12 @@
 % This file is part of documentation for ISAMPP
-% 2018 - 2020, Ivan Kmeťo
+% 2018 - 2021, Ivan Kmeťo
 %
 % CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 % https://creativecommons.org/publicdomain/zero/1.0/
 
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 \usepackage[left=1in,right=1in,top=1in,bottom=.8in]{geometry}
 \usepackage[dvipsnames]{xcolor}
@@ -20,12 +21,15 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 \title{Includes for San Andreas Multiplayer Plus\\Version 1.4, Documentation}
 \author{Ivan Kmeťo}
-\date{October 2020}
+\date{April 2021}
 
 
 \begin{document}
 
 \maketitle
+\begin{center}
+\includegraphics[width = 40mm]{logo/isampp_logo_big.png}
+\end{center}
 
 \newpage
 \tableofcontents
@@ -33,15 +37,16 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \newpage
 \section{Changes in ISAMPP 1.4}
 \textbf{Project:}
-\\- 
+\\- Default GitHub repository branch changed, from 'master' to 'main'
+\\- New logo and icon (docs/logo)
 \\
 \\
 \textbf{ISAMPP Library:}
-\\- 
+\\- Updated documentation (external links to scripting resources now refer also to OpenMP Documentation)
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
-\\- 
+\\- Output messages now use string ISAMPP\_VERSION
 \\
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
