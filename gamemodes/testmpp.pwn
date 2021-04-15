@@ -1,6 +1,7 @@
 /*
  * This file is part of Includes for San Andreas Multiplayer+
  * as its sandbox game mode for San Andreas Multiplayer Mod (SA-MP)
+ * 2018 - 2021, Ivan Kmeto
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
