@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2020, Ivan Kmeťo
+ * 2018 - 2021, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -25,8 +25,8 @@
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 
-new ISAMPP_VERSION[5] = "v1.4";
-new ISAMPP_VERID = 202114;
+new ISAMPP_VERSION[5] = "v1.5";
+new ISAMPP_VERID = 202115;
 
 
 stock isampp_console_printversion() {
