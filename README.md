@@ -50,7 +50,7 @@ Alternatively, you can use pre-compiled file testmpp.amx.
 Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 
 *colorlist* - List of color definitions</br>
-*iconids* - List of icon identifiers</br>
+*iconids* - List of map icon identifiers</br>
 *locationids* - List of location definitions with coordinates, interior identifiers and names</br>
 *pickupids* - List of definitions for pickup identifiers</br>
 *skinids* - List of definitions for character skin/model identifiers</br>
