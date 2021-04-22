@@ -88,7 +88,7 @@ public OnGameModeInit()
 {
 	SetWorldTime(12);
 	// Don't use these lines if it's a filterscript
-	SetGameModeText("ISAMPP 1.4 Sandbox GameMode");
+	SetGameModeText("ISAMPP 1.5 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, 441.7056,2500.1367,17.7823,276.6780, 0, 0, 0, 0, 0, 0);
@@ -740,6 +740,7 @@ public OnPlayerConnect(playerid)
 		case 202012: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.2");
 		case 202013: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.3");
 		case 202114: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.4");
+		case 202115: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.5");
 		default: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
 	}
 
