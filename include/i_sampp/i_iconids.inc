@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2020, Ivan Kmeťo
+ * 2018 - 2021, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -33,7 +33,7 @@
 #define ICON_LOCO                  23
 #define ICON_MADDDOGG              24
 #define ICON_CALIGULAS             25
-#define ICON_OGLOC0                26
+#define ICON_MCS                   26
 #define ICON_MODGARAGE             27
 #define ICON_OGLOC                 28
 #define ICON_PIZZA                 29
