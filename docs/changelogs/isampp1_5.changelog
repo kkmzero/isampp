@@ -1,0 +1,8 @@
+Changes in ISAMPP 1.5
+
+* ISAMPP Library *
+- ICON_OGLOC0 renamed to ICON_MCS (i_iconids.inc)
+- Updated documentation (external links to SA-MP Wiki were removed)
+
+* ISAMPP Sandbox Game Mode *
+- 
