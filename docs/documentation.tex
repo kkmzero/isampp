@@ -19,7 +19,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \fi
 
 
-\title{Includes for San Andreas Multiplayer Plus\\Version 1.4, Documentation}
+\title{Includes for San Andreas Multiplayer Plus\\Version 1.5, Documentation}
 \author{Ivan Kmeťo}
 \date{April 2021}
 
@@ -35,18 +35,17 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \tableofcontents
 
 \newpage
-\section{Changes in ISAMPP 1.4}
+\section{Changes in ISAMPP 1.5}
 \textbf{Project:}
-\\- Default GitHub repository branch changed, from 'master' to 'main'
-\\- New logo and icon (docs/logo)
+\\- 
 \\
 \\
 \textbf{ISAMPP Library:}
-\\- Updated documentation (external links to scripting resources now refer also to OpenMP Documentation)
+\\- 
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
-\\- Output messages now use string ISAMPP\_VERSION
+\\- 
 \\
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -95,7 +94,7 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \\
 \textit{colorlist} - List of color definitions
 \\
-\textit{iconids} - List of icon identifiers
+\textit{iconids} - List of map icon identifiers
 \\
 \textit{locationids} - List of location definitions with coordinates, interior identifiers and names
 \\
@@ -130,8 +129,10 @@ where the output will print in game client message box string of text in this fo
 Secondary or String colors can be used simply in strings while Primary/Main colors would be used mainly as parameters in SA-MP functions. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
 
 
-\section{Icon Identifiers}
-There are total 64 icons in total included as macro defines with prefix \textit{ICON\_}. 
+\section{Map Icon Identifiers}
+There are in total 64 map icons included as macro defines with prefix \textit{ICON\_}.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/mapicons}
 
 
 \section{Location Identifiers}
@@ -177,9 +178,7 @@ You can test this in ISAMPP sandbox game mode with command \textbf{/setvehiclehe
 \section{Vehicle Colors}
 List of all available colors for vehicles in game. Color names using prefix \textit{CARCOL\_SAMP\_} are supported only in SA-MP version 0.3x.
 \\
-\\More information is available on SA-MP Wiki: \url{https://wiki.sa-mp.com/wiki/Vehicle_Color_IDs}
-\\Or in OpenMP Documentation:
-\url{https://open.mp/docs/scripting/resources/vehiclecolorid}
+\\Resources: \url{https://open.mp/docs/scripting/resources/vehiclecolorid}
 
 \section{Vehicle Paintjobs}
 List of all available paintjobs for vehicles in game. Use \textit{PAINTJOB\_REMOVE} to remove applied paintjob.
@@ -331,7 +330,6 @@ Identifier & Marker Mode \\
 \hline
 \end{tabular}
 \\\\
-\\\url{https://wiki.sa-mp.com/wroot/index.php?title=ShowPlayerMarkers}
 \\\url{https://open.mp/docs/scripting/functions/ShowPlayerMarkers}
 
 
