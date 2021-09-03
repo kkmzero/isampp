@@ -28,7 +28,9 @@ In your game mode file you can include ISAMPP header for all its contents:
 
 or include header files as you wish separately:
 
-```#include <i_sampp/i_colorlist>
+```
+#include <i_sampp/i_bodyparts>
+#include <i_sampp/i_colorlist>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
 #include <i_sampp/i_pickupids>
@@ -49,6 +51,7 @@ Alternatively, you can use pre-compiled file testmpp.amx.
 
 Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 
+*bodyparts* - List of player/npc body parts</br>
 *colorlist* - List of color definitions</br>
 *iconids* - List of map icon identifiers</br>
 *locationids* - List of location definitions with coordinates, interior identifiers and names</br>
