@@ -84,6 +84,10 @@ new pickupArmor;
 //Get Vehicle Model
 new VehicleModelID = 0;
 
+//Create Actor Dummy
+new gActorDummy;
+
+
 public OnGameModeInit()
 {
 	SetWorldTime(12);
@@ -717,12 +721,18 @@ public OnGameModeInit()
 	AddStaticVehicle(VEH_BMX,40.7991,2523.3472,16.5764,180,CARCOL_SMOKE2,0);
 	AddStaticVehicle(VEH_BIKE,35.7991,2523.3472,16.5764,180,CARCOL_LIGHTLIME,0);
 	AddStaticVehicle(VEH_MTBIKE,30.7991,2523.3472,16.5764,180,CARCOL_CORAL,0);
-	
+
+	//Create Actor Dummy
+	gActorDummy = CreateActor(SKIN_BMYST, 428.687, 2531.6868, 16.5926, 180);
+	SetActorInvulnerable(gActorDummy, false);
+
 	return 1;
 }
 
 public OnGameModeExit()
 {
+	DestroyActor(gActorDummy);
+
 	return 1;
 }
 
@@ -731,6 +741,7 @@ public OnPlayerRequestClass(playerid, classid)
 	SetPlayerPos(playerid, 441.7056, 2500.1367, 17.7823);
 	SetPlayerCameraPos(playerid, 446.7056, 2500.1367, 18.7823);
 	SetPlayerCameraLookAt(playerid, 441.7056 ,2500.1367, 17.7823);
+
 	return 1;
 }
 
@@ -755,6 +766,8 @@ public OnPlayerDisconnect(playerid, reason)
 
 public OnPlayerSpawn(playerid)
 {
+	GivePlayerWeapon(playerid, WEAP_MP5, 100);
+
 	return 1;
 }
 
@@ -2257,5 +2270,29 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 {
+	return 1;
+}
+
+public OnPlayerGiveDamageActor(playerid, damaged_actorid, Float: amount, weaponid, bodypart)
+{
+	new string[128], attacker[MAX_PLAYER_NAME], sbodypart[128];
+	new weaponname[24];
+	GetPlayerName(playerid, attacker, sizeof (attacker));
+	GetWeaponName(weaponid, weaponname, sizeof (weaponname));
+
+	switch(bodypart) {
+		case BODYPART_TORSO: sbodypart = "torso";
+		case BODYPART_GROIN: sbodypart = "groin";
+		case BODYPART_LEFTARM: sbodypart = "left arm";
+		case BODYPART_RIGHTARM: sbodypart = "right arm";
+		case BODYPART_LEFTLEG: sbodypart = "left leg";
+		case BODYPART_RIGHTLEG: sbodypart = "right leg";
+		case BODYPART_HEAD: sbodypart = "head";
+		default: sbodypart = "undefined";
+	}
+
+	format(string, sizeof(string), "%s has made %.0f damage to actor id %d, weapon: %s, sbodypart: %s", attacker, amount, damaged_actorid, weaponname, sbodypart);
+	SendClientMessageToAll(COLOR_WHITE, string);
+
 	return 1;
 }
