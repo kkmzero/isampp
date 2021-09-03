@@ -1,8 +1,11 @@
 Changes in ISAMPP 1.5
 
 * ISAMPP Library *
+- New definitions for body parts (i_bodyparts.inc)
 - ICON_OGLOC0 renamed to ICON_MCS (i_iconids.inc)
 - Updated documentation (external links to SA-MP Wiki were removed)
 
 * ISAMPP Sandbox Game Mode *
-- 
+- Player will get weapon on spawn
+- Added test dummy Actor
+- Implemented function OnPlayerGiveDamageActor
