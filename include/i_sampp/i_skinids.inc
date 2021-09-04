@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2020, Ivan Kmeťo
+ * 2018 - 2021, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
