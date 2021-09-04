@@ -10,3 +10,5 @@ Changes in ISAMPP 1.5
 - Player will get weapon on spawn
 - Added test dummy Actor
 - Implemented function OnPlayerGiveDamageActor
+- Added position coordinates variables for AddPlayerClass function
+- Code formatting cleanup
