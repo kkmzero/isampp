@@ -30,6 +30,7 @@ or include header files as you wish separately:
 
 ```
 #include <i_sampp/i_bodyparts>
+#include <i_sampp/i_boneids>
 #include <i_sampp/i_colorlist>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
@@ -52,6 +53,7 @@ Alternatively, you can use pre-compiled file testmpp.amx.
 Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 
 *bodyparts* - List of available player/npc body part identifiers</br>
+*boneids* - List of player bone identifiers</br>
 *colorlist* - List of color definitions</br>
 *iconids* - List of map icon identifiers</br>
 *locationids* - List of location definitions with coordinates, interior identifiers and names</br>
