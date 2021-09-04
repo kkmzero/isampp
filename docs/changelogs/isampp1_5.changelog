@@ -3,6 +3,7 @@ Changes in ISAMPP 1.5
 * ISAMPP Library *
 - New definitions for body parts (i_bodyparts.inc)
 - ICON_OGLOC0 renamed to ICON_MCS (i_iconids.inc)
+- SKIN_BBFAT renamed to SKIN_BB (i_skinids.inc)
 - Updated documentation (external links to SA-MP Wiki were removed)
 
 * ISAMPP Sandbox Game Mode *
