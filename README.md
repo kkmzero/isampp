@@ -1,19 +1,10 @@
 # Includes for San Andreas Multiplayer+
-San Andreas Multiplayer Includes Library+ or ISAMPP (Includes for San Andreas Multiplayer Plus) is 
-library of include files for San Andreas Multiplayer Mod SA-MP. Purpose of ISAMPP is to make development 
-of game modes for SA-MP much easier. SA-MP by default uses in most cases numeric identifiers which are 
-hard to remember and without enough experience you have to use SA-MP wiki a lot. I believe that word 
-identifiers are much more easier to remember, they make much more sense (especially if you are familiar with 
-modding the game Grand Theft Auto: San Andreas) and may also have positive impact on your workflow.
+San Andreas Multiplayer Includes Library+ or ISAMPP (Includes for San Andreas Multiplayer Plus) is library of include files for San Andreas Multiplayer Mod SA-MP. Purpose of ISAMPP is to make development of game modes for SA-MP much easier. SA-MP by default uses in most cases numeric identifiers which are hard to remember and without enough experience you have to use SA-MP wiki a lot. Word identifiers are much more easier to remember, they make much more sense (especially if you are familiar with modding the game Grand Theft Auto: San Andreas) and may also have positive impact on your workflow.
 
-Except re-definitions of numeric identifiers, ISAMPP also contains other useful libraries - such as library of 
-locations with coordinates, interior identifiers and location names - or few related custom stock functions. 
-ISAMPP is available with sandbox-styled game mode in which you can see everything implemented.
+Except re-definitions of numeric identifiers, ISAMPP also contains other useful libraries - such as library of locations with coordinates, interior identifiers and location names - or few related custom stock functions. ISAMPP is available with sandbox-styled game mode in which you can see everything implemented.
 
-*ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar
-Games, Rockstar North or Take-Two Interactive Software Inc.*
-*Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive
-Software Inc.*
+*ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar Games, Rockstar North or Take-Two Interactive Software Inc.*
+*Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive Software Inc.*
 
 *ISAMPP versions 1.3 or newer should be considered [public domain](LICENSE).*
 
