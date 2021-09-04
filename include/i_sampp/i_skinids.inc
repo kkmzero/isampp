@@ -12,7 +12,7 @@
 #define SKIN_MACCER                2    //Maccer
 #define SKIN_ANDRE                 3    //Andre
 #define SKIN_BBTHIN                4    //Barry "Big Bear" Thorne [Thin]
-#define SKIN_BBFAT                 5    //Barry "Big Bear" Thorne [Big]
+#define SKIN_BB                    5    //Barry "Big Bear" Thorne [Big]
 #define SKIN_EMMET                 6    //Emmet
 #define SKIN_MALE01                7    //Taxi Driver/Train Driver
 #define SKIN_JANITOR               8    //Janitor
@@ -29,7 +29,7 @@
 #define SKIN_BMYDJ                 19   //DJ
 #define SKIN_BMYRI                 20   //Rich Guy (Madd Dogg's Manager)
 #define SKIN_BMYCR                 21   //Normal Ped (M)
-#define SKIN_BMYST                 22   //Nurmal Ped (M)
+#define SKIN_BMYST                 22   //Normal Ped (M)
 #define SKIN_WMYBMX                23   //BMXer
 #define SKIN_WBDYG1                24   //Madd Dogg Bodyguard
 #define SKIN_WBDYG2                25   //Madd Dogg Bodyguard
@@ -161,7 +161,7 @@
 #define SKIN_WFYPRO                152  //Prostitute
 #define SKIN_WMYCONB               153  //Construction Worker
 #define SKIN_WMYBE                 154  //Beach Visitor (M)
-#define SKIN_WMYPIZZ               155  //Pizza shop worker
+#define SKIN_WMYPIZZ               155  //Well Stacked Pizza Worker
 #define SKIN_BMOBAR                156  //Old Reece
 #define SKIN_CWFYHB                157  //Hillbilly (F)
 #define SKIN_CWMOFR                158  //Farmer (M)
@@ -248,7 +248,7 @@
 #define SKIN_SWMOTR4               239  //Homeless
 #define SKIN_SWMYRI                240  //The D.A.
 #define SKIN_SMYST                 241  //Normal Ped with Afro (M)
-#define SKIN_SMYST2                242  //Normal Ped (M)
+#define SKIN_SMYST2                242  //Normal Ped Mexican (M)
 #define SKIN_SFYPRO                243  //Prostitute
 #define SKIN_VBFYST2               244  //Stripper
 #define SKIN_VBFYPRO               245  //Prostitute
@@ -278,7 +278,7 @@
 #define SKIN_SMOKE                 269  //Big Smoke
 #define SKIN_SWEET                 270  //Sweet
 #define SKIN_RYDER                 271  //Ryder
-#define SKIN_FORELLI               272  //Mafia Member
+#define SKIN_FORELLI               272  //Mafia Boss
 #define SKIN_TBONE                 273  //T-Bone Mendez
 #define SKIN_LAEMT1                274  //Paramedic LS
 #define SKIN_LVEMT1                275  //Paramedic LV
@@ -293,7 +293,7 @@
 #define SKIN_LAPDM1                284  //LSPD Motorbike Cop
 #define SKIN_SWAT                  285  //S.W.A.T. Special Forces
 #define SKIN_FBI                   286  //Federal Agent
-#define SKIN_ARMY                  287  //San Andreas Army
+#define SKIN_ARMY                  287  //San Andreas Army Soldier
 #define SKIN_DSHER                 288  //Desert Sheriff
 #define SKIN_ZERO                  289  //Zero
 #define SKIN_ROSE                  290  //Ken Rosenberg
