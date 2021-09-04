@@ -51,7 +51,7 @@ Alternatively, you can use pre-compiled file testmpp.amx.
 
 Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 
-*bodyparts* - List of player/npc body parts</br>
+*bodyparts* - List of available player/npc body part identifiers</br>
 *colorlist* - List of color definitions</br>
 *iconids* - List of map icon identifiers</br>
 *locationids* - List of location definitions with coordinates, interior identifiers and names</br>
