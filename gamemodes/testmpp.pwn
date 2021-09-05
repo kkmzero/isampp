@@ -804,7 +804,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]; /tpcoord");
 		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list");
-		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /changeskin");
+		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin");
 		return 1;
 	}
 	
@@ -2037,6 +2037,36 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	//SHOW VEHICLE INFORMATION
 	if (strcmp("/showvehicleinfo", cmdtext, true, 15) == 0) {
 		MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTBLUE);
+		return 1;
+	}
+
+	//SHOW PLAYER CAMERA MODE
+	if (strcmp("/cameramode", cmdtext, true, 15) == 0) {
+		new szMessage[128]; new sCammode[128];
+
+		switch(GetPlayerCameraMode(playerid)) {
+			case CAMMODE_FOLLOWPED: sCammode = "CAMMODE_FOLLOWPED";
+			case CAMMODE_SNIPER: sCammode = "CAMMODE_SNIPER";
+			case CAMMODE_ROCKETAIM: sCammode = "CAMMODE_ROCKETAIM";
+			case CAMMODE_FIXED: sCammode = "CAMMODE_FIXED";
+			case CAMMODE_VEHICLEFRONT: sCammode = "CAMMODE_VEHICLEFRONT";
+			case CAMMODE_VEHICLEDEFAULT: sCammode = "CAMMODE_VEHICLEDEFAULT";
+			case CAMMODE_BOATDEFAULT: sCammode = "CAMMODE_BOATDEFAULT";
+			case CAMMODE_ROCKETAIM2: sCammode = "CAMMODE_ROCKETAIM2";
+			case CAMMODE_WEAPONAIM2: sCammode = "CAMMODE_WEAPONAIM2";
+			case CAMMODE_VEHICLEPASSENGER: sCammode = "CAMMODE_VEHICLEPASSENGER";
+			case CAMMODE_HELICHASE: sCammode = "CAMMODE_HELICHASE";
+			case CAMMODE_GROUNDCHASE: sCammode = "CAMMODE_GROUNDCHASE";
+			case CAMMODE_FLYBYCHASE: sCammode = "CAMMODE_FLYBYCHASE";
+			case CAMMODE_GROUNDCHASE2: sCammode = "CAMMODE_GROUNDCHASE2";
+			case CAMMODE_FLYBYCHASE2: sCammode = "CAMMODE_FLYBYCHASE2";
+			case CAMMODE_FLYBYCHASE3: sCammode = "CAMMODE_FLYBYCHASE3";
+			case CAMMODE_PILOTCHASE: sCammode = "CAMMODE_PILOTCHASE";
+			default: sCammode = "Unknown Camera Mode";
+		}
+
+		format(szMessage, sizeof(szMessage), "Camera mode: %d %s", GetPlayerCameraMode(playerid), sCammode);
+		SendClientMessage(playerid, COLOR_LIGHTBLUE, szMessage);
 		return 1;
 	}
 
