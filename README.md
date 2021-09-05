@@ -23,16 +23,16 @@ or include header files as you wish separately:
 #include <i_sampp/i_bodyparts>
 #include <i_sampp/i_boneids>
 #include <i_sampp/i_cammode>
+#include <i_sampp/i_carcols>
 #include <i_sampp/i_colorlist>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
+#include <i_sampp/i_paintjob>
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_textstyle>
-#include <i_sampp/i_vehids>
 #include <i_sampp/i_vehhealth>
-#include <i_sampp/i_carcols>
-#include <i_sampp/i_paintjob>
+#include <i_sampp/i_vehids>
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 ```
@@ -47,16 +47,16 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 *bodyparts* - List of available player/npc body part identifiers</br>
 *boneids* - List of player bone identifiers</br>
 *cammode* - List of known camera modes</br>
+*carcols* - List of definitions for all available vehicle colors</br>
 *colorlist* - List of color definitions</br>
 *iconids* - List of map icon identifiers</br>
 *locationids* - List of location definitions with coordinates, interior identifiers and names</br>
+*paintjob* - List of definitions for all available vehicle paintjobs</br>
 *pickupids* - List of definitions for pickup identifiers</br>
 *skinids* - List of definitions for character skin/model identifiers</br>
 *textstyle* - List of definitions for GameText styles</br>
-*vehids* - List of definitions for all available vehicles</br>
 *vehhealth* - Vehicle Health configurations</br>
-*carcols* - List of definitions for all available vehicle colors</br>
-*paintjob* - List of definitions for all available vehicle paintjobs</br>
+*vehids* - List of definitions for all available vehicles</br>
 *weaponids* - List of definitions for weapon identifiers, sorted by weapon slot IDs</br>
 *weatherids* - List of definitions for weather identifiers
 
