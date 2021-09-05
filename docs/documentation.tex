@@ -4,6 +4,7 @@
 % CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 % https://creativecommons.org/publicdomain/zero/1.0/
 
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -21,7 +22,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 \title{Includes for San Andreas Multiplayer Plus\\Version 1.5, Documentation}
 \author{Ivan Kmeťo}
-\date{April 2021}
+\date{September 2021}
 
 
 \begin{document}
@@ -36,22 +37,29 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 \newpage
 \section{Changes in ISAMPP 1.5}
-\textbf{Project:}
-\\- 
-\\
-\\
 \textbf{ISAMPP Library:}
-\\- 
+\\- New definitions for body parts \textit{(i\_bodyparts.inc)}
+\\- New definitions for player bones \textit{(i\_boneids.inc)}
+\\- Added remaining 9 GameText styles \textit{(i\_textstyle.inc)}
+\\- ICON\_OGLOC0 renamed to ICON\_MCS \textit{(i\_iconids.inc)}
+\\- SKIN\_BBFAT renamed to SKIN\_BB \textit{(i\_skinids.inc)}
+\\- Updated documentation (external links to SA-MP Wiki were removed)
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
-\\- 
+\\- Player will get weapon on spawn
+\\- Added test dummy Actor
+\\- Implemented function OnPlayerGiveDamageActor
+\\- Player will spawn with green hat (for testing Bone IDs)
+\\- Expanded commands for testing GameText styles
+\\- Added position coordinates variables for AddPlayerClass function
+\\- Code formatting cleanup
 \\
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
 \newpage
 \section{Introduction}
-San Andreas Multiplayer Includes Library+ or ISAMPP \textit{(Includes for San Andreas Multiplayer Plus)} is library of include files for San Andreas Multiplayer Mod SA-MP. Purpose of ISAMPP is to make development of game modes for SA-MP much easier. SA-MP by default uses in most cases numeric identifiers which are hard to remember and without enough experience you have to use SA-MP wiki a lot. I believe that word identifiers are much more easier to remember, they make much more sense (especially if you are familiar with modding the game Grand Theft Auto: San Andreas) and may also have positive impact on your workflow. Except re-definitions of numeric identifiers, ISAMPP also contains other useful libraries - such as library of locations with coordinates, interior identifiers and location names - or few related custom stock functions. ISAMPP is available with sandbox-styled game mode in which you can see everything implemented.
+San Andreas Multiplayer Includes Library+ or ISAMPP \textit{(Includes for San Andreas Multiplayer Plus)} is library of include files for San Andreas Multiplayer Mod SA-MP. Purpose of ISAMPP is to make development of game modes for SA-MP much easier. SA-MP by default uses in most cases numeric identifiers which are hard to remember and without enough experience you have to use SA-MP wiki a lot. Word identifiers are much more easier to remember, they make much more sense (especially if you are familiar with modding the game Grand Theft Auto: San Andreas) and may also have positive impact on your workflow. Except re-definitions of numeric identifiers, ISAMPP also contains other useful libraries - such as library of locations with coordinates, interior identifiers and location names - or few related custom stock functions. ISAMPP is available with sandbox-styled game mode in which you can see everything implemented.
 
 \textit{\\ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar Games, Rockstar North or Take-Two Interactive Software Inc.}
 \textit{\\Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive Software Inc.}
@@ -72,6 +80,8 @@ In your game mode file you can include ISAMPP header for all its contents:
 \end{verbatim}
 or include header files as you wish separately:
 \begin{verbatim}
+#include <i_sampp/i_bodyparts>
+#include <i_sampp/i_boneids>
 #include <i_sampp/i_colorlist>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
@@ -91,6 +101,10 @@ If you wish to run included sandbox game mode, you have to add file testmpp.pwn 
 \section{Includes}
 Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 \\
+\\
+\textit{bodyparts} - List of available player/npc body part identifiers
+\\
+\textit{boneids} - List of player bone identifiers
 \\
 \textit{colorlist} - List of color definitions
 \\
@@ -118,6 +132,61 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 
 
 \newpage
+\section{Body Parts}
+Body parts can be used in functions \textit{OnPlayerGiveDamage}, \textit{OnPlayerTakeDamage} and \textit{OnPlayerGiveDamageActor}. It is unknown if IDs 0, 1 and 2 have any use. You can test this feature in sandbox game mode by shooting Actor NPC.
+\\
+\\
+\begin{tabular}{ |l|c|l| } 
+\hline
+Identifier & Value & Body Part \\
+\hline
+BODYPART\_TORSO & 3 & Torso \\ 
+BODYPART\_GROIN & 4 & Groin \\
+BODYPART\_LEFTARM & 5 & Left Arm \\
+BODYPART\_RIGHTARM & 6 & Right Arm \\
+BODYPART\_LEFTLEG & 7 & Left Leg \\
+BODYPART\_RIGHTLEG & 8 & Right Leg \\
+BODYPART\_HEAD & 9 & Head \\
+\hline
+\end{tabular}
+\\
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/bodyparts}
+
+\section{Bone Identifiers}
+Bone identifiers can be used for attaching objects to players with function \textit{SetPlayerAttachedObject}.
+\\
+\\
+\begin{tabular}{ |l|c|l| } 
+\hline
+Identifier & Value & Bone \\
+\hline
+BONE\_SPINE & 1 & Spine \\
+BONE\_HEAD & 2 & Head \\
+BONE\_LEFTUPPERARM & 3 & Left Upper Arm \\
+BONE\_RIGHTUPPERARM & 4 & Right Upper Arm \\
+BONE\_LEFTHAND & 5 & Left Hand \\
+BONE\_RIGHTHAND & 6 & Right Hand \\
+BONE\_LEFTTHIGH & 7 & Left Thigh \\
+BONE\_RIGHTTHIGH & 8 & Right Thigh \\
+BONE\_LEFTFOOT & 9 & Left Foot \\
+BONE\_RIGHTFOOT & 10 & Right Foot \\
+BONE\_RIGHTCALF & 11 & Right Calf \\
+BONE\_LEFTCALF & 12 & Left Calf \\
+BONE\_LEFTFOREARM & 13 & Left Forearm \\
+BONE\_RIGHTFOREARM & 14 & Right Forearm \\
+BONE\_LEFTSHOULDER & 15 & Left Clavicle (shoulder) \\
+BONE\_RIGHTSHOULDER & 16 & Right Clavicle (shoulder) \\
+BONE\_NECK & 17 & Neck \\
+BONE\_JAW & 18 & Jaw \\
+\hline
+\end{tabular}
+\\
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/boneid}
+
+
+\newpage
 \section{Color List}
 Color List contains definitions of some few common colors in two formats. Primary or Main color definitions have prefix \textit{COLOR\_} and are defined in 0xRRGGBBAA format. Secondary or String color definitions with prefix \textit{SCOL\_} are defined in more common hex format "\{RRGGBB\}" without the alpha color transparency values. The difference of these two formats can be explained by this example:
 \begin{verbatim}
@@ -127,6 +196,8 @@ where the output will print in game client message box string of text in this fo
 \textbf{\color{red}Hello \color{blue}World}\\
 \\
 Secondary or String colors can be used simply in strings while Primary/Main colors would be used mainly as parameters in SA-MP functions. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/colorslist}
 
 
 \section{Map Icon Identifiers}
@@ -138,19 +209,58 @@ There are in total 64 map icons included as macro defines with prefix \textit{IC
 \section{Location Identifiers}
 Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed.\\
 \\
-Please note that if you wish to add new location to this list, you have to do it in correct order. Not every location has hitboxes because it was used only in cutscene, so in certain interiors you may just fall through ground.
+Please note that if you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/interiorids}
+
 
 \section{Pickup Identifiers}
 Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/pickupids}
+
 
 \section{Skin/Playermodel Identifiers}
 Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers SA-MP uses by default.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/skins}
+
 
 \section{GameText Styles}
-List of definitions for SA-MP function \textit{GameTextForPlayer(playerid, const string[], time, \textbf{style})}.
+List of definitions for SA-MP function \textit{GameTextForPlayer(playerid, const string[], time, \textbf{style})}. Some styles might not work properly or could crash the game.
+\\
+\\
+\begin{tabular}{ |l|c|l| } 
+\hline
+Identifier & Name & Notes \\
+\hline
+GMTEXT\_STYLE\_PRICEDOWN & 0 & Appears for 9 seconds regardless of time setting.\\
+GMTEXT\_STYLE\_RPRICEDOWN & 1 & Fades out after 8 seconds, regardless of time set.\\
+GMTEXT\_STYLE\_SA & 2 & San Andreas main font. Does not disappear until player respawns. \\
+GMTEXT\_STYLE\_SLIM & 3 & San Andreas specific font. \\
+GMTEXT\_STYLE\_SLIM2 & 4 & San Andreas specific font. \\
+GMTEXT\_STYLE\_SLIMW & 5 & Displays for 3 seconds, regardless of what time you set. \\
+GMTEXT\_STYLE\_BPRICEDOWN & 6 & Blue Pricedown font in middle of screen. \\
+GMTEXT\_STYLE\_VEHNAME & 7 & Based on SA vehicle names. Added by fixes.inc \\
+GMTEXT\_STYLE\_LOCATION & 8 & Based on SA location names. Added by fixes.inc \\
+GMTEXT\_STYLE\_RADIO & 9 & Based on SA radio station names (selected). Added by fixes.inc \\
+GMTEXT\_STYLE\_RADIOW & 10 & Based on SA radio station names (switching). Added by fixes.inc \\
+GMTEXT\_STYLE\_PMONEY & 11 & Based on SA positive money. Added by fixes.inc \\
+GMTEXT\_STYLE\_NMONEY & 12 & Based on SA negative money. Added by fixes.inc \\
+GMTEXT\_STYLE\_STUNT & 13 & Based on SA stunt bonuses. Added by fixes.inc \\
+GMTEXT\_STYLE\_CLOCK & 14 & Based on SA in-game clock. Added by fixes.inc \\
+GMTEXT\_STYLE\_NOTIFICATION & 15 & Based on SA notification popup. Added by fixes.inc \\
+\hline
+\end{tabular}
+\\\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/gametextstyles}
+
 
 \section{Vehicle Identifiers}
 Vehicle identifiers are included as macro defines with prefix \textit{VEH\_} followed by the name of vehicle in game with capital letters \textit{(motorcycles, bicycles, boats, planes, helicopters, trailers, trains, etc. are included in this format as well)}. For better orientation in list, defines are sorted by vehicle type.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/vehicleid}
+
 
 \section{Vehicle Health}
 Vehicle Health configurations are included as macro defines with prefix \textit{VEH\_HEALTH\_} followed by the desired pre-defined identifier. These values are only related to engine condition and do not change visual damage of vehicle model.
@@ -174,11 +284,15 @@ VEH\_HEALTH\_ONFIRE & 249 & Sets car on fire \\
 \\
 \\
 You can test this in ISAMPP sandbox game mode with command \textbf{/setvehiclehealth [ID]} while being in any vehicle.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/vehiclehealth}
+
 
 \section{Vehicle Colors}
 List of all available colors for vehicles in game. Color names using prefix \textit{CARCOL\_SAMP\_} are supported only in SA-MP version 0.3x.
 \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehiclecolorid}
+
 
 \section{Vehicle Paintjobs}
 List of all available paintjobs for vehicles in game. Use \textit{PAINTJOB\_REMOVE} to remove applied paintjob.
@@ -186,15 +300,23 @@ List of all available paintjobs for vehicles in game. Use \textit{PAINTJOB\_REMO
 \\
 \textbf{Example of implementation:}
 \begin{verbatim}
-AddStaticVehicle(VEH_CAMPER,425.7991,2493.3472,16.5794,180,CARCOL_WHITE,CARCOL_WHITE);
+AddStaticVehicle(VEH_CAMPER, 425.7991, 2493.3472, 16.5794, 180, CARCOL_WHITE, CARCOL_WHITE);
 ChangeVehiclePaintjob(vehicleid, PAINTJOB_CAMPER_TRUTH);
 \end{verbatim}
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/paintjobs}
+
 
 \section{Weapon Identifiers}
 Weapon identifiers are included as macro defines with prefix \textit{WEAP\_}. In ISAMPP sandbox game mode weapon pickups are fully functional. Every weapon in game can be used only for certain weapon slot and weapon identifiers are ordered in file \textit{i\_weaponids.inc} by weapon slot number.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/weaponids}
+
 
 \section{Weather Identifiers}
 Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}. In ISAMPP sandbox game mode you can test weather settings with command \textbf{/w [ID]}.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/weatherid}
 
 
 \newpage
@@ -316,13 +438,53 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 \section{Useful Resources}
 SA-MP has in certain cases various text defines replacing numeric identifiers by default.
 
+
+\subsection{Animations List}
+Read More: \url{https://open.mp/docs/scripting/resources/animations}
+
+
+\subsection{Bullet Hit Types}
+To be used with function \textit{OnPlayerWeaponShot}.
+\\
+\\
+\begin{tabular}{ |l|l| } 
+\hline
+Value & Name \\
+\hline
+0 & BULLET\_HIT\_TYPE\_NONE \\
+1 & BULLET\_HIT\_TYPE\_PLAYER \\
+2 & BULLET\_HIT\_TYPE\_VEHICLE \\
+3 & BULLET\_HIT\_TYPE\_OBJECT \\
+4 & BULLET\_HIT\_TYPE\_PLAYER\_OBJECT \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/bullethittypes}
+
+
+\subsection{Camera Cut Styles}
+Camera Cut Styles to be used with functions \textit{SetPlayerCameraLookAt}, \textit{InterpolateCameraPos} and \textit{InterpolateCameraLookAt}.
+\\
+\\
+\begin{tabular}{ |l|l| } 
+\hline
+Value & Name \\
+\hline
+1 & CAMERA\_MOVE \\ 
+2 & CAMERA\_CUT \\ 
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/cameracutstyles}
+
+
 \subsection{Marker Modes}
 \textit{ShowPlayerMarkers(Marker Mode);}
 \\
 \\
 \begin{tabular}{ |l|l| } 
 \hline
-Identifier & Marker Mode \\
+Value & Name \\
 \hline
 0 & PLAYER\_MARKERS\_MODE\_OFF \\ 
 1 & PLAYER\_MARKERS\_MODE\_GLOBAL \\ 
@@ -330,7 +492,7 @@ Identifier & Marker Mode \\
 \hline
 \end{tabular}
 \\\\
-\\\url{https://open.mp/docs/scripting/functions/ShowPlayerMarkers}
+\\Read More: \url{https://open.mp/docs/scripting/functions/ShowPlayerMarkers}
 
 
 
