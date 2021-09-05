@@ -14,6 +14,7 @@
 #define _I_SAMPP
 #include <i_sampp/i_bodyparts>
 #include <i_sampp/i_boneids>
+#include <i_sampp/i_cammode>
 #include <i_sampp/i_colorlist>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
