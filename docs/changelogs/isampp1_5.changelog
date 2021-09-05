@@ -3,6 +3,7 @@ Changes in ISAMPP 1.5
 * ISAMPP Library *
 - New definitions for body parts (i_bodyparts.inc)
 - New definitions for player bones (i_boneids.inc)
+- Added remaining 9 GameText styles (i_textstyle.inc)
 - ICON_OGLOC0 renamed to ICON_MCS (i_iconids.inc)
 - SKIN_BBFAT renamed to SKIN_BB (i_skinids.inc)
 - Updated documentation (external links to SA-MP Wiki were removed)
@@ -12,5 +13,6 @@ Changes in ISAMPP 1.5
 - Added test dummy Actor
 - Implemented function OnPlayerGiveDamageActor
 - Player will spawn with green hat (for testing Bone IDs)
+- Expanded commands for testing GameText styles
 - Added position coordinates variables for AddPlayerClass function
 - Code formatting cleanup
