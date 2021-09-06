@@ -4,10 +4,12 @@ Changes in ISAMPP 1.5
 - New definitions for body parts (i_bodyparts.inc)
 - New definitions for player bones (i_boneids.inc)
 - New definitions for camera mode (i_cammode.inc)
+- New definitions for vehicle components (i_carmods.inc)
 - Added remaining 9 GameText styles (i_textstyle.inc)
 - ICON_OGLOC0 renamed to ICON_MCS (i_iconids.inc)
 - SKIN_BBFAT renamed to SKIN_BB (i_skinids.inc)
 - Updated documentation (external links to SA-MP Wiki were removed)
+- Expanded section Useful Resources in documentation
 
 * ISAMPP Sandbox Game Mode *
 - Player will get weapon on spawn
