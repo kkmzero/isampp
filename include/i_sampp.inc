@@ -29,8 +29,8 @@
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 
-new ISAMPP_VERSION[5] = "v1.5";
-new ISAMPP_VERID = 202115;
+new ISAMPP_VERSION[5] = "v1.6";
+new ISAMPP_VERID = 202116;
 
 
 stock isampp_console_printversion() {
