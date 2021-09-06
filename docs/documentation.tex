@@ -40,10 +40,13 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \textbf{ISAMPP Library:}
 \\- New definitions for body parts \textit{(i\_bodyparts.inc)}
 \\- New definitions for player bones \textit{(i\_boneids.inc)}
+\\- New definitions for camera mode \textit{(i\_cammode.inc)}
+\\- New definitions for vehicle components \textit{(i\_carmods.inc)}
 \\- Added remaining 9 GameText styles \textit{(i\_textstyle.inc)}
 \\- ICON\_OGLOC0 renamed to ICON\_MCS \textit{(i\_iconids.inc)}
 \\- SKIN\_BBFAT renamed to SKIN\_BB \textit{(i\_skinids.inc)}
 \\- Updated documentation (external links to SA-MP Wiki were removed)
+\\- Expanded section Useful Resources in documentation
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
@@ -51,6 +54,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \\- Added test dummy Actor
 \\- Implemented function OnPlayerGiveDamageActor
 \\- Player will spawn with green hat (for testing Bone IDs)
+\\- Added new command for showing active Camera Mode
 \\- Expanded commands for testing GameText styles
 \\- Added position coordinates variables for AddPlayerClass function
 \\- Code formatting cleanup
@@ -82,16 +86,18 @@ or include header files as you wish separately:
 \begin{verbatim}
 #include <i_sampp/i_bodyparts>
 #include <i_sampp/i_boneids>
+#include <i_sampp/i_cammode>
+#include <i_sampp/i_carcols>
+#include <i_sampp/i_carmods>
 #include <i_sampp/i_colorlist>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
+#include <i_sampp/i_paintjob>
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_textstyle>
-#include <i_sampp/i_vehids>
 #include <i_sampp/i_vehhealth>
-#include <i_sampp/i_carcols>
-#include <i_sampp/i_paintjob>
+#include <i_sampp/i_vehids>
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 \end{verbatim}
@@ -106,11 +112,19 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \\
 \textit{boneids} - List of player bone identifiers
 \\
+\textit{cammode} - List of known camera modes
+\\
+\textit{carcols} - List of definitions for all available vehicle colors
+\\
+\textit{carmods} - List of all available components for vehicle customization
+\\
 \textit{colorlist} - List of color definitions
 \\
 \textit{iconids} - List of map icon identifiers
 \\
 \textit{locationids} - List of location definitions with coordinates, interior identifiers and names
+\\
+\textit{paintjob} - List of definitions for all available vehicle paintjobs
 \\
 \textit{pickupids} - List of definitions for pickup identifiers
 \\
@@ -118,13 +132,9 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \\
 \textit{textstyle} - List of definitions for GameText styles
 \\
-\textit{vehids} - List of definitions for all available vehicles
-\\
 \textit{vehhealth} - Vehicle Health configurations
 \\
-\textit{carcols} - List of definitions for all available vehicle colors
-\\
-\textit{paintjob} - List of definitions for all available vehicle paintjobs
+\textit{vehids} - List of definitions for all available vehicles
 \\
 \textit{weaponids} - List of definitions for weapon identifiers, sorted by weapon slot IDs
 \\
@@ -133,7 +143,7 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 
 \newpage
 \section{Body Parts}
-Body parts can be used in functions \textit{OnPlayerGiveDamage}, \textit{OnPlayerTakeDamage} and \textit{OnPlayerGiveDamageActor}. It is unknown if IDs 0, 1 and 2 have any use. You can test this feature in sandbox game mode by shooting Actor NPC.
+Body part identifiers are included as macro defines with prefix \textit{BODYPART\_}. Body parts can be used in functions \textit{OnPlayerGiveDamage}, \textit{OnPlayerTakeDamage} and \textit{OnPlayerGiveDamageActor}. It is unknown if IDs 0, 1 and 2 have any use. You can test this feature in sandbox game mode by shooting Actor NPC.
 \\
 \\
 \begin{tabular}{ |l|c|l| } 
@@ -154,7 +164,7 @@ BODYPART\_HEAD & 9 & Head \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/bodyparts}
 
 \section{Bone Identifiers}
-Bone identifiers can be used for attaching objects to players with function \textit{SetPlayerAttachedObject}.
+Bone identifiers with prefix \textit{BONE\_} can be used for attaching objects to specific parts of player model/skin with function \textit{SetPlayerAttachedObject}.
 \\
 \\
 \begin{tabular}{ |l|c|l| } 
@@ -183,10 +193,56 @@ BONE\_JAW & 18 & Jaw \\
 \end{tabular}
 \\
 \\
+\\\textbf{Example of implementation:}
+\begin{verbatim}
+public OnPlayerSpawn(playerid)
+{
+    //Give player green hat on spawn
+    SetPlayerAttachedObject(playerid, BONE_LEFTUPPERARM, 19487, 2, 0.101, 
+    -0.0, 0.0, 5.50, 84.60, 83.7, 1.0, 1.0, 1.0, 0xFF00FF00);
+
+    return 1;
+}
+\end{verbatim}
+\\
 \\Resources: \url{https://open.mp/docs/scripting/resources/boneid}
 
 
 \newpage
+\section{Camera Modes}
+List of known camera modes to be used as returned value of function \textit{GetPlayerCameraMode(playerid)}.\\In ISAMPP sandbox game mode you can output more information about active camera mode with command \textbf{/cameramode}
+\\
+\\
+\begin{tabular}{ |l|c|l| } 
+\hline
+Identifier & Value & Description \\
+\hline
+CAMMODE\_TRAIN & 3 & Train/tram camera. \\
+CAMMODE\_FOLLOWPED & 4 & Follow ped (normal behind player camera). \\
+CAMMODE\_SNIPER & 7 & Sniper rifle aiming. \\
+CAMMODE\_ROCKETAIM & 8 & Rocket launcher aiming. \\
+CAMMODE\_FIXED & 15 & Fixed camera (non-moving). \\
+CAMMODE\_VEHICLEFRONT & 16 & Vehicle front camera, bike side camera. \\
+CAMMODE\_VEHICLEDEFAULT & 18 & Normal car/helicopter/airplane camera, several variable distances. \\
+CAMMODE\_BOATDEFAULT & 22 & Normal boat camera. \\
+CAMMODE\_WEAPONAIM & 46 & Weapon aiming camera. \\
+CAMMODE\_ROCKETAIM2 & 51 & Heat-seeking Rocket Launcher aiming camera.\\
+CAMMODE\_WEAPONAIM2 & 53 & Aiming any other weapon. \\
+CAMMODE\_VEHICLEPASSENGER & 55 & Vehicle passenger drive-by camera. \\
+CAMMODE\_HELICHASE & 56 & Chase camera: helicopter/bird view. \\
+CAMMODE\_GROUNDCHASE & 57 & Chase camera: ground camera, zooms in very quickly. \\
+CAMMODE\_FLYBYCHASE & 58 & Chase camera: horizontal flyby past vehicle. \\
+CAMMODE\_GROUNDCHASE2 & 59 & Chase camera (air vehicles only): looking up to the air vehicle. \\
+CAMMODE\_FLYBYCHASE2 & 62 & Chase camera (air vehicles only): vertical flyby past air vehicle. \\
+CAMMODE\_FLYBYCHASE3 & 63 & Chase camera (air vehicles only): horizontal flyby past air vehicle. \\
+CAMMODE\_PILOTCHASE & 64 & Chase camera (air vehicles only): camera focused on pilot. \\
+\hline
+\end{tabular}
+\\
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/cameramodes}
+
+
 \section{Color List}
 Color List contains definitions of some few common colors in two formats. Primary or Main color definitions have prefix \textit{COLOR\_} and are defined in 0xRRGGBBAA format. Secondary or String color definitions with prefix \textit{SCOL\_} are defined in more common hex format "\{RRGGBB\}" without the alpha color transparency values. The difference of these two formats can be explained by this example:
 \begin{verbatim}
@@ -200,6 +256,7 @@ Secondary or String colors can be used simply in strings while Primary/Main colo
 \\Resources: \url{https://open.mp/docs/scripting/resources/colorslist}
 
 
+\newpage
 \section{Map Icon Identifiers}
 There are in total 64 map icons included as macro defines with prefix \textit{ICON\_}.
 \\
@@ -232,7 +289,7 @@ List of definitions for SA-MP function \textit{GameTextForPlayer(playerid, const
 \\
 \begin{tabular}{ |l|c|l| } 
 \hline
-Identifier & Name & Notes \\
+Identifier & Value & Notes \\
 \hline
 GMTEXT\_STYLE\_PRICEDOWN & 0 & Appears for 9 seconds regardless of time setting.\\
 GMTEXT\_STYLE\_RPRICEDOWN & 1 & Fades out after 8 seconds, regardless of time set.\\
@@ -254,6 +311,12 @@ GMTEXT\_STYLE\_NOTIFICATION & 15 & Based on SA notification popup. Added by fixe
 \end{tabular}
 \\\\
 \\Resources: \url{https://open.mp/docs/scripting/resources/gametextstyles}
+
+
+\section{Vehicle Components}
+List of all available components for vehicle customization, starting with prefix \textit{CARMOD\_}\\Can be used with function \textit{AddVehicleComponent(vehicleid, \textbf{componentid});}
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/carcomponentid}
 
 
 \section{Vehicle Identifiers}
@@ -314,7 +377,7 @@ Weapon identifiers are included as macro defines with prefix \textit{WEAP\_}. In
 
 
 \section{Weather Identifiers}
-Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}. In ISAMPP sandbox game mode you can test weather settings with command \textbf{/w [ID]}.
+Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}. In ISAMPP sandbox game mode you can test weather settings with command \textbf{/w [ID]}
 \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/weatherid}
 
@@ -447,7 +510,7 @@ Read More: \url{https://open.mp/docs/scripting/resources/animations}
 To be used with function \textit{OnPlayerWeaponShot}.
 \\
 \\
-\begin{tabular}{ |l|l| } 
+\begin{tabular}{ |c|l| } 
 \hline
 Value & Name \\
 \hline
@@ -466,7 +529,7 @@ Value & Name \\
 Camera Cut Styles to be used with functions \textit{SetPlayerCameraLookAt}, \textit{InterpolateCameraPos} and \textit{InterpolateCameraLookAt}.
 \\
 \\
-\begin{tabular}{ |l|l| } 
+\begin{tabular}{ |c|l| } 
 \hline
 Value & Name \\
 \hline
@@ -478,11 +541,89 @@ Value & Name \\
 \\Read More: \url{https://open.mp/docs/scripting/resources/cameracutstyles}
 
 
-\subsection{Marker Modes}
-\textit{ShowPlayerMarkers(Marker Mode);}
+\subsection{Component Slots}
+All available component slots for vehicle customization.\\To be used with function \textit{GetVehicleComponentInSlot(vehicleid, \textbf{slot});}
+\\
+\\
+\begin{tabular}{ |c|l| } 
+\hline
+Value & Name \\
+\hline
+0 & CARMODTYPE\_SPOILER \\
+1 & CARMODTYPE\_HOOD \\
+2 & CARMODTYPE\_ROOF \\
+3 & CARMODTYPE\_SIDESKIRT \\
+4 & CARMODTYPE\_LAMPS \\
+5 & CARMODTYPE\_NITRO \\
+6 & CARMODTYPE\_EXHAUST \\
+7 & CARMODTYPE\_WHEELS \\
+8 & CARMODTYPE\_STEREO \\
+9 & CARMODTYPE\_HYDRAULICS \\
+10 & CARMODTYPE\_FRONT\_BUMPER \\
+11 & CARMODTYPE\_REAR\_BUMPER \\
+12 & CARMODTYPE\_VENT\_RIGHT \\
+13 & CARMODTYPE\_VENT\_LEFT \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/Componentslots}
+
+
+\newpage
+\subsection{Connection Status}
+Connection status returned as value of function \textit{NetStats\_ConnectionStatus(playerid);}
+\\
+\\
+\begin{tabular}{ |c|l|l| } 
+\hline
+Value & Name & Description \\
+\hline
+0 & NO\_ACTION & N/A \\
+1 & DISCONNECT\_ASAP & playerid exists, OnPlayerDisconnect called \\
+2 & DISCONNECT\_ASAP\_SILENTLY & N/A \\
+3 & DISCONNECT\_ON\_NO\_ACK & N/A \\
+4 & REQUESTED\_CONNECTION & Connection request cookie sent \\
+5 & HANDLING\_CONNECTION\_REQUEST & N/A \\
+6 & UNVERIFIED\_SENDER & N/A \\
+7 & SET\_ENCRYPTION\_ON\_MULTIPLE\_16\_BYTE\_PACKET & N/A \\
+8 & CONNECTED & playerid is connected to the server \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/connectionstatus}
+
+
+\subsection{Constants List}
+Pre-defined constants and identifiers in various SA-MP header files.
+\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/constants}
+
+
+\subsection{Dialog Styles}
+Styles of dialog windows in SA-MP, to be used with function \textit{ShowPlayerDialog}.
 \\
 \\
 \begin{tabular}{ |l|l| } 
+\hline
+Style & Name \\
+\hline
+Style 0 & DIALOG\_STYLE\_MSGBOX \\
+Style 1 & DIALOG\_STYLE\_INPUT \\
+Style 2 & DIALOG\_STYLE\_LIST \\
+Style 3 & DIALOG\_STYLE\_PASSWORD \\
+Style 4 & DIALOG\_STYLE\_TABLIST \\
+Style 5 & DIALOG\_STYLE\_TABLIST\_HEADERS \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/dialogstyles}
+
+
+\subsection{Marker Modes}
+To be used with function \textit{ShowPlayerMarkers(\textbf{mode});}
+\\
+\\
+\begin{tabular}{ |c|l| } 
 \hline
 Value & Name \\
 \hline
@@ -492,7 +633,7 @@ Value & Name \\
 \hline
 \end{tabular}
 \\\\
-\\Read More: \url{https://open.mp/docs/scripting/functions/ShowPlayerMarkers}
+\\Read More: \url{https://open.mp/docs/scripting/resources/markermodes}
 
 
 
