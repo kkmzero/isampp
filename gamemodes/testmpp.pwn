@@ -97,7 +97,7 @@ new gActorDummy;
 public OnGameModeInit()
 {
 	SetWorldTime(12);
-	SetGameModeText("ISAMPP 1.5 Sandbox GameMode");
+	SetGameModeText("ISAMPP 1.6 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
@@ -757,6 +757,7 @@ public OnPlayerConnect(playerid)
 		case 202013: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.3");
 		case 202114: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.4");
 		case 202115: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.5");
+		case 202116: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.6");
 		default: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
 	}
 
@@ -803,7 +804,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
 		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]; /tpcoord");
 		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
-		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list");
+		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin");
 		return 1;
 	}
