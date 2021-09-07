@@ -18,6 +18,7 @@
 #include <i_sampp/i_carcols>
 #include <i_sampp/i_carmods>
 #include <i_sampp/i_colorlist>
+#include <i_sampp/i_crimes>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
 #include <i_sampp/i_paintjob>
