@@ -803,8 +803,9 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
 		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]; /tpcoord");
-		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
+		SendClientMessage(playerid, COLOR_ORANGE, "/crime[3-19, 21, 22]");
 		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list)");
+		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin");
 		return 1;
 	}
@@ -1966,7 +1967,104 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		MppTeleportToCoords(playerid, 49.4172, 2512.4282, 16.4844, 0, 272);
 		return 1;
 	}
-	
+
+	//PLAY CRIME REPORT
+	if (strcmp("/crime3", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_71);
+		return 1;
+	}
+
+	if (strcmp("/crime4", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_37_1);
+		return 1;
+	}
+
+	if (strcmp("/crime5", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_1);
+		return 1;
+	}
+
+	if (strcmp("/crime6", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_24);
+		return 1;
+	}
+
+	if (strcmp("/crime7", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_21_1);
+		return 1;
+	}
+
+	if (strcmp("/crime8", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_21_2);
+		return 1;
+	}
+
+	if (strcmp("/crime9", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_21_3);
+		return 1;
+	}
+
+	if (strcmp("/crime10", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_17);
+		return 1;
+	}
+
+	if (strcmp("/crime11", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_2);
+		return 1;
+	}
+
+	if (strcmp("/crime12", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_91_1);
+		return 1;
+	}
+
+	if (strcmp("/crime13", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_28_1);
+		return 1;
+	}
+
+	if (strcmp("/crime14", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_3);
+		return 1;
+	}
+
+	if (strcmp("/crime15", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_28_2);
+		return 1;
+	}
+
+	if (strcmp("/crime16", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_91_2);
+		return 1;
+	}
+
+	if (strcmp("/crime17", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_34);
+		return 1;
+	}
+
+	if (strcmp("/crime18", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_37_2);
+		return 1;
+	}
+
+	if (strcmp("/crime19", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_4);
+		return 1;
+	}
+
+	if (strcmp("/crime21", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_7_1);
+		return 1;
+	}
+
+	if (strcmp("/crime22", cmdtext, true, 20) == 0) {
+		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_7_2);
+		return 1;
+	}
+
+
 	//SET VEHICLE HEALTH
 	if (strcmp("/setvehiclehealth help", cmdtext, true, 35) == 0) {
 		SendClientMessage(playerid, COLOR_MAGENTA, "/setvehiclehealth [ID]: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
