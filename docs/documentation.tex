@@ -39,6 +39,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \section{Changes in ISAMPP 1.6}
 \textbf{ISAMPP Library:}
 \\- New definitions for crime reports \textit{(i\_crimes.inc)}
+\\- Updated documentation
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
@@ -255,13 +256,13 @@ Identifier & Value & Description \\
 \hline
 CRIME\_10\_71 & 3 & 10-71 Advise nature of fire \\
 CRIME\_10\_37\_1 & 4 & 10-37 Investigate suspicious vehicle \\
-CRIME\_10\_81\_1 & 5 & 10-81 Breatherlizer Report \\
+CRIME\_10\_81\_1 & 5 & 10-81 Breathalyzer Report \\
 CRIME\_10\_24 & 6 & 10-24 Assignment Completed \\
 CRIME\_10\_21\_1 & 7 & 10-21 Call () by phone \\
 CRIME\_10\_21\_2 & 8 & 10-21 Call () by phone \\
 CRIME\_10\_21\_3 & 9 & 10-21 Call () by phone \\
 CRIME\_10\_17 & 10 & 10-17 Meet Complainant \\
-CRIME\_10\_81\_2 & 11 & 10-81 Breatherlizer Report \\
+CRIME\_10\_81\_2 & 11 & 10-81 Breathalyzer Report \\
 CRIME\_10\_91\_1 & 12 & 10-91 Pick up prisoner/subject \\
 CRIME\_10\_28\_1 & 13 & 10-28 Vehicle registration information \\
 CRIME\_10\_81\_3 & 14 & 10-81 Breathalyzer \\
@@ -534,10 +535,132 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 
 
 \newpage
-\section{Useful Resources}
-SA-MP has in certain cases various text defines replacing numeric identifiers by default.
+\section{SA-MP Scripting Basics}
+
+\subsection{Glossary}
+\begin{tabular}{ |l|l| } 
+\hline
+Word & Meaning \\
+\hline
+PAWN & The scripting language used to make SA-MP scripts \\
+Gamemode & The main game script that runs on a server \\
+Filterscripts & Scripts that run alongside gamemodes \\
+Plugins & Extra functions and other features added through .DLL or .SO libraries \\
+Include & Pieces of script in .INC files to be included in Filterscripts/Gamemodes \\
+Pawno & The script editor most people use for PAWN programming \\
+Pawncc & The compiler that compiles .pwn to .amx files \\
+Masterlist & The server SA-MP stores its data on such as the Internet list \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/glossary}
 
 
+\subsection{Escape Codes}
+When creating a string you may find that some character may be impossible or extremely difficult to express in the source code of your script. This is where escape codes come in handy - these allow you to use the symbols and expressions that come under this category. Below is a list of escape codes for the PAWN language.
+\\
+\\
+\begin{tabular}{ |l|l| }
+\hline
+Code & Description \\
+\hline
+$\backslash a$ or $\backslash 7$ & Audible beep (on server machine) \\
+$\backslash b$ & Backspace \\
+$\backslash e$ & Escape \\
+$\backslash f$ & Form feed \\
+$\backslash n$ & New line \\
+$\backslash r$ & Carriage return \\
+$\backslash t$ & Horizontal tab \\
+$\backslash v$ & Vertical tab \\
+$\backslash h$ & Backslash \\
+$\backslash h'$ & Single quote \\
+$\backslash h"$ & Double quote \\
+$\backslash \%$ & Percent sign \\
+$\backslash ddd;$ & Character code with decimal code \\
+$\backslash xhhh;$ & Character code with hexidecimal code \\
+\hline
+\end{tabular}
+\\\\
+\\\textit{\textbf{Note:} The semicolon after the nddd; and xhhh; codes is optional. Its purpose is to give the escape sequence sequence an explicit termination symbol when it is used in a string constant.}
+\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/escapecodes}
+
+
+\newpage
+\subsection{Limits}
+\textbf{In-game Entities}
+\\
+\\
+\begin{tabular}{ |l|l| } 
+\hline
+Type & Limit \\
+\hline
+Players & 1000 \\
+Vehicles & 2000 \\
+Vehicle Models & Unlimited \\
+Objects & 1000 \\
+Virtual Worlds & 2,147,483,647 \\
+Interiors & 256 \\
+Classes & 320 \\
+Map Icons & 100 \\
+Race Checkpoints & 1 \\
+Checkpoints & 1 \\
+Pickups & 4096 \\
+Global 3D Labels & 1024 \\
+Per-player 3D Text Labels & 1024 \\
+Chat Bubble String & 144 \\
+SetObjectMaterialText length & 2048 \\
+SetPlayerObjectMaterialText length & 2048 \\
+Gangzones & 1024 \\
+Menus & 128 \\
+Attached player objects & 10 \\
+Player Variables & 800 \\
+Actors (since SA-MP 0.3.7) & 1000 \\
+Explosions & 10 \\
+\hline
+\end{tabular}
+\\
+\\
+\\\textbf{Textdraws}
+\\
+\\
+\begin{tabular}{ |l|l| } 
+\hline
+Type & Limit \\
+\hline
+String Length & 1024 \\
+Shown In A Single Client's Screen & 2048 + 256 \\
+Shown In A Single Client's Screen (sprites) & 100 \\
+Created Serverwise (Global) & 2048 \\
+Created Serverwise (Per-Player) & 256 \\
+\hline
+\end{tabular}
+\\
+\\
+\\\textbf{Dialogs}
+\\
+\\
+\begin{tabular}{ |l|l| } 
+\hline
+Type & Limit \\
+\hline
+Dialog IDs & 32768 \\
+Info (Main text) & 4096 \\
+Caption & 64 \\
+Input Text Box & 128 \\
+Tab List Columns & 4 \\
+Tab List Column Characters & 128 \\
+Tab List Row Characters & 256 \\
+\hline
+\end{tabular}
+\\
+\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/limits}
+
+
+\newpage
+\section{SA-MP Macros}
+SA-MP has in certain cases various macros replacing numeric identifiers by default.
 \subsection{Animations List}
 Read More: \url{https://open.mp/docs/scripting/resources/animations}
 
