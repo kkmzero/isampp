@@ -39,11 +39,14 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \section{Changes in ISAMPP 1.6}
 \textbf{ISAMPP Library:}
 \\- New definitions for crime reports \textit{(i\_crimes.inc)}
+\\- New definitions for explosions \textit{(i\_explosions.inc)}
 \\- Updated documentation
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
 \\- Added in-game command /crime for testing crime report playback
+\\- Added in-game command /explosion for testing explosions
+\\- OnPlayerRequestClass re-uses player position variables
 \\
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -77,6 +80,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_carmods>
 #include <i_sampp/i_colorlist>
 #include <i_sampp/i_crimes>
+#include <i_sampp/i_explosions>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
 #include <i_sampp/i_paintjob>
@@ -108,6 +112,8 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \textit{colorlist} - List of color definitions
 \\
 \textit{crimes} - List of crime reports
+\\
+\textit{explosions} - List of available types of explosions
 \\
 \textit{iconids} - List of map icon identifiers
 \\
@@ -293,33 +299,13 @@ public OnPlayerCommandText(playerid, cmdtext[])
 \\Resources: \url{https://open.mp/docs/scripting/resources/crimelist}
 
 
+\section{Explosions}
+There are 14 types of available explosions defined as macros with prefix \textit{EXPLOSION\_} and you can test every explosion with in-game command \textbf{/explosion [ID]}. These identifiers can be used with both functions \textit{CreateExplosion} or \textit{CreateExplosionForPlayer}.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/explosionlist}
+
+
 \newpage
-\section{Map Icon Identifiers}
-There are in total 64 map icons included as macro defines with prefix \textit{ICON\_}.
-\\
-\\Resources: \url{https://open.mp/docs/scripting/resources/mapicons}
-
-
-\section{Location Identifiers}
-Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed.\\
-\\
-Please note that if you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.
-\\
-\\Resources: \url{https://open.mp/docs/scripting/resources/interiorids}
-
-
-\section{Pickup Identifiers}
-Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode.
-\\
-\\Resources: \url{https://open.mp/docs/scripting/resources/pickupids}
-
-
-\section{Skin/Playermodel Identifiers}
-Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers SA-MP uses by default.
-\\
-\\Resources: \url{https://open.mp/docs/scripting/resources/skins}
-
-
 \section{GameText Styles}
 List of definitions for SA-MP function \textit{GameTextForPlayer(playerid, const string[], time, \textbf{style})}. Some styles might not work properly or could crash the game.
 \\
@@ -348,6 +334,33 @@ GMTEXT\_STYLE\_NOTIFICATION & 15 & Based on SA notification popup. Added by fixe
 \end{tabular}
 \\\\
 \\Resources: \url{https://open.mp/docs/scripting/resources/gametextstyles}
+
+
+\section{Map Icon Identifiers}
+There are in total 64 map icons included as macro defines with prefix \textit{ICON\_}.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/mapicons}
+
+
+\section{Location Identifiers}
+Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed.\\
+\\
+Please note that if you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/interiorids}
+
+
+\section{Pickup Identifiers}
+Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/pickupids}
+
+
+\newpage
+\section{Skin/Playermodel Identifiers}
+Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers SA-MP uses by default.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/skins}
 
 
 \section{Vehicle Components}
@@ -388,6 +401,7 @@ You can test this in ISAMPP sandbox game mode with command \textbf{/setvehiclehe
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehiclehealth}
 
 
+\newpage
 \section{Vehicle Colors}
 List of all available colors for vehicles in game. Color names using prefix \textit{CARCOL\_SAMP\_} are supported only in SA-MP version 0.3x.
 \\
@@ -778,6 +792,27 @@ Style 5 & DIALOG\_STYLE\_TABLIST\_HEADERS \\
 \\Read More: \url{https://open.mp/docs/scripting/resources/dialogstyles}
 
 
+\subsection{Fighting Styles}
+Fighting Styles to be used with functions \textit{SetPlayerFightingStyle(playerid, \textbf{style})} and \textit{GetPlayerFightingStyle}.
+\\
+\\
+\begin{tabular}{ |c|l| } 
+\hline
+Value & Name \\
+\hline
+4 & FIGHT\_STYLE\_NORMAL \\
+5 & FIGHT\_STYLE\_BOXING \\
+6 & FIGHT\_STYLE\_KUNGFU \\
+7 & FIGHT\_STYLE\_KNEEHEAD \\
+15 & FIGHT\_STYLE\_GRABKICK \\
+16 & FIGHT\_STYLE\_ELBOW \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/fightingstyles}
+
+
+\newpage
 \subsection{Marker Modes}
 To be used with function \textit{ShowPlayerMarkers(\textbf{mode});}
 \\
