@@ -35,15 +35,17 @@
 #endif
 
 
-//Position Coordinates
+//Position Coordinates: Player Class Selection
 new Float:cpos_pclass_x = 441.7056;
 new Float:cpos_pclass_y = 2500.1367;
 new Float:cpos_pclass_z = 17.7823;
 new Float:cpos_pclass_angle = 276.6780;
 
+//Position Coordinates: Explosions
 new Float:cpos_explosion_x = 414.37;
 new Float:cpos_explosion_y = 2502.48;
 new Float:cpos_explosion_z = 16.484;
+
 
 //Active Pickups
 new pickupWeapBrassKnuckles;
@@ -747,9 +749,9 @@ public OnGameModeExit()
 
 public OnPlayerRequestClass(playerid, classid)
 {
-	SetPlayerPos(playerid, 441.7056, 2500.1367, 17.7823);
-	SetPlayerCameraPos(playerid, 446.7056, 2500.1367, 18.7823);
-	SetPlayerCameraLookAt(playerid, 441.7056, 2500.1367, 17.7823);
+	SetPlayerPos(playerid, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z);
+	SetPlayerCameraPos(playerid, cpos_pclass_x + 5.0, cpos_pclass_y, cpos_pclass_z + 1.0);
+	SetPlayerCameraLookAt(playerid, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z);
 
 	return 1;
 }
@@ -2210,18 +2212,19 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 
 
-
 	//SHOW PLAYER POSITION COORDINATES
 	if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 		MppShowPlayerPosition(playerid, COLOR_LIGHTRED);
 		return 1;
 	}
 
+
 	//SHOW VEHICLE INFORMATION
 	if (strcmp("/showvehicleinfo", cmdtext, true, 15) == 0) {
 		MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTBLUE);
 		return 1;
 	}
+
 
 	//SHOW PLAYER CAMERA MODE
 	if (strcmp("/cameramode", cmdtext, true, 15) == 0) {
