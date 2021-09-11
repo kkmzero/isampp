@@ -41,6 +41,10 @@ new Float:cpos_pclass_y = 2500.1367;
 new Float:cpos_pclass_z = 17.7823;
 new Float:cpos_pclass_angle = 276.6780;
 
+new Float:cpos_explosion_x = 414.37;
+new Float:cpos_explosion_y = 2502.48;
+new Float:cpos_explosion_z = 16.484;
+
 //Active Pickups
 new pickupWeapBrassKnuckles;
 new pickupWeapGolfClub;
@@ -804,6 +808,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
 		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]; /tpcoord");
 		SendClientMessage(playerid, COLOR_ORANGE, "/crime[3-19, 21, 22]");
+		SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /explosion help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin");
@@ -817,6 +822,13 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
 		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
 		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
+		return 1;
+	}
+
+	if (strcmp("/explosion help", cmdtext, true, 20) == 0) {
+		SendClientMessage(playerid, COLOR_MAGENTA, "/explosion [ID]");
+		SendClientMessage(playerid, COLOR_MAGENTA, "ID: small1, small2, small3, small4, medium, chem1, chem2, large1, large2");
+		SendClientMessage(playerid, COLOR_MAGENTA, "large3, invis1, invis2, invis3, rctiger");
 		return 1;
 	}
 
@@ -2061,6 +2073,78 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	if (strcmp("/crime22", cmdtext, true, 20) == 0) {
 		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_7_2);
+		return 1;
+	}
+
+
+	//TEST EXPLOSIONS
+	if (strcmp("/explosion small1", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_1, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion medium", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_MEDIUM, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion small2", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_2, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion small3", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_3, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion chem1", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_CHEMICAL_1, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion chem2", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_CHEMICAL_2, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion large1", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_1, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion large2", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_2, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion invis1", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_1, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion invis2", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_2, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion large3", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_3, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion small4", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_4, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion rctiger", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_RCTIGER, 10.0);
+		return 1;
+	}
+
+	if (strcmp("/explosion invis3", cmdtext, true, 20) == 0) {
+		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_3, 10.0);
 		return 1;
 	}
 
