@@ -2,7 +2,9 @@ Changes in ISAMPP 1.6
 
 * ISAMPP Library *
 - New definitions for crime reports (i_crimes.inc)
+- New definitions for explosions (i_explosions.inc)
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
 - Added in-game command /crime for testing crime report playback
+- Added in-game command /explosion for testing explosions
