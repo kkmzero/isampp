@@ -8,3 +8,4 @@ Changes in ISAMPP 1.6
 * ISAMPP Sandbox Game Mode *
 - Added in-game command /crime for testing crime report playback
 - Added in-game command /explosion for testing explosions
+- OnPlayerRequestClass re-uses player position variables
