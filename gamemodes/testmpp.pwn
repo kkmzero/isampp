@@ -806,24 +806,15 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
+	//HELP COMMANDS
 	if (strcmp("/help", cmdtext, true, 10) == 0) {
 		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
-		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list); /tp [ID]; /tpcoord");
-		SendClientMessage(playerid, COLOR_ORANGE, "/crime[3-19, 21, 22]");
+		SendClientMessage(playerid, COLOR_ORANGE, "/crime[3-19, 21, 22]; /tp [ID]; /tpcoord");
 		SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /explosion help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
+		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list)");
 		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin");
-		return 1;
-	}
-	
-	if (strcmp("/w help", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
-		SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
-		SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
-		SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
-		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
-		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
 		return 1;
 	}
 
@@ -838,6 +829,22 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_MAGENTA, "/gametext [ID]");
 		SendClientMessage(playerid, COLOR_MAGENTA, "ID: pricedown, rpricedown, sa, slim, slim2, slimw, bpricedown");
 		SendClientMessage(playerid, COLOR_MAGENTA, "vehname, location, radio, radiow, pmoney, nmoney, stunt, clock, notification");
+		return 1;
+	}
+
+	if (strcmp("/w help", cmdtext, true, 10) == 0) {
+		SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
+		SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
+		SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
+		SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
+		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
+		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
+		return 1;
+	}
+
+	if (strcmp("/setvehiclehealth help", cmdtext, true, 35) == 0) {
+		SendClientMessage(playerid, COLOR_MAGENTA, "/setvehiclehealth [ID]");
+		SendClientMessage(playerid, COLOR_MAGENTA, "ID: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
 		return 1;
 	}
 
@@ -1124,7 +1131,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_YELLOWGREEN, "Yellow Green");
 		return 1;
 	}
-	
+
 	//STRINGCOLS COMMAND
 	if (strcmp("/stringcols", cmdtext, true, 15) == 0) {
 		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_BLACK"X"SCOL_WHITE"X"SCOL_RED"X"SCOL_GREEN"X"SCOL_BLUE"X"SCOL_CYAN"X"SCOL_MAGENTA"X"SCOL_YELLOW"X"SCOL_DARKRED"X"SCOL_DARKGREEN"X"SCOL_DARKBLUE"X"SCOL_DARKCYAN"X"SCOL_DARKMAGENTA"X"SCOL_DARKYELLOW"X"SCOL_LIGHTRED"X"SCOL_LIGHTGREEN"X");
@@ -1138,6 +1145,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_SKYBLUE"X"SCOL_SLATEBLUE"X"SCOL_SLATEGRAY"X"SCOL_SNOW"X"SCOL_SPRINGGREEN"X"SCOL_STEELBLUE"X"SCOL_TAN"X"SCOL_TEAL"X"SCOL_THISTLE"X"SCOL_TOMATO"X"SCOL_TURQUOISE"X"SCOL_VIOLET"X"SCOL_WHEAT"X"SCOL_WHITESMOKE"X"SCOL_YELLOWGREEN"X");
 		return 1;
 	}
+
 
 	//WEATHER COMMANDS
 	if (strcmp("/w extrasunnyla", cmdtext, true, 10) == 0) {
@@ -1982,6 +1990,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+
 	//PLAY CRIME REPORT
 	if (strcmp("/crime3", cmdtext, true, 20) == 0) {
 		PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_71);
@@ -2152,11 +2161,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 
 	//SET VEHICLE HEALTH
-	if (strcmp("/setvehiclehealth help", cmdtext, true, 35) == 0) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "/setvehiclehealth [ID]: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
-		return 1;
-	}
-
 	if (strcmp("/setvehiclehealth full", cmdtext, true, 35) == 0) {
 		new vehicleid = GetPlayerVehicleID(playerid);
 		SetVehicleHealth(vehicleid, VEH_HEALTH_FULL);
