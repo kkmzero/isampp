@@ -22,6 +22,7 @@
 #include <i_sampp/i_explosions>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
+#include <i_sampp/i_objects.inc>
 #include <i_sampp/i_paintjob>
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_skinids>
