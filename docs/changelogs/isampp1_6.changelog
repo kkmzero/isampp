@@ -3,6 +3,7 @@ Changes in ISAMPP 1.6
 * ISAMPP Library *
 - New definitions for crime reports (i_crimes.inc)
 - New definitions for explosions (i_explosions.inc)
+- New definitions for objects/models (i_objects.inc)
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
