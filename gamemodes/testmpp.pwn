@@ -737,6 +737,16 @@ public OnGameModeInit()
 	gActorDummy = CreateActor(SKIN_BMYST, 428.687, 2531.6868, 16.5926, 180);
 	SetActorInvulnerable(gActorDummy, false);
 
+	//TestObjects - Remove Later
+	/*CreateObject(OBJECT_TEC9, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_ARMOUR, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_TREE3, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_TREEA1, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_TREEB1, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_TREEA3, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_PALWEE03, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_PALM04, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
+
 	return 1;
 }
 
@@ -1986,6 +1996,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//TELEPORT TO COORDINATES
 	if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
+		//Teleport to end of runway
 		MppTeleportToCoords(playerid, 49.4172, 2512.4282, 16.4844, 0, 272);
 		return 1;
 	}
