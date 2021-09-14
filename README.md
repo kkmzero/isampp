@@ -30,6 +30,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_explosions>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
+#include <i_sampp/i_objects>
 #include <i_sampp/i_paintjob>
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_skinids>
@@ -57,6 +58,7 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 *explosions* - List of available types of explosions</br>
 *iconids* - List of map icon identifiers</br>
 *locationids* - List of location definitions with coordinates, interior identifiers and names</br>
+*objects* - List of game objects/models</br>
 *paintjob* - List of definitions for all available vehicle paintjobs</br>
 *pickupids* - List of definitions for pickup identifiers</br>
 *skinids* - List of definitions for character skin/model identifiers</br>
