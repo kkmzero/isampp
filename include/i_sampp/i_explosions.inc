@@ -7,17 +7,17 @@
  */
 
 
-#define EXPLOSION_SMALL_1          0
-#define EXPLOSION_MEDIUM           1
-#define EXPLOSION_SMALL_2          2
-#define EXPLOSION_SMALL_3          3
-#define EXPLOSION_CHEMICAL_1       4
-#define EXPLOSION_CHEMICAL_2       5
-#define EXPLOSION_LARGE_1          6
-#define EXPLOSION_LARGE_2          7
-#define EXPLOSION_INVISIBLE_1      8
-#define EXPLOSION_INVISIBLE_2      9
-#define EXPLOSION_LARGE_3          10
-#define EXPLOSION_SMALL_4          11
-#define EXPLOSION_RCTIGER          12
-#define EXPLOSION_INVISIBLE_3      13
+#define EXPLOSION_SMALL_1          0    //Visible + Audible
+#define EXPLOSION_MEDIUM           1    //Visible + Audible, No Physical Blast, Creates Fire
+#define EXPLOSION_SMALL_2          2    //Visible + Audible, Creates Fire
+#define EXPLOSION_SMALL_3          3    //Visible + Audible, Sometimes Creates Fire
+#define EXPLOSION_CHEMICAL_1       4    //Visible, Silent
+#define EXPLOSION_CHEMICAL_2       5    //Visible, Silent
+#define EXPLOSION_LARGE_1          6    //Visible + Audible
+#define EXPLOSION_LARGE_2          7    //Visible + Audible
+#define EXPLOSION_INVISIBLE_1      8    //Audible
+#define EXPLOSION_INVISIBLE_2      9    //Creates Fire + Audible
+#define EXPLOSION_LARGE_3          10   //Visible + Audible
+#define EXPLOSION_SMALL_4          11   //Visible + Audible
+#define EXPLOSION_RCTIGER          12   //Visible + Audible
+#define EXPLOSION_INVISIBLE_3      13   //No Physical Blast, Silent
