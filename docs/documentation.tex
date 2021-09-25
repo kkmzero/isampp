@@ -275,12 +275,12 @@ CRIME\_10\_17 & 10 & 10-17 Meet Complainant \\
 CRIME\_10\_81\_2 & 11 & 10-81 Breathalyzer Report \\
 CRIME\_10\_91\_1 & 12 & 10-91 Pick up prisoner/subject \\
 CRIME\_10\_28\_1 & 13 & 10-28 Vehicle registration information \\
-CRIME\_10\_81\_3 & 14 & 10-81 Breathalyzer \\
+CRIME\_10\_81\_3 & 14 & 10-81 Breathalyzer Report \\
 CRIME\_10\_28\_2 & 15 & 10-28 Vehicle registration information \\
 CRIME\_10\_91\_2 & 16 & 10-91 Pick up prisoner/subject \\
 CRIME\_10\_34 & 17 & 10-34 Riot \\
 CRIME\_10\_37\_2 & 18 & 10-37 Investigate suspicious vehicle \\
-CRIME\_10\_81\_4 & 19 & 10-81 Breathalyzer \\
+CRIME\_10\_81\_4 & 19 & 10-81 Breathalyzer Report \\
 CRIME\_10\_7\_1 & 21 & 10-7 Out of service \\
 CRIME\_10\_7\_2 & 22 & 10-7 Out of service \\
 \hline
@@ -343,9 +343,15 @@ GMTEXT\_STYLE\_NOTIFICATION & 15 & Based on SA notification popup. Added by fixe
 \section{Location Identifiers}
 Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed.\\
 \\
-Please note that if you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.
+\textit{\textbf{Note:} If you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.}
 \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/interiorids}
+
+
+\section{Objects}
+Available objects in order by ID number. Every game object is listed with prefix \textit{OBJECT\_} followed by its name of DFF file.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/samp_objects}
 
 
 \section{Map Icon Identifiers}
@@ -354,15 +360,15 @@ There are in total 64 map icons included as macro defines with prefix \textit{IC
 \\Resources: \url{https://open.mp/docs/scripting/resources/mapicons}
 
 
+\newpage
 \section{Pickup Identifiers}
 Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode.
 \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/pickupids}
 
 
-\newpage
 \section{Skin/Playermodel Identifiers}
-Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. Luckily, Rockstar North did great job in naming their models, so it's pretty simple to know what name represents which skin in game. Usually, with exception of few character models \textit{(mainly main story ones and special characters)} where the name is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with number identifiers SA-MP uses by default.
+Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. With exception of few character models \textit{(mainly main story characters and other special characters)} where the name of model is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with plain number identifiers SA-MP uses by default.
 \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/skins}
 
