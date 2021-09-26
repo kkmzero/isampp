@@ -817,45 +817,49 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
+	new cmd[128], idx;
+	cmd = strtok(cmdtext, idx);
+
 	//HELP COMMANDS
-	if (strcmp("/help", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
-		SendClientMessage(playerid, COLOR_ORANGE, "/crime[3-19, 21, 22]; /tp [ID]; /tpcoord");
-		SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /explosion help for ID list)");
-		SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /gametext help for ID list)");
-		SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /setvehiclehealth help for ID list)");
-		SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /w help for ID list)");
-		SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin");
-		return 1;
-	}
+	if (strcmp(cmd, "/help", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
 
-	if (strcmp("/explosion help", cmdtext, true, 20) == 0) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "/explosion [ID]");
-		SendClientMessage(playerid, COLOR_MAGENTA, "ID: small1, small2, small3, small4, medium, chem1, chem2, large1, large2");
-		SendClientMessage(playerid, COLOR_MAGENTA, "large3, invis1, invis2, invis3, rctiger");
-		return 1;
-	}
+		if (isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
+			SendClientMessage(playerid, COLOR_ORANGE, "/crime[3-19, 21, 22]; /tp [ID]; /tpcoord");
+			SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /help explosion for ID list)");
+			SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /help gametext for ID list)");
+			SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /help setvehiclehealth for ID list)");
+			SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /help w for weather ID list)");
+			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin; /myname");
+		}
+		else if (strcmp(tmp, "explosion") == 0) {
+			SendClientMessage(playerid, COLOR_MAGENTA, "/explosion [ID]");
+			SendClientMessage(playerid, COLOR_MAGENTA, "ID: small1, small2, small3, small4, medium, chem1, chem2, large1, large2");
+			SendClientMessage(playerid, COLOR_MAGENTA, "large3, invis1, invis2, invis3, rctiger");
+		}
+		else if (strcmp(tmp, "gametext") == 0) {
+			SendClientMessage(playerid, COLOR_MAGENTA, "/gametext [ID]");
+			SendClientMessage(playerid, COLOR_MAGENTA, "ID: pricedown, rpricedown, sa, slim, slim2, slimw, bpricedown");
+			SendClientMessage(playerid, COLOR_MAGENTA, "vehname, location, radio, radiow, pmoney, nmoney, stunt, clock, notification");
+		}
+		else if (strcmp(tmp, "setvehiclehealth") == 0) {
+			SendClientMessage(playerid, COLOR_MAGENTA, "/setvehiclehealth [ID]");
+			SendClientMessage(playerid, COLOR_MAGENTA, "ID: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
+		}
+		else if (strcmp(tmp, "w") == 0) {
+			SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
+			SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
+			SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
+			SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
+			SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
+			SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
+		}
+		else {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Use command /help for list of available commands");
+		}
 
-	if (strcmp("/gametext help", cmdtext, true, 20) == 0) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "/gametext [ID]");
-		SendClientMessage(playerid, COLOR_MAGENTA, "ID: pricedown, rpricedown, sa, slim, slim2, slimw, bpricedown");
-		SendClientMessage(playerid, COLOR_MAGENTA, "vehname, location, radio, radiow, pmoney, nmoney, stunt, clock, notification");
-		return 1;
-	}
-
-	if (strcmp("/w help", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
-		SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
-		SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
-		SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
-		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
-		SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
-		return 1;
-	}
-
-	if (strcmp("/setvehiclehealth help", cmdtext, true, 35) == 0) {
-		SendClientMessage(playerid, COLOR_MAGENTA, "/setvehiclehealth [ID]");
-		SendClientMessage(playerid, COLOR_MAGENTA, "ID: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
 		return 1;
 	}
 
@@ -2237,7 +2241,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//SHOW VEHICLE INFORMATION
 	if (strcmp("/showvehicleinfo", cmdtext, true, 15) == 0) {
-		MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTBLUE);
+		MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTRED);
 		return 1;
 	}
 
@@ -2274,9 +2278,18 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//CHANGE PLAYER CLASS/PLAYER SKIN
 	if (strcmp("/changeskin", cmdtext, true, 15) == 0) {
+		SetPlayerFacingAngle(playerid, 270);
 		ForceClassSelection(playerid);
 		TogglePlayerSpectating(playerid, true);
 		TogglePlayerSpectating(playerid, false);
+		return 1;
+	}
+
+	//SHOW PLAYER NAME
+	if(strcmp(cmdtext, "/myname", true) == 0) {
+		new str[256];
+		format(str, sizeof(str), "Your name is %s", MppGetPlayerName(playerid));
+		SendClientMessage(playerid, COLOR_LIGHTBLUE, str);
 		return 1;
 	}
 
