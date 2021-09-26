@@ -115,3 +115,9 @@ stock MppShowVehicleInfo(playerid, vehicleid, pstringcolor) {
 
 	return 1;
 }
+
+stock MppGetPlayerName(playerid) {
+	new playername[MAX_PLAYER_NAME];
+	GetPlayerName(playerid, playername, MAX_PLAYER_NAME);
+	return playername;
+}
