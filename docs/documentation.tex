@@ -20,9 +20,9 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \fi
 
 
-\title{Includes for San Andreas Multiplayer Plus\\Version 1.6, Documentation}
+\title{Includes for San Andreas Multiplayer Plus\\Version 1.7, Documentation}
 \author{Ivan Kmeťo}
-\date{September 2021}
+\date{October 2021}
 
 
 \begin{document}
@@ -36,18 +36,17 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \tableofcontents
 
 \newpage
-\section{Changes in ISAMPP 1.6}
+\section{Changes in ISAMPP 1.7}
 \textbf{ISAMPP Library:}
-\\- New definitions for crime reports \textit{(i\_crimes.inc)}
-\\- New definitions for explosions \textit{(i\_explosions.inc)}
-\\- New definitions for objects/models \textit{(i\_objects.inc)}
+\\- Implemented legacy functions strtok, strrest, isnull \textit{(i\_funcl.inc)}
+\\- New stock function MppGetPlayerName
 \\- Updated documentation
 \\
 \\
 \textbf{ISAMPP Sandbox Game Mode:}
-\\- Added in-game command /crime for testing crime report playback
-\\- Added in-game command /explosion for testing explosions
-\\- OnPlayerRequestClass re-uses player position variables
+\\- Command /changeskin sets proper player facing angle
+\\- New command /myname for testing MppGetPlayerName function
+\\- Changed structure of /help commands
 \\
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -82,6 +81,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_colorlist>
 #include <i_sampp/i_crimes>
 #include <i_sampp/i_explosions>
+#include <i_sampp/i_funcl>
 #include <i_sampp/i_iconids>
 #include <i_sampp/i_locationids>
 #include <i_sampp/i_objects>
@@ -116,6 +116,8 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \textit{crimes} - List of crime reports
 \\
 \textit{explosions} - List of available types of explosions
+\\
+\textit{funcl} - Legacy functions
 \\
 \textit{iconids} - List of map icon identifiers
 \\
@@ -447,9 +449,8 @@ Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}
 \section{Custom Functions}
 
 ISAMPP uses various stock functions which may be useful in creating your own game modes for SA-MP or simply for debugging purposes. These stock functions are defined in \textit{i\_sampp.inc} file.
-\\
-\subsection{isampp\_console\_printversion()}
 
+\subsection{isampp\_console\_printversion()}
 \textit{Outputs ISAMPP version to server console.}
 \\
 \\
@@ -463,7 +464,6 @@ main() {
 
 
 \subsection{MppTeleport(playerid, locationid)}
-
 \textit{Teleports player to desired location passed as parameter 'locationid'.}
 \\
 \\
@@ -477,7 +477,6 @@ if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
 
 
 \subsection{MppTeleportEx(playerid, locationid, pstringcolor)}
-
 \textit{Same as MppTeleport, plus outputs location name to in-game chat window. \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.}
 \\
 \\
@@ -491,7 +490,6 @@ if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
 
 
 \subsection{MppTeleportToCoords(playerid, x, y, z, interiorid, facingangle)}
-
 \textit{Teleports player to specified xyz coordinates, supplied with interior identifier and player facing angle.}
 \\
 \\
@@ -506,7 +504,6 @@ if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
 
 \newpage
 \subsection{MppShowPlayerPosition(playerid, pstringcolor)}
-
 \textit{Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.
 \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
 \\This function might not work properly if player is in a vehicle.}
@@ -522,7 +519,6 @@ if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 
 
 \subsection{MppShowVehicleInfo(playerid, vehicleid, pstringcolor)}
-
 \textit{Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.
 \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
 \\Note: You must pass vehicleid parameter if you want to get model name else function returns '0 Unknown'.}
@@ -553,6 +549,21 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 {
     VehicleModelID = 0;
 
+    return 1;
+}
+\end{verbatim}
+
+
+\subsection{MppGetPlayerName(playerid)}
+\textit{Returns player nick/name from given playerid.}
+\\
+\\
+\textbf{Example of implementation:}
+\begin{verbatim}
+if(strcmp(cmdtext, "/myname", true) == 0) {
+    new str[256];
+    format(str, sizeof(str), "Your name is %s", MppGetPlayerName(playerid));
+    SendClientMessage(playerid, COLOR_LIGHTBLUE, str);
     return 1;
 }
 \end{verbatim}
