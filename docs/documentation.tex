@@ -350,16 +350,16 @@ Locations, in-game interiors and exteriors, are stored in file \textit{i\_locati
 \\Resources: \url{https://open.mp/docs/scripting/resources/interiorids}
 
 
-\section{Objects}
-Available objects in order by ID number. Every game object is listed with prefix \textit{OBJECT\_} followed by its name of DFF file.
-\\
-\\Resources: \url{https://open.mp/docs/scripting/resources/samp_objects}
-
-
 \section{Map Icon Identifiers}
 There are in total 64 map icons included as macro defines with prefix \textit{ICON\_}.
 \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/mapicons}
+
+
+\section{Objects}
+Available objects in order by ID number. Every game object is listed with prefix \textit{OBJECT\_} followed by its name of DFF file.
+\\
+\\Resources: \url{https://open.mp/docs/scripting/resources/samp_objects}
 
 
 \newpage
@@ -554,6 +554,7 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 \end{verbatim}
 
 
+\newpage
 \subsection{MppGetPlayerName(playerid)}
 \textit{Returns player nick/name from given playerid.}
 \\
@@ -834,6 +835,62 @@ Value & Name \\
 
 
 \newpage
+\subsection{Keys}
+To be used with functions \textit{GetPlayerKeys} and textit{OnPlayerKeyStateChange}.
+\\
+\\
+\begin{tabular}{ |c|l| } 
+\hline
+Value & Name \\
+\hline
+1 & KEY\_ACTION \\
+2 & KEY\_CROUCH \\
+4 & KEY\_FIRE \\
+8 & KEY\_SPRINT \\
+16 & KEY\_SECONDARY\_ATTACK \\
+32 & KEY\_JUMP \\
+64 & KEY\_LOOK\_RIGHT \\
+128 & KEY\_HANDBRAKE/KEY\_AIM \\
+256 & KEY\_LOOK\_LEFT \\
+512 & KEY\_LOOK\_BEHIND \\
+512 & KEY\_SUBMISSION \\
+1024 & KEY\_WALK \\
+2048 & KEY\_ANALOG\_UP \\
+4096 & KEY\_ANALOG\_DOWN \\
+8192 & KEY\_ANALOG\_LEFT \\
+16384 & KEY\_ANALOG\_RIGHT \\
+65536 & KEY\_YES \\
+131072 & KEY\_NO \\
+262144(4) & KEY\_CTRL\_BACK \\
+- & UNDEFINED \\
+-128 & KEY\_UP \\
+128 & KEY\_DOWN \\
+-128 & KEY\_LEFT \\
+128 & KEY\_RIGHT \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/keys}
+
+
+\subsection{Map Icon Styles}
+To be used with function \textit{SetPlayerMapIcon}.
+\\
+\\
+\begin{tabular}{ |c|l|l|l| } 
+\hline
+Value & Name & Checkpoint Marker & Radar Map Range \\
+\hline
+0 & MAPICON\_LOCAL & No & Close proximity only \\
+1 & MAPICON\_GLOBAL & No & Show on radar edge as long as in range \\
+2 & MAPICON\_LOCAL\_CHECKPOINT & Yes & Close proximity only \\
+3 & MAPICON\_GLOBAL\_CHECKPOINT & Yes & Show on radar edge as long as in range \\
+\hline
+\end{tabular}
+\\\\
+\\Read More: \url{https://open.mp/docs/scripting/resources/mapiconstyles}
+
+
 \subsection{Marker Modes}
 To be used with function \textit{ShowPlayerMarkers(\textbf{mode});}
 \\
