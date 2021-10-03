@@ -841,7 +841,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		}
 		else if (strcmp(tmp, "gametext") == 0) {
 			SendClientMessage(playerid, COLOR_MAGENTA, "/gametext [ID]");
-			SendClientMessage(playerid, COLOR_MAGENTA, "ID: pricedown, rpricedown, sa, slim, slim2, slimw, bpricedown");
+			SendClientMessage(playerid, COLOR_MAGENTA, "ID: pricedown, rpricedown, sa, slim1, slim2, slimw, bpricedown");
 			SendClientMessage(playerid, COLOR_MAGENTA, "vehname, location, radio, radiow, pmoney, nmoney, stunt, clock, notification");
 		}
 		else if (strcmp(tmp, "setvehiclehealth") == 0) {
@@ -1136,83 +1136,123 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+	//TEST EXPLOSIONS COMMAND
+	if (strcmp(cmd, "/explosion", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
+
+		if (isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /explosion [ID]. Type /help explosion for ID list.");
+		}
+		else if (strcmp(tmp, "small1") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_1, 10.0);
+		}
+		else if (strcmp(tmp, "medium") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_MEDIUM, 10.0);
+		}
+		else if (strcmp(tmp, "small2") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_2, 10.0);
+		}
+		else if (strcmp(tmp, "small3") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_3, 10.0);
+		}
+		else if (strcmp(tmp, "chem1") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_CHEMICAL_1, 10.0);
+		}
+		else if (strcmp(tmp, "chem2") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_CHEMICAL_2, 10.0);
+		}
+		else if (strcmp(tmp, "large1") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_1, 10.0);
+		}
+		else if (strcmp(tmp, "large2") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_2, 10.0);
+		}
+		else if (strcmp(tmp, "invis1") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_1, 10.0);
+		}
+		else if (strcmp(tmp, "invis2") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_2, 10.0);
+		}
+		else if (strcmp(tmp, "large3") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_3, 10.0);
+		}
+		else if (strcmp(tmp, "small4") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_4, 10.0);
+		}
+		else if (strcmp(tmp, "rctiger") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_RCTIGER, 10.0);
+		}
+		else if (strcmp(tmp, "invis3") == 0) {
+			CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_3, 10.0);
+		}
+		else {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /explosion [ID]. Type /help explosion for ID list.");
+		}
+
+		return 1;
+	}
+
 	//GAME TEXT TEST COMMANDS
-	if (strcmp("/gametext pricedown", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_PRICEDOWN", 2000, GMTEXT_STYLE_PRICEDOWN);
-		return 1;
-	}
+	if (strcmp(cmd, "/gametext", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
 
-	if (strcmp("/gametext rpricedown", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_RPRICEDOWN", 2000, GMTEXT_STYLE_RPRICEDOWN);
-		return 1;
-	}
+		if (isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /gametext [ID]. Type /help gametext for ID list.");
+		}
+		else if (strcmp(tmp, "pricedown") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_PRICEDOWN", 2000, GMTEXT_STYLE_PRICEDOWN);
+		}
+		else if (strcmp(tmp, "rpricedown") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_RPRICEDOWN", 2000, GMTEXT_STYLE_RPRICEDOWN);
+		}
+		else if (strcmp(tmp, "sa") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_SA", 2000, GMTEXT_STYLE_SA);
+		}
+		else if (strcmp(tmp, "slim1") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_SLIM1", 2000, GMTEXT_STYLE_SLIM1);
+		}
+		else if (strcmp(tmp, "slim2") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_SLIM2", 2000, GMTEXT_STYLE_SLIM2);
+		}
+		else if (strcmp(tmp, "slimw") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_SLIMW", 2000, GMTEXT_STYLE_SLIMW);
+		}
+		else if (strcmp(tmp, "bpricedown") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_BPRICEDOWN", 2000, GMTEXT_STYLE_BPRICEDOWN);
+		}
+		else if (strcmp(tmp, "vehname") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_VEHNAME", 2000, GMTEXT_STYLE_VEHNAME);
+		}
+		else if (strcmp(tmp, "location") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_LOCATION", 2000, GMTEXT_STYLE_LOCATION);
+		}
+		else if (strcmp(tmp, "radio") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_RADIO", 2000, GMTEXT_STYLE_RADIO);
+		}
+		else if (strcmp(tmp, "radiow") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_RADIOW", 2000, GMTEXT_STYLE_RADIOW);
+		}
+		else if (strcmp(tmp, "pmoney") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_PMONEY", 2000, GMTEXT_STYLE_PMONEY);
+		}
+		else if (strcmp(tmp, "nmoney") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_NMONEY", 2000, GMTEXT_STYLE_NMONEY);
+		}
+		else if (strcmp(tmp, "stunt") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_STUNT", 2000, GMTEXT_STYLE_STUNT);
+		}
+		else if (strcmp(tmp, "clock") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_CLOCK", 2000, GMTEXT_STYLE_CLOCK);
+		}
+		else if (strcmp(tmp, "notification") == 0) {
+			GameTextForPlayer(playerid, "GMTEXT_STYLE_NOTIFICATION", 2000, GMTEXT_STYLE_NOTIFICATION);
+		}
+		else {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /gametext [ID]. Type /help gametext for ID list.");
+		}
 
-	if (strcmp("/gametext sa", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_SA", 2000, GMTEXT_STYLE_SA);
-		return 1;
-	}
-
-	if (strcmp("/gametext slim", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_SLIM", 2000, GMTEXT_STYLE_SLIM);
-		return 1;
-	}
-
-	if (strcmp("/gametext slim2", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_SLIM2", 2000, GMTEXT_STYLE_SLIM2);
-		return 1;
-	}
-
-	if (strcmp("/gametext slimw", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_SLIMW", 2000, GMTEXT_STYLE_SLIMW);
-		return 1;
-	}
-
-	if (strcmp("/gametext bpricedown", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_BPRICEDOWN", 2000, GMTEXT_STYLE_BPRICEDOWN);
-		return 1;
-	}
-
-	if (strcmp("/gametext vehname", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_VEHNAME", 2000, GMTEXT_STYLE_VEHNAME);
-		return 1;
-	}
-
-	if (strcmp("/gametext location", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_LOCATION", 2000, GMTEXT_STYLE_LOCATION);
-		return 1;
-	}
-
-	if (strcmp("/gametext radio", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_RADIO", 2000, GMTEXT_STYLE_RADIO);
-		return 1;
-	}
-
-	if (strcmp("/gametext radiow", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_RADIOW", 2000, GMTEXT_STYLE_RADIOW);
-		return 1;
-	}
-
-	if (strcmp("/gametext pmoney", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_PMONEY", 2000, GMTEXT_STYLE_PMONEY);
-		return 1;
-	}
-
-	if (strcmp("/gametext nmoney", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_NMONEY", 2000, GMTEXT_STYLE_NMONEY);
-		return 1;
-	}
-	if (strcmp("/gametext stunt", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_STUNT", 2000, GMTEXT_STYLE_STUNT);
-		return 1;
-	}
-
-	if (strcmp("/gametext clock", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_CLOCK", 2000, GMTEXT_STYLE_CLOCK);
-		return 1;
-	}
-
-	if (strcmp("/gametext notification", cmdtext, true, 20) == 0) {
-		GameTextForPlayer(playerid, "GMTEXT_STYLE_NOTIFICATION", 2000, GMTEXT_STYLE_NOTIFICATION);
 		return 1;
 	}
 
@@ -2060,78 +2100,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		MppTeleportToCoords(playerid, 49.4172, 2512.4282, 16.4844, 0, 272);
 		return 1;
 	}
-
-	//TEST EXPLOSIONS
-	if (strcmp("/explosion small1", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_1, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion medium", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_MEDIUM, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion small2", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_2, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion small3", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_3, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion chem1", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_CHEMICAL_1, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion chem2", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_CHEMICAL_2, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion large1", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_1, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion large2", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_2, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion invis1", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_1, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion invis2", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_2, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion large3", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_LARGE_3, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion small4", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_SMALL_4, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion rctiger", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_RCTIGER, 10.0);
-		return 1;
-	}
-
-	if (strcmp("/explosion invis3", cmdtext, true, 20) == 0) {
-		CreateExplosion(cpos_explosion_x, cpos_explosion_y, cpos_explosion_z, EXPLOSION_INVISIBLE_3, 10.0);
-		return 1;
-	}
-
 
 	//SET VEHICLE HEALTH
 	if (strcmp("/setvehiclehealth full", cmdtext, true, 35) == 0) {
