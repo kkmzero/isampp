@@ -11,7 +11,7 @@
 #define GMTEXT_STYLE_PRICEDOWN     0   //Appears for 9 seconds regardless of time setting
 #define GMTEXT_STYLE_RPRICEDOWN    1   //Fades out after 8 seconds, regardless of time settting
 #define GMTEXT_STYLE_SA            2   //Does not disappear until player respawns
-#define GMTEXT_STYLE_SLIM          3   //San Andreas specific font
+#define GMTEXT_STYLE_SLIM1         3   //San Andreas specific font
 #define GMTEXT_STYLE_SLIM2         4   //San Andreas specific font
 #define GMTEXT_STYLE_SLIMW         5   //Displays for 3 seconds, regardless of time setting
 #define GMTEXT_STYLE_BPRICEDOWN    6   //Blue Pricedown font in middle of screen
