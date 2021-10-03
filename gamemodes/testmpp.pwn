@@ -738,14 +738,14 @@ public OnGameModeInit()
 	SetActorInvulnerable(gActorDummy, false);
 
 	//TestObjects - Remove Later
-	/*CreateObject(OBJECT_SM_VEG_TREE4_VBIG, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_SM_VEGVBBIGBRN, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VGS_PALM01, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VGS_PALM02, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VGS_PALM03, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_BEVTREE1, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_BEVTREE2, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_BEVTREE3, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
+	/*CreateObject(OBJECT_SM_DES_PCKLYPR2, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_SM_DES_PCKLYPR1, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_SM_SCRUB_ROCK6, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_SM_BUSH_LARGE_1, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_SM_BUSH_SMALL_1, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_SM_DRYBRUSH_SM1, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_NEW_BUSHTEST, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_ASH1_HI, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
 
 	return 1;
 }
@@ -826,7 +826,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		tmp = strtok(cmdtext, idx);
 
 		if (isnull(tmp)) {
-			SendClientMessage(playerid, COLOR_ORANGE, "/defcols[0-14]; /stringcols");
+			SendClientMessage(playerid, COLOR_ORANGE, "/maincols [0-14]; /stringcols");
 			SendClientMessage(playerid, COLOR_ORANGE, "/crime[3-19, 21, 22]; /tp [ID]; /tpcoord");
 			SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /help explosion for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /help gametext for ID list)");
@@ -863,6 +863,206 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+	//PRIMARY COLOR TEXT TEST COMMANDS
+	if (strcmp(cmd, "/maincols", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
+
+		if(isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /maincols [0-14]");
+		}
+		else if(strval(tmp) == 0) {
+			SendClientMessage(playerid, COLOR_WHITE, "White");
+			SendClientMessage(playerid, COLOR_BLACK, "Black");
+			SendClientMessage(playerid, COLOR_RED, "Red");
+			SendClientMessage(playerid, COLOR_GREEN, "Green");
+			SendClientMessage(playerid, COLOR_BLUE, "Blue");
+			SendClientMessage(playerid, COLOR_CYAN, "Cyan");
+			SendClientMessage(playerid, COLOR_MAGENTA, "Magenta");
+			SendClientMessage(playerid, COLOR_YELLOW, "Yellow");
+			SendClientMessage(playerid, COLOR_DARKRED, "Dark Red");
+			SendClientMessage(playerid, COLOR_DARKGREEN, "Dark Green");
+		}
+		else if (strval(tmp) == 1) {
+			SendClientMessage(playerid, COLOR_DARKBLUE, "Dark Blue");
+			SendClientMessage(playerid, COLOR_DARKCYAN, "Dark Cyan");
+			SendClientMessage(playerid, COLOR_DARKMAGENTA, "Dark Magenta");
+			SendClientMessage(playerid, COLOR_DARKYELLOW, "Dark Yellow");
+			SendClientMessage(playerid, COLOR_LIGHTRED, "Light Red");
+			SendClientMessage(playerid, COLOR_LIGHTGREEN, "Light Green");
+			SendClientMessage(playerid, COLOR_LIGHTBLUE, "Light Blue");
+			SendClientMessage(playerid, COLOR_LIGHTCYAN, "Light Cyan");
+			SendClientMessage(playerid, COLOR_LIGHTMAGENTA, "Light Magenta");
+			SendClientMessage(playerid, COLOR_LIGHTYELLOW, "Light Yellow");
+		}
+		else if (strval(tmp) == 2) {
+			SendClientMessage(playerid, COLOR_ALICEBLUE, "Alice Blue");
+			SendClientMessage(playerid, COLOR_ANTIQUEWHITE, "Antique White");
+			SendClientMessage(playerid, COLOR_AQUA, "Aqua");
+			SendClientMessage(playerid, COLOR_AQUAMARINE, "Aquamarine");
+			SendClientMessage(playerid, COLOR_AZURE, "Azure");
+			SendClientMessage(playerid, COLOR_BEIGE, "Beige");
+			SendClientMessage(playerid, COLOR_BLANCHEDALMOND, "Blanched Almond");
+			SendClientMessage(playerid, COLOR_BLUEVIOLET, "Blue Violet");
+			SendClientMessage(playerid, COLOR_BROWN, "Brown");
+			SendClientMessage(playerid, COLOR_BURLYWOOD, "Burlywood");
+		}
+		else if (strval(tmp) == 3) {
+			SendClientMessage(playerid, COLOR_CADETBLUE, "Cadet Blue");
+			SendClientMessage(playerid, COLOR_CHARTEREUSE, "Chartereuse");
+			SendClientMessage(playerid, COLOR_CHOCOLATE, "Chocolate");
+			SendClientMessage(playerid, COLOR_CORAL, "Coral");
+			SendClientMessage(playerid, COLOR_CORNFLOWERBLUE, "Cornflower Blue");
+			SendClientMessage(playerid, COLOR_CORNSILK, "Cornsilk");
+			SendClientMessage(playerid, COLOR_CRIMSON, "Crimson");
+			SendClientMessage(playerid, COLOR_DARKGOLDENROD, "Dark Golden Rod");
+			SendClientMessage(playerid, COLOR_DARKGRAY, "Dark Gray");
+			SendClientMessage(playerid, COLOR_DARKKHAKI, "Dark Khaki");
+		}
+		else if (strval(tmp) == 4) {
+			SendClientMessage(playerid, COLOR_DARKOLIVEGREEN, "Dark Olive Green");
+			SendClientMessage(playerid, COLOR_DARKORANGE, "Dark Orange");
+			SendClientMessage(playerid, COLOR_DARKORCHID, "Dark Orchid");
+			SendClientMessage(playerid, COLOR_DARKSALMON, "Dark Salmon");
+			SendClientMessage(playerid, COLOR_DARKSEAGREEN, "Dark Sea Green");
+			SendClientMessage(playerid, COLOR_DARKSLATEBLUE, "Dark Slate Blue");
+			SendClientMessage(playerid, COLOR_DARKSLATEGRAY, "Dark Slate Gray");
+			SendClientMessage(playerid, COLOR_DARKTURQUOISE, "Dark Turquoise");
+			SendClientMessage(playerid, COLOR_DARKVIOLET, "Dark Violet");
+			SendClientMessage(playerid, COLOR_DEEPPINK, "Deep Pink");
+		}
+		else if (strval(tmp) == 5) {
+			SendClientMessage(playerid, COLOR_DEEPSKYBLUE, "Deep Sky Blue");
+			SendClientMessage(playerid, COLOR_DIMGRAY, "Dim Gray");
+			SendClientMessage(playerid, COLOR_DODGERBLUE, "Dodger Blue");
+			SendClientMessage(playerid, COLOR_FIREBRICK, "Firebrick");
+			SendClientMessage(playerid, COLOR_FLORALWHITE, "Floral White");
+			SendClientMessage(playerid, COLOR_FORESTGREEN, "Forest Green");
+			SendClientMessage(playerid, COLOR_GAINSBORO, "Gainsboro");
+			SendClientMessage(playerid, COLOR_GHOSTWHITE, "Ghost White");
+			SendClientMessage(playerid, COLOR_GOLD, "Gold");
+			SendClientMessage(playerid, COLOR_GOLDENROD, "Golden Rod");
+		}
+		else if (strval(tmp) == 6) {
+			SendClientMessage(playerid, COLOR_DARKERGREEN, "Darker Green");
+			SendClientMessage(playerid, COLOR_GREENYELLOW, "Green Yellow");
+			SendClientMessage(playerid, COLOR_HONEYDEW, "Honeydew");
+			SendClientMessage(playerid, COLOR_HOTPINK, "Hot Pink");
+			SendClientMessage(playerid, COLOR_INDIANRED, "Indian Red");
+			SendClientMessage(playerid, COLOR_INDIGO, "Indigo");
+			SendClientMessage(playerid, COLOR_IVORY, "Ivory");
+			SendClientMessage(playerid, COLOR_KHAKI, "Khaki");
+			SendClientMessage(playerid, COLOR_LAVENDER, "Lavender");
+			SendClientMessage(playerid, COLOR_LAVENDERBLUSH, "Lavender Blush");
+		}
+		else if (strval(tmp) == 7) {
+			SendClientMessage(playerid, COLOR_LAWNGREEN, "Lawn Green");
+			SendClientMessage(playerid, COLOR_LEMONCHIFFON, "Lemon Chiffon");
+			SendClientMessage(playerid, COLOR_LIGHTCORAL, "Light Coral");
+			SendClientMessage(playerid, COLOR_LIGHTGOLDENRODYELLOW, "Light Golden Rod Yellow");
+			SendClientMessage(playerid, COLOR_LIGHTGRAY, "Light Gray");
+			SendClientMessage(playerid, COLOR_LIGHTPINK, "Light Pink");
+			SendClientMessage(playerid, COLOR_LIGHTSALMON, "Light Salmon");
+			SendClientMessage(playerid, COLOR_LIGHTSEAGREEN, "Light Sea Green");
+			SendClientMessage(playerid, COLOR_LIGHTSKYBLUE, "Light Sky Blue");
+			SendClientMessage(playerid, COLOR_LIGHTSLATEGRAY, "Light Slate Gray");
+		}
+		else if (strval(tmp) == 8) {
+			SendClientMessage(playerid, COLOR_LIGHTSTEELBLUE, "Light Steel Blue");
+			SendClientMessage(playerid, COLOR_LIME, "Lime");
+			SendClientMessage(playerid, COLOR_LIMEGREEN, "Lime Green");
+			SendClientMessage(playerid, COLOR_LINEN, "Linen");
+			SendClientMessage(playerid, COLOR_MAROON, "Maroon");
+			SendClientMessage(playerid, COLOR_MEDIUMAQUAMARINE, "Medium Aquamarine");
+			SendClientMessage(playerid, COLOR_MEDIUMBLUE, "Mediu mBlue");
+			SendClientMessage(playerid, COLOR_MEDIUMORCHID, "Medium Orchid");
+			SendClientMessage(playerid, COLOR_MEDIUMPURPLE, "Medium Purple");
+			SendClientMessage(playerid, COLOR_MEDIUMSEAGREEN, "Medium Sea Green");
+		}
+		else if (strval(tmp) == 9) {
+			SendClientMessage(playerid, COLOR_MEDIUMSLATEBLUE, "Medium Slate Blue");
+			SendClientMessage(playerid, COLOR_MEDIUMSPRINGGREEN, "Medium Spring Green");
+			SendClientMessage(playerid, COLOR_MEDIUMTURQUOISE, "Medium Turquoise");
+			SendClientMessage(playerid, COLOR_MEDIUMVIOLETRED, "Medium Violet Red");
+			SendClientMessage(playerid, COLOR_MIDNIGHTBLUE, "Midnight Blue");
+			SendClientMessage(playerid, COLOR_MINTCREAM, "Mint Cream");
+			SendClientMessage(playerid, COLOR_MISTYROSE, "Misty Rose");
+			SendClientMessage(playerid, COLOR_MOCCASIN, "Moccasin");
+			SendClientMessage(playerid, COLOR_NAVAJOWHITE, "Navajo White");
+			SendClientMessage(playerid, COLOR_NAVY, "Navy");
+		}
+		else if (strval(tmp) == 10) {
+			SendClientMessage(playerid, COLOR_OLDLACE, "Oldlace");
+			SendClientMessage(playerid, COLOR_OLIVE, "Olive");
+			SendClientMessage(playerid, COLOR_OLIVEDRAB, "Olive Drab");
+			SendClientMessage(playerid, COLOR_ORANGE, "Orange");
+			SendClientMessage(playerid, COLOR_ORANGERED, "Orange Red");
+			SendClientMessage(playerid, COLOR_ORCHID, "Orchid");
+			SendClientMessage(playerid, COLOR_PALEGOLDENROD, "Pale Golden Rod");
+			SendClientMessage(playerid, COLOR_PALEGREEN, "Pale Green");
+			SendClientMessage(playerid, COLOR_PALETURQUOISE, "Pale Turquoise");
+			SendClientMessage(playerid, COLOR_PALEVIOLETRED, "Pale Violet Red");
+		}
+		else if (strval(tmp) == 11) {
+			SendClientMessage(playerid, COLOR_PAPAYAWHIP, "Papaya Whip");
+			SendClientMessage(playerid, COLOR_PEACHPUFF, "Peach Puff");
+			SendClientMessage(playerid, COLOR_PERU, "Peru");
+			SendClientMessage(playerid, COLOR_PINK, "Pink");
+			SendClientMessage(playerid, COLOR_PLUM, "Plum");
+			SendClientMessage(playerid, COLOR_POWDERBLUE, "Powder Blue");
+			SendClientMessage(playerid, COLOR_PURPLE, "Purple");
+			SendClientMessage(playerid, COLOR_REBECCAPURPLE, "Rebecca Purple");
+			SendClientMessage(playerid, COLOR_ROSYBROWN, "Rosy Brown");
+			SendClientMessage(playerid, COLOR_ROYALBLUE, "Royal Blue");
+		}
+		else if (strval(tmp) == 12) {
+			SendClientMessage(playerid, COLOR_SADDLEBROWN, "Saddle Brown");
+			SendClientMessage(playerid, COLOR_SALMON, "Salmon");
+			SendClientMessage(playerid, COLOR_SANDYBROWN, "Sandy Brown");
+			SendClientMessage(playerid, COLOR_SEAGREEN, "Sea Green");
+			SendClientMessage(playerid, COLOR_SEASHELL, "Sea Shell");
+			SendClientMessage(playerid, COLOR_SIENNA, "Sienna");
+			SendClientMessage(playerid, COLOR_SILVER, "Silver");
+			SendClientMessage(playerid, COLOR_SKYBLUE, "Sky Blue");
+			SendClientMessage(playerid, COLOR_SLATEBLUE, "Slate Blue");
+			SendClientMessage(playerid, COLOR_SLATEGRAY, "Slate Gray");
+		}
+		else if (strval(tmp) == 13) {
+			SendClientMessage(playerid, COLOR_SNOW, "Snow");
+			SendClientMessage(playerid, COLOR_SPRINGGREEN, "Spring Green");
+			SendClientMessage(playerid, COLOR_STEELBLUE, "Steel Blue");
+			SendClientMessage(playerid, COLOR_TAN, "Tan");
+			SendClientMessage(playerid, COLOR_TEAL, "Teal");
+			SendClientMessage(playerid, COLOR_THISTLE, "Thistle");
+			SendClientMessage(playerid, COLOR_TOMATO, "Tomato");
+			SendClientMessage(playerid, COLOR_TURQUOISE, "Turquoise");
+			SendClientMessage(playerid, COLOR_VIOLET, "Violet");
+			SendClientMessage(playerid, COLOR_WHEAT, "Wheat");
+		}
+		else if (strval(tmp) == 14) {
+			SendClientMessage(playerid, COLOR_WHITESMOKE, "White Smoke");
+			SendClientMessage(playerid, COLOR_YELLOWGREEN, "Yellow Green");
+		}
+		else {
+            SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /maincols [0-14]");
+		}
+
+		return 1;
+	}
+
+	//STRING COLOR TEXT TEST COMMANDS
+	if (strcmp("/stringcols", cmdtext, true, 15) == 0) {
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_BLACK"X"SCOL_WHITE"X"SCOL_RED"X"SCOL_GREEN"X"SCOL_BLUE"X"SCOL_CYAN"X"SCOL_MAGENTA"X"SCOL_YELLOW"X"SCOL_DARKRED"X"SCOL_DARKGREEN"X"SCOL_DARKBLUE"X"SCOL_DARKCYAN"X"SCOL_DARKMAGENTA"X"SCOL_DARKYELLOW"X"SCOL_LIGHTRED"X"SCOL_LIGHTGREEN"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_LIGHTBLUE"X"SCOL_LIGHTCYAN"X"SCOL_LIGHTMAGENTA"X"SCOL_LIGHTYELLOW"X"SCOL_ALICEBLUE"X"SCOL_ANTIQUEWHITE"X"SCOL_AQUA"X"SCOL_AQUAMARINE"X"SCOL_AZURE"X"SCOL_BEIGE"X"SCOL_BISQUE"X"SCOL_BLANCHEDALMOND"X"SCOL_BLUEVIOLET"X"SCOL_BROWN"X"SCOL_BURLYWOOD"X"SCOL_CADETBLUE"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_CHARTEREUSE"X"SCOL_CHOCOLATE"X"SCOL_CORAL"X"SCOL_CORNFLOWERBLUE"X"SCOL_CORNSILK"X"SCOL_CRIMSON"X"SCOL_DARKGOLDENROD"X"SCOL_DARKGRAY"X"SCOL_DARKKHAKI"X"SCOL_DARKOLIVEGREEN"X"SCOL_DARKORANGE"X"SCOL_DARKORCHID"X"SCOL_DARKSALMON"X"SCOL_DARKSEAGREEN"X"SCOL_DARKSLATEBLUE"X"SCOL_DARKSLATEGRAY"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_DARKTURQUOISE"X"SCOL_DARKVIOLET"X"SCOL_DEEPPINK"X"SCOL_DEEPSKYBLUE"X"SCOL_DIMGRAY"X"SCOL_DODGERBLUE"X"SCOL_FIREBRICK"X"SCOL_FLORALWHITE"X"SCOL_FORESTGREEN"X"SCOL_GAINSBORO"X"SCOL_GHOSTWHITE"X"SCOL_GOLD"X"SCOL_GOLDENROD"X"SCOL_DARKERGREEN"X"SCOL_GREENYELLOW"X"SCOL_HONEYDEW"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_HOTPINK"X"SCOL_INDIANRED"X"SCOL_INDIGO"X"SCOL_IVORY"X"SCOL_KHAKI"X"SCOL_LAVENDER"X"SCOL_LAVENDERBLUSH"X"SCOL_LAWNGREEN"X"SCOL_LEMONCHIFFON"X"SCOL_LIGHTCORAL"X"SCOL_LIGHTGOLDENRODYELLOW"X"SCOL_LIGHTGRAY"X"SCOL_LIGHTPINK"X"SCOL_LIGHTSALMON"X"SCOL_LIGHTSEAGREEN"X"SCOL_LIGHTSKYBLUE"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_LIGHTSLATEGRAY"X"SCOL_LIGHTSTEELBLUE"X"SCOL_LIME"X"SCOL_LIMEGREEN"X"SCOL_LINEN"X"SCOL_MAROON"X"SCOL_MEDIUMAQUAMARINE"X"SCOL_MEDIUMBLUE"X"SCOL_MEDIUMORCHID"X"SCOL_MEDIUMPURPLE"X"SCOL_MEDIUMSEAGREEN"X"SCOL_MEDIUMSLATEBLUE"X"SCOL_MEDIUMSPRINGGREEN"X"SCOL_MEDIUMTURQUOISE"X"SCOL_MEDIUMVIOLETRED"X"SCOL_MIDNIGHTBLUE"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_MINTCREAM"X"SCOL_MISTYROSE"X"SCOL_MOCCASIN"X"SCOL_NAVAJOWHITE"X"SCOL_NAVY"X"SCOL_OLDLACE"X"SCOL_OLIVE"X"SCOL_OLIVEDRAB"X"SCOL_ORANGE"X"SCOL_ORANGERED"X"SCOL_ORCHID"X"SCOL_PALEGOLDENROD"X"SCOL_PALEGREEN"X"SCOL_PALETURQUOISE"X"SCOL_PALEVIOLETRED"X"SCOL_PAPAYAWHIP"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_PEACHPUFF"X"SCOL_PERU"X"SCOL_PINK"X"SCOL_PLUM"X"SCOL_POWDERBLUE"X"SCOL_PURPLE"X"SCOL_REBECCAPURPLE"X"SCOL_ROSYBROWN"X"SCOL_ROYALBLUE"X"SCOL_SADDLEBROWN"X"SCOL_SALMON"X"SCOL_SANDYBROWN"X"SCOL_SEAGREEN"X"SCOL_SEASHELL"X"SCOL_SIENNA"X"SCOL_SILVER"X");
+		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_SKYBLUE"X"SCOL_SLATEBLUE"X"SCOL_SLATEGRAY"X"SCOL_SNOW"X"SCOL_SPRINGGREEN"X"SCOL_STEELBLUE"X"SCOL_TAN"X"SCOL_TEAL"X"SCOL_THISTLE"X"SCOL_TOMATO"X"SCOL_TURQUOISE"X"SCOL_VIOLET"X"SCOL_WHEAT"X"SCOL_WHITESMOKE"X"SCOL_YELLOWGREEN"X");
+		return 1;
+	}
 
 	//GAME TEXT TEST COMMANDS
 	if (strcmp("/gametext pricedown", cmdtext, true, 20) == 0) {
@@ -941,223 +1141,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	if (strcmp("/gametext notification", cmdtext, true, 20) == 0) {
 		GameTextForPlayer(playerid, "GMTEXT_STYLE_NOTIFICATION", 2000, GMTEXT_STYLE_NOTIFICATION);
-		return 1;
-	}
-
-	//COLOR TEXT TEST COMMANDS
-	if (strcmp("/defcols0", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_WHITE, "White");
-		SendClientMessage(playerid, COLOR_BLACK, "Black");
-		SendClientMessage(playerid, COLOR_RED, "Red");
-		SendClientMessage(playerid, COLOR_GREEN, "Green");
-		SendClientMessage(playerid, COLOR_BLUE, "Blue");
-		SendClientMessage(playerid, COLOR_CYAN, "Cyan");
-		SendClientMessage(playerid, COLOR_MAGENTA, "Magenta");
-		SendClientMessage(playerid, COLOR_YELLOW, "Yellow");
-		SendClientMessage(playerid, COLOR_DARKRED, "Dark Red");
-		SendClientMessage(playerid, COLOR_DARKGREEN, "Dark Green");
-		return 1;
-	}
-
-	if (strcmp("/defcols1", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_DARKBLUE, "Dark Blue");
-		SendClientMessage(playerid, COLOR_DARKCYAN, "Dark Cyan");
-		SendClientMessage(playerid, COLOR_DARKMAGENTA, "Dark Magenta");
-		SendClientMessage(playerid, COLOR_DARKYELLOW, "Dark Yellow");
-		SendClientMessage(playerid, COLOR_LIGHTRED, "Light Red");
-		SendClientMessage(playerid, COLOR_LIGHTGREEN, "Light Green");
-		SendClientMessage(playerid, COLOR_LIGHTBLUE, "Light Blue");
-		SendClientMessage(playerid, COLOR_LIGHTCYAN, "Light Cyan");
-		SendClientMessage(playerid, COLOR_LIGHTMAGENTA, "Light Magenta");
-		SendClientMessage(playerid, COLOR_LIGHTYELLOW, "Light Yellow");
-		return 1;
-	}
-
-	if (strcmp("/defcols2", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_ALICEBLUE, "Alice Blue");
-		SendClientMessage(playerid, COLOR_ANTIQUEWHITE, "Antique White");
-		SendClientMessage(playerid, COLOR_AQUA, "Aqua");
-		SendClientMessage(playerid, COLOR_AQUAMARINE, "Aquamarine");
-		SendClientMessage(playerid, COLOR_AZURE, "Azure");
-		SendClientMessage(playerid, COLOR_BEIGE, "Beige");
-		SendClientMessage(playerid, COLOR_BLANCHEDALMOND, "Blanched Almond");
-		SendClientMessage(playerid, COLOR_BLUEVIOLET, "Blue Violet");
-		SendClientMessage(playerid, COLOR_BROWN, "Brown");
-		SendClientMessage(playerid, COLOR_BURLYWOOD, "Burlywood");
-		return 1;
-	}
-
-	if (strcmp("/defcols3", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_CADETBLUE, "Cadet Blue");
-		SendClientMessage(playerid, COLOR_CHARTEREUSE, "Chartereuse");
-		SendClientMessage(playerid, COLOR_CHOCOLATE, "Chocolate");
-		SendClientMessage(playerid, COLOR_CORAL, "Coral");
-		SendClientMessage(playerid, COLOR_CORNFLOWERBLUE, "Cornflower Blue");
-		SendClientMessage(playerid, COLOR_CORNSILK, "Cornsilk");
-		SendClientMessage(playerid, COLOR_CRIMSON, "Crimson");
-		SendClientMessage(playerid, COLOR_DARKGOLDENROD, "Dark Golden Rod");
-		SendClientMessage(playerid, COLOR_DARKGRAY, "Dark Gray");
-		SendClientMessage(playerid, COLOR_DARKKHAKI, "Dark Khaki");
-		return 1;
-	}
-
-	if (strcmp("/defcols4", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_DARKOLIVEGREEN, "Dark Olive Green");
-		SendClientMessage(playerid, COLOR_DARKORANGE, "Dark Orange");
-		SendClientMessage(playerid, COLOR_DARKORCHID, "Dark Orchid");
-		SendClientMessage(playerid, COLOR_DARKSALMON, "Dark Salmon");
-		SendClientMessage(playerid, COLOR_DARKSEAGREEN, "Dark Sea Green");
-		SendClientMessage(playerid, COLOR_DARKSLATEBLUE, "Dark Slate Blue");
-		SendClientMessage(playerid, COLOR_DARKSLATEGRAY, "Dark Slate Gray");
-		SendClientMessage(playerid, COLOR_DARKTURQUOISE, "Dark Turquoise");
-		SendClientMessage(playerid, COLOR_DARKVIOLET, "Dark Violet");
-		SendClientMessage(playerid, COLOR_DEEPPINK, "Deep Pink");
-		return 1;
-	}
-
-	if (strcmp("/defcols5", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_DEEPSKYBLUE, "Deep Sky Blue");
-		SendClientMessage(playerid, COLOR_DIMGRAY, "Dim Gray");
-		SendClientMessage(playerid, COLOR_DODGERBLUE, "Dodger Blue");
-		SendClientMessage(playerid, COLOR_FIREBRICK, "Firebrick");
-		SendClientMessage(playerid, COLOR_FLORALWHITE, "Floral White");
-		SendClientMessage(playerid, COLOR_FORESTGREEN, "Forest Green");
-		SendClientMessage(playerid, COLOR_GAINSBORO, "Gainsboro");
-		SendClientMessage(playerid, COLOR_GHOSTWHITE, "Ghost White");
-		SendClientMessage(playerid, COLOR_GOLD, "Gold");
-		SendClientMessage(playerid, COLOR_GOLDENROD, "Golden Rod");
-		return 1;
-	}
-
-	if (strcmp("/defcols6", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_DARKERGREEN, "Darker Green");
-		SendClientMessage(playerid, COLOR_GREENYELLOW, "Green Yellow");
-		SendClientMessage(playerid, COLOR_HONEYDEW, "Honeydew");
-		SendClientMessage(playerid, COLOR_HOTPINK, "Hot Pink");
-		SendClientMessage(playerid, COLOR_INDIANRED, "Indian Red");
-		SendClientMessage(playerid, COLOR_INDIGO, "Indigo");
-		SendClientMessage(playerid, COLOR_IVORY, "Ivory");
-		SendClientMessage(playerid, COLOR_KHAKI, "Khaki");
-		SendClientMessage(playerid, COLOR_LAVENDER, "Lavender");
-		SendClientMessage(playerid, COLOR_LAVENDERBLUSH, "Lavender Blush");
-		return 1;
-	}
-
-	if (strcmp("/defcols7", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_LAWNGREEN, "Lawn Green");
-		SendClientMessage(playerid, COLOR_LEMONCHIFFON, "Lemon Chiffon");
-		SendClientMessage(playerid, COLOR_LIGHTCORAL, "Light Coral");
-		SendClientMessage(playerid, COLOR_LIGHTGOLDENRODYELLOW, "Light Golden Rod Yellow");
-		SendClientMessage(playerid, COLOR_LIGHTGRAY, "Light Gray");
-		SendClientMessage(playerid, COLOR_LIGHTPINK, "Light Pink");
-		SendClientMessage(playerid, COLOR_LIGHTSALMON, "Light Salmon");
-		SendClientMessage(playerid, COLOR_LIGHTSEAGREEN, "Light Sea Green");
-		SendClientMessage(playerid, COLOR_LIGHTSKYBLUE, "Light Sky Blue");
-		SendClientMessage(playerid, COLOR_LIGHTSLATEGRAY, "Light Slate Gray");
-		return 1;
-	}
-
-	if (strcmp("/defcols8", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_LIGHTSTEELBLUE, "Light Steel Blue");
-		SendClientMessage(playerid, COLOR_LIME, "Lime");
-		SendClientMessage(playerid, COLOR_LIMEGREEN, "Lime Green");
-		SendClientMessage(playerid, COLOR_LINEN, "Linen");
-		SendClientMessage(playerid, COLOR_MAROON, "Maroon");
-		SendClientMessage(playerid, COLOR_MEDIUMAQUAMARINE, "Medium Aquamarine");
-		SendClientMessage(playerid, COLOR_MEDIUMBLUE, "Mediu mBlue");
-		SendClientMessage(playerid, COLOR_MEDIUMORCHID, "Medium Orchid");
-		SendClientMessage(playerid, COLOR_MEDIUMPURPLE, "Medium Purple");
-		SendClientMessage(playerid, COLOR_MEDIUMSEAGREEN, "Medium Sea Green");
-		return 1;
-	}
-
-	if (strcmp("/defcols9", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_MEDIUMSLATEBLUE, "Medium Slate Blue");
-		SendClientMessage(playerid, COLOR_MEDIUMSPRINGGREEN, "Medium Spring Green");
-		SendClientMessage(playerid, COLOR_MEDIUMTURQUOISE, "Medium Turquoise");
-		SendClientMessage(playerid, COLOR_MEDIUMVIOLETRED, "Medium Violet Red");
-		SendClientMessage(playerid, COLOR_MIDNIGHTBLUE, "Midnight Blue");
-		SendClientMessage(playerid, COLOR_MINTCREAM, "Mint Cream");
-		SendClientMessage(playerid, COLOR_MISTYROSE, "Misty Rose");
-		SendClientMessage(playerid, COLOR_MOCCASIN, "Moccasin");
-		SendClientMessage(playerid, COLOR_NAVAJOWHITE, "Navajo White");
-		SendClientMessage(playerid, COLOR_NAVY, "Navy");
-		return 1;
-	}
-
-	if (strcmp("/defcols10", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_OLDLACE, "Oldlace");
-		SendClientMessage(playerid, COLOR_OLIVE, "Olive");
-		SendClientMessage(playerid, COLOR_OLIVEDRAB, "Olive Drab");
-		SendClientMessage(playerid, COLOR_ORANGE, "Orange");
-		SendClientMessage(playerid, COLOR_ORANGERED, "Orange Red");
-		SendClientMessage(playerid, COLOR_ORCHID, "Orchid");
-		SendClientMessage(playerid, COLOR_PALEGOLDENROD, "Pale Golden Rod");
-		SendClientMessage(playerid, COLOR_PALEGREEN, "Pale Green");
-		SendClientMessage(playerid, COLOR_PALETURQUOISE, "Pale Turquoise");
-		SendClientMessage(playerid, COLOR_PALEVIOLETRED, "Pale Violet Red");
-		return 1;
-	}
-
-	if (strcmp("/defcols11", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_PAPAYAWHIP, "Papaya Whip");
-		SendClientMessage(playerid, COLOR_PEACHPUFF, "Peach Puff");
-		SendClientMessage(playerid, COLOR_PERU, "Peru");
-		SendClientMessage(playerid, COLOR_PINK, "Pink");
-		SendClientMessage(playerid, COLOR_PLUM, "Plum");
-		SendClientMessage(playerid, COLOR_POWDERBLUE, "Powder Blue");
-		SendClientMessage(playerid, COLOR_PURPLE, "Purple");
-		SendClientMessage(playerid, COLOR_REBECCAPURPLE, "Rebecca Purple");
-		SendClientMessage(playerid, COLOR_ROSYBROWN, "Rosy Brown");
-		SendClientMessage(playerid, COLOR_ROYALBLUE, "Royal Blue");
-		return 1;
-	}
-
-	if (strcmp("/defcols12", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_SADDLEBROWN, "Saddle Brown");
-		SendClientMessage(playerid, COLOR_SALMON, "Salmon");
-		SendClientMessage(playerid, COLOR_SANDYBROWN, "Sandy Brown");
-		SendClientMessage(playerid, COLOR_SEAGREEN, "Sea Green");
-		SendClientMessage(playerid, COLOR_SEASHELL, "Sea Shell");
-		SendClientMessage(playerid, COLOR_SIENNA, "Sienna");
-		SendClientMessage(playerid, COLOR_SILVER, "Silver");
-		SendClientMessage(playerid, COLOR_SKYBLUE, "Sky Blue");
-		SendClientMessage(playerid, COLOR_SLATEBLUE, "Slate Blue");
-		SendClientMessage(playerid, COLOR_SLATEGRAY, "Slate Gray");
-		return 1;
-	}
-
-	if (strcmp("/defcols13", cmdtext, true, 10) == 0) {
-		SendClientMessage(playerid, COLOR_SNOW, "Snow");
-		SendClientMessage(playerid, COLOR_SPRINGGREEN, "Spring Green");
-		SendClientMessage(playerid, COLOR_STEELBLUE, "Steel Blue");
-		SendClientMessage(playerid, COLOR_TAN, "Tan");
-		SendClientMessage(playerid, COLOR_TEAL, "Teal");
-		SendClientMessage(playerid, COLOR_THISTLE, "Thistle");
-		SendClientMessage(playerid, COLOR_TOMATO, "Tomato");
-		SendClientMessage(playerid, COLOR_TURQUOISE, "Turquoise");
-		SendClientMessage(playerid, COLOR_VIOLET, "Violet");
-		SendClientMessage(playerid, COLOR_WHEAT, "Wheat");
-		return 1;
-	}
-
-	if (strcmp("/defcols14", cmdtext, true, 15) == 0) {
-		SendClientMessage(playerid, COLOR_WHITESMOKE, "White Smoke");
-		SendClientMessage(playerid, COLOR_YELLOWGREEN, "Yellow Green");
-		return 1;
-	}
-
-	//STRINGCOLS COMMAND
-	if (strcmp("/stringcols", cmdtext, true, 15) == 0) {
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_BLACK"X"SCOL_WHITE"X"SCOL_RED"X"SCOL_GREEN"X"SCOL_BLUE"X"SCOL_CYAN"X"SCOL_MAGENTA"X"SCOL_YELLOW"X"SCOL_DARKRED"X"SCOL_DARKGREEN"X"SCOL_DARKBLUE"X"SCOL_DARKCYAN"X"SCOL_DARKMAGENTA"X"SCOL_DARKYELLOW"X"SCOL_LIGHTRED"X"SCOL_LIGHTGREEN"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_LIGHTBLUE"X"SCOL_LIGHTCYAN"X"SCOL_LIGHTMAGENTA"X"SCOL_LIGHTYELLOW"X"SCOL_ALICEBLUE"X"SCOL_ANTIQUEWHITE"X"SCOL_AQUA"X"SCOL_AQUAMARINE"X"SCOL_AZURE"X"SCOL_BEIGE"X"SCOL_BISQUE"X"SCOL_BLANCHEDALMOND"X"SCOL_BLUEVIOLET"X"SCOL_BROWN"X"SCOL_BURLYWOOD"X"SCOL_CADETBLUE"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_CHARTEREUSE"X"SCOL_CHOCOLATE"X"SCOL_CORAL"X"SCOL_CORNFLOWERBLUE"X"SCOL_CORNSILK"X"SCOL_CRIMSON"X"SCOL_DARKGOLDENROD"X"SCOL_DARKGRAY"X"SCOL_DARKKHAKI"X"SCOL_DARKOLIVEGREEN"X"SCOL_DARKORANGE"X"SCOL_DARKORCHID"X"SCOL_DARKSALMON"X"SCOL_DARKSEAGREEN"X"SCOL_DARKSLATEBLUE"X"SCOL_DARKSLATEGRAY"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_DARKTURQUOISE"X"SCOL_DARKVIOLET"X"SCOL_DEEPPINK"X"SCOL_DEEPSKYBLUE"X"SCOL_DIMGRAY"X"SCOL_DODGERBLUE"X"SCOL_FIREBRICK"X"SCOL_FLORALWHITE"X"SCOL_FORESTGREEN"X"SCOL_GAINSBORO"X"SCOL_GHOSTWHITE"X"SCOL_GOLD"X"SCOL_GOLDENROD"X"SCOL_DARKERGREEN"X"SCOL_GREENYELLOW"X"SCOL_HONEYDEW"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_HOTPINK"X"SCOL_INDIANRED"X"SCOL_INDIGO"X"SCOL_IVORY"X"SCOL_KHAKI"X"SCOL_LAVENDER"X"SCOL_LAVENDERBLUSH"X"SCOL_LAWNGREEN"X"SCOL_LEMONCHIFFON"X"SCOL_LIGHTCORAL"X"SCOL_LIGHTGOLDENRODYELLOW"X"SCOL_LIGHTGRAY"X"SCOL_LIGHTPINK"X"SCOL_LIGHTSALMON"X"SCOL_LIGHTSEAGREEN"X"SCOL_LIGHTSKYBLUE"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_LIGHTSLATEGRAY"X"SCOL_LIGHTSTEELBLUE"X"SCOL_LIME"X"SCOL_LIMEGREEN"X"SCOL_LINEN"X"SCOL_MAROON"X"SCOL_MEDIUMAQUAMARINE"X"SCOL_MEDIUMBLUE"X"SCOL_MEDIUMORCHID"X"SCOL_MEDIUMPURPLE"X"SCOL_MEDIUMSEAGREEN"X"SCOL_MEDIUMSLATEBLUE"X"SCOL_MEDIUMSPRINGGREEN"X"SCOL_MEDIUMTURQUOISE"X"SCOL_MEDIUMVIOLETRED"X"SCOL_MIDNIGHTBLUE"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_MINTCREAM"X"SCOL_MISTYROSE"X"SCOL_MOCCASIN"X"SCOL_NAVAJOWHITE"X"SCOL_NAVY"X"SCOL_OLDLACE"X"SCOL_OLIVE"X"SCOL_OLIVEDRAB"X"SCOL_ORANGE"X"SCOL_ORANGERED"X"SCOL_ORCHID"X"SCOL_PALEGOLDENROD"X"SCOL_PALEGREEN"X"SCOL_PALETURQUOISE"X"SCOL_PALEVIOLETRED"X"SCOL_PAPAYAWHIP"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_PEACHPUFF"X"SCOL_PERU"X"SCOL_PINK"X"SCOL_PLUM"X"SCOL_POWDERBLUE"X"SCOL_PURPLE"X"SCOL_REBECCAPURPLE"X"SCOL_ROSYBROWN"X"SCOL_ROYALBLUE"X"SCOL_SADDLEBROWN"X"SCOL_SALMON"X"SCOL_SANDYBROWN"X"SCOL_SEAGREEN"X"SCOL_SEASHELL"X"SCOL_SIENNA"X"SCOL_SILVER"X");
-		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_SKYBLUE"X"SCOL_SLATEBLUE"X"SCOL_SLATEGRAY"X"SCOL_SNOW"X"SCOL_SPRINGGREEN"X"SCOL_STEELBLUE"X"SCOL_TAN"X"SCOL_TEAL"X"SCOL_THISTLE"X"SCOL_TOMATO"X"SCOL_TURQUOISE"X"SCOL_VIOLET"X"SCOL_WHEAT"X"SCOL_WHITESMOKE"X"SCOL_YELLOWGREEN"X");
 		return 1;
 	}
 
@@ -2287,9 +2270,9 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//SHOW PLAYER NAME
 	if(strcmp(cmdtext, "/myname", true) == 0) {
-		new str[256];
-		format(str, sizeof(str), "Your name is %s", MppGetPlayerName(playerid));
-		SendClientMessage(playerid, COLOR_LIGHTBLUE, str);
+		new sMsg[256];
+		format(sMsg, sizeof(sMsg), "Your name is %s", MppGetPlayerName(playerid));
+		SendClientMessage(playerid, COLOR_LIGHTBLUE, sMsg);
 		return 1;
 	}
 
