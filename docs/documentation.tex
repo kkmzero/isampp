@@ -43,9 +43,11 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
+\\- Command /defcols[0-14] was replaced with /maincols [0-14]
 \\- Command /changeskin sets proper player facing angle
 \\- New command /myname for testing MppGetPlayerName function
-\\- Changed structure of /help commands
+\\- Changed source code format of commands
+\\- Changed order of commands
 \bigskip
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -232,7 +234,7 @@ SendClientMessage(playerid, COLOR_RED, "Hello "SCOL_BLUE"World");
 \textbf{\color{red}Hello \color{blue}World}
 \end{sloppypar}
 \bigskip
-Secondary or String colors can be used simply in strings while Primary/Main colors would be used mainly as parameters in SA-MP functions. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/defcols[0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
+Secondary or String colors can be used directly in strings while Primary/Main colors would be used mainly as separate parameters in SA-MP functions. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/maincols [0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/colorslist}
 
@@ -540,9 +542,9 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 \\\textbf{Example of implementation:}
 \begin{verbatim}
 if(strcmp(cmdtext, "/myname", true) == 0) {
-    new str[256];
-    format(str, sizeof(str), "Your name is %s", MppGetPlayerName(playerid));
-    SendClientMessage(playerid, COLOR_LIGHTBLUE, str);
+    new sMsg[256];
+    format(sMsg, sizeof(sMsg), "Your name is %s", MppGetPlayerName(playerid));
+    SendClientMessage(playerid, COLOR_LIGHTBLUE, sMsg);
     return 1;
 }
 \end{verbatim}
