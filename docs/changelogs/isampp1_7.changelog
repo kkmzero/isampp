@@ -6,6 +6,8 @@ Changes in ISAMPP 1.7
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
+- Command /defcols[0-14] was replaced with /maincols [0-14]
 - Command /changeskin sets proper player facing angle
 - New command /myname for testing MppGetPlayerName function
-- Changed structure of /help commands
+- Changed source code format of commands
+- Changed order of commands
