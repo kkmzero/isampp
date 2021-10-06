@@ -738,14 +738,14 @@ public OnGameModeInit()
 	SetActorInvulnerable(gActorDummy, false);
 
 	//TestObjects - Remove Later
-	/*CreateObject(OBJECT_SM_DES_PCKLYPR2, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_SM_DES_PCKLYPR1, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_SM_SCRUB_ROCK6, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_SM_BUSH_LARGE_1, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_SM_BUSH_SMALL_1, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_SM_DRYBRUSH_SM1, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_NEW_BUSHTEST, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_ASH1_HI, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
+	/*CreateObject(OBJECT_VEG_PROCFPATCH, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_PROCGRASSPATCH, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_PROCFPATCH01, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_PFLOWERS03, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_PFLOWERS04, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_VEG_PFLOWERS02, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_P_RUBBLE04BCOL, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_P_RUBBLE0BCOL, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
 
 	return 1;
 }
@@ -831,7 +831,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /help explosion for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /help gametext for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /help setvehiclehealth for ID list)");
-			SendClientMessage(playerid, COLOR_ORANGE, "/w [ID] (type /help w for weather ID list)");
+			SendClientMessage(playerid, COLOR_ORANGE, "/weather [ID] (type /help weather for weather ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin; /myname");
 		}
 		else if (strcmp(tmp, "explosion") == 0) {
@@ -848,8 +848,8 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_MAGENTA, "/setvehiclehealth [ID]");
 			SendClientMessage(playerid, COLOR_MAGENTA, "ID: full, fulllow, whitesmoke, whitesmokelow, greysmoke, greysmokelow, blacksmoke, blacksmokelow, onfire");
 		}
-		else if (strcmp(tmp, "w") == 0) {
-			SendClientMessage(playerid, COLOR_MAGENTA, "/w [ID]");
+		else if (strcmp(tmp, "weather") == 0) {
+			SendClientMessage(playerid, COLOR_MAGENTA, "/weather [ID]");
 			SendClientMessage(playerid, COLOR_MAGENTA, "ID: extrasunnyla, sunnyla, extrasunnysmogla, sunnysmogla, cloudyla");
 			SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
 			SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
@@ -1256,112 +1256,85 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+	//CHANGE WEATHER COMMANDS
+	if (strcmp(cmd, "/weather", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
 
-	//WEATHER COMMANDS
-	if (strcmp("/w extrasunnyla", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_EXSUNNY_LA);
+		if (isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /weather [ID]. Type /help weather for ID list.");
+		}
+		else if (strcmp(tmp, "extrasunnyla") == 0) {
+			SetWeather(WEATHER_EXSUNNY_LA);
+		}
+		else if (strcmp(tmp, "sunnyla") == 0) {
+			SetWeather(WEATHER_SUNNY_LA);
+		}
+		else if (strcmp(tmp, "extrasunnysmogla") == 0) {
+			SetWeather(WEATHER_EXSUNNY_SMOG_LA);
+		}
+		else if (strcmp(tmp, "sunnysmogla") == 0) {
+			SetWeather(WEATHER_SUNNY_SMOG_LA);
+		}
+		else if (strcmp(tmp, "cloudyla") == 0) {
+			SetWeather(WEATHER_CLOUDY_LA);
+		}
+		else if (strcmp(tmp, "sunnysf") == 0) {
+			SetWeather(WEATHER_SUNNY_SF);
+		}
+		else if (strcmp(tmp, "extrasunnysf") == 0) {
+			SetWeather(WEATHER_EXSUNNY_SF);
+		}
+		else if (strcmp(tmp, "cloudysf") == 0) {
+			SetWeather(WEATHER_CLOUDY_SF);
+		}
+		else if (strcmp(tmp, "rainysf") == 0) {
+			SetWeather(WEATHER_RAINY_SF);
+		}
+		else if (strcmp(tmp, "foggysf") == 0) {
+			SetWeather(WEATHER_FOGGY_SF);
+		}
+		else if (strcmp(tmp, "sunnyvegas") == 0) {
+			SetWeather(WEATHER_SUNNY_VEGAS);
+		}
+		else if (strcmp(tmp, "extrasunnyvegas") == 0) {
+			SetWeather(WEATHER_EXSUNNY_VEGAS);
+		}
+		else if (strcmp(tmp, "cloudyvegas") == 0) {
+			SetWeather(WEATHER_CLOUDY_VEGAS);
+		}
+		else if (strcmp(tmp, "extrasunnycountry") == 0) {
+			SetWeather(WEATHER_EXSUNNY_CTRYSIDE);
+		}
+		else if (strcmp(tmp, "sunnycountry") == 0) {
+			SetWeather(WEATHER_SUNNY_CTRYSIDE);
+		}
+		else if (strcmp(tmp, "cloudycountry") == 0) {
+			SetWeather(WEATHER_CLOUDY_CTRYSIDE);
+		}
+		else if (strcmp(tmp, "rainycountry") == 0) {
+			SetWeather(WEATHER_RAINY_CTRYSIDE);
+		}
+		else if (strcmp(tmp, "extrasunnydesert") == 0) {
+			SetWeather(WEATHER_EXSUNNY_DESERT);
+		}
+		else if (strcmp(tmp, "sunnydesert") == 0) {
+			SetWeather(WEATHER_SUNNY_DESERT);
+		}
+		else if (strcmp(tmp, "sandstorm") == 0) {
+			SetWeather(WEATHER_SANDSTORM_DESERT);
+		}
+		else if (strcmp(tmp, "underwater") == 0) {
+			SetWeather(WEATHER_UNDERWATER);
+		}
+		else {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /weather [ID]. Type /help weather for ID list.");
+		}
+
 		return 1;
 	}
-	
-	if (strcmp("/w sunnyla", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_SUNNY_LA);
-		return 1;
-	}
-	
-	if (strcmp("/w extrasunnysmogla", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_EXSUNNY_SMOG_LA);
-		return 1;
-	}
-	
-	if (strcmp("/w sunnysmogla", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_SUNNY_SMOG_LA);
-		return 1;
-	}
-	
-	if (strcmp("/w cloudyla", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_CLOUDY_LA);
-		return 1;
-	}
-	
-	if (strcmp("/w sunnysf", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_SUNNY_SF);
-		return 1;
-	}
-	
-	if (strcmp("/w extrasunnysf", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_EXSUNNY_SF);
-		return 1;
-	}
-	
-	if (strcmp("/w cloudysf", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_CLOUDY_SF);
-		return 1;
-	}
-	
-	if (strcmp("/w rainysf", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_RAINY_SF);
-		return 1;
-	}
-	
-	if (strcmp("/w foggysf", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_FOGGY_SF);
-		return 1;
-	}
-	
-	if (strcmp("/w sunnyvegas", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_SUNNY_VEGAS);
-		return 1;
-	}
-	
-	if (strcmp("/w extrasunnyvegas", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_EXSUNNY_VEGAS);
-		return 1;
-	}
-	
-	if (strcmp("/w cloudyvegas", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_CLOUDY_VEGAS);
-		return 1;
-	}
-	
-	if (strcmp("/w extrasunnycountry", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_EXSUNNY_CTRYSIDE);
-		return 1;
-	}
-	
-	if (strcmp("/w sunnycountry", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_SUNNY_CTRYSIDE);
-		return 1;
-	}
-	
-	if (strcmp("/w cloudycountry", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_CLOUDY_CTRYSIDE);
-		return 1;
-	}
-	
-	if (strcmp("/w rainycountry", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_RAINY_CTRYSIDE);
-		return 1;
-	}
-	
-	if (strcmp("/w extrasunnydesert", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_EXSUNNY_DESERT);
-		return 1;
-	}
-	
-	if (strcmp("/w sunnydesert", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_SUNNY_DESERT);
-		return 1;
-	}
-	
-	if (strcmp("/w sandstorm", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_SANDSTORM_DESERT);
-		return 1;
-	}
-	
-	if (strcmp("/w underwater", cmdtext, true, 10) == 0) {
-		SetWeather(WEATHER_UNDERWATER);
-		return 1;
-	}
+
+
 
 	//TELEPORT COMMANDS
 	if (strcmp("/tp warehouse2", cmdtext, true, 20) == 0) {
@@ -2198,6 +2171,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 		format(szMessage, sizeof(szMessage), "Camera mode: %d %s", GetPlayerCameraMode(playerid), sCammode);
 		SendClientMessage(playerid, COLOR_LIGHTBLUE, szMessage);
+
 		return 1;
 	}
 
