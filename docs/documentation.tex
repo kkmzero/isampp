@@ -39,11 +39,14 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \section{Changes in ISAMPP 1.7}
 \textbf{ISAMPP Library:}
 \\- Implemented legacy functions strtok, strrest, isnull \textit{(i\_funcl.inc)}
+\\- GMTEXT\_STYLE\_SLIM renamed to GMTEXT\_STYLE\_SLIM1 \textit{(i\_textstyle.inc)}
 \\- New stock function MppGetPlayerName
 \\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
 \\- Command /defcols[0-14] was replaced with /maincols [0-14]
+\\- Command /w [ID] was replaced with /weather [ID]
+\\- Format of command /crime[3-19, 21, 22] was changed to /crime [3-19, 21, 22]
 \\- Command /changeskin sets proper player facing angle
 \\- New command /myname for testing MppGetPlayerName function
 \\- Changed source code format of commands
@@ -306,7 +309,7 @@ Identifier & Value & Notes \\
 GMTEXT\_STYLE\_PRICEDOWN & 0 & Appears for 9 seconds. \\
 GMTEXT\_STYLE\_RPRICEDOWN & 1 & Fades out after 8 seconds.\\
 GMTEXT\_STYLE\_SA & 2 & Does not disappear until player respawns. \\
-GMTEXT\_STYLE\_SLIM & 3 & San Andreas specific font. \\
+GMTEXT\_STYLE\_SLIM1 & 3 & San Andreas specific font. \\
 GMTEXT\_STYLE\_SLIM2 & 4 & San Andreas specific font. \\
 GMTEXT\_STYLE\_SLIMW & 5 & Displays for 3 seconds. \\
 GMTEXT\_STYLE\_BPRICEDOWN & 6 & Blue Pricedown font in middle of screen. \\
