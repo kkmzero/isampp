@@ -8,6 +8,7 @@ Changes in ISAMPP 1.7
 
 * ISAMPP Sandbox Game Mode *
 - Command /defcols[0-14] was replaced with /maincols [0-14]
+- Command /w [ID] was replaced with /weather [ID]
 - Format of command /crime[3-19, 21, 22] was changed to /crime [3-19, 21, 22]
 - Command /changeskin sets proper player facing angle
 - New command /myname for testing MppGetPlayerName function
