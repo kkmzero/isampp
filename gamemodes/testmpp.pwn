@@ -738,14 +738,14 @@ public OnGameModeInit()
 	SetActorInvulnerable(gActorDummy, false);
 
 	//TestObjects - Remove Later
-	/*CreateObject(OBJECT_VEG_PROCFPATCH, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_PROCGRASSPATCH, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_PROCFPATCH01, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_PFLOWERS03, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_PFLOWERS04, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VEG_PFLOWERS02, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_P_RUBBLE04BCOL, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_P_RUBBLE0BCOL, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
+	/*CreateObject(OBJECT_PLANT_POT_10, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_PLANT_POT_4, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_PLANT_POT_12, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_VIEW_TELE2, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_GENERATOR_BIG_D, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_OYSTER, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_HORSE_SHOE, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_EXT_SPRUNK, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
 
 	return 1;
 }
@@ -1251,6 +1251,50 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		}
 		else {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /gametext [ID]. Type /help gametext for ID list.");
+		}
+
+		return 1;
+	}
+
+	//SET VEHICLE HEALTH COMMAND
+	if (strcmp(cmd, "/setvehiclehealth", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
+
+		new vehicleid = GetPlayerVehicleID(playerid);
+
+		if (isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /setvehiclehealth [ID]. Type /help setvehiclehealth for ID list.");
+		}
+		else if (strcmp(tmp, "full") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_FULL);
+		}
+		else if (strcmp(tmp, "fulllow") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_FULL_LOW);
+		}
+		else if (strcmp(tmp, "whitesmoke") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE);
+		}
+		else if (strcmp(tmp, "whitesmokelow") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE_LOW);
+		}
+		else if (strcmp(tmp, "greysmoke") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE);
+		}
+		else if (strcmp(tmp, "greysmokelow") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE_LOW);
+		}
+		else if (strcmp(tmp, "blacksmoke") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE);
+		}
+		else if (strcmp(tmp, "blacksmokelow") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE_LOW);
+		}
+		else if (strcmp(tmp, "onfire") == 0) {
+			SetVehicleHealth(vehicleid, VEH_HEALTH_ONFIRE);
+		}
+		else {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /setvehiclehealth [ID]. Type /help setvehiclehealth for ID list.");
 		}
 
 		return 1;
@@ -2067,6 +2111,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+
 	//TELEPORT TO COORDINATES
 	if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
 		//Teleport to end of runway
@@ -2074,75 +2119,17 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//SET VEHICLE HEALTH
-	if (strcmp("/setvehiclehealth full", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_FULL);
-		return 1;
-	}
-	
-	if (strcmp("/setvehiclehealth fulllow", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_FULL_LOW);
-		return 1;
-	}
-	
-	if (strcmp("/setvehiclehealth whitesmoke", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE);
-		return 1;
-	}
-	
-	if (strcmp("/setvehiclehealth whitesmokelow", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE_LOW);
-		return 1;
-	}
-	
-	if (strcmp("/setvehiclehealth greysmoke", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE);
-		return 1;
-	}
-
-	if (strcmp("/setvehiclehealth greysmokelow", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE_LOW);
-		return 1;
-	}
-	
-	if (strcmp("/setvehiclehealth blacksmoke", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE);
-		return 1;
-	}
-
-	if (strcmp("/setvehiclehealth blacksmokelow", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE_LOW);
-		return 1;
-	}
-	
-	if (strcmp("/setvehiclehealth onfire", cmdtext, true, 35) == 0) {
-		new vehicleid = GetPlayerVehicleID(playerid);
-		SetVehicleHealth(vehicleid, VEH_HEALTH_ONFIRE);
-		return 1;
-	}
-
-
 	//SHOW PLAYER POSITION COORDINATES
 	if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 		MppShowPlayerPosition(playerid, COLOR_LIGHTRED);
 		return 1;
 	}
 
-
 	//SHOW VEHICLE INFORMATION
 	if (strcmp("/showvehicleinfo", cmdtext, true, 15) == 0) {
 		MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTRED);
 		return 1;
 	}
-
 
 	//SHOW PLAYER CAMERA MODE
 	if (strcmp("/cameramode", cmdtext, true, 15) == 0) {
