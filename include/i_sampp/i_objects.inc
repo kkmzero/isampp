@@ -151,275 +151,275 @@
 #define OBJECT_VEG_BEVTREE1           713    //veg_bevtree1.dff
 #define OBJECT_VEG_BEVTREE2           714    //veg_bevtree2.dff
 #define OBJECT_VEG_BEVTREE3           715    //veg_bevtree3.dff
-#define OBJECT_SJMPALMBIGPV           716    //sjmpalmbigpv.dff
-#define OBJECT_SM_BEVHILTREEPV        717    //sm_bevhiltreepv.dff
-#define OBJECT_VGS_PALM04             718    //vgs_palm04.dff
-#define OBJECT_VEG_LARGEFURS07        719    //veg_largefurs07.dff
-#define OBJECT_VEG_LARGEFURS01        720    //veg_largefurs01.dff
-#define OBJECT_VEG_LARGEFURS02        721    //veg_largefurs02.dff
-#define OBJECT_VEG_LARGEFURS03        722    //veg_largefurs03.dff
-#define OBJECT_VEG_LARGEFURS04        723    //veg_largefurs04.dff
-#define OBJECT_VEG_LARGEFURS05        724    //veg_largefurs05.dff
-#define OBJECT_VEG_LARGEFURS06        725    //veg_largefurs06.dff
-#define OBJECT_TREE_HIPOLY19          726    //tree_hipoly19.dff
-#define OBJECT_TREE_HIPOLY04          727    //tree_hipoly04.dff
-#define OBJECT_TREE_HIPOLY06          728    //tree_hipoly06.dff
-#define OBJECT_TREE_HIPOLY07          729    //tree_hipoly07.dff
-#define OBJECT_TREE_HIPOLY08          730    //tree_hipoly08.dff
-#define OBJECT_TREE_HIPOLY09          731    //tree_hipoly09.dff
-#define OBJECT_TREE_HIPOLY10          732    //tree_hipoly10.dff
-#define OBJECT_TREE_HIPOLY11          733    //tree_hipoly11.dff
-#define OBJECT_TREE_HIPOLY14          734    //tree_hipoly14.dff
-#define OBJECT_TREE_HIPOLY09B         735    //tree_hipoly09b.dff
-#define OBJECT_CEASERTREE01_LVS       736    //ceasertree01_lvs.dff
-#define OBJECT_AW_STREETTREE3         737    //aw_streettree3.dff
-#define OBJECT_AW_STREETTREE2         738    //aw_streettree2.dff
-#define OBJECT_SJMPALMTALL            739    //sjmpalmtall.dff
-#define OBJECT_VGS_PALMVTALL          740    //vgs_palmvtall.dff
-#define OBJECT_POT_01                 741    //pot_01.dff
-#define OBJECT_POT_03                 742    //pot_03.dff
-#define OBJECT_KB_POT_1               743    //kb_pot_1.dff
-#define OBJECT_SM_SCRUB_ROCK4         744    //sm_scrub_rock4.dff
-#define OBJECT_SM_SCRUB_ROCK5         745    //sm_scrub_rock5.dff
-#define OBJECT_SM_SCRUB_ROCK2         746    //sm_scrub_rock2.dff
-#define OBJECT_SM_SCRUB_ROCK3         747    //sm_scrub_rock3.dff
-#define OBJECT_SM_SCRB_GRP1           748    //sm_scrb_grp1.dff
-#define OBJECT_SM_SCRB_COLUMN3        749    //sm_scrb_column3.dff
-#define OBJECT_SM_SCRB_COLUMN2        750    //sm_scrb_column2.dff
-#define OBJECT_SM_SCRB_COLUMN1        751    //sm_scrb_column1.dff
-#define OBJECT_SM_CUNT_ROCK1          752    //sm_cunt_rock1.dff
-#define OBJECT_SM_DESCACTIIGRPB       753    //sm_descactiigrpb.dff
-#define OBJECT_SM_DES_CACTIIGRP       754    //sm_des_cactiigrp.dff
-#define OBJECT_SM_DES_PCKLYPR3        755    //sm_des_pcklypr3.dff
-#define OBJECT_SM_DES_PCKLYPR2        756    //sm_des_pcklypr2.dff
-#define OBJECT_SM_DES_PCKLYPR1        757    //sm_des_pcklypr1.dff
-#define OBJECT_SM_SCRUB_ROCK6         758    //sm_scrub_rock6.dff
-#define OBJECT_SM_BUSH_LARGE_1        759    //sm_bush_large_1.dff
-#define OBJECT_SM_BUSH_SMALL_1        760    //sm_bush_small_1.dff
-#define OBJECT_SM_DRYBRUSH_SM1        761    //sm_drybrush_sm1.dff
-#define OBJECT_NEW_BUSHTEST           762    //new_bushtest.dff
-#define OBJECT_ASH1_HI                763    //Ash1_hi.dff
-#define OBJECT_CEDAR3_HI              764    //Cedar3_hi.dff
-#define OBJECT_CEDAR2_HI              765    //Cedar2_hi.dff
-#define OBJECT_CEDAR1_HI              766    //Cedar1_hi.dff
-#define OBJECT_ELMTREEGRN_HI          767    //Elmtreegrn_hi.dff
-#define OBJECT_ELMTREEGRN2_HI         768    //Elmtreegrn2_hi.dff
-#define OBJECT_LOCUST_HI              769    //Locust_hi.dff
-#define OBJECT_PINEBG_HI              770    //Pinebg_hi.dff
-#define OBJECT_SPRUCETREE_HI          771    //sprucetree_hi.dff
-#define OBJECT_ELMRED_HI              772    //Elmred_hi.dff
-#define OBJECT_ELMDEAD_HI             773    //Elmdead_hi.dff
-#define OBJECT_ELMPARSE_HI            774    //Elmsparse_hi.dff
-#define OBJECT_ELMWEE_HI              775    //Elmwee_hi.dff
-#define OBJECT_HAZELWEETREE_HI        776    //Hazelweetree_hi.dff
-#define OBJECT_HAZELTALL_HI           777    //Hazeltall_hi.dff
-#define OBJECT_ELMRED_HISM            778    //Elmred_hism.dff
-#define OBJECT_PINEBG_HISM            779    //Pinebg_hism.dff
-#define OBJECT_ELMSPARSE_HISM         780    //Elmsparse_hism.dff
-#define OBJECT_ELMWEE_HISM            781    //Elmwee_hism.dff
-#define OBJECT_ELMTREEGRN_HISM        782    //Elmtreegrn_hism.dff
-#define OBJECT_HASHBURYTREE4SFS       789    //hashburytree4sfs.dff
-#define OBJECT_SM_FIR_TALLGROUP       790    //sm_fir_tallgroup.dff
-#define OBJECT_VBG_FIR_COPSE          791    //vbg_fir_copse.dff
-#define OBJECT_AW_STREETTREE1         792    //aw_streettree1.dff
-#define OBJECT_GENVEG_BUSH07          800    //genVEG_bush07.dff
-#define OBJECT_GENVEG_BUSH01          801    //genVEG_bush01.dff
-#define OBJECT_GENVEG_BUSH08          802    //genVEG_bush08.dff
-#define OBJECT_GENVEG_BUSH09          803    //genVEG_bush09.dff
-#define OBJECT_GENVEG_BUSH10          804    //genVEG_bush10.dff
-#define OBJECT_GENVEG_BUSH11          805    //genVEG_bush11.dff
-#define OBJECT_GENVEG_TALLGRASS       806    //genVEG_tallgrass.dff
-#define OBJECT_P_RUBBLE               807    //p_rubble.dff
-#define OBJECT_GENVEG_BUSH12          808    //genVEG_bush12.dff
-#define OBJECT_GENVEG_BUSH13          809    //genVEG_bush13.dff
-#define OBJECT_GENVEG_BUSH14          810    //genVEG_bush14.dff
-#define OBJECT_GENVEG_BUSH15          811    //genVEG_bush15.dff
-#define OBJECT_GENVEG_BUSH16          812    //genVEG_bush16.dff
-#define OBJECT_GENVEG_BUSH17          813    //genVEG_bush17.dff
-#define OBJECT_GENVEG_BUSH18          814    //genVEG_bush18.dff
-#define OBJECT_GENVEG_BUSH19          815    //genVEG_bush19.dff
-#define OBJECT_P_RUBBLE03             816    //p_rubble03.dff
-#define OBJECT_VEG_PFLOWERS01         817    //veg_Pflowers01.dff
-#define OBJECT_GENVEG_TALLGRASS02     818    //genVEG_tallgrass02.dff
-#define OBJECT_GENVEG_TALLGRASS03     819    //genVEG_tallgrass03.dff
-#define OBJECT_GENVEG_TALLGRASS04     820    //genVEG_tallgrass04.dff
-#define OBJECT_GENVEG_TALLGRASS05     821    //genVEG_tallgrass05.dff
-#define OBJECT_GENVEG_TALLGRASS06     822    //genVEG_tallgrass06.dff
-#define OBJECT_GENVEG_TALLGRASS07     823    //genVEG_tallgrass07.dff
-#define OBJECT_GENVEG_TALLGRASS08     824    //genVEG_tallgrass08.dff
-#define OBJECT_GENVEG_BUSHY           825    //genVEG_bushy.dff
-#define OBJECT_GENVEG_TALLGRASS10     826    //genVEG_tallgrass10.dff
-#define OBJECT_GENVEG_TALLGRASS11     827    //genVEG_tallgrass11.dff
-#define OBJECT_P_RUBBLE2              828    //p_rubble2.dff
-#define OBJECT_DEAD_TREE_3            829    //DEAD_TREE_3.dff
-#define OBJECT_DEAD_TREE_2            830    //DEAD_TREE_2.dff
-#define OBJECT_DEAD_TREE_5            831    //DEAD_TREE_5.dff
-#define OBJECT_DEAD_TREE_4            832    //DEAD_TREE_4.dff
-#define OBJECT_DEAD_TREE_6            833    //DEAD_TREE_6.dff
-#define OBJECT_DEAD_TREE_7            834    //DEAD_TREE_7.dff
-#define OBJECT_DEAD_TREE_8            835    //DEAD_TREE_8.dff
-#define OBJECT_DEAD_TREE_10           836    //DEAD_TREE_10.dff
-#define OBJECT_DEAD_TREE_1            837    //DEAD_TREE_1.dff
-#define OBJECT_DEAD_TREE_9            838    //DEAD_TREE_9.dff
-#define OBJECT_DEAD_TREE_11           839    //DEAD_TREE_11.dff
-#define OBJECT_DEAD_TREE_12           840    //DEAD_TREE_12.dff
-#define OBJECT_DEAD_TREE_13           841    //DEAD_TREE_13.dff
-#define OBJECT_DEAD_TREE_14           842    //DEAD_TREE_14.dff
-#define OBJECT_DEAD_TREE_15           843    //DEAD_TREE_15.dff
-#define OBJECT_DEAD_TREE_16           844    //DEAD_TREE_16.dff
-#define OBJECT_DEAD_TREE_17           845    //DEAD_TREE_17.dff
-#define OBJECT_DEAD_TREE_18           846    //DEAD_TREE_18.dff
-#define OBJECT_DEAD_TREE_19           847    //DEAD_TREE_19.dff
-#define OBJECT_DEAD_TREE_20           848    //DEAD_TREE_20.dff
-#define OBJECT_CJ_URB_RUB_3           849    //CJ_urb_rub_3.dff
-#define OBJECT_CJ_URB_RUB_1           850    //CJ_urb_rub_1.dff
-#define OBJECT_CJ_URB_RUB_2           851    //CJ_urb_rub_2.dff
-#define OBJECT_CJ_URB_RUB_4           852    //CJ_urb_rub_4.dff
-#define OBJECT_CJ_URB_RUB_5           853    //CJ_urb_rub_5.dff
-#define OBJECT_CJ_URB_RUB_3B          854    //CJ_urb_rub_3b.dff
-#define OBJECT_GENVEG_TALLGRASS01     855    //genVEG_tallgrass01.dff
-#define OBJECT_GENVEG_TALLGRASS12     856    //genVEG_tallgrass12.dff
-#define OBJECT_PROCWEEGRS             857    //procweegrs.dff
-#define OBJECT_SAND_JOSH2             858    //sand_josh2.dff
-#define OBJECT_SAND_PLANT04           859    //sand_plant04.dff
-#define OBJECT_SAND_PLANT01           860    //sand_plant01.dff
-#define OBJECT_SAND_PLANT02           861    //sand_plant02.dff
-#define OBJECT_SAND_PLANT05           862    //sand_plant05.dff
-#define OBJECT_SAND_PLANT03           863    //sand_plant03.dff
-#define OBJECT_SAND_COMBUSH1          864    //sand_combush1.dff
-#define OBJECT_SAND_COMBUSH02         865    //sand_combush02.dff
-#define OBJECT_SAND_COMBUSH03         866    //sand_combush03.dff
-#define OBJECT_P_RUBBLE04COL          867    //p_rubble04col.dff
-#define OBJECT_P_RUBBLE05COL          868    //p_rubble05col.dff
-#define OBJECT_VEG_PFLOWERSWEE        869    //veg_Pflowerswee.dff
-#define OBJECT_VEG_PFLOWERS2WEE       870    //veg_Pflowers2wee.dff
-#define OBJECT_VEG_PROCFPATCHWEE      871    //veg_procfpatchwee.dff
-#define OBJECT_GEN_TALLGRSNEW         872    //gen_tallgrsnew.dff
-#define OBJECT_VEG_PROCFPATCH         873    //veg_procfpatch.dff
-#define OBJECT_VEG_PROCGRASSPATCH     874    //veg_procgrasspatch.dff
-#define OBJECT_VEG_PROCFPATCH01       875    //veg_procfpatch01.dff
-#define OBJECT_VEG_PFLOWERS03         876    //veg_Pflowers03.dff
-#define OBJECT_VEG_PFLOWERS04         877    //veg_Pflowers04.dff
-#define OBJECT_VEG_PFLOWERS02         878    //veg_Pflowers02.dff
-#define OBJECT_P_RUBBLE04BCOL         879    //p_rubble04bcol.dff
-#define OBJECT_P_RUBBLE0BCOL          880    //p_rubble0bcol.dff
-#define OBJECT_SM_FIR_SCABG_PO        881    //sm_fir_scabg_PO.dff
-#define OBJECT_ASH_PO                 882    //Ash_PO.dff
-#define OBJECT_CEDAR3_PO              883    //Cedar3_PO.dff
-#define OBJECT_CEDAR2_PO              884    //Cedar2_PO.dff
-#define OBJECT_CEDAR1_PO              885    //Cedar1_PO.dff
-#define OBJECT_ELMTREEGRN_PO          886    //Elmtreegrn_PO.dff
-#define OBJECT_ELMTREEGRN2_PO         887    //Elmtreegrn2_PO.dff
-#define OBJECT_LOCUST_PO              888    //Locust_PO.dff
-#define OBJECT_PINEBG_PO              889    //Pinebg_PO.dff
-#define OBJECT_ELMRED_PO              890    //Elmred_PO.dff
-#define OBJECT_ELMDEAD_PO             891    //Elmdead_PO.dff
-#define OBJECT_HAZELWEETREE_PO        892    //Hazelweetree_PO.dff
-#define OBJECT_ELMREDSM_PO            893    //Elmredsm_PO.dff
-#define OBJECT_ELMSPARSESM_PO         894    //Elmsparsesm_PO.dff
-#define OBJECT_ELMWEESM_PO            895    //Elmweesm_PO.dff
-#define OBJECT_SEAROCK06              896    //searock06.dff
-#define OBJECT_SEAROCK01              897    //searock01.dff
-#define OBJECT_SEAROCK02              898    //searock02.dff
-#define OBJECT_SEAROCK03              899    //searock03.dff
-#define OBJECT_SEAROCK04              900    //searock04.dff
-#define OBJECT_SEAROCK05              901    //searock05.dff
-#define OBJECT_STARFISH               902    //Starfish.dff
-#define OBJECT_SEAWEED                903    //seaweed.dff
-#define OBJECT_SAND_JOSH1             904    //sand_josh1.dff
-#define OBJECT_ROCKBRKQ               905    //rockbrkq.dff
-#define OBJECT_P_RUBBLEBIG            906    //p_rubblebig.dff
-#define OBJECT_BUST_CABINET_4         910    //BUST_CABINET_4.dff
-#define OBJECT_BUST_CABINET_1         911    //BUST_CABINET_1.dff
-#define OBJECT_BUST_CABINET_2         912    //BUST_CABINET_2.dff
-#define OBJECT_BUST_CABINET_3         913    //BUST_CABINET_3.dff
-#define OBJECT_GRILL                  914    //GRILL.dff
-#define OBJECT_AIRCON_FAN             915    //AIRCON_FAN.dff
-#define OBJECT_FRUITCRATE2            916    //FRUITCRATE2.dff
-#define OBJECT_FRUITCRATE1            917    //FRUITCRATE1.dff
-#define OBJECT_CJ_FLAME_DRUM          918    //CJ_FLAME_Drum.dff
-#define OBJECT_AIRCON                 919    //AIRCON.dff
-#define OBJECT_Y_GENERATOR            920    //Y_GENERATOR.dff
-#define OBJECT_CJ_IND_LIGHT           921    //CJ_IND_LIGHT.dff
-#define OBJECT_PACKING_CARATES1       922    //Packing_carates1.dff
-#define OBJECT_PACKING_CARATES2       923    //Packing_carates2.dff
-#define OBJECT_FRUITCRATE3            924    //FRUITCRATE3.dff
-#define OBJECT_RACK2                  925    //RACK2.dff
-#define OBJECT_RUBBISH_BOX2           926    //RUBBISH_BOX2.dff
-#define OBJECT_PIPING_DETAIL          927    //Piping_Detail.dff
-#define OBJECT_RUBBISH_BOX1           928    //RUBBISH_BOX1.dff
-#define OBJECT_GENERATOR              929    //GENERATOR.dff
-#define OBJECT_O2_BOTTLES             930    //O2_Bottles.dff
-#define OBJECT_RACK3                  931    //RACK3.dff
-#define OBJECT_H_WHEELCHAIR           932    //H_WHEELCHAIR.dff
-#define OBJECT_CJ_CABLEROLL           933    //CJ_CABLEROLL.dff
-#define OBJECT_GENERATOR_BIG          934    //GENERATOR_BIG.dff
-#define OBJECT_CJ_DRUM                935    //CJ_Drum.dff
-#define OBJECT_CJ_DF_WORKTOP_2        936    //CJ_DF_WORKTOP_2.dff
-#define OBJECT_CJ_DF_WORKTOP          937    //CJ_DF_WORKTOP.dff
-#define OBJECT_CJ_DF_LIGHT            938    //CJ_DF_LIGHT.dff
-#define OBJECT_CJ_DF_UNIT             939    //CJ_DF_UNIT.dff
-#define OBJECT_CJ_DF_LIGHT_2          940    //CJ_DF_LIGHT_2.dff
-#define OBJECT_CJ_DF_WORKTOP_3        941    //CJ_DF_WORKTOP_3.dff
-#define OBJECT_CJ_DF_UNIT_2           942    //CJ_DF_UNIT_2.dff
-#define OBJECT_GENERATOR_LOW          943    //GENERATOR_LOW.dff
-#define OBJECT_PACKING_CARATES04      944    //Packing_carates04.dff
-#define OBJECT_WS_CF_LAMPS            945    //WS_CF_LAMPS.dff
-#define OBJECT_BSKBALL_LAX            946    //bskball_lax.dff
-#define OBJECT_BSKBALLHUB_LAX01       947    //bskballhub_lax01.dff
-#define OBJECT_PLANT_POT_10           948    //Plant_Pot_10.dff
-#define OBJECT_PLANT_POT_4            949    //Plant_Pot_4.dff
-#define OBJECT_PLANT_POT_12           950    //Plant_Pot_12.dff
-#define OBJECT_CJ_VIEW_TELE2          951    //CJ_VIEW_TELE2.dff
-#define OBJECT_GENERATOR_BIG_D        952    //GENERATOR_BIG_d.dff
-#define OBJECT_CJ_OYSTER              953    //CJ_OYSTER.dff
-#define OBJECT_CJ_HORSE_SHOE          954    //cj_horse_Shoe.dff
-#define OBJECT_CJ_EXT_SPRUNK          955    //CJ_EXT_SPRUNK.dff
-#define OBJECT_CJ_EXT_CANDY           956    //CJ_EXT_CANDY.dff
-#define OBJECT_CJ_LIGHT_FIX_EXT       957    //CJ_LIGHT_FIT_EXT.dff
-#define OBJECT_CJ_CHIP_MAKER          958    //CJ_CHIP_MAKER.dff
-#define OBJECT_CJ_CHIP_MAKER_BITS     959    //CJ_CHIP_MAKER_BITS.dff
-#define OBJECT_CJ_ARM_CRATE           960    //CJ_ARM_CRATE.dff
-#define OBJECT_CJ_ARM_CRATE_TOP       961    //CJ_ARM_CRATE_top.dff
-#define OBJECT_CJ_T_TICKET_PED        962    //CJ_T_TICKET_PED.dff
-#define OBJECT_CJ_T_TICKET            963    //CJ_T_TICKET.dff
-#define OBJECT_CJ_METAL_CRATE         964    //CJ_METAL_CRATE.dff
-#define OBJECT_BAR_GATEBAR01          966    //bar_gatebar01.dff
-#define OBJECT_BAR_GATEBOX01          967    //bar_gatebox01.dff
-#define OBJECT_BARRIERTURN            968    //barrierturn.dff
-#define OBJECT_ELECTRICGATE           969    //Electricgate.dff
-#define OBJECT_FENCESMALLB            970    //fencesmallb.dff
-#define OBJECT_SUBWAYGATE             971    //subwaygate.dff
-#define OBJECT_TUNNELENTRANCE         972    //tunnelentrance.dff
-#define OBJECT_SUB_ROADBARRIER        973    //sub_roadbarrier.dff
-#define OBJECT_TALL_FENCE             974    //tall_fence.dff
-#define OBJECT_COLUMBIANGATE          975    //Columbiangate.dff
-#define OBJECT_PHILS_COMPND_GATE      976    //phils_compnd_gate.dff
-#define OBJECT_NEWTOWERDOOR1          977    //newtowerdoor1.dff
-#define OBJECT_SUB_ROADRIGHT          978    //sub_roadright.dff
-#define OBJECT_SUB_ROADLEFT           979    //sub_roadleft.dff
-#define OBJECT_AIRPORTGATE            980    //airportgate.dff
-#define OBJECT_HELIX_BARRIER          981    //helix_barrier.dff
-#define OBJECT_FENCESHIT              982    //fenceshit.dff
-#define OBJECT_FENCESHIT3             983    //fenceshit3.dff
-#define OBJECT_FENCESHIT2             984    //fenceshit2.dff
-#define OBJECT_GATE_AUTOR             985    //gate_autoR.dff
-#define OBJECT_GATE_AUTOL             986    //gate_autoL.dff
-#define OBJECT_ELECFENCE_BAR          987    //elecfence_BAR.dff
-#define OBJECT_WS_APGATE              988    //ws_apgate.dff
-#define OBJECT_AC_APGATE              989    //ac_apgate.dff
-#define OBJECT_BAR_BARRIER12          990    //bar_barrier12.dff
-#define OBJECT_BAR_BARRIERGATE1       991    //bar_barriergate1.dff
-#define OBJECT_BAR_BARRIER10B         992    //bar_barrier10b.dff
-#define OBJECT_BAR_BARRIER10          993    //bar_barrier10.dff
-#define OBJECT_LHOUSE_BARRIER2        994    //lhouse_barrier2.dff
-#define OBJECT_BAR_BARRIER16          995    //bar_barrier16.dff
-#define OBJECT_LHOUSE_BARRIER1        996    //lhouse_barrier1.dff
-#define OBJECT_LHOUSE_BARRIER3        997    //lhouse_barrier3.dff
-#define OBJECT_GDYN_BARRIER17         998    //Gdyn_barrier17.dff
-#define OBJECT_SPL_B_MAR_M            1000   //spl_b_mar_m.dff
-#define OBJECT_SPL_B_BAB_M            1001   //spl_b_bab_m.dff
-#define OBJECT_SPL_B_BAR_M            1002   //spl_b_bar_m.dff
-#define OBJECT_SPL_B_MAB_M            1003   //spl_b_mab_m.dff
-#define OBJECT_BNT_B_SC_M             1004   //bnt_b_sc_m.dff
-#define OBJECT_BNT_B_SC_L             1005   //bnt_b_sc_l.dff
+#define OBJECT_SJMPALMBIGPV           716     //vegepart.ide, sjmpalmbigpv.dff
+#define OBJECT_SM_BEVHILTREEPV        717     //vegepart.ide, sm_bevhiltreepv.dff
+#define OBJECT_VGS_PALM04             718     //vegepart.ide, vgs_palm04.dff
+#define OBJECT_VEG_LARGEFURS07        719     //vegepart.ide, veg_largefurs07.dff
+#define OBJECT_VEG_LARGEFURS01        720     //vegepart.ide, veg_largefurs01.dff
+#define OBJECT_VEG_LARGEFURS02        721     //vegepart.ide, veg_largefurs02.dff
+#define OBJECT_VEG_LARGEFURS03        722     //vegepart.ide, veg_largefurs03.dff
+#define OBJECT_VEG_LARGEFURS04        723     //vegepart.ide, veg_largefurs04.dff
+#define OBJECT_VEG_LARGEFURS05        724     //vegepart.ide, veg_largefurs05.dff
+#define OBJECT_VEG_LARGEFURS06        725     //vegepart.ide, veg_largefurs06.dff
+#define OBJECT_TREE_HIPOLY19          726     //vegepart.ide, tree_hipoly19.dff
+#define OBJECT_TREE_HIPOLY04          727     //vegepart.ide, tree_hipoly04.dff
+#define OBJECT_TREE_HIPOLY06          728     //vegepart.ide, tree_hipoly06.dff
+#define OBJECT_TREE_HIPOLY07          729     //vegepart.ide, tree_hipoly07.dff
+#define OBJECT_TREE_HIPOLY08          730     //vegepart.ide, tree_hipoly08.dff
+#define OBJECT_TREE_HIPOLY09          731     //vegepart.ide, tree_hipoly09.dff
+#define OBJECT_TREE_HIPOLY10          732     //vegepart.ide, tree_hipoly10.dff
+#define OBJECT_TREE_HIPOLY11          733     //vegepart.ide, tree_hipoly11.dff
+#define OBJECT_TREE_HIPOLY14          734     //vegepart.ide, tree_hipoly14.dff
+#define OBJECT_TREE_HIPOLY09B         735     //vegepart.ide, tree_hipoly09b.dff
+#define OBJECT_CEASERTREE01_LVS       736     //vegepart.ide, ceasertree01_lvs.dff
+#define OBJECT_AW_STREETTREE3         737     //vegepart.ide, aw_streettree3.dff
+#define OBJECT_AW_STREETTREE2         738     //vegepart.ide, aw_streettree2.dff
+#define OBJECT_SJMPALMTALL            739     //vegepart.ide, sjmpalmtall.dff
+#define OBJECT_VGS_PALMVTALL          740     //vegepart.ide, vgs_palmvtall.dff
+#define OBJECT_POT_01                 741     //vegepart.ide, pot_01.dff
+#define OBJECT_POT_03                 742     //vegepart.ide, pot_03.dff
+#define OBJECT_KB_POT_1               743     //vegepart.ide, kb_pot_1.dff
+#define OBJECT_SM_SCRUB_ROCK4         744     //vegepart.ide, sm_scrub_rock4.dff
+#define OBJECT_SM_SCRUB_ROCK5         745     //vegepart.ide, sm_scrub_rock5.dff
+#define OBJECT_SM_SCRUB_ROCK2         746     //vegepart.ide, sm_scrub_rock2.dff
+#define OBJECT_SM_SCRUB_ROCK3         747     //vegepart.ide, sm_scrub_rock3.dff
+#define OBJECT_SM_SCRB_GRP1           748     //vegepart.ide, sm_scrb_grp1.dff
+#define OBJECT_SM_SCRB_COLUMN3        749     //vegepart.ide, sm_scrb_column3.dff
+#define OBJECT_SM_SCRB_COLUMN2        750     //vegepart.ide, sm_scrb_column2.dff
+#define OBJECT_SM_SCRB_COLUMN1        751     //vegepart.ide, sm_scrb_column1.dff
+#define OBJECT_SM_CUNT_ROCK1          752     //vegepart.ide, sm_cunt_rock1.dff
+#define OBJECT_SM_DESCACTIIGRPB       753     //vegepart.ide, sm_descactiigrpb.dff
+#define OBJECT_SM_DES_CACTIIGRP       754     //vegepart.ide, sm_des_cactiigrp.dff
+#define OBJECT_SM_DES_PCKLYPR3        755     //vegepart.ide, sm_des_pcklypr3.dff
+#define OBJECT_SM_DES_PCKLYPR2        756     //vegepart.ide, sm_des_pcklypr2.dff
+#define OBJECT_SM_DES_PCKLYPR1        757     //vegepart.ide, sm_des_pcklypr1.dff
+#define OBJECT_SM_SCRUB_ROCK6         758     //vegepart.ide, sm_scrub_rock6.dff
+#define OBJECT_SM_BUSH_LARGE_1        759     //vegepart.ide, sm_bush_large_1.dff
+#define OBJECT_SM_BUSH_SMALL_1        760     //vegepart.ide, sm_bush_small_1.dff
+#define OBJECT_SM_DRYBRUSH_SM1        761     //vegepart.ide, sm_drybrush_sm1.dff
+#define OBJECT_NEW_BUSHTEST           762     //vegepart.ide, new_bushtest.dff
+#define OBJECT_ASH1_HI                763     //vegepart.ide, Ash1_hi.dff
+#define OBJECT_CEDAR3_HI              764     //vegepart.ide, Cedar3_hi.dff
+#define OBJECT_CEDAR2_HI              765     //vegepart.ide, Cedar2_hi.dff
+#define OBJECT_CEDAR1_HI              766     //vegepart.ide, Cedar1_hi.dff
+#define OBJECT_ELMTREEGRN_HI          767     //vegepart.ide, Elmtreegrn_hi.dff
+#define OBJECT_ELMTREEGRN2_HI         768     //vegepart.ide, Elmtreegrn2_hi.dff
+#define OBJECT_LOCUST_HI              769     //vegepart.ide, Locust_hi.dff
+#define OBJECT_PINEBG_HI              770     //vegepart.ide, Pinebg_hi.dff
+#define OBJECT_SPRUCETREE_HI          771     //vegepart.ide, sprucetree_hi.dff
+#define OBJECT_ELMRED_HI              772     //vegepart.ide, Elmred_hi.dff
+#define OBJECT_ELMDEAD_HI             773     //vegepart.ide, Elmdead_hi.dff
+#define OBJECT_ELMPARSE_HI            774     //vegepart.ide, Elmsparse_hi.dff
+#define OBJECT_ELMWEE_HI              775     //vegepart.ide, Elmwee_hi.dff
+#define OBJECT_HAZELWEETREE_HI        776     //vegepart.ide, Hazelweetree_hi.dff
+#define OBJECT_HAZELTALL_HI           777     //vegepart.ide, Hazeltall_hi.dff
+#define OBJECT_ELMRED_HISM            778     //vegepart.ide, Elmred_hism.dff
+#define OBJECT_PINEBG_HISM            779     //vegepart.ide, Pinebg_hism.dff
+#define OBJECT_ELMSPARSE_HISM         780     //vegepart.ide, Elmsparse_hism.dff
+#define OBJECT_ELMWEE_HISM            781     //vegepart.ide, Elmwee_hism.dff
+#define OBJECT_ELMTREEGRN_HISM        782     //vegepart.ide, Elmtreegrn_hism.dff
+#define OBJECT_HASHBURYTREE4SFS       789     //vegepart.ide, hashburytree4sfs.dff
+#define OBJECT_SM_FIR_TALLGROUP       790     //vegepart.ide, sm_fir_tallgroup.dff
+#define OBJECT_VBG_FIR_COPSE          791     //vegepart.ide, vbg_fir_copse.dff
+#define OBJECT_AW_STREETTREE1         792     //vegepart.ide, aw_streettree1.dff
+#define OBJECT_GENVEG_BUSH07          800     //procobj.ide, genVEG_bush07.dff
+#define OBJECT_GENVEG_BUSH01          801     //procobj.ide, genVEG_bush01.dff
+#define OBJECT_GENVEG_BUSH08          802     //procobj.ide, genVEG_bush08.dff
+#define OBJECT_GENVEG_BUSH09          803     //procobj.ide, genVEG_bush09.dff
+#define OBJECT_GENVEG_BUSH10          804     //procobj.ide, genVEG_bush10.dff
+#define OBJECT_GENVEG_BUSH11          805     //procobj.ide, genVEG_bush11.dff
+#define OBJECT_GENVEG_TALLGRASS       806     //procobj.ide, genVEG_tallgrass.dff
+#define OBJECT_P_RUBBLE               807     //procobj.ide, p_rubble.dff
+#define OBJECT_GENVEG_BUSH12          808     //procobj.ide, genVEG_bush12.dff
+#define OBJECT_GENVEG_BUSH13          809     //procobj.ide, genVEG_bush13.dff
+#define OBJECT_GENVEG_BUSH14          810     //procobj.ide, genVEG_bush14.dff
+#define OBJECT_GENVEG_BUSH15          811     //procobj.ide, genVEG_bush15.dff
+#define OBJECT_GENVEG_BUSH16          812     //procobj.ide, genVEG_bush16.dff
+#define OBJECT_GENVEG_BUSH17          813     //procobj.ide, genVEG_bush17.dff
+#define OBJECT_GENVEG_BUSH18          814     //procobj.ide, genVEG_bush18.dff
+#define OBJECT_GENVEG_BUSH19          815     //procobj.ide, genVEG_bush19.dff
+#define OBJECT_P_RUBBLE03             816     //procobj.ide, p_rubble03.dff
+#define OBJECT_VEG_PFLOWERS01         817     //procobj.ide, veg_Pflowers01.dff
+#define OBJECT_GENVEG_TALLGRASS02     818     //procobj.ide, genVEG_tallgrass02.dff
+#define OBJECT_GENVEG_TALLGRASS03     819     //procobj.ide, genVEG_tallgrass03.dff
+#define OBJECT_GENVEG_TALLGRASS04     820     //procobj.ide, genVEG_tallgrass04.dff
+#define OBJECT_GENVEG_TALLGRASS05     821     //procobj.ide, genVEG_tallgrass05.dff
+#define OBJECT_GENVEG_TALLGRASS06     822     //procobj.ide, genVEG_tallgrass06.dff
+#define OBJECT_GENVEG_TALLGRASS07     823     //procobj.ide, genVEG_tallgrass07.dff
+#define OBJECT_GENVEG_TALLGRASS08     824     //procobj.ide, genVEG_tallgrass08.dff
+#define OBJECT_GENVEG_BUSHY           825     //procobj.ide, genVEG_bushy.dff
+#define OBJECT_GENVEG_TALLGRASS10     826     //procobj.ide, genVEG_tallgrass10.dff
+#define OBJECT_GENVEG_TALLGRASS11     827     //procobj.ide, genVEG_tallgrass11.dff
+#define OBJECT_P_RUBBLE2              828     //procobj.ide, p_rubble2.dff
+#define OBJECT_DEAD_TREE_3            829     //procobj.ide, DEAD_TREE_3.dff
+#define OBJECT_DEAD_TREE_2            830     //procobj.ide, DEAD_TREE_2.dff
+#define OBJECT_DEAD_TREE_5            831     //procobj.ide, DEAD_TREE_5.dff
+#define OBJECT_DEAD_TREE_4            832     //procobj.ide, DEAD_TREE_4.dff
+#define OBJECT_DEAD_TREE_6            833     //procobj.ide, DEAD_TREE_6.dff
+#define OBJECT_DEAD_TREE_7            834     //procobj.ide, DEAD_TREE_7.dff
+#define OBJECT_DEAD_TREE_8            835     //procobj.ide, DEAD_TREE_8.dff
+#define OBJECT_DEAD_TREE_10           836     //procobj.ide, DEAD_TREE_10.dff
+#define OBJECT_DEAD_TREE_1            837     //procobj.ide, DEAD_TREE_1.dff
+#define OBJECT_DEAD_TREE_9            838     //procobj.ide, DEAD_TREE_9.dff
+#define OBJECT_DEAD_TREE_11           839     //procobj.ide, DEAD_TREE_11.dff
+#define OBJECT_DEAD_TREE_12           840     //procobj.ide, DEAD_TREE_12.dff
+#define OBJECT_DEAD_TREE_13           841     //procobj.ide, DEAD_TREE_13.dff
+#define OBJECT_DEAD_TREE_14           842     //procobj.ide, DEAD_TREE_14.dff
+#define OBJECT_DEAD_TREE_15           843     //procobj.ide, DEAD_TREE_15.dff
+#define OBJECT_DEAD_TREE_16           844     //procobj.ide, DEAD_TREE_16.dff
+#define OBJECT_DEAD_TREE_17           845     //procobj.ide, DEAD_TREE_17.dff
+#define OBJECT_DEAD_TREE_18           846     //procobj.ide, DEAD_TREE_18.dff
+#define OBJECT_DEAD_TREE_19           847     //procobj.ide, DEAD_TREE_19.dff
+#define OBJECT_DEAD_TREE_20           848     //procobj.ide, DEAD_TREE_20.dff
+#define OBJECT_CJ_URB_RUB_3           849     //procobj.ide, CJ_urb_rub_3.dff
+#define OBJECT_CJ_URB_RUB_1           850     //procobj.ide, CJ_urb_rub_1.dff
+#define OBJECT_CJ_URB_RUB_2           851     //procobj.ide, CJ_urb_rub_2.dff
+#define OBJECT_CJ_URB_RUB_4           852     //procobj.ide, CJ_urb_rub_4.dff
+#define OBJECT_CJ_URB_RUB_5           853     //procobj.ide, CJ_urb_rub_5.dff
+#define OBJECT_CJ_URB_RUB_3B          854     //procobj.ide, CJ_urb_rub_3b.dff
+#define OBJECT_GENVEG_TALLGRASS01     855     //procobj.ide, genVEG_tallgrass01.dff
+#define OBJECT_GENVEG_TALLGRASS12     856     //procobj.ide, genVEG_tallgrass12.dff
+#define OBJECT_PROCWEEGRS             857     //procobj.ide, procweegrs.dff
+#define OBJECT_SAND_JOSH2             858     //procobj.ide, sand_josh2.dff
+#define OBJECT_SAND_PLANT04           859     //procobj.ide, sand_plant04.dff
+#define OBJECT_SAND_PLANT01           860     //procobj.ide, sand_plant01.dff
+#define OBJECT_SAND_PLANT02           861     //procobj.ide, sand_plant02.dff
+#define OBJECT_SAND_PLANT05           862     //procobj.ide, sand_plant05.dff
+#define OBJECT_SAND_PLANT03           863     //procobj.ide, sand_plant03.dff
+#define OBJECT_SAND_COMBUSH1          864     //procobj.ide, sand_combush1.dff
+#define OBJECT_SAND_COMBUSH02         865     //procobj.ide, sand_combush02.dff
+#define OBJECT_SAND_COMBUSH03         866     //procobj.ide, sand_combush03.dff
+#define OBJECT_P_RUBBLE04COL          867     //procobj.ide, p_rubble04col.dff
+#define OBJECT_P_RUBBLE05COL          868     //procobj.ide, p_rubble05col.dff
+#define OBJECT_VEG_PFLOWERSWEE        869     //procobj.ide, veg_Pflowerswee.dff
+#define OBJECT_VEG_PFLOWERS2WEE       870     //procobj.ide, veg_Pflowers2wee.dff
+#define OBJECT_VEG_PROCFPATCHWEE      871     //procobj.ide, veg_procfpatchwee.dff
+#define OBJECT_GEN_TALLGRSNEW         872     //procobj.ide, gen_tallgrsnew.dff
+#define OBJECT_VEG_PROCFPATCH         873     //procobj.ide, veg_procfpatch.dff
+#define OBJECT_VEG_PROCGRASSPATCH     874     //procobj.ide, veg_procgrasspatch.dff
+#define OBJECT_VEG_PROCFPATCH01       875     //procobj.ide, veg_procfpatch01.dff
+#define OBJECT_VEG_PFLOWERS03         876     //procobj.ide, veg_Pflowers03.dff
+#define OBJECT_VEG_PFLOWERS04         877     //procobj.ide, veg_Pflowers04.dff
+#define OBJECT_VEG_PFLOWERS02         878     //procobj.ide, veg_Pflowers02.dff
+#define OBJECT_P_RUBBLE04BCOL         879     //procobj.ide, p_rubble04bcol.dff
+#define OBJECT_P_RUBBLE0BCOL          880     //procobj.ide, p_rubble0bcol.dff
+#define OBJECT_SM_FIR_SCABG_PO        881     //procobj.ide, sm_fir_scabg_PO.dff
+#define OBJECT_ASH_PO                 882     //procobj.ide, Ash_PO.dff
+#define OBJECT_CEDAR3_PO              883     //procobj.ide, Cedar3_PO.dff
+#define OBJECT_CEDAR2_PO              884     //procobj.ide, Cedar2_PO.dff
+#define OBJECT_CEDAR1_PO              885     //procobj.ide, Cedar1_PO.dff
+#define OBJECT_ELMTREEGRN_PO          886     //procobj.ide, Elmtreegrn_PO.dff
+#define OBJECT_ELMTREEGRN2_PO         887     //procobj.ide, Elmtreegrn2_PO.dff
+#define OBJECT_LOCUST_PO              888     //procobj.ide, Locust_PO.dff
+#define OBJECT_PINEBG_PO              889     //procobj.ide, Pinebg_PO.dff
+#define OBJECT_ELMRED_PO              890     //procobj.ide, Elmred_PO.dff
+#define OBJECT_ELMDEAD_PO             891     //procobj.ide, Elmdead_PO.dff
+#define OBJECT_HAZELWEETREE_PO        892     //procobj.ide, Hazelweetree_PO.dff
+#define OBJECT_ELMREDSM_PO            893     //procobj.ide, Elmredsm_PO.dff
+#define OBJECT_ELMSPARSESM_PO         894     //procobj.ide, Elmsparsesm_PO.dff
+#define OBJECT_ELMWEESM_PO            895     //procobj.ide, Elmweesm_PO.dff
+#define OBJECT_SEAROCK06              896     //procobj.ide, searock06.dff
+#define OBJECT_SEAROCK01              897     //procobj.ide, searock01.dff
+#define OBJECT_SEAROCK02              898     //procobj.ide, searock02.dff
+#define OBJECT_SEAROCK03              899     //procobj.ide, searock03.dff
+#define OBJECT_SEAROCK04              900     //procobj.ide, searock04.dff
+#define OBJECT_SEAROCK05              901     //procobj.ide, searock05.dff
+#define OBJECT_STARFISH               902     //procobj.ide, Starfish.dff
+#define OBJECT_SEAWEED                903     //procobj.ide, seaweed.dff
+#define OBJECT_SAND_JOSH1             904     //procobj.ide, sand_josh1.dff
+#define OBJECT_ROCKBRKQ               905     //procobj.ide, rockbrkq.dff
+#define OBJECT_P_RUBBLEBIG            906     //procobj.ide, p_rubblebig.dff
+#define OBJECT_BUST_CABINET_4         910     //propext.ide, BUST_CABINET_4.dff
+#define OBJECT_BUST_CABINET_1         911     //propext.ide, BUST_CABINET_1.dff
+#define OBJECT_BUST_CABINET_2         912     //propext.ide, BUST_CABINET_2.dff
+#define OBJECT_BUST_CABINET_3         913     //propext.ide, BUST_CABINET_3.dff
+#define OBJECT_GRILL                  914     //propext.ide, GRILL.dff
+#define OBJECT_AIRCON_FAN             915     //propext.ide, AIRCON_FAN.dff
+#define OBJECT_FRUITCRATE2            916     //propext.ide, FRUITCRATE2.dff
+#define OBJECT_FRUITCRATE1            917     //propext.ide, FRUITCRATE1.dff
+#define OBJECT_CJ_FLAME_DRUM          918     //propext.ide, CJ_FLAME_Drum.dff
+#define OBJECT_AIRCON                 919     //propext.ide, AIRCON.dff
+#define OBJECT_Y_GENERATOR            920     //propext.ide, Y_GENERATOR.dff
+#define OBJECT_CJ_IND_LIGHT           921     //propext.ide, CJ_IND_LIGHT.dff
+#define OBJECT_PACKING_CARATES1       922     //propext.ide, Packing_carates1.dff
+#define OBJECT_PACKING_CARATES2       923     //propext.ide, Packing_carates2.dff
+#define OBJECT_FRUITCRATE3            924     //propext.ide, FRUITCRATE3.dff
+#define OBJECT_RACK2                  925     //propext.ide, RACK2.dff
+#define OBJECT_RUBBISH_BOX2           926     //propext.ide, RUBBISH_BOX2.dff
+#define OBJECT_PIPING_DETAIL          927     //propext.ide, Piping_Detail.dff
+#define OBJECT_RUBBISH_BOX1           928     //propext.ide, RUBBISH_BOX1.dff
+#define OBJECT_GENERATOR              929     //propext.ide, GENERATOR.dff
+#define OBJECT_O2_BOTTLES             930     //propext.ide, O2_Bottles.dff
+#define OBJECT_RACK3                  931     //propext.ide, RACK3.dff
+#define OBJECT_H_WHEELCHAIR           932     //propext.ide, H_WHEELCHAIR.dff
+#define OBJECT_CJ_CABLEROLL           933     //propext.ide, CJ_CABLEROLL.dff
+#define OBJECT_GENERATOR_BIG          934     //propext.ide, GENERATOR_BIG.dff
+#define OBJECT_CJ_DRUM                935     //propext.ide, CJ_Drum.dff
+#define OBJECT_CJ_DF_WORKTOP_2        936     //propext.ide, CJ_DF_WORKTOP_2.dff
+#define OBJECT_CJ_DF_WORKTOP          937     //propext.ide, CJ_DF_WORKTOP.dff
+#define OBJECT_CJ_DF_LIGHT            938     //propext.ide, CJ_DF_LIGHT.dff
+#define OBJECT_CJ_DF_UNIT             939     //propext.ide, CJ_DF_UNIT.dff
+#define OBJECT_CJ_DF_LIGHT_2          940     //propext.ide, CJ_DF_LIGHT_2.dff
+#define OBJECT_CJ_DF_WORKTOP_3        941     //propext.ide, CJ_DF_WORKTOP_3.dff
+#define OBJECT_CJ_DF_UNIT_2           942     //propext.ide, CJ_DF_UNIT_2.dff
+#define OBJECT_GENERATOR_LOW          943     //propext.ide, GENERATOR_LOW.dff
+#define OBJECT_PACKING_CARATES04      944     //propext.ide, Packing_carates04.dff
+#define OBJECT_WS_CF_LAMPS            945     //propext.ide, WS_CF_LAMPS.dff
+#define OBJECT_BSKBALL_LAX            946     //propext.ide, bskball_lax.dff
+#define OBJECT_BSKBALLHUB_LAX01       947     //propext.ide, bskballhub_lax01.dff
+#define OBJECT_PLANT_POT_10           948     //propext.ide, Plant_Pot_10.dff
+#define OBJECT_PLANT_POT_4            949     //propext.ide, Plant_Pot_4.dff
+#define OBJECT_PLANT_POT_12           950     //propext.ide, Plant_Pot_12.dff
+#define OBJECT_CJ_VIEW_TELE2          951     //propext.ide, CJ_VIEW_TELE2.dff
+#define OBJECT_GENERATOR_BIG_D        952     //propext.ide, GENERATOR_BIG_d.dff
+#define OBJECT_CJ_OYSTER              953     //propext.ide, CJ_OYSTER.dff
+#define OBJECT_CJ_HORSE_SHOE          954     //propext.ide, cj_horse_Shoe.dff
+#define OBJECT_CJ_EXT_SPRUNK          955     //propext.ide, CJ_EXT_SPRUNK.dff
+#define OBJECT_CJ_EXT_CANDY           956     //propext.ide, CJ_EXT_CANDY.dff
+#define OBJECT_CJ_LIGHT_FIX_EXT       957     //propext.ide, CJ_LIGHT_FIT_EXT.dff
+#define OBJECT_CJ_CHIP_MAKER          958     //propext.ide, CJ_CHIP_MAKER.dff
+#define OBJECT_CJ_CHIP_MAKER_BITS     959     //propext.ide, CJ_CHIP_MAKER_BITS.dff
+#define OBJECT_CJ_ARM_CRATE           960     //propext.ide, CJ_ARM_CRATE.dff
+#define OBJECT_CJ_ARM_CRATE_TOP       961     //propext.ide, CJ_ARM_CRATE_top.dff
+#define OBJECT_CJ_T_TICKET_PED        962     //propext.ide, CJ_T_TICKET_PED.dff
+#define OBJECT_CJ_T_TICKET            963     //propext.ide, CJ_T_TICKET.dff
+#define OBJECT_CJ_METAL_CRATE         964     //propext.ide, CJ_METAL_CRATE.dff
+#define OBJECT_BAR_GATEBAR01          966     //barriers.ide, bar_gatebar01.dff
+#define OBJECT_BAR_GATEBOX01          967     //barriers.ide, bar_gatebox01.dff
+#define OBJECT_BARRIERTURN            968     //barriers.ide, barrierturn.dff
+#define OBJECT_ELECTRICGATE           969     //barriers.ide, Electricgate.dff
+#define OBJECT_FENCESMALLB            970     //barriers.ide, fencesmallb.dff
+#define OBJECT_SUBWAYGATE             971     //barriers.ide, subwaygate.dff
+#define OBJECT_TUNNELENTRANCE         972     //barriers.ide, tunnelentrance.dff
+#define OBJECT_SUB_ROADBARRIER        973     //barriers.ide, sub_roadbarrier.dff
+#define OBJECT_TALL_FENCE             974     //barriers.ide, tall_fence.dff
+#define OBJECT_COLUMBIANGATE          975     //barriers.ide, Columbiangate.dff
+#define OBJECT_PHILS_COMPND_GATE      976     //barriers.ide, phils_compnd_gate.dff
+#define OBJECT_NEWTOWERDOOR1          977     //barriers.ide, newtowerdoor1.dff
+#define OBJECT_SUB_ROADRIGHT          978     //barriers.ide, sub_roadright.dff
+#define OBJECT_SUB_ROADLEFT           979     //barriers.ide, sub_roadleft.dff
+#define OBJECT_AIRPORTGATE            980     //barriers.ide, airportgate.dff
+#define OBJECT_HELIX_BARRIER          981     //barriers.ide, helix_barrier.dff
+#define OBJECT_FENCESHIT              982     //barriers.ide, fenceshit.dff
+#define OBJECT_FENCESHIT3             983     //barriers.ide, fenceshit3.dff
+#define OBJECT_FENCESHIT2             984     //barriers.ide, fenceshit2.dff
+#define OBJECT_GATE_AUTOR             985     //barriers.ide, gate_autoR.dff
+#define OBJECT_GATE_AUTOL             986     //barriers.ide, gate_autoL.dff
+#define OBJECT_ELECFENCE_BAR          987     //barriers.ide, elecfence_BAR.dff
+#define OBJECT_WS_APGATE              988     //barriers.ide, ws_apgate.dff
+#define OBJECT_AC_APGATE              989     //barriers.ide, ac_apgate.dff
+#define OBJECT_BAR_BARRIER12          990     //barriers.ide, bar_barrier12.dff
+#define OBJECT_BAR_BARRIERGATE1       991     //barriers.ide, bar_barriergate1.dff
+#define OBJECT_BAR_BARRIER10B         992     //barriers.ide, bar_barrier10b.dff
+#define OBJECT_BAR_BARRIER10          993     //barriers.ide, bar_barrier10.dff
+#define OBJECT_LHOUSE_BARRIER2        994     //barriers.ide, lhouse_barrier2.dff
+#define OBJECT_BAR_BARRIER16          995     //barriers.ide, bar_barrier16.dff
+#define OBJECT_LHOUSE_BARRIER1        996     //barriers.ide, lhouse_barrier1.dff
+#define OBJECT_LHOUSE_BARRIER3        997     //barriers.ide, lhouse_barrier3.dff
+#define OBJECT_GDYN_BARRIER17         998     //barriers.ide, Gdyn_barrier17.dff
+#define OBJECT_SPL_B_MAR_M            1000    //veh_mods.ide, spl_b_mar_m.dff
+#define OBJECT_SPL_B_BAB_M            1001    //veh_mods.ide, spl_b_bab_m.dff
+#define OBJECT_SPL_B_BAR_M            1002    //veh_mods.ide, spl_b_bar_m.dff
+#define OBJECT_SPL_B_MAB_M            1003    //veh_mods.ide, spl_b_mab_m.dff
+#define OBJECT_BNT_B_SC_M             1004    //veh_mods.ide, bnt_b_sc_m.dff
+#define OBJECT_BNT_B_SC_L             1005    //veh_mods.ide, bnt_b_sc_l.dff
