@@ -518,36 +518,30 @@ public OnPlayerCommandText(playerid, cmdtext[])
         MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTBLUE);
         return 1;
     }
-
     return 0;
 }
 
 public OnPlayerEnterVehicle(playerid, vehicleid, ispassenger)
 {
     VehicleModelID = GetVehicleModel(vehicleid);
-
     return 1;
 }
 
 public OnPlayerExitVehicle(playerid, vehicleid)
 {
     VehicleModelID = 0;
-
     return 1;
 }
 \end{verbatim}
 
 
-\newpage
 \subsection{MppGetPlayerName(playerid)}
 \textit{Returns player nick/name from given playerid.}
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
 if(strcmp(cmdtext, "/myname", true) == 0) {
-    new sMsg[256];
-    format(sMsg, sizeof(sMsg), "Your name is %s", MppGetPlayerName(playerid));
-    SendClientMessage(playerid, COLOR_LIGHTBLUE, sMsg);
+    SendClientMessage(playerid, COLOR_LIGHTBLUE, MppGetPlayerName(playerid));
     return 1;
 }
 \end{verbatim}
