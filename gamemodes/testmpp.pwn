@@ -738,14 +738,14 @@ public OnGameModeInit()
 	SetActorInvulnerable(gActorDummy, false);
 
 	//TestObjects - Remove Later
-	/*CreateObject(OBJECT_PLANT_POT_10, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_PLANT_POT_4, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_PLANT_POT_12, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_VIEW_TELE2, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_GENERATOR_BIG_D, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_OYSTER, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_HORSE_SHOE, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_EXT_SPRUNK, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
+	/*CreateObject(OBJECT_WG_R_C_S, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_WG_L_C_S, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_RF_A_S, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_RF_C_S, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_EXH_A_L, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_WG_L_A_L, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_EXH_C_L, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_RF_A_L, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
 
 	return 1;
 }
@@ -2173,9 +2173,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//SHOW PLAYER NAME
 	if(strcmp(cmdtext, "/myname", true) == 0) {
-		new sMsg[256];
-		format(sMsg, sizeof(sMsg), "Your name is %s", MppGetPlayerName(playerid));
-		SendClientMessage(playerid, COLOR_LIGHTBLUE, sMsg);
+		SendClientMessage(playerid, COLOR_LIGHTBLUE, MppGetPlayerName(playerid));
 		return 1;
 	}
 
@@ -2455,12 +2453,12 @@ public OnPlayerClickPlayer(playerid, clickedplayerid, source)
 	return 1;
 }
 
-public OnPlayerGiveDamageActor(playerid, damaged_actorid, Float: amount, weaponid, bodypart)
+public OnPlayerGiveDamageActor(playerid, damaged_actorid, Float:amount, weaponid, bodypart)
 {
 	new string[128], attacker[MAX_PLAYER_NAME], sbodypart[128];
 	new weaponname[24];
-	GetPlayerName(playerid, attacker, sizeof (attacker));
-	GetWeaponName(weaponid, weaponname, sizeof (weaponname));
+	GetPlayerName(playerid, attacker, sizeof(attacker));
+	GetWeaponName(weaponid, weaponname, sizeof(weaponname));
 
 	switch(bodypart) {
 		case BODYPART_TORSO: sbodypart = "torso";
@@ -2474,7 +2472,7 @@ public OnPlayerGiveDamageActor(playerid, damaged_actorid, Float: amount, weaponi
 	}
 
 	format(string, sizeof(string), "%s has made %.0f damage to actor id %d, weapon: %s, sbodypart: %s", attacker, amount, damaged_actorid, weaponname, sbodypart);
-	SendClientMessageToAll(COLOR_WHITE, string);
+	SendClientMessage(playerid, COLOR_WHITE, string);
 
 	return 1;
 }
