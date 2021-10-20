@@ -1378,739 +1378,458 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-
-
 	//TELEPORT COMMANDS
-	if (strcmp("/tp warehouse2", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WAREHOUSE2, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp transfenders", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_TRANSFENDER, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp worldofcoq", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WORLDOFCOQ, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp ammunation2", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_AMMUNATION2, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp suburban", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SUBURBAN, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp denise", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_DENISEBEDROOM, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp sfgarage", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SFGARAGE, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp ovalstadium", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_OVALSTADIUM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp libertycity", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LIBERTYCITY, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp sweet", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SWEETSHOUSE, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp caligulas", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CALIGULAS, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp wuzimu", cmdtext, true, 20) == 0) {
- 		MppTeleportEx(playerid, LOC_WUZIMU, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp jet", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_JET, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp welcomepump", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WELCOMEPUMP, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp burgh3", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH3, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp abattoir", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ABATTOIR, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp shcameltoe", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SHCAMELTOE, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp caligroof", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CALIGROOF, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp bduppalace", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BDUPPALACE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp pigpen", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_THEPIGPEN, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp ryder", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_RYDERSHOUSE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp katiesnest", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_KATIESNEST, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp reece", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_REECES, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp aptrailer", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_APTRAILER, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp crackpalace", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BSCRACKPALACE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh2", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH2, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp pairburgh", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_PAIRBURGH, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp caligoffice", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CALIGOFFICE, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp stripcasino", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_STRIPCASINO, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp locolowco", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LOCOLOWCO, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp brothel1", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BROTHEL1, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp brothel2", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BROTHEL2, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp insidetrack", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ITBETTING, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp bfrecords", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BFRECORDS, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp bsranch", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BSRANCH, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp bdupapt", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BDUPAPT, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp wheelarch", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WARCHANGELS, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp oglochouse", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_OGLOCHOUSE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BARBERSHOP, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp planningdpt", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_PLANNINGDPT, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp lvpdhq", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LVPDHQ, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp prolaps", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_PROLAPS, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp sexshop", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SEXSHOP, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp lvtattoo", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LVTATTOO, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp helenasbarn", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_HELENASBARN, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp johnsonhouse", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_JOHNSONHOUSE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp pleasuredomes", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_PLEASUREDOMES, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp burgh1", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH1, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp bikeschool", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BIKESCHOOL, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp drivingschool", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_DRIVESCHOOL, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp burgh12", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH12, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp ammunation3", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_AMMUNATION3, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp jaysdinner", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_JAYSDINER, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp 247v5", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_247V5, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp michelle", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_MICHELLESNEST, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh13", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH13, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp dirtbike", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_DIRTBIKE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh15", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH15, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp gantongym", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_GANTONGYM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp diner1", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_DINER1, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp pizzastack", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_PIZZASTACK, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp victim", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_VICTIM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp barbara", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BARBARASNEST, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp madddogg", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_MADDDOGGMANSION, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burningdesire", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURNINGDESIREB, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp safehouse1", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SAFEHOUSE1, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp burgh4", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH4, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp crackden", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CRACKDEN, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh11", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH11, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh16", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH16, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh17", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH17, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp safehouse2", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SAFEHOUSE2, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp millie", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_MILLIESROOM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp cobragym", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_COBRAGYM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp lspdhq", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LSPDHQ, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp burgh18", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH18, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh19", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH19, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp zerorc", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ZERORCSHOP, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp ammunation4", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_AMMUNATION4, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp ammunation5", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_AMMUNATION5, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp 247v6", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_247V6, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp valleydiner", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_VALLEYDINER, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp whorehouse", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WHOREHOUSE, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp ammunation", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_AMMUNATION, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp belowbeltgym", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BBELTGYM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp 8track", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_8TSTADIUM, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp colonels", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_COLONELS, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp verdantbluffs", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SHVBLUFFS, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp burgh21", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH21, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp safehouse3", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SAFEHOUSE3, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp cbell", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CBELL, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp andromada", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ANDROMADA, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh22", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH22, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh23", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH23, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp sfpdhq", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SFPDHQ, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp 247v2", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_247V2, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp fourdragons", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_FOURDRAGONS, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp rcbattlefield", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_RCBATTLEFIELD, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgershot", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGERSHOT, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp actower", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ACTOWER, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp safehouse4", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SAFEHOUSE4, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh14", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH14, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp cfdjanitor", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CFDJANITOR, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp cfdsuite", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CFDSUITE, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp bar", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BAR, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp shwfield", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SHWFIELD, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp casino", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CASINO, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp budgetmotel", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BUDGETMOTEL, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp usafehouse", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_USAFEHOUSE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp barber2", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BARBERSHOP2, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp wardrobe", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WARDROBE, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp didersachs", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_DIDERSACHS, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp kickstartstadium", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_KICKSTADIUM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp lsairport", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LSAIRPORT, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp francisintl", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_FRANCISINTL, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp jeffersonmotel", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_JEFFERSONM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp binco", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BINCO, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp 4burgh", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_4BURGH, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp bloodbowl", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BLOODBOWL, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp burgh20", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BURGH20, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp lstattoo", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LSTATTOO, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp 247v4", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_247V4, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp vicestadium", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_VICESTADIUM, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp lsftattoo", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LSFTATTOO, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp 247v1", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_247V1, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp donutshop", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_RUSTYBDONUTS, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp club", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_CLUB, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp shermandam", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_SHERMANDAM, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp warehouse1", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WAREHOUSE1, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp 247v3", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_247V3, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp zip", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ZIP, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp atrium", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ATRIUM, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp lilprobeinn", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LILPROBEINN, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp palobank", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_PALOBANK, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp palodiner", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_PALODINER, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp dilligast", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_DILLIGASST, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp ranch", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_TORRENOR, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp zombotech", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_ZOMBOTECH, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp cemetery", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_LSCEMETC, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp liqorstore", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BLUEBLIQ, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp warehouse3", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WAREHOUSE3, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp militarydepo", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_MILITARYDEPO, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp area69", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_AREA69, COLOR_LIMEGREEN);
-		return 1;
-	}
-
-	if (strcmp("/tp bikesch", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_BIKESCH, COLOR_LIMEGREEN);
-		return 1;
-	}
+	if (strcmp(cmd, "/tp", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
+
+		if (isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /tp [ID]");
+		}
+		else if (strcmp(tmp, "warehouse2") == 0) {
+			MppTeleportEx(playerid, LOC_WAREHOUSE2, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "transfender") == 0) {
+			MppTeleportEx(playerid, LOC_TRANSFENDER, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "worldofcoq") == 0) {
+			MppTeleportEx(playerid, LOC_WORLDOFCOQ, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ammunation2") == 0) {
+			MppTeleportEx(playerid, LOC_AMMUNATION2, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "suburban") == 0) {
+			MppTeleportEx(playerid, LOC_SUBURBAN, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "denise") == 0) {
+			MppTeleportEx(playerid, LOC_DENISEBEDROOM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "sfgarage") == 0) {
+			MppTeleportEx(playerid, LOC_SFGARAGE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ovalstadium") == 0) {
+			MppTeleportEx(playerid, LOC_OVALSTADIUM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "libertycity") == 0) {
+			MppTeleportEx(playerid, LOC_LIBERTYCITY, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "sweet") == 0) {
+			MppTeleportEx(playerid, LOC_SWEETSHOUSE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "caligulas") == 0) {
+			MppTeleportEx(playerid, LOC_CALIGULAS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "wuzimu") == 0) {
+			MppTeleportEx(playerid, LOC_WUZIMU, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "jet") == 0) {
+			MppTeleportEx(playerid, LOC_JET, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "welcomepump") == 0) {
+			MppTeleportEx(playerid, LOC_WELCOMEPUMP, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh3") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH3, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "abattoir") == 0) {
+			MppTeleportEx(playerid, LOC_ABATTOIR, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "shcameltoe") == 0) {
+			MppTeleportEx(playerid, LOC_SHCAMELTOE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "caligroof") == 0) {
+			MppTeleportEx(playerid, LOC_CALIGROOF, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bduppalace") == 0) {
+			MppTeleportEx(playerid, LOC_BDUPPALACE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "pigpen") == 0) {
+			MppTeleportEx(playerid, LOC_THEPIGPEN, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ryder") == 0) {
+			MppTeleportEx(playerid, LOC_RYDERSHOUSE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "katiesnest") == 0) {
+			MppTeleportEx(playerid, LOC_KATIESNEST, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "reece") == 0) {
+			MppTeleportEx(playerid, LOC_REECES, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "aptrailer") == 0) {
+			MppTeleportEx(playerid, LOC_APTRAILER, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "crackpalace") == 0) {
+			MppTeleportEx(playerid, LOC_BSCRACKPALACE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh2") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH2, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "pairburgh") == 0) {
+			MppTeleportEx(playerid, LOC_PAIRBURGH, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "caligoffice") == 0) {
+			MppTeleportEx(playerid, LOC_CALIGOFFICE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "shstripcasino") == 0) {
+			MppTeleportEx(playerid, LOC_STRIPCASINO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "locolowco") == 0) {
+			MppTeleportEx(playerid, LOC_LOCOLOWCO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "brothel1") == 0) {
+			MppTeleportEx(playerid, LOC_BROTHEL1, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "brothel2") == 0) {
+			MppTeleportEx(playerid, LOC_BROTHEL2, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "insidetrack") == 0) {
+			MppTeleportEx(playerid, LOC_ITBETTING, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bfrecords") == 0) {
+			MppTeleportEx(playerid, LOC_BFRECORDS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bsranch") == 0) {
+			MppTeleportEx(playerid, LOC_BSRANCH, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bdupapt") == 0) {
+			MppTeleportEx(playerid, LOC_BDUPAPT, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "wheelarch") == 0) {
+			MppTeleportEx(playerid, LOC_WARCHANGELS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "oglochouse") == 0) {
+			MppTeleportEx(playerid, LOC_OGLOCHOUSE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "barbershop") == 0) {
+			MppTeleportEx(playerid, LOC_BARBERSHOP, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "planningdpt") == 0) {
+			MppTeleportEx(playerid, LOC_PLANNINGDPT, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lvpdhq") == 0) {
+			MppTeleportEx(playerid, LOC_LVPDHQ, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "prolaps") == 0) {
+			MppTeleportEx(playerid, LOC_PROLAPS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "sexshop") == 0) {
+			MppTeleportEx(playerid, LOC_SEXSHOP, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lvtattoo") == 0) {
+			MppTeleportEx(playerid, LOC_LVTATTOO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "helenasbarn") == 0) {
+			MppTeleportEx(playerid, LOC_HELENASBARN, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "johnsonhouse") == 0) {
+			MppTeleportEx(playerid, LOC_JOHNSONHOUSE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "pleasuredomes") == 0) {
+			MppTeleportEx(playerid, LOC_PLEASUREDOMES, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh1") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH1, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bikeschool") == 0) {
+			MppTeleportEx(playerid, LOC_BIKESCHOOL, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "drivingschool") == 0) {
+			MppTeleportEx(playerid, LOC_DRIVESCHOOL, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh12") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH12, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ammunation3") == 0) {
+			MppTeleportEx(playerid, LOC_AMMUNATION3, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "jaysdiner") == 0) {
+			MppTeleportEx(playerid, LOC_JAYSDINER, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "247v5") == 0) {
+			MppTeleportEx(playerid, LOC_247V5, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "michelle") == 0) {
+			MppTeleportEx(playerid, LOC_MICHELLESNEST, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh13") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH13, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "dirtbike") == 0) {
+			MppTeleportEx(playerid, LOC_DIRTBIKE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh15") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH15, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "gantongym") == 0) {
+			MppTeleportEx(playerid, LOC_GANTONGYM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "diner1") == 0) {
+			MppTeleportEx(playerid, LOC_DINER1, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "pizzastack") == 0) {
+			MppTeleportEx(playerid, LOC_PIZZASTACK, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "victim") == 0) {
+			MppTeleportEx(playerid, LOC_VICTIM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "barbara") == 0) {
+			MppTeleportEx(playerid, LOC_BARBARASNEST, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "madddogg") == 0) {
+			MppTeleportEx(playerid, LOC_MADDDOGGMANSION, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burningdesire") == 0) {
+			MppTeleportEx(playerid, LOC_BURNINGDESIREB, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "safehouse1") == 0) {
+			MppTeleportEx(playerid, LOC_SAFEHOUSE1, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh4") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH4, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "crackden") == 0) {
+			MppTeleportEx(playerid, LOC_CRACKDEN, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh11") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH11, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh16") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH16, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh17") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH17, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "safehouse2") == 0) {
+			MppTeleportEx(playerid, LOC_SAFEHOUSE2, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "millie") == 0) {
+			MppTeleportEx(playerid, LOC_MILLIESROOM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "cobragym") == 0) {
+			MppTeleportEx(playerid, LOC_COBRAGYM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lspdhq") == 0) {
+			MppTeleportEx(playerid, LOC_LSPDHQ, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh18") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH18, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh19") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH19, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "zerorc") == 0) {
+			MppTeleportEx(playerid, LOC_ZERORCSHOP, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ammunation4") == 0) {
+			MppTeleportEx(playerid, LOC_AMMUNATION4, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ammunation5") == 0) {
+			MppTeleportEx(playerid, LOC_AMMUNATION5, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "247v6") == 0) {
+			MppTeleportEx(playerid, LOC_247V6, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "valleydiner") == 0) {
+			MppTeleportEx(playerid, LOC_VALLEYDINER, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "whorehouse") == 0) {
+			MppTeleportEx(playerid, LOC_WHOREHOUSE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ammunation") == 0) {
+			MppTeleportEx(playerid, LOC_AMMUNATION, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "belowbeltgym") == 0) {
+			MppTeleportEx(playerid, LOC_BBELTGYM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "8track") == 0) {
+			MppTeleportEx(playerid, LOC_8TSTADIUM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "colonels") == 0) {
+			MppTeleportEx(playerid, LOC_COLONELS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "shverdantbluffs") == 0) {
+			MppTeleportEx(playerid, LOC_SHVBLUFFS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh21") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH21, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "safehouse3") == 0) {
+			MppTeleportEx(playerid, LOC_SAFEHOUSE3, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "cbell") == 0) {
+			MppTeleportEx(playerid, LOC_CBELL, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "andromada") == 0) {
+			MppTeleportEx(playerid, LOC_ANDROMADA, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh22") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH22, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh23") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH23, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "sfpdhq") == 0) {
+			MppTeleportEx(playerid, LOC_SFPDHQ, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "247v2") == 0) {
+			MppTeleportEx(playerid, LOC_247V2, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "fourdragons") == 0) {
+			MppTeleportEx(playerid, LOC_FOURDRAGONS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "rcbattlefield") == 0) {
+			MppTeleportEx(playerid, LOC_RCBATTLEFIELD, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgershot") == 0) {
+			MppTeleportEx(playerid, LOC_BURGERSHOT, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "actower") == 0) {
+			MppTeleportEx(playerid, LOC_ACTOWER, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "safehouse4") == 0) {
+			MppTeleportEx(playerid, LOC_SAFEHOUSE4, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh14") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH14, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "cfdjanitor") == 0) {
+			MppTeleportEx(playerid, LOC_CFDJANITOR, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "cfdsuite") == 0) {
+			MppTeleportEx(playerid, LOC_CFDSUITE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bar") == 0) {
+			MppTeleportEx(playerid, LOC_BAR, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "shwfield") == 0) {
+			MppTeleportEx(playerid, LOC_SHWFIELD, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "casino") == 0) {
+			MppTeleportEx(playerid, LOC_CASINO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "budgetmotel") == 0) {
+			MppTeleportEx(playerid, LOC_BUDGETMOTEL, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "usafehouse") == 0) {
+			MppTeleportEx(playerid, LOC_USAFEHOUSE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "barber2") == 0) {
+			MppTeleportEx(playerid, LOC_BARBERSHOP2, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "wardrobe") == 0) {
+			MppTeleportEx(playerid, LOC_WARDROBE, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "didersachs") == 0) {
+			MppTeleportEx(playerid, LOC_DIDERSACHS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "kickstartstadium") == 0) {
+			MppTeleportEx(playerid, LOC_KICKSTADIUM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lsairport") == 0) {
+			MppTeleportEx(playerid, LOC_LSAIRPORT, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "francisintl") == 0) {
+			MppTeleportEx(playerid, LOC_FRANCISINTL, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "jeffersonmotel") == 0) {
+			MppTeleportEx(playerid, LOC_JEFFERSONM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "binco") == 0) {
+			MppTeleportEx(playerid, LOC_BINCO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "4burgh") == 0) {
+			MppTeleportEx(playerid, LOC_4BURGH, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bloodbowl") == 0) {
+			MppTeleportEx(playerid, LOC_BLOODBOWL, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "burgh20") == 0) {
+			MppTeleportEx(playerid, LOC_BURGH20, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lstattoo") == 0) {
+			MppTeleportEx(playerid, LOC_LSTATTOO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "247v4") == 0) {
+			MppTeleportEx(playerid, LOC_247V4, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "vicestadium") == 0) {
+			MppTeleportEx(playerid, LOC_VICESTADIUM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lsftattoo") == 0) {
+			MppTeleportEx(playerid, LOC_LSFTATTOO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "247v1") == 0) {
+			MppTeleportEx(playerid, LOC_247V1, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "donutshop") == 0) {
+			MppTeleportEx(playerid, LOC_RUSTYBDONUTS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "club") == 0) {
+			MppTeleportEx(playerid, LOC_CLUB, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "shermandam") == 0) {
+			MppTeleportEx(playerid, LOC_SHERMANDAM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "warehouse1") == 0) {
+			MppTeleportEx(playerid, LOC_WAREHOUSE1, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "247v3") == 0) {
+			MppTeleportEx(playerid, LOC_247V3, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "zip") == 0) {
+			MppTeleportEx(playerid, LOC_ZIP, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "atrium") == 0) {
+			MppTeleportEx(playerid, LOC_ATRIUM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lilprobeinn") == 0) {
+			MppTeleportEx(playerid, LOC_LILPROBEINN, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "palobank") == 0) {
+			MppTeleportEx(playerid, LOC_PALOBANK, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "palodiner") == 0) {
+			MppTeleportEx(playerid, LOC_PALODINER, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "dilligasst") == 0) {
+			MppTeleportEx(playerid, LOC_DILLIGASST, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ranch") == 0) {
+			MppTeleportEx(playerid, LOC_TORRENOR, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "zombotech") == 0) {
+			MppTeleportEx(playerid, LOC_ZOMBOTECH, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "cemetery") == 0) {
+			MppTeleportEx(playerid, LOC_LSCEMETC, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "liqorstore") == 0) {
+			MppTeleportEx(playerid, LOC_BLUEBLIQ, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "warehouse3") == 0) {
+			MppTeleportEx(playerid, LOC_WAREHOUSE3, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "militarydepo") == 0) {
+			MppTeleportEx(playerid, LOC_MILITARYDEPO, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "area69") == 0) {
+			MppTeleportEx(playerid, LOC_AREA69, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bikesch") == 0) {
+			MppTeleportEx(playerid, LOC_BIKESCH, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ottoautos") == 0) {
+			MppTeleportEx(playerid, LOC_OTTOAUTOS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "wangcars") == 0) {
+			MppTeleportEx(playerid, LOC_WANGCARS, COLOR_LIMEGREEN);
+		}
+		else {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /tp [ID]");
+		}
 
-	if (strcmp("/tp ottoautos", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_OTTOAUTOS, COLOR_LIMEGREEN);
-		return 1;
-	}
-	
-	if (strcmp("/tp wangcars", cmdtext, true, 20) == 0) {
-		MppTeleportEx(playerid, LOC_WANGCARS, COLOR_LIMEGREEN);
 		return 1;
 	}
-
 
 	//TELEPORT TO COORDINATES
 	if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
