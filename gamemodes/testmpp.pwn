@@ -1713,7 +1713,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		else if (strcmp(tmp, "usafehouse") == 0) {
 			MppTeleportEx(playerid, LOC_USAFEHOUSE, COLOR_LIMEGREEN);
 		}
-		else if (strcmp(tmp, "barber2") == 0) {
+		else if (strcmp(tmp, "barbershop2") == 0) {
 			MppTeleportEx(playerid, LOC_BARBERSHOP2, COLOR_LIMEGREEN);
 		}
 		else if (strcmp(tmp, "wardrobe") == 0) {
@@ -1815,8 +1815,8 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		else if (strcmp(tmp, "area69") == 0) {
 			MppTeleportEx(playerid, LOC_AREA69, COLOR_LIMEGREEN);
 		}
-		else if (strcmp(tmp, "bikesch") == 0) {
-			MppTeleportEx(playerid, LOC_BIKESCH, COLOR_LIMEGREEN);
+		else if (strcmp(tmp, "bikeschoollv") == 0) {
+			MppTeleportEx(playerid, LOC_BIKESCHOOLLV, COLOR_LIMEGREEN);
 		}
 		else if (strcmp(tmp, "ottoautos") == 0) {
 			MppTeleportEx(playerid, LOC_OTTOAUTOS, COLOR_LIMEGREEN);
