@@ -150,7 +150,7 @@
 #define LOC_WAREHOUSE3             140
 #define LOC_MILITARYDEPO           141
 #define LOC_AREA69                 142
-#define LOC_BIKESCH                143
+#define LOC_BIKESCHOOLLV           143
 #define LOC_OTTOAUTOS              144
 #define LOC_WANGCARS               145
 
@@ -562,7 +562,7 @@ new locName[146][] = {
 "Casino (Redsands West)",
 "Budget Inn Motel Room",
 "Unused Safe House",
-"Barber Shop",
+"Barber Shop 2",
 "Wardrobe/Changing Room",
 "Didier Sachs",
 "Kickstart Stadium",
