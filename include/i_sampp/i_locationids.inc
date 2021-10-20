@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2020, Ivan Kmeťo
+ * 2018 - 2021, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -29,12 +29,12 @@
 #define LOC_THEPIGPEN              19
 #define LOC_RYDERSHOUSE            20
 #define LOC_KATIESNEST             21
-#define LOC_REECES                 22
+#define LOC_REECES                 22    //Might crash the game
 #define LOC_APTRAILER              23
 #define LOC_BSCRACKPALACE          24
 #define LOC_BURGH2                 25
 #define LOC_PAIRBURGH              26
-#define LOC_CALIGOFFICE            27 //[!] No Collisions
+#define LOC_CALIGOFFICE            27    //[!] No Collisions
 #define LOC_STRIPCASINO            28
 #define LOC_LOCOLOWCO              29
 #define LOC_BROTHEL1               30
@@ -66,7 +66,7 @@
 #define LOC_DIRTBIKE               56
 #define LOC_BURGH15                57
 #define LOC_GANTONGYM              58
-#define LOC_DINER1                 59 //[!] No Collisions
+#define LOC_DINER1                 59    //[!] No Collisions
 #define LOC_PIZZASTACK             60
 #define LOC_VICTIM                 61
 #define LOC_BARBARASNEST           62
@@ -78,7 +78,7 @@
 #define LOC_BURGH11                68
 #define LOC_BURGH16                69
 #define LOC_BURGH17                70
-#define LOC_SAFEHOUSE2             71 //[!] No Collisions
+#define LOC_SAFEHOUSE2             71    //[!] No Collisions
 #define LOC_MILLIESROOM            72
 #define LOC_COBRAGYM               73
 #define LOC_LSPDHQ                 74
@@ -88,7 +88,7 @@
 #define LOC_AMMUNATION4            78
 #define LOC_AMMUNATION5            79
 #define LOC_247V6                  80
-#define LOC_VALLEYDINER            81 //[!] No Collisions
+#define LOC_VALLEYDINER            81    //[!] No Collisions
 #define LOC_WHOREHOUSE             82
 #define LOC_AMMUNATION             83
 #define LOC_BBELTGYM               84
@@ -110,9 +110,9 @@
 #define LOC_SAFEHOUSE4             100
 #define LOC_BURGH14                101
 #define LOC_CFDJANITOR             102
-#define LOC_CFDSUITE               103 //[!] No Collisions
+#define LOC_CFDSUITE               103   //[!] No Collisions
 #define LOC_BAR                    104
-#define LOC_SHWFIELD               105 //[!] No Collisions
+#define LOC_SHWFIELD               105   //[!] No Collisions
 #define LOC_CASINO                 106
 #define LOC_BUDGETMOTEL            107
 #define LOC_USAFEHOUSE             108
@@ -120,7 +120,7 @@
 #define LOC_WARDROBE               110
 #define LOC_DIDERSACHS             111
 #define LOC_KICKSTADIUM            112
-#define LOC_LSAIRPORT              113 //[!] No Collisions
+#define LOC_LSAIRPORT              113   //[!] No Collisions
 #define LOC_FRANCISINTL            114
 #define LOC_JEFFERSONM             115
 #define LOC_BINCO                  116
