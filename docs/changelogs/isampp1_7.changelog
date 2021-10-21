@@ -2,6 +2,7 @@ Changes in ISAMPP 1.7
 
 * ISAMPP Library *
 - Implemented legacy functions strtok, strrest, isnull (i_funcl.inc)
+- Defined 464 new game objects (i_objects.inc)
 - GMTEXT_STYLE_SLIM renamed to GMTEXT_STYLE_SLIM1 (i_textstyle.inc)
 - LOC_BIKESCH renamed to LOC_BIKESCHOOLLV (i_locationids.inc)
 - New stock function MppGetPlayerName
