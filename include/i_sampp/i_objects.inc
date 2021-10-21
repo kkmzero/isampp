@@ -7,150 +7,150 @@
  */
 
 
-#define OBJECT_GUN_DILDO1             321    //gun_dildo1.dff
-#define OBJECT_GUN_DILDO2             322    //gun_dildo2.dff
-#define OBJECT_GUN_VIBE1              323    //gun_vibe1.dff
-#define OBJECT_GUN_VIBE2              324    //gun_vibe2.dff
-#define OBJECT_FLOWERA                325    //flowera.dff
-#define OBJECT_GUN_CANE               326    //gun_cane.dff
-#define OBJECT_GUN_BOXWEE             327    //gun_boxwee.dff
-#define OBJECT_GUN_BOXBIX             328    //gun_boxbig.dff
-#define OBJECT_CELLPHONE              330    //cellphone.dff
-#define OBJECT_BRASSKNUCKLE           331    //brassknuckle.dff
-#define OBJECT_GOLFCLUB               333    //golfclub.dff
-#define OBJECT_NITESTICK              334    //nitestick.dff
-#define OBJECT_KNIFECUR               335    //knifecur.dff
-#define OBJECT_BAT                    336    //bat.dff
-#define OBJECT_SHOVEL                 337    //shovel.dff
-#define OBJECT_POOLCUE                338    //poolcue.dff
-#define OBJECT_KATANA                 339    //katana.dff
-#define OBJECT_CHNSAW                 341    //chnsaw.dff
-#define OBJECT_GRENADE                342    //grenade.dff
-#define OBJECT_TEARGAS                343    //teargas.dff
-#define OBJECT_MOLOTOV                344    //molotov.dff
-#define OBJECT_MISSILE                345    //missile.dff
-#define OBJECT_COLT45                 346    //colt45.dff
-#define OBJECT_SILENCED               347    //silenced.dff
-#define OBJECT_DESERT_EAGLE           348    //desert_eagle.dff
-#define OBJECT_CHROMEGUN              349    //chromegun.dff
-#define OBJECT_SAWNOFF                350    //sawnoff.dff
-#define OBJECT_SHOTGSPA               351    //shotgspa.dff
-#define OBJECT_MICRO_UZI              352    //micro_uzi.dff
-#define OBJECT_MP5LNG                 353    //mp5lng.dff
-#define OBJECT_FLARE                  354    //flare.dff
-#define OBJECT_AK47                   355    //ak47.dff
-#define OBJECT_M4                     356    //m4.dff
-#define OBJECT_CUNTGUN                357    //cuntgun.dff
-#define OBJECT_SNIPER                 358    //sniper.dff
-#define OBJECT_ROCKETLA               359    //rocketla.dff
-#define OBJECT_HEATSEEK               360    //heatseek.dff
-#define OBJECT_FLAME                  361    //flame.dff
-#define OBJECT_MINIGUN                362    //minigun.dff
-#define OBJECT_SATCHEL                363    //satchel.dff
-#define OBJECT_BOMB                   364    //bomb.dff
-#define OBJECT_SPRAYCAN               365    //spraycan.dff
-#define OBJECT_FIRE_EX                366    //fire_ex.dff
-#define OBJECT_CAMERA                 367    //camera.dff
-#define OBJECT_NVGOGGLES              368    //nvgoggles.dff
-#define OBJECT_IRGOGGLES              369    //irgoggles.dff
-#define OBJECT_JETPACK                370    //jetpack.dff
-#define OBJECT_GUN_PARA               371    //gun_para.dff
-#define OBJECT_TEC9                   372    //tec9.dff
-#define OBJECT_ARMOUR                 373    //armour.dff
-#define OBJECT_VEG_TREE3              615    //veg_tree3.dff
-#define OBJECT_VEG_TREEA1             616    //veg_treea1.dff
-#define OBJECT_VEG_TREEB1             617    //veg_treeb1.dff
-#define OBJECT_VEG_TREEA3             618    //veg_treea3.dff
-#define OBJECT_VEG_PALWEE03           619    //veg_palwee03.dff
-#define OBJECT_VEG_PALM04             620    //veg_palm04.dff
-#define OBJECT_VEG_PALM02             621    //veg_palm02.dff
-#define OBJECT_VEG_PALM03             622    //veg_palm03.dff
-#define OBJECT_VEG_PALWEE01           623    //veg_palwee01.dff
-#define OBJECT_VEG_PALWEE02           624    //veg_palwee02.dff
-#define OBJECT_VEG_PALMKB1            625    //veg_palmkb1.dff
-#define OBJECT_VEG_PALMKB2            626    //veg_palmkb2.dff
-#define OBJECT_VEG_PALMKB3            627    //veg_palmkb3.dff
-#define OBJECT_VEG_PALMKB4            628    //veg_palmkb4.dff
-#define OBJECT_VEG_PALMKB5            629    //veg_palmkb5.dff
-#define OBJECT_VEG_PALMKB8            630    //veg_palmkb8.dff
-#define OBJECT_VEG_PALMKB9            631    //veg_palmkb9.dff
-#define OBJECT_VEG_PALMKB7            632    //veg_palmkb7.dff
-#define OBJECT_VEG_PALMKB10           633    //veg_palmkb10.dff
-#define OBJECT_VEG_PALMKBB11          634    //veg_palmkbb11.dff
-#define OBJECT_VEG_FERN_BALCNY_KB1    635    //veg_fern_balcny_kb1.dff
-#define OBJECT_VEG_FERN_BALCNY_KB2    636    //veg_fern_balcny_kb2.dff
-#define OBJECT_KB_PLANTERBOX          637    //kb_planterbox.dff
-#define OBJECT_KB_PLANTERBUSH         638    //kb_planter+bush.dff
-#define OBJECT_VEG_IVY_BALCNY_KB3     639    //veg_ivy_balcny_kb3.dff
-#define OBJECT_KB_PLANTERBUSH2        640    //kb_planter+bush2.dff
-#define OBJECT_VEG_PALMKB13           641    //veg_palmkb13.dff
-#define OBJECT_KB_CANOPY_TEST         642    //kb_canopy_test.dff
-#define OBJECT_KB_CHR_TBL_TEST        643    //kb_chr_tbl_test.dff
-#define OBJECT_POT_02                 644    //pot_02.dff
-#define OBJECT_VEG_PALMBIG14          645    //veg_palmbig14.dff
-#define OBJECT_VEG_PALMKB14           646    //veg_palmkb14.dff
-#define OBJECT_NEW_BUSHSM             647    //new_bushsm.dff
-#define OBJECT_VEG_PALM01             648    //veg_palm01.dff
-#define OBJECT_SJMPALM                649    //sjmpalm.dff
-#define OBJECT_SJMCACTI2              650    //sjmcacti2.dff
-#define OBJECT_SJMCACTI1              651    //sjmcacti1.dff
-#define OBJECT_SJMPALMBIG             652    //sjmpalmbig.dff
-#define OBJECT_SJMCACTI03             653    //sjmcacti03.dff
-#define OBJECT_PINETREE08             654    //pinetree08.dff
-#define OBJECT_PINETREE06             655    //pinetree06.dff
-#define OBJECT_PINETREE05             656    //pinetree05.dff
-#define OBJECT_PINETREE02             657    //pinetree02.dff
-#define OBJECT_PINETREE04             658    //pinetree04.dff
-#define OBJECT_PINETREE01             659    //pinetree01.dff
-#define OBJECT_PINETREE03             660    //pinetree03.dff
-#define OBJECT_PINETREE07             661    //pinetree07.dff
-#define OBJECT_FIRTREE2               664    //firtree2.dff
-#define OBJECT_SM_VEG_TREE4           669    //sm_veg_tree4.dff
-#define OBJECT_SM_FIRTALLDED          670    //sm_firtallded.dff
-#define OBJECT_SM_BUSHYTREE           671    //sm_bushytree.dff
-#define OBJECT_SM_VEG_TREE5           672    //sm_veg_tree5.dff
-#define OBJECT_SM_BEVHILTREE          673    //sm_bevhiltree.dff
-#define OBJECT_SM_DES_JOSH_LRG1       674    //sm_des_josh_lrg1.dff
-#define OBJECT_JOSH_BALL              675    //josh_ball.dff
-#define OBJECT_SM_DES_JOSH_SML1       676    //sm_des_josh_sml1.dff
-#define OBJECT_SM_DES_AGAVE1          677    //sm_des_agave1.dff
-#define OBJECT_SM_DES_AGAVE2          678    //sm_des_agave2.dff
-#define OBJECT_SM_DES_CACT_BSH        679    //sm_des_cact_bsh.dff
-#define OBJECT_SM_DES_JOSH_LRG2       680    //sm_des_josh_lrg2.dff
-#define OBJECT_SM_DES_JOSH_SM2        681    //sm_des_josh_sm2.dff
-#define OBJECT_SM_DES_CACTFLR         682    //sm_des_cactflr.dff
-#define OBJECT_SM_FIR_GROUP           683    //sm_fir_group.dff
-#define OBJECT_SM_FIR_LOG02           684    //sm_fir_log02.dff
-#define OBJECT_SM_FIR_SCABBY          685    //sm_fir_scabby.dff
-#define OBJECT_SM_FIR_DEAD            686    //sm_fir_dead.dff
-#define OBJECT_SM_FIR                 687    //sm_fir_.dff
-#define OBJECT_SM_FIR_SCABG           688    //sm_fir_scabg.dff
-#define OBJECT_SM_FIR_COPSE1          689    //sm_fir_copse1.dff
-#define OBJECT_SM_FIR_COPSE2          690    //sm_fir_copse2.dff
-#define OBJECT_SM_VEG_TREE4_BIG       691    //sm_veg_tree4_big.dff
-#define OBJECT_SM_DES_BUSH1           692    //sm_des_bush1.dff
-#define OBJECT_SM_REDWOOD             693    //sm_redwood_.dff
-#define OBJECT_SM_REDWOODGRP          694    //sm_redwoodgrp.dff
-#define OBJECT_SM_FIR_SCABTG          695    //sm_fir_scabtg.dff
-#define OBJECT_SM_FIR_SCABT           696    //sm_fir_scabt.dff
-#define OBJECT_SM_FIR_TALL            697    //sm_fir_tall.dff
-#define OBJECT_SM_FIRTBSHG            698    //sm_firtbshg.dff
-#define OBJECT_SM_VEG_TREE6           700    //sm_veg_tree6.dff
-#define OBJECT_SM_TUMBLEWD48P         701    //sm_tumblewd48p.dff
-#define OBJECT_SM_TUMBLEWEED          702    //sm_tumbleweed.dff
-#define OBJECT_SM_VEG_TREE7_BIG       703    //sm_veg_tree7_big.dff
-#define OBJECT_BG_FIR_DEAD            704    //bg_fir_dead.dff
-#define OBJECT_SM_VEG_TREE7VBIG       705    //sm_veg_tree7vbig.dff
-#define OBJECT_SM_VEGVBBIG            706    //sm_vegvbbig.dff
-#define OBJECT_SM_BUSHVBIG            707    //sm_bushvbig.dff
-#define OBJECT_SM_VEG_TREE4_VBIG      708    //sm_veg_tree4_vbig.dff
-#define OBJECT_SM_VEGVBBIGBRN         709    //sm_vegvbbigbrn.dff
-#define OBJECT_VGS_PALM01             710    //vgs_palm01.dff
-#define OBJECT_VGS_PALM02             711    //vgs_palm02.dff
-#define OBJECT_VGS_PALM03             712    //vgs_palm03.dff
-#define OBJECT_VEG_BEVTREE1           713    //veg_bevtree1.dff
-#define OBJECT_VEG_BEVTREE2           714    //veg_bevtree2.dff
-#define OBJECT_VEG_BEVTREE3           715    //veg_bevtree3.dff
+#define OBJECT_GUN_DILDO1             321     //default.ide, gun_dildo1.dff
+#define OBJECT_GUN_DILDO2             322     //default.ide, gun_dildo2.dff
+#define OBJECT_GUN_VIBE1              323     //default.ide, gun_vibe1.dff
+#define OBJECT_GUN_VIBE2              324     //default.ide, gun_vibe2.dff
+#define OBJECT_FLOWERA                325     //default.ide, flowera.dff
+#define OBJECT_GUN_CANE               326     //default.ide, gun_cane.dff
+#define OBJECT_GUN_BOXWEE             327     //default.ide, gun_boxwee.dff
+#define OBJECT_GUN_BOXBIX             328     //default.ide, gun_boxbig.dff
+#define OBJECT_CELLPHONE              330     //default.ide, cellphone.dff
+#define OBJECT_BRASSKNUCKLE           331     //default.ide, brassknuckle.dff
+#define OBJECT_GOLFCLUB               333     //default.ide, golfclub.dff
+#define OBJECT_NITESTICK              334     //default.ide, nitestick.dff
+#define OBJECT_KNIFECUR               335     //default.ide, knifecur.dff
+#define OBJECT_BAT                    336     //default.ide, bat.dff
+#define OBJECT_SHOVEL                 337     //default.ide, shovel.dff
+#define OBJECT_POOLCUE                338     //default.ide, poolcue.dff
+#define OBJECT_KATANA                 339     //default.ide, katana.dff
+#define OBJECT_CHNSAW                 341     //default.ide, chnsaw.dff
+#define OBJECT_GRENADE                342     //default.ide, grenade.dff
+#define OBJECT_TEARGAS                343     //default.ide, teargas.dff
+#define OBJECT_MOLOTOV                344     //default.ide, molotov.dff
+#define OBJECT_MISSILE                345     //default.ide, missile.dff
+#define OBJECT_COLT45                 346     //default.ide, colt45.dff
+#define OBJECT_SILENCED               347     //default.ide, silenced.dff
+#define OBJECT_DESERT_EAGLE           348     //default.ide, desert_eagle.dff
+#define OBJECT_CHROMEGUN              349     //default.ide, chromegun.dff
+#define OBJECT_SAWNOFF                350     //default.ide, sawnoff.dff
+#define OBJECT_SHOTGSPA               351     //default.ide, shotgspa.dff
+#define OBJECT_MICRO_UZI              352     //default.ide, micro_uzi.dff
+#define OBJECT_MP5LNG                 353     //default.ide, mp5lng.dff
+#define OBJECT_FLARE                  354     //default.ide, flare.dff
+#define OBJECT_AK47                   355     //default.ide, ak47.dff
+#define OBJECT_M4                     356     //default.ide, m4.dff
+#define OBJECT_CUNTGUN                357     //default.ide, cuntgun.dff
+#define OBJECT_SNIPER                 358     //default.ide, sniper.dff
+#define OBJECT_ROCKETLA               359     //default.ide, rocketla.dff
+#define OBJECT_HEATSEEK               360     //default.ide, heatseek.dff
+#define OBJECT_FLAME                  361     //default.ide, flame.dff
+#define OBJECT_MINIGUN                362     //default.ide, minigun.dff
+#define OBJECT_SATCHEL                363     //default.ide, satchel.dff
+#define OBJECT_BOMB                   364     //default.ide, bomb.dff
+#define OBJECT_SPRAYCAN               365     //default.ide, spraycan.dff
+#define OBJECT_FIRE_EX                366     //default.ide, fire_ex.dff
+#define OBJECT_CAMERA                 367     //default.ide, camera.dff
+#define OBJECT_NVGOGGLES              368     //default.ide, nvgoggles.dff
+#define OBJECT_IRGOGGLES              369     //default.ide, irgoggles.dff
+#define OBJECT_JETPACK                370     //default.ide, jetpack.dff
+#define OBJECT_GUN_PARA               371     //default.ide, gun_para.dff
+#define OBJECT_TEC9                   372     //default.ide, tec9.dff
+#define OBJECT_ARMOUR                 373     //default.ide, armour.dff
+#define OBJECT_VEG_TREE3              615     //vegepart.ide, veg_tree3.dff
+#define OBJECT_VEG_TREEA1             616     //vegepart.ide, veg_treea1.dff
+#define OBJECT_VEG_TREEB1             617     //vegepart.ide, veg_treeb1.dff
+#define OBJECT_VEG_TREEA3             618     //vegepart.ide, veg_treea3.dff
+#define OBJECT_VEG_PALWEE03           619     //vegepart.ide, veg_palwee03.dff
+#define OBJECT_VEG_PALM04             620     //vegepart.ide, veg_palm04.dff
+#define OBJECT_VEG_PALM02             621     //vegepart.ide, veg_palm02.dff
+#define OBJECT_VEG_PALM03             622     //vegepart.ide, veg_palm03.dff
+#define OBJECT_VEG_PALWEE01           623     //vegepart.ide, veg_palwee01.dff
+#define OBJECT_VEG_PALWEE02           624     //vegepart.ide, veg_palwee02.dff
+#define OBJECT_VEG_PALMKB1            625     //vegepart.ide, veg_palmkb1.dff
+#define OBJECT_VEG_PALMKB2            626     //vegepart.ide, veg_palmkb2.dff
+#define OBJECT_VEG_PALMKB3            627     //vegepart.ide, veg_palmkb3.dff
+#define OBJECT_VEG_PALMKB4            628     //vegepart.ide, veg_palmkb4.dff
+#define OBJECT_VEG_PALMKB5            629     //vegepart.ide, veg_palmkb5.dff
+#define OBJECT_VEG_PALMKB8            630     //vegepart.ide, veg_palmkb8.dff
+#define OBJECT_VEG_PALMKB9            631     //vegepart.ide, veg_palmkb9.dff
+#define OBJECT_VEG_PALMKB7            632     //vegepart.ide, veg_palmkb7.dff
+#define OBJECT_VEG_PALMKB10           633     //vegepart.ide, veg_palmkb10.dff
+#define OBJECT_VEG_PALMKBB11          634     //vegepart.ide, veg_palmkbb11.dff
+#define OBJECT_VEG_FERN_BALCNY_KB1    635     //vegepart.ide, veg_fern_balcny_kb1.dff
+#define OBJECT_VEG_FERN_BALCNY_KB2    636     //vegepart.ide, veg_fern_balcny_kb2.dff
+#define OBJECT_KB_PLANTERBOX          637     //vegepart.ide, kb_planterbox.dff
+#define OBJECT_KB_PLANTERBUSH         638     //vegepart.ide, kb_planter+bush.dff
+#define OBJECT_VEG_IVY_BALCNY_KB3     639     //vegepart.ide, veg_ivy_balcny_kb3.dff
+#define OBJECT_KB_PLANTERBUSH2        640     //vegepart.ide, kb_planter+bush2.dff
+#define OBJECT_VEG_PALMKB13           641     //vegepart.ide, veg_palmkb13.dff
+#define OBJECT_KB_CANOPY_TEST         642     //vegepart.ide, kb_canopy_test.dff
+#define OBJECT_KB_CHR_TBL_TEST        643     //vegepart.ide, kb_chr_tbl_test.dff
+#define OBJECT_POT_02                 644     //vegepart.ide, pot_02.dff
+#define OBJECT_VEG_PALMBIG14          645     //vegepart.ide, veg_palmbig14.dff
+#define OBJECT_VEG_PALMKB14           646     //vegepart.ide, veg_palmkb14.dff
+#define OBJECT_NEW_BUSHSM             647     //vegepart.ide, new_bushsm.dff
+#define OBJECT_VEG_PALM01             648     //vegepart.ide, veg_palm01.dff
+#define OBJECT_SJMPALM                649     //vegepart.ide, sjmpalm.dff
+#define OBJECT_SJMCACTI2              650     //vegepart.ide, sjmcacti2.dff
+#define OBJECT_SJMCACTI1              651     //vegepart.ide, sjmcacti1.dff
+#define OBJECT_SJMPALMBIG             652     //vegepart.ide, sjmpalmbig.dff
+#define OBJECT_SJMCACTI03             653     //vegepart.ide, sjmcacti03.dff
+#define OBJECT_PINETREE08             654     //vegepart.ide, pinetree08.dff
+#define OBJECT_PINETREE06             655     //vegepart.ide, pinetree06.dff
+#define OBJECT_PINETREE05             656     //vegepart.ide, pinetree05.dff
+#define OBJECT_PINETREE02             657     //vegepart.ide, pinetree02.dff
+#define OBJECT_PINETREE04             658     //vegepart.ide, pinetree04.dff
+#define OBJECT_PINETREE01             659     //vegepart.ide, pinetree01.dff
+#define OBJECT_PINETREE03             660     //vegepart.ide, pinetree03.dff
+#define OBJECT_PINETREE07             661     //vegepart.ide, pinetree07.dff
+#define OBJECT_FIRTREE2               664     //vegepart.ide, firtree2.dff
+#define OBJECT_SM_VEG_TREE4           669     //vegepart.ide, sm_veg_tree4.dff
+#define OBJECT_SM_FIRTALLDED          670     //vegepart.ide, sm_firtallded.dff
+#define OBJECT_SM_BUSHYTREE           671     //vegepart.ide, sm_bushytree.dff
+#define OBJECT_SM_VEG_TREE5           672     //vegepart.ide, sm_veg_tree5.dff
+#define OBJECT_SM_BEVHILTREE          673     //vegepart.ide, sm_bevhiltree.dff
+#define OBJECT_SM_DES_JOSH_LRG1       674     //vegepart.ide, sm_des_josh_lrg1.dff
+#define OBJECT_JOSH_BALL              675     //vegepart.ide, josh_ball.dff
+#define OBJECT_SM_DES_JOSH_SML1       676     //vegepart.ide, sm_des_josh_sml1.dff
+#define OBJECT_SM_DES_AGAVE1          677     //vegepart.ide, sm_des_agave1.dff
+#define OBJECT_SM_DES_AGAVE2          678     //vegepart.ide, sm_des_agave2.dff
+#define OBJECT_SM_DES_CACT_BSH        679     //vegepart.ide, sm_des_cact_bsh.dff
+#define OBJECT_SM_DES_JOSH_LRG2       680     //vegepart.ide, sm_des_josh_lrg2.dff
+#define OBJECT_SM_DES_JOSH_SM2        681     //vegepart.ide, sm_des_josh_sm2.dff
+#define OBJECT_SM_DES_CACTFLR         682     //vegepart.ide, sm_des_cactflr.dff
+#define OBJECT_SM_FIR_GROUP           683     //vegepart.ide, sm_fir_group.dff
+#define OBJECT_SM_FIR_LOG02           684     //vegepart.ide, sm_fir_log02.dff
+#define OBJECT_SM_FIR_SCABBY          685     //vegepart.ide, sm_fir_scabby.dff
+#define OBJECT_SM_FIR_DEAD            686     //vegepart.ide, sm_fir_dead.dff
+#define OBJECT_SM_FIR                 687     //vegepart.ide, sm_fir_.dff
+#define OBJECT_SM_FIR_SCABG           688     //vegepart.ide, sm_fir_scabg.dff
+#define OBJECT_SM_FIR_COPSE1          689     //vegepart.ide, sm_fir_copse1.dff
+#define OBJECT_SM_FIR_COPSE2          690     //vegepart.ide, sm_fir_copse2.dff
+#define OBJECT_SM_VEG_TREE4_BIG       691     //vegepart.ide, sm_veg_tree4_big.dff
+#define OBJECT_SM_DES_BUSH1           692     //vegepart.ide, sm_des_bush1.dff
+#define OBJECT_SM_REDWOOD             693     //vegepart.ide, sm_redwood_.dff
+#define OBJECT_SM_REDWOODGRP          694     //vegepart.ide, sm_redwoodgrp.dff
+#define OBJECT_SM_FIR_SCABTG          695     //vegepart.ide, sm_fir_scabtg.dff
+#define OBJECT_SM_FIR_SCABT           696     //vegepart.ide, sm_fir_scabt.dff
+#define OBJECT_SM_FIR_TALL            697     //vegepart.ide, sm_fir_tall.dff
+#define OBJECT_SM_FIRTBSHG            698     //vegepart.ide, sm_firtbshg.dff
+#define OBJECT_SM_VEG_TREE6           700     //vegepart.ide, sm_veg_tree6.dff
+#define OBJECT_SM_TUMBLEWD48P         701     //vegepart.ide, sm_tumblewd48p.dff
+#define OBJECT_SM_TUMBLEWEED          702     //vegepart.ide, sm_tumbleweed.dff
+#define OBJECT_SM_VEG_TREE7_BIG       703     //vegepart.ide, sm_veg_tree7_big.dff
+#define OBJECT_BG_FIR_DEAD            704     //vegepart.ide, bg_fir_dead.dff
+#define OBJECT_SM_VEG_TREE7VBIG       705     //vegepart.ide, sm_veg_tree7vbig.dff
+#define OBJECT_SM_VEGVBBIG            706     //vegepart.ide, sm_vegvbbig.dff
+#define OBJECT_SM_BUSHVBIG            707     //vegepart.ide, sm_bushvbig.dff
+#define OBJECT_SM_VEG_TREE4_VBIG      708     //vegepart.ide, sm_veg_tree4_vbig.dff
+#define OBJECT_SM_VEGVBBIGBRN         709     //vegepart.ide, sm_vegvbbigbrn.dff
+#define OBJECT_VGS_PALM01             710     //vegepart.ide, vgs_palm01.dff
+#define OBJECT_VGS_PALM02             711     //vegepart.ide, vgs_palm02.dff
+#define OBJECT_VGS_PALM03             712     //vegepart.ide, vgs_palm03.dff
+#define OBJECT_VEG_BEVTREE1           713     //vegepart.ide, veg_bevtree1.dff
+#define OBJECT_VEG_BEVTREE2           714     //vegepart.ide, veg_bevtree2.dff
+#define OBJECT_VEG_BEVTREE3           715     //vegepart.ide, veg_bevtree3.dff
 #define OBJECT_SJMPALMBIGPV           716     //vegepart.ide, sjmpalmbigpv.dff
 #define OBJECT_SM_BEVHILTREEPV        717     //vegepart.ide, sm_bevhiltreepv.dff
 #define OBJECT_VGS_PALM04             718     //vegepart.ide, vgs_palm04.dff
