@@ -5,6 +5,11 @@ Changes in ISAMPP 1.7
 - Defined 464 new game objects (i_objects.inc)
 - GMTEXT_STYLE_SLIM renamed to GMTEXT_STYLE_SLIM1 (i_textstyle.inc)
 - LOC_BIKESCH renamed to LOC_BIKESCHOOLLV (i_locationids.inc)
+- PICKUP_MINE renamed to PICKUP_LANDMINE (i_pickupids.inc)
+- PICKUP_APMINE renamed to PICKUP_LANDMINE2 (i_pickupids.inc)
+- PICKUP_GREYBOMB renamed to PICKUP_BARRELEXPLOSIVE (i_pickupids.inc)
+- PICKUP_CJFIREEXT renamed to PICKUP_EXTINGUISHER (i_pickupids.inc)
+- Pickups re-ordered by ID and type (i_pickupids.inc)
 - New stock function MppGetPlayerName
 - Updated documentation
 
