@@ -26,6 +26,7 @@
 #include <i_sampp/i_objects>
 #include <i_sampp/i_paintjob>
 #include <i_sampp/i_pickupids>
+#include <i_sampp/i_pickuptypes>
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_textstyle>
 #include <i_sampp/i_vehhealth>
