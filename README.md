@@ -34,6 +34,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_objects>
 #include <i_sampp/i_paintjob>
 #include <i_sampp/i_pickupids>
+#include <i_sampp/i_pickuptypes>
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_textstyle>
 #include <i_sampp/i_vehhealth>
@@ -63,6 +64,7 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 *objects* - List of game objects/models</br>
 *paintjob* - List of definitions for all available vehicle paintjobs</br>
 *pickupids* - List of definitions for pickup identifiers</br>
+*pickuptypes* - List of definitions for pickup types</br>
 *skinids* - List of definitions for character skin/model identifiers</br>
 *textstyle* - List of definitions for GameText styles</br>
 *vehhealth* - Vehicle Health configurations</br>
