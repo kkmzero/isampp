@@ -3,6 +3,7 @@ Changes in ISAMPP 1.7
 * ISAMPP Library *
 - Implemented legacy functions strtok, strrest, isnull (i_funcl.inc)
 - Defined 464 new game objects (i_objects.inc)
+- Defined all available pickup types (i_pickuptypes.inc)
 - GMTEXT_STYLE_SLIM renamed to GMTEXT_STYLE_SLIM1 (i_textstyle.inc)
 - LOC_BIKESCH renamed to LOC_BIKESCHOOLLV (i_locationids.inc)
 - PICKUP_MINE renamed to PICKUP_LANDMINE (i_pickupids.inc)
@@ -21,4 +22,5 @@ Changes in ISAMPP 1.7
 - New command /myname for testing MppGetPlayerName function
 - Changed source code format of commands
 - Changed order of commands
+- Pickups now use pickup type macros
 - SendClientMessageToAll -> SendClientMessage in OnPlayerGiveDamageActor
