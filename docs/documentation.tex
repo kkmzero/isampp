@@ -39,7 +39,15 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \section{Changes in ISAMPP 1.7}
 \textbf{ISAMPP Library:}
 \\- Implemented legacy functions strtok, strrest, isnull \textit{(i\_funcl.inc)}
+\\- Defined 464 new game objects \textit{(i\_objects.inc)}
+\\- Defined all available pickup types \textit{(i\_pickuptypes.inc)}
 \\- GMTEXT\_STYLE\_SLIM renamed to GMTEXT\_STYLE\_SLIM1 \textit{(i\_textstyle.inc)}
+\\- LOC\_BIKESCH renamed to LOC\_BIKESCHOOLLV \textit{(i\_locationids.inc)}
+\\- PICKUP\_MINE renamed to PICKUP\_LANDMINE \textit{(i\_pickupids.inc)}
+\\- PICKUP\_APMINE renamed to PICKUP\_LANDMINE2 \textit{(i\_pickupids.inc)}
+\\- PICKUP\_GREYBOMB renamed to PICKUP\_BARRELEXPLOSIVE \textit{(i\_pickupids.inc)}
+\\- PICKUP\_CJFIREEXT renamed to PICKUP\_EXTINGUISHER \textit{(i\_pickupids.inc)}
+\\- Pickups re-ordered by ID and type \textit{(i\_pickupids.inc)}
 \\- New stock function MppGetPlayerName
 \\- Updated documentation
 \bigskip
@@ -51,6 +59,8 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \\- New command /myname for testing MppGetPlayerName function
 \\- Changed source code format of commands
 \\- Changed order of commands
+\\- Pickups now use pickup type macros
+\\- SendClientMessageToAll -$>$ SendClientMessage in OnPlayerGiveDamageActor
 \bigskip
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -90,6 +100,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_objects>
 #include <i_sampp/i_paintjob>
 #include <i_sampp/i_pickupids>
+#include <i_sampp/i_pickuptypes>
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_textstyle>
 #include <i_sampp/i_vehhealth>
@@ -117,6 +128,7 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \\\textit{objects}- List of game objects/models
 \\\textit{paintjob} - List of definitions for all available vehicle paintjobs
 \\\textit{pickupids} - List of definitions for pickup identifiers
+\\\textit{pickuptypes} - List of definitions for pickup types
 \\\textit{skinids} - List of definitions for character skin/model identifiers
 \\\textit{textstyle} - List of definitions for GameText styles
 \\\textit{vehhealth} - Vehicle Health configurations
@@ -352,9 +364,15 @@ Available objects in order by ID number. Every game object is listed with prefix
 
 \newpage
 \section{Pickup Identifiers}
-Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode.
+Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode. Weapon pickups use combined prefix \textit{PICKUP\_WEAP\_} for easier use.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/pickupids}
+
+
+\section{Pickup Types}
+Pickup types specify behavior of created pickups in game modes. Every pickup type available in SA-MP is listed with prefix \textit{PICKUP\_TYPE\_}
+\bigskip
+\\Resources: \url{https://open.mp/docs/scripting/resources/pickuptypes}
 
 
 \section{Skin/Playermodel Identifiers}
@@ -375,6 +393,7 @@ Vehicle identifiers are included as macro defines with prefix \textit{VEH\_} fol
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehicleid}
 
 
+\newpage
 \section{Vehicle Health}
 \begin{sloppypar}
 Vehicle Health configurations are included as macro defines with prefix \textit{VEH\_HEALTH\_} followed by the desired pre-defined identifier. These values are only related to engine condition and do not change visual damage of vehicle model.
@@ -401,7 +420,6 @@ VEH\_HEALTH\_ONFIRE & 249 & Sets car on fire \\
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehiclehealth}
 
 
-\newpage
 \section{Vehicle Colors}
 List of all available colors for vehicles in game. Color names using prefix \textit{CARCOL\_SAMP\_} are supported only in SA-MP version 0.3x.
 \bigskip
