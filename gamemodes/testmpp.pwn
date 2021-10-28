@@ -103,7 +103,7 @@ new gActorDummy;
 public OnGameModeInit()
 {
 	SetWorldTime(12);
-	SetGameModeText("ISAMPP 1.7 Sandbox GameMode");
+	SetGameModeText("ISAMPP 1.8 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
@@ -775,6 +775,7 @@ public OnPlayerConnect(playerid)
 		case 202115: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.5");
 		case 202116: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.6");
 		case 202117: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.7");
+		case 202118: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.8");
 		default: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
 	}
 
