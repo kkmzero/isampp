@@ -38,7 +38,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \newpage
 \section{Changes in ISAMPP 1.8}
 \textbf{ISAMPP Library:}
-\\- 
+\\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
 \\- 
@@ -928,13 +928,85 @@ To be used with functions \textit{OnPlayerEditObject} and \textit{OnPlayerEditAt
 \hline
 Value & Name & Description \\
 \hline
-0 & EDIT\_RESPONSE\_CANCEL & Player cancelled (ESC). \\
-1 & EDIT\_RESPONSE\_FINAL & Player clicked on save. \\
-2 & EDIT\_RESPONSE\_UPDATE & Player moved the object (edition did not stop). \\
+0 & EDIT\_RESPONSE\_CANCEL & Player cancelled (ESC) \\
+1 & EDIT\_RESPONSE\_FINAL & Player clicked on save \\
+2 & EDIT\_RESPONSE\_UPDATE & Player moved the object (edition did not stop) \\
 \hline
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/objecteditionresponsetypes}
+
+
+\newpage
+\subsection{Player States}
+To be used with \textit{GetPlayerState} function or \textit{OnPlayerStateChange} callback.
+\bigskip
+\\\begin{tabular}{ |c|l|l| }
+\hline
+Value & Name & Description \\
+\hline
+0 & PLAYER\_STATE\_NONE & Default player state, used while initializing \\
+1 & PLAYER\_STATE\_ONFOOT & Player is on foot \\
+2 & PLAYER\_STATE\_DRIVER & Player is driving a vehicle \\
+3 & PLAYER\_STATE\_PASSENGER & Player is in a vehicle as a passenger \\
+4 & PLAYER\_STATE\_EXIT\_VEHICLE & Player is exiting vehicle \\
+5 & PLAYER\_STATE\_ENTER\_VEHICLE\_DRIVER & Player is entering vehicle as driver \\
+6 & PLAYER\_STATE\_ENTER\_VEHICLE\_PASSENGER & Player is entering vehicle as passenger \\
+7 & PLAYER\_STATE\_WASTED & Player is either dead or in class selection \\
+8 & PLAYER\_STATE\_SPAWNED & Player just spawned \\
+9 & PLAYER\_STATE\_SPECTATING & Player is in spectator mode \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/playerstates}
+
+
+\subsection{Pvar Types}
+Types of player variables (also called pvar types) used in Per-player variable system.
+\bigskip
+\\\begin{tabular}{ |c|l| }
+\hline
+Value & Name \\
+\hline
+0 & PLAYER\_VARTYPE\_NONE \\
+1 & PLAYER\_VARTYPE\_INT \\
+2 & PLAYER\_VARTYPE\_STRING \\
+3 & PLAYER\_VARTYPE\_FLOAT \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/pvartypes}
+
+
+\subsection{Record Types}
+To be used with \textit{StartRecordingPlayerData} function.
+\bigskip
+\\\begin{tabular}{ |c|l| }
+\hline
+Value & Name \\
+\hline
+0 & PLAYER\_RECORDING\_TYPE\_NONE \\
+1 & PLAYER\_RECORDING\_TYPE\_DRIVER \\
+2 & PLAYER\_RECORDING\_TYPE\_ONFOOT \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/recordtypes}
+
+
+\subsection{Select Object Types}
+Select object types used by \textit{OnPlayerSelectObject} function.
+\bigskip
+\\\begin{tabular}{ |c|l| }
+\hline
+Value & Name \\
+\hline
+1 & SELECT\_OBJECT\_GLOBAL\_OBJECT \\
+2 & SELECT\_OBJECT\_PLAYER\_OBJECT \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/selectobjecttypes}
 
 
 
