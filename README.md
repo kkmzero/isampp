@@ -19,7 +19,7 @@ In your game mode file you can include ISAMPP header for all its contents:
 
 or include header files as you wish separately:
 
-```
+```pawn
 #include <i_sampp/i_bodyparts>
 #include <i_sampp/i_boneids>
 #include <i_sampp/i_cammode>
