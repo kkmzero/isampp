@@ -15,7 +15,9 @@ Copy contents of include folder to *”[SA-MP Server folder]/include”* and als
 
 In your game mode file you can include ISAMPP header for all its contents:
 
-```#include <i_sampp>```
+```pawn
+#include <i_sampp>
+```
 
 or include header files as you wish separately:
 
