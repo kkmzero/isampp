@@ -14,9 +14,7 @@
 #if defined FILTERSCRIPT
 	public OnFilterScriptInit()
 	{
-		print("\n----------------------------");
-		print("ISAMPP" ISAMPP_VERSION "Sandbox GameMode");
-		print("----------------------------\n");
+		print("WARNING: ISAMPP Sandbox GameMode is not a filterscript!\n");
 		return 1;
 	}
 	public OnFilterScriptExit()
@@ -26,7 +24,7 @@
 #else
 	main()
 	{
-        isampp_console_printversion();
+		isampp_console_printversion();
 
 		print("\n----------------------------");
 		printf("ISAMPP %s Sandbox GameMode", ISAMPP_VERSION);
@@ -738,14 +736,14 @@ public OnGameModeInit()
 	SetActorInvulnerable(gActorDummy, false);
 
 	//TestObjects - Remove Later
-	/*CreateObject(OBJECT_FBMP_LR_T1, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_RBMP_LR_T1, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_RBMP_LR_T2, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_TINY_ROCK, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_WASHER, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_VENDMACH, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_BRIEFCASE, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_FIRE_HYDRANT, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
+	/*CreateObject(OBJECT_PROPERTY_LOCKED, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_PROPERTY_FSALE, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_BIGDOLLAR, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CLOTHESP, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_PACKAGE1, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_PICKUPSAVE, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_SUB_FLOODLITE, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CRAIGPACKAGE, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
 
 	return 1;
 }
