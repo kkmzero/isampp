@@ -12,23 +12,17 @@
 #endif
 
 
-stock strtok(const string[], &index) {
-	new length = strlen(string);
-
-	while ((index < length) && (string[index] <= ' ')) {
-		index++;
+stock rot13(string[]) {
+	for (new index = 0; string[index]; index++) {
+		if ('a' <= string[index] <= 'z') {
+			string[index] = (string[index] - 'a' +13) % 26 + 'a';
+		}
+		else if ('A' <= string[index] <= 'Z') {
+			string[index] = (string[index] - 'A' +13) % 26 + 'A';
+		}
 	}
-
-	new offset = index;
-	new result[20];
-
-	while ((index < length) && (string[index] > ' ') && ((index - offset) < (sizeof(result) - 1))) {
-		result[index - offset] = string[index];
-		index++;
-	}
-
-	result[index - offset] = EOS;
-	return result;
+	
+	return string;
 }
 
 stock strrest(const string[], &index)
@@ -43,6 +37,25 @@ stock strrest(const string[], &index)
 	new result[128];
 
 	while ((index < length) && ((index - offset) < (sizeof(result) - 1))) {
+		result[index - offset] = string[index];
+		index++;
+	}
+
+	result[index - offset] = EOS;
+	return result;
+}
+
+stock strtok(const string[], &index) {
+	new length = strlen(string);
+
+	while ((index < length) && (string[index] <= ' ')) {
+		index++;
+	}
+
+	new offset = index;
+	new result[20];
+
+	while ((index < length) && (string[index] > ' ') && ((index - offset) < (sizeof(result) - 1))) {
 		result[index - offset] = string[index];
 		index++;
 	}
