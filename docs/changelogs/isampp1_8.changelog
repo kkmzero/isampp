@@ -1,7 +1,7 @@
 Changes in ISAMPP 1.8
 
 * ISAMPP Library *
-- New legacy function rot13 (i_funcl.inc)
+- New legacy functions rot13, strclr, strisempty (i_funcl.inc)
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
