@@ -38,6 +38,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \newpage
 \section{Changes in ISAMPP 1.8}
 \textbf{ISAMPP Library:}
+\\- New legacy function rot13 \textit{(i\_funcl.inc)}
 \\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
@@ -195,25 +196,25 @@ List of known camera modes to be used as returned value of function \textit{GetP
 \hline
 Identifier & Value & Description \\
 \hline
-CAMMODE\_TRAIN & 3 & Train/tram camera. \\
-CAMMODE\_FOLLOWPED & 4 & Follow player camera. \\
-CAMMODE\_SNIPER & 7 & Sniper rifle aiming. \\
-CAMMODE\_ROCKETAIM & 8 & Rocket launcher aiming. \\
-CAMMODE\_FIXED & 15 & Fixed camera (non-moving). \\
-CAMMODE\_VEHICLEFRONT & 16 & Vehicle front camera, bike side camera. \\
-CAMMODE\_VEHICLEDEFAULT & 18 & Normal vehicle camera, several variable distances. \\
-CAMMODE\_BOATDEFAULT & 22 & Normal boat camera. \\
-CAMMODE\_WEAPONAIM & 46 & Weapon aiming camera. \\
-CAMMODE\_ROCKETAIM2 & 51 & Heat-seeking Rocket Launcher aiming camera.\\
-CAMMODE\_WEAPONAIM2 & 53 & Aiming any other weapon. \\
-CAMMODE\_VEHICLEPASSENGER & 55 & Vehicle passenger drive-by camera. \\
-CAMMODE\_HELICHASE & 56 & Chase camera: helicopter/bird view. \\
-CAMMODE\_GROUNDCHASE & 57 & Chase camera: ground camera, zooms in very quickly. \\
-CAMMODE\_FLYBYCHASE & 58 & Chase camera: horizontal flyby past vehicle. \\
-CAMMODE\_GROUNDCHASE2 & 59 & Chase camera (air vehicles): looking up. \\
-CAMMODE\_FLYBYCHASE2 & 62 & Chase camera (air vehicles): vertical flyby. \\
-CAMMODE\_FLYBYCHASE3 & 63 & Chase camera (air vehicles): horizontal flyby. \\
-CAMMODE\_PILOTCHASE & 64 & Chase camera (air vehicles): camera focused on pilot. \\
+CAMMODE\_TRAIN & 3 & Train/tram camera \\
+CAMMODE\_FOLLOWPED & 4 & Follow player camera \\
+CAMMODE\_SNIPER & 7 & Sniper rifle aiming \\
+CAMMODE\_ROCKETAIM & 8 & Rocket launcher aiming \\
+CAMMODE\_FIXED & 15 & Fixed camera (non-moving) \\
+CAMMODE\_VEHICLEFRONT & 16 & Vehicle front camera, bike side camera \\
+CAMMODE\_VEHICLEDEFAULT & 18 & Normal vehicle camera, several variable distances \\
+CAMMODE\_BOATDEFAULT & 22 & Normal boat camera \\
+CAMMODE\_WEAPONAIM & 46 & Weapon aiming camera \\
+CAMMODE\_ROCKETAIM2 & 51 & Heat-seeking Rocket Launcher aiming camera \\
+CAMMODE\_WEAPONAIM2 & 53 & Aiming any other weapon \\
+CAMMODE\_VEHICLEPASSENGER & 55 & Vehicle passenger drive-by camera \\
+CAMMODE\_HELICHASE & 56 & Chase camera: helicopter/bird view \\
+CAMMODE\_GROUNDCHASE & 57 & Chase camera: ground camera, zooms in very quickly \\
+CAMMODE\_FLYBYCHASE & 58 & Chase camera: horizontal flyby past vehicle \\
+CAMMODE\_GROUNDCHASE2 & 59 & Chase camera (air vehicles): looking up \\
+CAMMODE\_FLYBYCHASE2 & 62 & Chase camera (air vehicles): vertical flyby \\
+CAMMODE\_FLYBYCHASE3 & 63 & Chase camera (air vehicles): horizontal flyby \\
+CAMMODE\_PILOTCHASE & 64 & Chase camera (air vehicles): camera focused on pilot \\
 \hline
 \end{tabular}
 \bigskip
@@ -299,24 +300,26 @@ List of definitions for SA-MP function \textit{GameTextForPlayer(playerid, const
 \hline
 Identifier & Value & Notes \\
 \hline
-GMTEXT\_STYLE\_PRICEDOWN & 0 & Appears for 9 seconds. \\
-GMTEXT\_STYLE\_RPRICEDOWN & 1 & Fades out after 8 seconds.\\
-GMTEXT\_STYLE\_SA & 2 & Does not disappear until player respawns. \\
-GMTEXT\_STYLE\_SLIM1 & 3 & San Andreas specific font. \\
-GMTEXT\_STYLE\_SLIM2 & 4 & San Andreas specific font. \\
-GMTEXT\_STYLE\_SLIMW & 5 & Displays for 3 seconds. \\
-GMTEXT\_STYLE\_BPRICEDOWN & 6 & Blue Pricedown font in middle of screen. \\
-GMTEXT\_STYLE\_VEHNAME & 7 & SA vehicle names. (fixes.inc) \\
-GMTEXT\_STYLE\_LOCATION & 8 & SA location names. (fixes.inc) \\
-GMTEXT\_STYLE\_RADIO & 9 & SA selected radio station names. (fixes.inc) \\
-GMTEXT\_STYLE\_RADIOW & 10 & SA switching radio station names. (fixes.inc) \\
-GMTEXT\_STYLE\_PMONEY & 11 & SA positive money. (fixes.inc) \\
-GMTEXT\_STYLE\_NMONEY & 12 & SA negative money. (fixes.inc) \\
-GMTEXT\_STYLE\_STUNT & 13 & SA stunt bonuses. (fixes.inc) \\
-GMTEXT\_STYLE\_CLOCK & 14 & SA in-game clock. (fixes.inc) \\
-GMTEXT\_STYLE\_NOTIFICATION & 15 & SA notification popup. (fixes.inc) \\
+GMTEXT\_STYLE\_PRICEDOWN & 0 & Appears for 9 seconds \\
+GMTEXT\_STYLE\_RPRICEDOWN & 1 & Fades out after 8 seconds \\
+GMTEXT\_STYLE\_SA & 2 & Does not disappear until player respawns \\
+GMTEXT\_STYLE\_SLIM1 & 3 & San Andreas specific font \\
+GMTEXT\_STYLE\_SLIM2 & 4 & San Andreas specific font \\
+GMTEXT\_STYLE\_SLIMW & 5 & Displays for 3 seconds \\
+GMTEXT\_STYLE\_BPRICEDOWN & 6 & Blue Pricedown font in middle of screen \\
+GMTEXT\_STYLE\_VEHNAME & 7 & SA vehicle names (fixes.inc) \\
+GMTEXT\_STYLE\_LOCATION & 8 & SA location names (fixes.inc) \\
+GMTEXT\_STYLE\_RADIO & 9 & SA selected radio station names (fixes.inc) \\
+GMTEXT\_STYLE\_RADIOW & 10 & SA switching radio station names (fixes.inc) \\
+GMTEXT\_STYLE\_PMONEY & 11 & SA positive money (fixes.inc) \\
+GMTEXT\_STYLE\_NMONEY & 12 & SA negative money (fixes.inc) \\
+GMTEXT\_STYLE\_STUNT & 13 & SA stunt bonuses (fixes.inc) \\
+GMTEXT\_STYLE\_CLOCK & 14 & SA in-game clock (fixes.inc) \\
+GMTEXT\_STYLE\_NOTIFICATION & 15 & SA notification popup (fixes.inc) \\
 \hline
 \end{tabular}
+\bigskip
+\\fixes.inc: \url{https://github.com/pawn-lang/sa-mp-fixes}
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/gametextstyles}
 
@@ -544,6 +547,25 @@ if(strcmp(cmdtext, "/myname", true) == 0) {
     return 1;
 }
 \end{verbatim}
+
+
+
+\newpage
+\section{Legacy Functions}
+Legacy functions are implemented in file \textit{i\_funcl.inc} for backwards compatibility with really old SA-MP gamemodes which often use them.
+
+\subsection{isnull(string)}
+Checks whether a string is equal to null (empty). More efficient than checking if strlen is equal to 0.
+
+\subsection{rot13(string[])}
+Rotates the alphabet by half of its length - 13 characters. It is a symmetric operation: applying it twice on the same string reveals the original.
+
+\subsection{strrest(const string[], \&index)}
+Returns remaining part of the string.
+
+\subsection{strtok(const string[], \&index)}
+Strtok is used for splitting strings and was used as one of the methods for creating game commands with arguments.
+
 
 
 \newpage
