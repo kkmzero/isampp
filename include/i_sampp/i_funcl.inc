@@ -25,6 +25,18 @@ stock rot13(string[]) {
 	return string;
 }
 
+stock strclr(string[]) {
+	string[0] = '\0';
+}
+
+stock bool:strisempty(const string[]) {
+	if (string[0] == '\0' || (string[0] == '\1' && string[1] == '\0')) {
+		return true;
+	}
+
+	return false;
+}
+
 stock strrest(const string[], &index)
 {
 	new length = strlen(string);
