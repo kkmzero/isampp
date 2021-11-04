@@ -21,8 +21,18 @@ stock rot13(string[]) {
 			string[index] = (string[index] - 'A' +13) % 26 + 'A';
 		}
 	}
-	
-	return string;
+
+	new result[128];
+
+	strcat(result, string, strlen(string));
+
+	result[strlen(string)] = EOS;
+	return result;
+}
+
+stock strcpy(dest[], const source[], len = sizeof(dest)) {
+	dest[0] = '\0';
+	return strcat(dest, source, len);
 }
 
 stock strclr(string[]) {
@@ -33,12 +43,12 @@ stock bool:strisempty(const string[]) {
 	if (string[0] == '\0' || (string[0] == '\1' && string[1] == '\0')) {
 		return true;
 	}
-
-	return false;
+	else {
+		return false;
+	}
 }
 
-stock strrest(const string[], &index)
-{
+stock strrest(const string[], &index) {
 	new length = strlen(string);
 
 	while ((index < length) && (string[index] <= ' ')) {
@@ -73,5 +83,37 @@ stock strtok(const string[], &index) {
 	}
 
 	result[index - offset] = EOS;
+	return result;
+}
+
+stock strtolower(string[]) {
+	new i = 0;
+
+	while(string[i] != '\0') {
+		string[i] = tolower(string[i]);
+		i++;
+	}
+
+	new result[128];
+
+	strcat(result, string, i);
+
+	result[i] = EOS;
+	return result;
+}
+
+stock strtoupper(string[]) {
+	new i = 0;
+
+	while(string[i] != '\0') {
+		string[i] = toupper(string[i]);
+		i++;
+	}
+
+	new result[128];
+
+	strcat(result, string, i);
+
+	result[i] = EOS;
 	return result;
 }
