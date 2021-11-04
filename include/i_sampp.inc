@@ -43,6 +43,10 @@ stock isampp_console_printversion() {
 	return 1;
 }
 
+stock pawncc_console_printversion() {
+	printf("Pawn Community Compiler %i (build %i)", __Pawn, __PawnBuild);
+}
+
 
 stock MppTeleport(playerid, locationid) {
 	SetPlayerPos(playerid, locCoords[locationid][0], locCoords[locationid][1], locCoords[locationid][2]);
@@ -120,5 +124,6 @@ stock MppShowVehicleInfo(playerid, vehicleid, pstringcolor) {
 stock MppGetPlayerName(playerid) {
 	new playername[MAX_PLAYER_NAME];
 	GetPlayerName(playerid, playername, MAX_PLAYER_NAME);
+
 	return playername;
 }
