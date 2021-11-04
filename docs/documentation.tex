@@ -38,11 +38,12 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \newpage
 \section{Changes in ISAMPP 1.8}
 \textbf{ISAMPP Library:}
-\\- New legacy function rot13 \textit{(i\_funcl.inc)}
+\\- New legacy functions rot13, strcpy, strclr, strisempty, strtolower, strtoupper \textit{(i\_funcl.inc)}
+\\- New function pawncc\_console\_printversion() \textit{(i\_sampp.inc)}
 \\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
-\\- 
+\\- Compiler upgraded to Pawn compiler 3.10.10 (pawncc) 
 \bigskip
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -439,11 +440,11 @@ Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}
 
 \newpage
 \section{Custom Functions}
-
 ISAMPP uses various stock functions which may be useful in creating your own game modes for SA-MP or simply for debugging purposes. These stock functions are defined in \textit{i\_sampp.inc} file.
 
+
 \subsection{isampp\_console\_printversion()}
-\textit{Outputs ISAMPP version to server console.}
+Outputs ISAMPP version to server console.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -453,9 +454,19 @@ main() {
 \end{verbatim}
 
 
+\subsection{pawncc\_console\_printversion()}
+Outputs version of compiler to server console if Pawncc is used.
+\bigskip
+\\\textbf{Example of implementation:}
+\begin{verbatim}
+main() {
+    pawncc_console_printversion();
+}
+\end{verbatim}
+
 
 \subsection{MppTeleport(playerid, locationid)}
-\textit{Teleports player to desired location passed as parameter 'locationid'.}
+Teleports player to desired location passed as parameter 'locationid'.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -467,7 +478,7 @@ if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
 
 
 \subsection{MppTeleportEx(playerid, locationid, pstringcolor)}
-\textit{Same as MppTeleport, plus outputs location name to in-game chat window. \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.}
+Same as MppTeleport, plus outputs location name to in-game chat window. \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -479,7 +490,7 @@ if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
 
 
 \subsection{MppTeleportToCoords(playerid, x, y, z, interiorid, facingangle)}
-\textit{Teleports player to specified xyz coordinates, supplied with interior identifier and player facing angle.}
+Teleports player to specified xyz coordinates, supplied with interior identifier and player facing angle.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -492,9 +503,9 @@ if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
 
 \newpage
 \subsection{MppShowPlayerPosition(playerid, pstringcolor)}
-\textit{Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.
+Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.
 \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
-\\This function might not work properly if player is in a vehicle.}
+\\This function might not work properly if player is in a vehicle.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -506,9 +517,9 @@ if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 
 
 \subsection{MppShowVehicleInfo(playerid, vehicleid, pstringcolor)}
-\textit{Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.
+Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.
 \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
-\\Note: You must pass vehicleid parameter if you want to get model name else function returns '0 Unknown'.}
+\\Note: You must pass vehicleid parameter if you want to get model name else function returns '0 Unknown'.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -538,7 +549,7 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 
 
 \subsection{MppGetPlayerName(playerid)}
-\textit{Returns player nick/name from given playerid.}
+Returns player nick/name from given playerid.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -558,13 +569,28 @@ Legacy functions are implemented in file \textit{i\_funcl.inc} for backwards com
 Checks whether a string is equal to null (empty). More efficient than checking if strlen is equal to 0.
 
 \subsection{rot13(string[])}
-Rotates the alphabet by half of its length - 13 characters. It is a symmetric operation: applying it twice on the same string reveals the original.
+Rotates the alphabet in string by half of its length - 13 characters. It is a symmetric operation: applying it twice on the same string reveals the original.
+
+\subsection{strcpy(dest[], const source[], len = sizeof(dest))}
+Copies the source string to the destination string.
+
+\subsection{strclr(string[])}
+Empties and clears given string.
+
+\subsection{strisempty(const string[])}
+Returns true if the given string is empty, otherwise returns false.
 
 \subsection{strrest(const string[], \&index)}
-Returns remaining part of the string.
+Splits string and gives back remaining part of the string divided by space ' ' character as default delimiter.
 
 \subsection{strtok(const string[], \&index)}
-Strtok is used for splitting strings and was used as one of the methods for creating game commands with arguments.
+Strtok is used for splitting strings and was used as one of the methods for creating game commands with arguments. Strings are divided by space ' ' character as default delimiter.
+
+\subsection{strtolower(string[])}
+Changes all characters in the string to lowercase.
+
+\subsection{strtoupper(string[])}
+Changes all characters in the string to uppercase.
 
 
 
