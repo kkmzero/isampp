@@ -2,7 +2,8 @@ Changes in ISAMPP 1.8
 
 * ISAMPP Library *
 - New legacy functions rot13, strclr, strisempty (i_funcl.inc)
+- New function pawncc_console_printversion() (i_sampp.inc)
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
-- 
+- Compiler upgraded to Pawn compiler 3.10.10 (pawncc)
