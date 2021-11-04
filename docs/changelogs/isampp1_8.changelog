@@ -1,7 +1,7 @@
 Changes in ISAMPP 1.8
 
 * ISAMPP Library *
-- New legacy functions rot13, strclr, strisempty (i_funcl.inc)
+- New legacy functions rot13, strcpy, strclr, strisempty, strtolower, strtoupper (i_funcl.inc)
 - New function pawncc_console_printversion() (i_sampp.inc)
 - Updated documentation
 
