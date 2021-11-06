@@ -75,7 +75,7 @@ stock strtok(const string[], &index) {
 	}
 
 	new offset = index;
-	new result[20];
+	new result[128];
 
 	while ((index < length) && (string[index] > ' ') && ((index - offset) < (sizeof(result) - 1))) {
 		result[index - offset] = string[index];
