@@ -24,6 +24,7 @@
 #else
 	main()
 	{
+		pawncc_console_printversion();
 		isampp_console_printversion();
 
 		print("\n----------------------------");
@@ -736,14 +737,14 @@ public OnGameModeInit()
 	SetActorInvulnerable(gActorDummy, false);
 
 	//TestObjects - Remove Later
-	/*CreateObject(OBJECT_PROPERTY_LOCKED, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_PROPERTY_FSALE, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_BIGDOLLAR, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CLOTHESP, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_PACKAGE1, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_PICKUPSAVE, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_SUB_FLOODLITE, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CRAIGPACKAGE, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
+	/*CreateObject(OBJECT_CJ_PHONE_KIOSK2, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_WASTEBIN, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_O2TANKS, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_SHTROLLY, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_TRAFFIC_LIGHT4, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_TRAFFIC_LIGHT5, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_TRAFFIC_LIGHT3, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
+	CreateObject(OBJECT_CJ_AIRCON, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
 
 	return 1;
 }
