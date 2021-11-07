@@ -40,6 +40,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \textbf{ISAMPP Library:}
 \\- New legacy functions rot13, strcpy, strclr, strisempty, strtolower, strtoupper \textit{(i\_funcl.inc)}
 \\- New function pawncc\_console\_printversion() \textit{(i\_sampp.inc)}
+\\- New definitions for sounds \textit{(i\_soundids.inc)}
 \\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
@@ -62,7 +63,6 @@ San Andreas Multiplayer Includes Library+ or ISAMPP \textit{(Includes for San An
 
 \section{Installation}
 Copy contents of \textit{include} folder to \textit{"[SA-MP Server folder]/include"} and also to \textit{"include"} folder for Pawno (by default \textit{"[SA-MP Server folder]/pawno/include"}).
-\bigskip
 \\In your game mode file you can include ISAMPP header for all its contents:
 \begin{verbatim}
 #include <i_sampp>
@@ -85,6 +85,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_pickupids>
 #include <i_sampp/i_pickuptypes>
 #include <i_sampp/i_skinids>
+#include <i_sampp/i_soundids>
 #include <i_sampp/i_textstyle>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_vehids>
@@ -113,6 +114,7 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \\\textit{pickupids} - List of definitions for pickup identifiers
 \\\textit{pickuptypes} - List of definitions for pickup types
 \\\textit{skinids} - List of definitions for character skin/model identifiers
+\\\textit{soundids} - List of definitions for sound identifiers
 \\\textit{textstyle} - List of definitions for GameText styles
 \\\textit{vehhealth} - Vehicle Health configurations
 \\\textit{vehids} - List of definitions for all available vehicles
@@ -364,6 +366,12 @@ Pickup types specify behavior of created pickups in game modes. Every pickup typ
 Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. With exception of few character models \textit{(mainly main story characters and other special characters)} where the name of model is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with plain number identifiers SA-MP uses by default.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/skins}
+
+
+\section{Sound Identifiers}
+Sounds meant to be played with function \textit{PlayerPlaySound} are defined with prefix \textit{SND\_} in file i\_soundids.inc. Please note that this list of available sounds may be incomplete and some sound loops might cause the game client to crash.
+\bigskip
+\\Resources: \url{https://open.mp/docs/scripting/resources/sound-ids}
 
 
 \section{Vehicle Components}
@@ -1055,6 +1063,28 @@ Value & Name \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/selectobjecttypes}
+
+
+\newpage
+\subsection{Shop Names}
+To be used with \textit{SetPlayerShopName(playerid, \textbf{shopname[]})} function.
+\bigskip
+\\\begin{tabular}{ |l|l|l| }
+\hline
+Name & Description & ISAMPP Location ID \\
+\hline
+FDPIZA & Stock Pizza Stack interior & LOC\_PIZZASTACK \\
+FDCHICK & Stock Cluckin' Bell interior & LOC\_CBELL \\
+FDBURG & Stock Burger Shot interior & LOC\_BURGERSHOT \\
+AMMUN1 & First Ammu-Nation interior & LOC\_AMMUNATION2 \\
+AMMUN2 & Second Ammu-Nation interior & LOC\_AMMUNATION3 \\
+AMMUN3 & Third Ammu-Nation interior & LOC\_AMMUNATION4 \\
+AMMUN4 & Fourth Ammu-Nation interior & LOC\_AMMUNATION \\
+AMMUN5 & Fifth Ammu-Nation interior & LOC\_AMMUNATION5 \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/shopnames}
 
 
 
