@@ -119,10 +119,19 @@
 #define SND_POLICE_TRUCK              3056    //Police Radio: "Truck"
 #define SND_POLICE_VAN                3057    //Police Radio: "Van"
 
+#define SND_AIRHORN_SHORT             3200    //Air horn
+#define SND_AIRHORN_LONG              3201    //Air horn (longer than previous one)
+#define SND_AIRCONDITIONING           3400    //Air conditioning
+#define SND_BELLRING_LOOP             3401    //Continuous ringing bell
+#define SND_PHONEDIAL                 3600    //Phone dialing
+#define SND_VIDEOTAPE_LOOP            3800    //Videotape (continuous)
+
 #define SND_CASINO_WHEEL_START        4200    //Bandit wheel start
 #define SND_CASINO_COINS              4201    //Casino slot machine falling coins
 #define SND_CASINO_BLIP1              4202    //Casino slot machine blip
 #define SND_CASINO_BLIP2              4203    //Casino slot machine blip
+
+#define SND_HAIRCUT                   4400    //Barber trimming hair (electric razor)
 
 #define SND_GYM_LINE_01               4800    //Gym Guy: "Yo' you wanna learn some new moves?"
 #define SND_GYM_LINE_02               4801    //Gym Guy: "Suit youself homes, but the streets are mean dude."
@@ -133,10 +142,94 @@
 #define SND_GYM_LINE_07               4806    //Gym Guy: "Make sure yo' opponent is down and out!"
 #define SND_GYM_LINE_08               4807    //Gym Guy: "Never give your opponent time to recover."
 
-#define SND_GAME_BUZZLOOP             5200    //Continuous buzz
+#define SND_GAME_BUZZ_LOOP            5200    //Continuous buzz
 #define SND_GAME_BLING                5201    //Bling
 #define SND_GAME_BBEE_DAMAGE          5202    //Bumblebee video game take damage
 #define SND_GAME_BBEE_GAMEOVER        5203    //Bumblebee video game game over
 #define SND_GAME_BBEE_FIRE            5204    //Bumblebee video game firing sound
 #define SND_GAME_BBEE_BEEP            5205    //Bumblebee video game beep
 #define SND_GAME_BBEE_DEATH           5206    //Bumblebee video game death
+
+#define SND_CROUPIER_LINE_01          5400    //Croupier: "Place your bets!"
+#define SND_CROUPIER_LINE_02          5401    //Croupier: "Place your bets ladies and gentlemen."
+#define SND_CROUPIER_LINE_03          5402    //Croupier: "An offer of credit has been made sir."
+#define SND_CROUPIER_LINE_04          5403    //Croupier: "The house is prepared to offer you credit sir."
+#define SND_CROUPIER_LINE_05          5404    //Croupier: "The house recognises sir's credit rating."
+#define SND_CROUPIER_LINE_06          5405    //Croupier: "Sir doesn't have sufficient money to back another bet."
+#define SND_CROUPIER_LINE_07          5406    //Croupier: "Sorry sir you do not have enough funds."
+#define SND_CROUPIER_LINE_08          5407    //Croupier: "You appear to have insufficient funds to continue betting."
+#define SND_CROUPIER_LINE_09          5408    //Croupier: "No more bets please!"
+#define SND_CROUPIER_LINE_10          5409    //Croupier: "No more bets ladies and gentlemen, please."
+#define SND_CROUPIER_LINE_11          5410    //Croupier: "No more bets people."
+#define SND_CROUPIER_LINE_12          5411    //Croupier: "Black, 10!"
+#define SND_CROUPIER_LINE_13          5412    //Croupier: "Black, 11!"
+#define SND_CROUPIER_LINE_14          5413    //Croupier: "Red, 12!"
+#define SND_CROUPIER_LINE_15          5414    //Croupier: "Black, 13!"
+#define SND_CROUPIER_LINE_16          5415    //Croupier: "Red, 14!"
+#define SND_CROUPIER_LINE_17          5416    //Croupier: "Black, 15!"
+#define SND_CROUPIER_LINE_18          5417    //Croupier: "Red, 16!"
+#define SND_CROUPIER_LINE_19          5418    //Croupier: "Black, 17!"
+#define SND_CROUPIER_LINE_20          5419    //Croupier: "Red, 18!"
+#define SND_CROUPIER_LINE_21          5420    //Croupier: "Red, 19!"
+#define SND_CROUPIER_LINE_22          5421    //Croupier: "Black, 20!"
+#define SND_CROUPIER_LINE_23          5422    //Croupier: "Red, 21!"
+#define SND_CROUPIER_LINE_24          5423    //Croupier: "Black, 22!"
+#define SND_CROUPIER_LINE_25          5424    //Croupier: "Red, 23!"
+#define SND_CROUPIER_LINE_26          5425    //Croupier: "Black, 24!"
+#define SND_CROUPIER_LINE_27          5426    //Croupier: "Red, 25!"
+#define SND_CROUPIER_LINE_28          5427    //Croupier: "Black, 26!"
+#define SND_CROUPIER_LINE_29          5428    //Croupier: "Red, 27!"
+#define SND_CROUPIER_LINE_30          5429    //Croupier: "Black, 28!"
+#define SND_CROUPIER_LINE_31          5430    //Croupier: "Black, 29!"
+#define SND_CROUPIER_LINE_32          5431    //Croupier: "Red, 30!"
+#define SND_CROUPIER_LINE_33          5432    //Croupier: "Black, 31!"
+#define SND_CROUPIER_LINE_34          5433    //Croupier: "Red, 32!"
+#define SND_CROUPIER_LINE_35          5434    //Croupier: "Black, 33!"
+#define SND_CROUPIER_LINE_36          5435    //Croupier: "Red, 34!"
+#define SND_CROUPIER_LINE_37          5436    //Croupier: "Black, 35!"
+#define SND_CROUPIER_LINE_38          5437    //Croupier: "Red, 36!"
+#define SND_CROUPIER_LINE_39          5438    //Croupier: "Zero!"
+#define SND_CROUPIER_LINE_40          5439    //Croupier: "Red, 1!"
+#define SND_CROUPIER_LINE_41          5440    //Croupier: "Black, 2!"
+#define SND_CROUPIER_LINE_42          5441    //Croupier: "Red, 3!"
+#define SND_CROUPIER_LINE_43          5442    //Croupier: "Black, 4!"
+#define SND_CROUPIER_LINE_44          5443    //Croupier: "Red, 5!"
+#define SND_CROUPIER_LINE_45          5444    //Croupier: "Black, 6!"
+#define SND_CROUPIER_LINE_46          5445    //Croupier: "Red, 7!"
+#define SND_CROUPIER_LINE_47          5446    //Croupier: "Black, 8!"
+#define SND_CROUPIER_LINE_48          5447    //Croupier: "Red, 9!"
+#define SND_CROUPIER_LINE_49          5448    //Croupier: "You win!"
+#define SND_CROUPIER_LINE_50          5449    //Croupier: "You win sir well done."
+#define SND_CROUPIER_LINE_51          5450    //Croupier: "Congratulations sir!"
+#define SND_CROUPIER_LINE_52          5451    //Croupier: "Sorry sir, regulars only."
+#define SND_CROUPIER_LINE_53          5452    //Croupier: "The house does not recognize your limit at this table sir."
+#define SND_CROUPIER_LINE_54          5453    //Croupier: "Thank you sir have a nice day!"
+#define SND_CROUPIER_LINE_55          5454    //Croupier: "Thank you for playing sir!"
+#define SND_CROUPIER_LINE_56          5455    //Croupier: "One dollar pays out!"
+#define SND_CROUPIER_LINE_57          5456    //Croupier: "Two dollars pays out!"
+#define SND_CROUPIER_LINE_58          5457    //Croupier: "Five dollars pays out!"
+#define SND_CROUPIER_LINE_59          5458    //Croupier: "Ten dollars pays out."
+#define SND_CROUPIER_LINE_60          5459    //Croupier: "Twenty dollars pays out."
+#define SND_CROUPIER_LINE_61          5460    //Croupier: "Forty dollars pays out."
+#define SND_CROUPIER_LINE_62          5461    //Croupier: "Jackpot!"
+#define SND_CROUPIER_LINE_63          5462    //Croupier: "Another win for sir!"
+#define SND_CROUPIER_LINE_64          5463    //Croupier: "Congratulations sir, you're having quite a run."
+#define SND_CROUPIER_LINE_65          5464    //Croupier: "I hope sir's luck holds!"
+
+#define SND_BLAST_DOOR                6000    //Blast door sliding
+#define SND_SIREN_LOOP                6001    //Repeating siren (repeats every 2 seconds).
+#define SND_HEAVY_DOOR                6002    //Heavy door
+#define SND_ELECTRIC                  6003    //Electricity (could be used for tazer)
+
+#define SND_BOATSCH_SEAGULLS          6200    //Boat School: Seagulls
+#define SND_BOATSCH_LINE_01           6201    //Boat School: "Welcome to the boat school."
+#define SND_BOATSCH_LINE_02           6202    //Boat School: "To pass, you must achieve bronze or higher in all five tests."
+#define SND_BOATSCH_LINE_03           6203    //Boat School: "To view a demonstration of each test, please use the TV over there."
+#define SND_BOATSCH_LINE_04           6204    //Boat School: "Passing the test, will unlock the next test."
+#define SND_BOATSCH_LINE_05           6205    //Boat School: "You can come back and check you scores or take new tests, at any time."
+
+#define SND_BLIP                      6400    //Blip ('door buzzer' in game files)
+#define SND_ELEVATOR_BELL             6401    //Lift bell rings
+
+#define SND_UNKNOWN1                  39000   //"What would your mother think?"
+#define SND_UNKNOWN2                  39002   //"Filth like you always have to pay for sex!"
