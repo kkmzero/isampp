@@ -13,6 +13,68 @@
 #define SND_HELI_DISABLE              1000    //Disable helicopter sounds
 #define SND_HELI_ENABLE               1001    //Enable helicopter sounds
 
+#define SND_CEILING_VENT_LAND         1002    //Vent dropped from ceiling
+
+#define SND_HIT_CAR                   1009    //Player hitting the car
+
+#define SND_WHEEL_OF_FORTUNE_CLACKER  1027    //Wheel Of Fortune clacker (Casino)
+
+#define SND_GARAGE_DOOR_LOOP          1035    //Garage door opening/closing
+#define SND_GARAGE_DOOR_STOP          1036    //Garage door finish opening/closing
+
+#define SND_PARACHUTE_OPEN            1039    //Parachute opening
+
+#define SND_SHOP1_BUY                 1052    //Buy blip
+#define SND_SHOP1_BUY_DENIED          1053    //Buying failed (f.e. insufficient money)
+#define SND_SHOP2_BUY                 1054    //Buy blip
+#define SND_SHOP2_BUY_DENIED          1055    //Buying failed (f.e. insufficient money)
+#define SND_RACE_COUNTDOWN            1056    //Race countdown blip
+#define SND_RACE_GO                   1057    //Race countdown "Go" blip
+#define SND_ITEM_SELECT               1058    //Blip for selecting/collecting items, race checkpoints
+
+#define SND_GAME_GOGO_TRACK_START     1062    //Go Go Space Monkey Music: start
+#define SND_GAME_GOGO_TRACK_STOP      1063    //Go Go Space Monkey Music: stop
+
+#define SND_GAME_DUAL_TRACK_START     1068    //Duality Music: start
+#define SND_GAME_DUAL_TRACK_STOP      1069    //Duality Music: stop
+
+#define SND_GAME_BBEE_TRACK_START     1076    //Bumblebee Music: start
+#define SND_GAME_BBEE_TRACK_STOP      1077    //Bumblebee Music: stop
+
+#define SND_CASINO_ADD_CASH           1083    //Blip: add cash or place marker on map
+#define SND_CASINO_REMOVE_CASH        1084    //Blip: remove cash or remove marker from map
+#define SND_CASINO_NO_CASH            1085    //Blip: insufficient money/limit hit
+
+#define SND_LOUD_HIT                  1095    //Loud hit
+
+#define SND_AWARD_TRACK_START         1097    //Awards Ceremony Music: start
+#define SND_AWARD_TRACK_STOP          1098    //Awards Ceremony Music: stop
+
+#define SND_MESH_GATE_OPEN            1100    //Mesh gate opening/closing
+#define SND_MESH_GATE_STOP            1101    //Mesh gate finish opening/closing
+
+#define SND_PUNCH_PED                 1130    //Punching ped
+#define SND_HIT_OBJECT                1131    //Hit wooden object
+#define SND_CAMERA_SHOT               1132    //Take camera picture
+#define SND_VEH_MOD                   1133    //Installing vehicle modification
+#define SND_VEH_RESPRAY               1134    //Respraying vehicle
+#define SND_BASEBALL_BAT_HIT_PED      1135    //Hitting ped with baseball bat
+#define SND_STAMP_PED                 1136    //Stamping ped
+#define SND_CHECKPOINT_BLIP1          1137    //Checkpoint blip
+#define SND_CHECKPOINT_BLIP2          1138    //Checkpoint blip
+#define SND_CHECKPOINT_BLIP3          1139    //Checkpoint blip
+
+#define SND_VEH_SMASH1                1140    //Smashing vehicle
+#define SND_VEH_SMASH2                1141    //Smashing vehicle
+#define SND_OTB_TRACK_START           1142    //OTB Sound: start
+#define SND_OTB_TRACK_STOP            1143    //OTB Sound: stop
+
+#define SND_RESTAURANT_TRAY_COLLISION 1145    //Collision/hit or thowing a satchel?
+#define SND_SWEETS_HORN               1147    //Sweet's car horn
+#define SND_MAGNET_VEH_COLLISION      1148    //Attaching vehicle to magnet
+#define SND_PROPERTY_PURCHASED        1149    //Property purchased blip
+
+
 #define SND_POLICE_ALDEA_MALVADA      2000    //Police Radio: "Aldea Malvada"
 #define SND_POLICE_ANGEL_PINE         2001    //Police Radio: "Angel Pine"
 #define SND_POLICE_ARCO_DEL_OESTE     2002    //Police Radio: "Arco Del Oeste"
