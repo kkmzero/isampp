@@ -7,4 +7,6 @@ Changes in ISAMPP 1.8
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
+- Phone pickup and 2 of 3 bottle pickups now work
+- New command /cancelaction for disabling special actions 
 - Compiler upgraded to Pawn compiler 3.10.10 (pawncc)
