@@ -19,8 +19,8 @@
 
 #define SND_WHEEL_OF_FORTUNE_CLACKER  1027    //Wheel Of Fortune clacker (Casino)
 
-#define SND_GARAGE_DOOR_LOOP          1035    //Garage door opening/closing
-#define SND_GARAGE_DOOR_STOP          1036    //Garage door finish opening/closing
+#define SND_GARAGE_DOOR_LOOP          1035    //Garage doors opening/closing
+#define SND_GARAGE_DOOR_STOP          1036    //Garage doors finish opening/closing
 
 #define SND_PARACHUTE_OPEN            1039    //Parachute opening
 
@@ -74,6 +74,24 @@
 #define SND_MAGNET_VEH_COLLISION      1148    //Attaching vehicle to magnet
 #define SND_PROPERTY_PURCHASED        1149    //Property purchased blip
 
+#define SND_PICKUP_BLIP               1150    //Picking up a pickup/selection blip
+
+#define SND_GARAGE_DOOR_LOOP_ALT      1153    //Garage doors opening/closing (same as SND_GARAGE_DOOR_LOOP)
+#define SND_GARAGE_DOOR_STOP_ALT      1154    //Garage doors finish opening/closing (same as SND_GARAGE_DOOR_STOP)
+
+#define SND_FEET_LAND_JUMP            1163    //Two-feet stomp (after jumping)
+
+#define SND_HANGAR_DOOR_LOOP          1165    //Hangar doors opening/closing 
+#define SND_HANGAR_DOOR_STOP          1166    //Hangar doors finish opening/closing
+
+#define SND_DRIVING_AWARD_TRACK_START 1183    //Driving School Award Music: Start
+#define SND_DRIVING_AWARD_TRACK_STOP  1184    //Driving School Award Music: Stop
+#define SND_BIKE_AWARD_TRACK_START    1185    //Bike School Award Music: Start
+#define SND_BIKE_AWARD_TRACK_STOP     1186    //Bike School Award Music: Stop
+#define SND_FLIGHT_AWARD_TRACK_START  1187    //Flight School Award Music: Start
+#define SND_FLIGHT_AWARD_TRACK_STOP   1188    //Flight School Award Music: Stop
+
+#define SND_SLAP                      1190    //Slap
 
 #define SND_POLICE_ALDEA_MALVADA      2000    //Police Radio: "Aldea Malvada"
 #define SND_POLICE_ANGEL_PINE         2001    //Police Radio: "Angel Pine"
@@ -360,14 +378,14 @@
 
 #define SND_HAIRCUT                   4400    //Barber trimming hair (electric razor)
 
-#define SND_GYM_LINE_01               4800    //Gym Guy: "Yo' you wanna learn some new moves?"
-#define SND_GYM_LINE_02               4801    //Gym Guy: "Suit youself homes, but the streets are mean dude."
-#define SND_GYM_LINE_03               4802    //Gym Guy: "Man you're an embarrassment, get yourselves some muscles first."
-#define SND_GYM_LINE_04               4803    //Gym Guy: "Hey you wanna go around with me?"
-#define SND_GYM_LINE_05               4804    //Gym Guy: "Yo' pay attention and you might learn something."
-#define SND_GYM_LINE_06               4805    //Gym Guy: "Yo' charge in and batter yo opponent!"
-#define SND_GYM_LINE_07               4806    //Gym Guy: "Make sure yo' opponent is down and out!"
-#define SND_GYM_LINE_08               4807    //Gym Guy: "Never give your opponent time to recover."
+#define SND_GYM_LINE_1                4800    //Gym Guy: "Yo' you wanna learn some new moves?"
+#define SND_GYM_LINE_2                4801    //Gym Guy: "Suit youself homes, but the streets are mean dude."
+#define SND_GYM_LINE_3                4802    //Gym Guy: "Man you're an embarrassment, get yourselves some muscles first."
+#define SND_GYM_LINE_4                4803    //Gym Guy: "Hey you wanna go around with me?"
+#define SND_GYM_LINE_5                4804    //Gym Guy: "Yo' pay attention and you might learn something."
+#define SND_GYM_LINE_6                4805    //Gym Guy: "Yo' charge in and batter yo opponent!"
+#define SND_GYM_LINE_7                4806    //Gym Guy: "Make sure yo' opponent is down and out!"
+#define SND_GYM_LINE_8                4807    //Gym Guy: "Never give your opponent time to recover."
 
 #define SND_GAME_BUZZ_LOOP            5200    //Continuous buzz
 #define SND_GAME_BLING                5201    //Bling
@@ -377,15 +395,15 @@
 #define SND_GAME_BBEE_BEEP            5205    //Bumblebee video game beep
 #define SND_GAME_BBEE_DEATH           5206    //Bumblebee video game death
 
-#define SND_CROUPIER_LINE_01          5400    //Croupier: "Place your bets!"
-#define SND_CROUPIER_LINE_02          5401    //Croupier: "Place your bets ladies and gentlemen."
-#define SND_CROUPIER_LINE_03          5402    //Croupier: "An offer of credit has been made sir."
-#define SND_CROUPIER_LINE_04          5403    //Croupier: "The house is prepared to offer you credit sir."
-#define SND_CROUPIER_LINE_05          5404    //Croupier: "The house recognises sir's credit rating."
-#define SND_CROUPIER_LINE_06          5405    //Croupier: "Sir doesn't have sufficient money to back another bet."
-#define SND_CROUPIER_LINE_07          5406    //Croupier: "Sorry sir you do not have enough funds."
-#define SND_CROUPIER_LINE_08          5407    //Croupier: "You appear to have insufficient funds to continue betting."
-#define SND_CROUPIER_LINE_09          5408    //Croupier: "No more bets please!"
+#define SND_CROUPIER_LINE_1           5400    //Croupier: "Place your bets!"
+#define SND_CROUPIER_LINE_2           5401    //Croupier: "Place your bets ladies and gentlemen."
+#define SND_CROUPIER_LINE_3           5402    //Croupier: "An offer of credit has been made sir."
+#define SND_CROUPIER_LINE_4           5403    //Croupier: "The house is prepared to offer you credit sir."
+#define SND_CROUPIER_LINE_5           5404    //Croupier: "The house recognises sir's credit rating."
+#define SND_CROUPIER_LINE_6           5405    //Croupier: "Sir doesn't have sufficient money to back another bet."
+#define SND_CROUPIER_LINE_7           5406    //Croupier: "Sorry sir you do not have enough funds."
+#define SND_CROUPIER_LINE_8           5407    //Croupier: "You appear to have insufficient funds to continue betting."
+#define SND_CROUPIER_LINE_9           5408    //Croupier: "No more bets please!"
 #define SND_CROUPIER_LINE_10          5409    //Croupier: "No more bets ladies and gentlemen, please."
 #define SND_CROUPIER_LINE_11          5410    //Croupier: "No more bets people."
 #define SND_CROUPIER_LINE_12          5411    //Croupier: "Black, 10!"
@@ -444,19 +462,40 @@
 #define SND_CROUPIER_LINE_65          5464    //Croupier: "I hope sir's luck holds!"
 
 #define SND_BLAST_DOOR                6000    //Blast door sliding
-#define SND_SIREN_LOOP                6001    //Repeating siren (repeats every 2 seconds).
+#define SND_SIREN_LOOP                6001    //Repeating siren (repeats every 2 seconds)
 #define SND_HEAVY_DOOR                6002    //Heavy door
 #define SND_ELECTRIC                  6003    //Electricity (could be used for tazer)
 
 #define SND_BOATSCH_SEAGULLS          6200    //Boat School: Seagulls
-#define SND_BOATSCH_LINE_01           6201    //Boat School: "Welcome to the boat school."
-#define SND_BOATSCH_LINE_02           6202    //Boat School: "To pass, you must achieve bronze or higher in all five tests."
-#define SND_BOATSCH_LINE_03           6203    //Boat School: "To view a demonstration of each test, please use the TV over there."
-#define SND_BOATSCH_LINE_04           6204    //Boat School: "Passing the test, will unlock the next test."
-#define SND_BOATSCH_LINE_05           6205    //Boat School: "You can come back and check you scores or take new tests, at any time."
+#define SND_BOATSCH_LINE_1            6201    //Boat School: "Welcome to the boat school."
+#define SND_BOATSCH_LINE_2            6202    //Boat School: "To pass, you must achieve bronze or higher in all five tests."
+#define SND_BOATSCH_LINE_3            6203    //Boat School: "To view a demonstration of each test, please use the TV over there."
+#define SND_BOATSCH_LINE_4            6204    //Boat School: "Passing the test, will unlock the next test."
+#define SND_BOATSCH_LINE_5            6205    //Boat School: "You can come back and check you scores or take new tests, at any time."
 
 #define SND_BLIP                      6400    //Blip ('door buzzer' in game files)
 #define SND_ELEVATOR_BELL             6401    //Lift bell rings
 
-#define SND_UNKNOWN1                  39000   //"What would your mother think?"
-#define SND_UNKNOWN2                  39002   //"Filth like you always have to pay for sex!"
+#define SND_UNKNOWN_LINE_1            39000   //"What would your mother think?"
+#define SND_UNKNOWN_LINE_2            39001   //"You're as bad as them"
+#define SND_UNKNOWN_LINE_3            39002   //"Filth like you always have to pay for sex!"
+
+#define SND_UNKNOWN_LINE_4            39047   //"Where's my cellphone!"
+
+#define SND_UNKNOWN_LINE_5            39051   //"That's right put your hands there."
+#define SND_UNKNOWN_LINE_6            39052   //"Holy fuck I've got my phone."
+
+#define SND_CJ_LINE_1                 39074   //CJ: "I'm listening, honest..."
+
+#define SND_CJ_LINE_2                 39076   //CJ: "Aha, real interesting."
+
+#define SND_UNKNOWN_LINE_7            50002   //"Just Try Punk! Just Try It!"
+
+#define SND_UNKNOWN_LINE_8            50004   //"You're My World Now!"
+
+#define SND_UNKNOWN_LINE_9            50050   //"Tell My Wife I Love Her."
+#define SND_UNKNOWN_LINE_10           50051   //"I'm going in."
+#define SND_UNKNOWN_LINE_11           50052   //"What The Hell!"
+#define SND_UNKNOWN_LINE_12           50053   //"Uh, My Coffee."
+
+#define SND_UNKNOWN_LINE_13           50094   //"Wait Wait, think about what you're doing."
