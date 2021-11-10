@@ -1001,13 +1001,13 @@ To be used with \textit{GetPlayerState} function or \textit{OnPlayerStateChange}
 \hline
 Value & Name & Description \\
 \hline
-0 & PLAYER\_STATE\_NONE & Default player state, used while initializing \\
+0 & PLAYER\_STATE\_NONE & Default state, used while initializing \\
 1 & PLAYER\_STATE\_ONFOOT & Player is on foot \\
 2 & PLAYER\_STATE\_DRIVER & Player is driving a vehicle \\
 3 & PLAYER\_STATE\_PASSENGER & Player is in a vehicle as a passenger \\
 4 & PLAYER\_STATE\_EXIT\_VEHICLE & Player is exiting vehicle \\
-5 & PLAYER\_STATE\_ENTER\_VEHICLE\_DRIVER & Player is entering vehicle as driver \\
-6 & PLAYER\_STATE\_ENTER\_VEHICLE\_PASSENGER & Player is entering vehicle as passenger \\
+5 & PLAYER\_STATE\_ENTER\_VEHICLE\_DRIVER & Entering vehicle (driver) \\
+6 & PLAYER\_STATE\_ENTER\_VEHICLE\_PASSENGER & Entering vehicle (passenger) \\
 7 & PLAYER\_STATE\_WASTED & Player is either dead or in class selection \\
 8 & PLAYER\_STATE\_SPAWNED & Player just spawned \\
 9 & PLAYER\_STATE\_SPECTATING & Player is in spectator mode \\
@@ -1085,6 +1085,55 @@ AMMUN5 & Fifth Ammu-Nation interior & LOC\_AMMUNATION5 \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/shopnames}
+
+
+\subsection{Special Actions}
+Used by \textit{GetPlayerSpecialAction} and \textit{SetPlayerSpecialAction} functions.
+\bigskip
+\\\begin{tabular}{ |c|l|l| }
+\hline
+Value & Action & Description \\
+\hline
+0 & SPECIAL\_ACTION\_NONE & Clears player of special actions \\
+1 & SPECIAL\_ACTION\_DUCK & Detect if the player is crouching \\
+2 & SPECIAL\_ACTION\_USEJETPACK & Make the player using jetpack \\
+3 & SPECIAL\_ACTION\_ENTER\_VEHICLE & Player is entering a vehicle \\
+4 & SPECIAL\_ACTION\_EXIT\_VEHICLE & Player is exiting a vehicle \\
+5 & SPECIAL\_ACTION\_DANCE1 & Applies dancing animation for player \\
+6 & SPECIAL\_ACTION\_DANCE2 & Applies dancing animation for player \\
+7 & SPECIAL\_ACTION\_DANCE3 & Applies dancing animation for player \\
+8 & SPECIAL\_ACTION\_DANCE4 & Applies dancing animation for player \\
+10 & SPECIAL\_ACTION\_HANDSUP & Make the player put hands up \\
+11 & SPECIAL\_ACTION\_USECELLPHONE & Make the player speaking on cellphone \\
+12 & SPECIAL\_ACTION\_SITTING & Detects if the player is sitting \\
+13 & SPECIAL\_ACTION\_STOPUSECELLPHONE & Makes players stop using cellphone \\
+20 & SPECIAL\_ACTION\_DRINK\_BEER & Icrease the player's drunk level \\
+21 & SPECIAL\_ACTION\_SMOKE\_CIGGY & Give the player a cigar \\
+22 & SPECIAL\_ACTION\_DRINK\_WINE & Give the player a wine bottle \\
+23 & SPECIAL\_ACTION\_DRINK\_SPRUNK & Give the player a sprunk bottle \\
+24 & SPECIAL\_ACTION\_CUFFED & Force the player in to cuffs \\
+25 & SPECIAL\_ACTION\_CARRY & Apply a carrying animation to the player \\
+68 & SPECIAL\_ACTION\_PISSING & Player performs the pissing animation \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/specialactions}
+
+
+\subsection{Spectate Modes}
+Used by \textit{PlayerSpectatePlayer} and \textit{PlayerSpectateVehicle} functions.
+\bigskip
+\\\begin{tabular}{ |l|l| }
+\hline
+Name & Description \\
+\hline
+SPECTATE\_MODE\_NORMAL & Normal spectate mode - third person camera \\
+SPECTATE\_MODE\_FIXED & Used with SetPlayerCameraPos function \\
+SPECTATE\_MODE\_SIDE & Camera will be attached to the side of the player/vehicle \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/spectatemodes}
 
 
 
