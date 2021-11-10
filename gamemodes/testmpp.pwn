@@ -62,6 +62,7 @@ new pickupWeapVibrator;
 new pickupWeapVibrator2;
 new pickupWeapFlowers;
 new pickupWeapCane;
+new pickupWeapPhone;
 new pickupWeapGrenade;
 new pickupWeapTeargas;
 new pickupWeapMolotov;
@@ -91,6 +92,8 @@ new pickupWeapNGoggles;
 new pickupWeapTGoggles;
 new pickupWeapParachute;
 new pickupArmor;
+new pickupBeerBottle1;
+new pickupBeerBottle2;
 
 //Get Vehicle Model
 new VehicleModelID = 0;
@@ -423,7 +426,7 @@ public OnGameModeInit()
 	pickupWeapVibrator2 = CreatePickup(PICKUP_WEAP_VIBRATOR2, PICKUP_TYPE_RESPAWN_30S, 410.5590, 2480.2830, 16.4844, -1);
 	pickupWeapFlowers = CreatePickup(PICKUP_WEAP_FLOWERS, PICKUP_TYPE_RESPAWN_30S, 405.5590, 2480.2830, 16.4844, -1);
 	pickupWeapCane = CreatePickup(PICKUP_WEAP_CANE, PICKUP_TYPE_RESPAWN_30S, 400.5590, 2480.2830, 16.4844, -1);
-	CreatePickup(PICKUP_WEAP_PHONE, PICKUP_TYPE_SCRIPTED, 395.5590, 2480.2830, 16.4844, -1);
+	pickupWeapPhone = CreatePickup(PICKUP_WEAP_PHONE, PICKUP_TYPE_RESPAWN_30S, 395.5590, 2480.2830, 16.4844, -1);
 	pickupWeapBrassKnuckles = CreatePickup(PICKUP_WEAP_BRASSKNUCKLES, PICKUP_TYPE_RESPAWN_30S, 390.5590, 2480.2830, 16.4844, -1);
 	pickupWeapGolfClub = CreatePickup(PICKUP_WEAP_GOLFCLUB, PICKUP_TYPE_RESPAWN_30S, 385.5590, 2480.2830, 16.4844, -1);
 	pickupWeapNightStick = CreatePickup(PICKUP_WEAP_NIGHTSTICK, PICKUP_TYPE_RESPAWN_30S, 380.5590, 2480.2830, 16.4844, -1);
@@ -509,8 +512,8 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_GIFTSMALL, PICKUP_TYPE_SCRIPTED, 220.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_GIFTBIG, PICKUP_TYPE_SCRIPTED, 215.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_BEERBOTTLE1, PICKUP_TYPE_SCRIPTED, 210.5590, 2486.2830, 16.4844, -1);
-	CreatePickup(PICKUP_BEERBOTTLE2, PICKUP_TYPE_SCRIPTED, 205.5590, 2486.2830, 16.4844, -1);
-	CreatePickup(PICKUP_BEERBOTTLE3, PICKUP_TYPE_SCRIPTED, 200.5590, 2486.2830, 16.4844, -1);
+	pickupBeerBottle1 = CreatePickup(PICKUP_BEERBOTTLE2, PICKUP_TYPE_RESPAWN_30S, 205.5590, 2486.2830, 16.4844, -1);
+	pickupBeerBottle2 = CreatePickup(PICKUP_BEERBOTTLE3, PICKUP_TYPE_RESPAWN_30S, 200.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_NAVALMINE, PICKUP_TYPE_SCRIPTED, 195.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_DONUTS, PICKUP_TYPE_SCRIPTED, 190.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_NITRO1, PICKUP_TYPE_SCRIPTED, 185.5590, 2486.2830, 16.4844, -1);
@@ -736,15 +739,6 @@ public OnGameModeInit()
 	gActorDummy = CreateActor(SKIN_BMYST, 428.687, 2531.6868, 16.5926, 180);
 	SetActorInvulnerable(gActorDummy, false);
 
-	//TestObjects - Remove Later
-	/*CreateObject(OBJECT_CJ_PHONE_KIOSK2, 425.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_WASTEBIN, 420.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_O2TANKS, 415.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_SHTROLLY, 410.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_TRAFFIC_LIGHT4, 405.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_TRAFFIC_LIGHT5, 400.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_TRAFFIC_LIGHT3, 395.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);
-	CreateObject(OBJECT_CJ_AIRCON, 390.5590, 2498.2830, 16.4844, 0.0, 0.0, 96.0);*/
 
 	return 1;
 }
@@ -833,6 +827,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /help setvehiclehealth for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/weather [ID] (type /help weather for weather ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin; /myname");
+			SendClientMessage(playerid, COLOR_ORANGE, "/cancelaction");
 		}
 		else if (strcmp(tmp, "explosion") == 0) {
 			SendClientMessage(playerid, COLOR_MAGENTA, "/explosion [ID]");
@@ -1896,6 +1891,12 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+	//CANCEL SPECIAL ACTIONS
+	if(strcmp(cmdtext, "/cancelaction", true) == 0) {
+		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
+		return 1;
+	}
+
 
 	return 0;
 }
@@ -1978,6 +1979,9 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	}
 	else if(pickupid == pickupWeapCane) {
 		GivePlayerWeapon(playerid, WEAP_CANE, 1);
+	}
+	else if(pickupid == pickupWeapPhone) {
+		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USECELLPHONE);
 	}
 	else if(pickupid == pickupWeapBrassKnuckles) {
 		GivePlayerWeapon(playerid, WEAP_BRASSKNUCKLES, 1);
@@ -2092,6 +2096,12 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	}
 	else if(pickupid == pickupArmor) {
 		SetPlayerArmour(playerid, 100);
+	}
+	else if(pickupid == pickupBeerBottle1) {
+		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DRINK_WINE);
+	}
+	else if(pickupid == pickupBeerBottle2) {
+		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DRINK_BEER);
 	}
 
 	return 1;
