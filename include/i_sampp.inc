@@ -46,6 +46,7 @@ stock isampp_console_printversion() {
 
 stock pawncc_console_printversion() {
 	printf("Pawn Community Compiler %d.%02d.%02d", __Pawn >>> 8, __Pawn & 0xFF, __PawnBuild);
+	return 1;
 }
 
 
