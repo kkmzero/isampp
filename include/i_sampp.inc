@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2021, Ivan Kmeťo
+ * 2018 - 2022, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -36,7 +36,7 @@
 #include <i_sampp/i_weatherids>
 
 new ISAMPP_VERSION[5] = "v1.8";
-new ISAMPP_VERID = 202118;
+new ISAMPP_VERID = 202218;
 
 
 stock isampp_console_printversion() {
