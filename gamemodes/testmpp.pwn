@@ -1,7 +1,7 @@
 /*
  * This file is part of Includes for San Andreas Multiplayer+
  * as its sandbox game mode for San Andreas Multiplayer Mod (SA-MP)
- * 2018 - 2021, Ivan Kmeto
+ * 2018 - 2022, Ivan Kmeto
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -768,7 +768,7 @@ public OnPlayerConnect(playerid)
 		case 202115: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.5");
 		case 202116: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.6");
 		case 202117: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.7");
-		case 202118: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.8");
+		case 202218: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP 1.8");
 		default: SendClientMessage(playerid, COLOR_MAGENTA, "ISAMPP Unknown version");
 	}
 
