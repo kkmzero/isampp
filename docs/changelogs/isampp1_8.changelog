@@ -5,6 +5,8 @@ Changes in ISAMPP 1.8
 - New function pawncc_console_printversion() (i_sampp.inc)
 - New definitions for sounds (i_soundids.inc)
 - Defined 1124 new game objects (i_objects.inc)
+- Game objects are now in separate files according to their IDE files
+- Game objects now use prefix OBJ_
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
