@@ -1,5 +1,5 @@
 % This file is part of documentation for ISAMPP
-% 2018 - 2021, Ivan Kmeťo
+% 2018 - 2022, Ivan Kmeťo
 %
 % CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 % https://creativecommons.org/publicdomain/zero/1.0/
@@ -22,7 +22,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 \title{Includes for San Andreas Multiplayer Plus\\Version 1.8, Documentation}
 \author{Ivan Kmeťo}
-\date{December 2021}
+\date{January 2022}
 
 
 \begin{document}
@@ -41,6 +41,9 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \\- New legacy functions rot13, strcpy, strclr, strisempty, strtolower, strtoupper \textit{(i\_funcl.inc)}
 \\- New function pawncc\_console\_printversion() \textit{(i\_sampp.inc)}
 \\- New definitions for sounds \textit{(i\_soundids.inc)}
+\\- Defined 1124 new game objects \textit{(i\_objects.inc)}
+\\- Game objects are now in separate files according to their IDE files
+\\- Game objects now use prefix \textit{OBJ\_}
 \\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
@@ -346,7 +349,7 @@ There are in total 64 map icons included as macro defines with prefix \textit{IC
 
 
 \section{Objects}
-Available objects in order by ID number. Every game object is listed with prefix \textit{OBJECT\_} followed by its name of DFF file.
+Available game objects are in order by IDE file and ID number. Every game object is listed with prefix \textit{OBJ\_} followed by its name of DFF file.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/samp_objects}
 
