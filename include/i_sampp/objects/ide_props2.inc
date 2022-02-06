@@ -10,7 +10,7 @@
 //props2.ide
 #define OBJ_CJ_ICE_FRIDGE_2        2360    //CJ_ICE_FRIDGE_2.dff
 #define OBJ_CJ_ICE_FRIDGE_1        2361    //CJ_ICE_FRIDGE_1.dff
-#define OBJ_SWEETIE_TRAY_1         2362    //CJ_SWEETIE_TRAY_1.dff
+#define OBJ_CJ_SWEETIE_TRAY_1      2362    //CJ_SWEETIE_TRAY_1.dff
 #define OBJ_CJ_SHOP_SIGN_1         2363    //CJ_SHOP_SIGN_1.dff
 #define OBJ_CJ_SHOP_SIGN_2         2364    //CJ_SHOP_SIGN_2.dff
 #define OBJ_SHOPPING_BASKET        2365    //SHOPPING_BASKET.dff
@@ -101,7 +101,7 @@
 #define OBJ_CJ_FF_CONTER_5B        2450    //CJ_FF_CONTER_5b.dff
 #define OBJ_CJ_FF_WORKTOP_3        2451    //CJ_FF_WORKTOP_3.dff
 #define OBJ_CJ_FF_FRIDGE2          2452    //CJ_FF_FRIDGE2.dff
-#define OBJ_PIZZA_DISPF            2453    //CJ_PIZZA_DISPf.dff
+#define OBJ_CJ_PIZZA_DISPF         2453    //CJ_PIZZA_DISPf.dff
 #define OBJ_CJ_FF_CONTER_8B        2454    //CJ_FF_CONTER_8b.dff
 #define OBJ_CJ_FF_CONTER_8         2455    //CJ_FF_CONTER_8.dff
 #define OBJ_CJ_FF_STAND02          2456    //CJ_FF_STAND02.dff
