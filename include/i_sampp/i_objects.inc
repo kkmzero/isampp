@@ -19,3 +19,4 @@
 #include <i_sampp/objects/ide_props>
 #include <i_sampp/objects/ide_props2>
 #include <i_sampp/objects/ide_levelxre>
+#include <i_sampp/objects/ide_counxref>
