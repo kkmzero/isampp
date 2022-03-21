@@ -21,3 +21,4 @@
 #include <i_sampp/objects/ide_levelxre>
 #include <i_sampp/objects/ide_counxref>
 #include <i_sampp/objects/ide_vegaxref>
+#include <i_sampp/objects/ide_laxref>
