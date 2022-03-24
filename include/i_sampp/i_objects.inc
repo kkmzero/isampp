@@ -22,3 +22,4 @@
 #include <i_sampp/objects/ide_counxref>
 #include <i_sampp/objects/ide_vegaxref>
 #include <i_sampp/objects/ide_laxref>
+#include <i_sampp/objects/ide_sfxref>
