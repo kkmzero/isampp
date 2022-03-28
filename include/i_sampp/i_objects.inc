@@ -24,3 +24,4 @@
 #include <i_sampp/objects/ide_laxref>
 #include <i_sampp/objects/ide_sfxref>
 #include <i_sampp/objects/ide_levelmap>
+#include <i_sampp/objects/ide_lan>
