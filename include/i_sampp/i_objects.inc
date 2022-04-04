@@ -25,3 +25,4 @@
 #include <i_sampp/objects/ide_sfxref>
 #include <i_sampp/objects/ide_levelmap>
 #include <i_sampp/objects/ide_lan>
+#include <i_sampp/objects/ide_seabed>
