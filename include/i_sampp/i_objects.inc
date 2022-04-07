@@ -26,3 +26,4 @@
 #include <i_sampp/objects/ide_levelmap>
 #include <i_sampp/objects/ide_lan>
 #include <i_sampp/objects/ide_seabed>
+#include <i_sampp/objects/ide_lan2>
