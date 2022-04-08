@@ -23,7 +23,7 @@ Changes in ISAMPP 1.9
 - PICKUP_STRIPEDQUESTIONM renamed to PICKUP_NOMODELFILE (i_pickupids.inc)
 - PICKUP_REDARROWDOWN renamed to PICKUP_ARROWTYPE4 (i_pickupids.inc)
 - PICKUP_YELLOWENMARKER renamed to PICKUP_ENEXMARKER3 (i_pickupids.inc)
-- ICKUP_LANDMINE2 renamed to PICKUP_LANDMINE1 (i_pickupids.inc)
+- PICKUP_LANDMINE2 renamed to PICKUP_LANDMINE1 (i_pickupids.inc)
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
