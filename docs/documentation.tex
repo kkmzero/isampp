@@ -22,7 +22,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 \title{Includes for San Andreas Multiplayer Plus\\Version 1.9, Documentation}
 \author{Ivan Kmeťo}
-\date{February 2022}
+\date{April 2022}
 
 
 \begin{document}
@@ -38,7 +38,8 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \newpage
 \section{Changes in ISAMPP 1.9}
 \textbf{ISAMPP Library:}
-\\- 
+\\- Completed object list for props2.ide \textit{(ide\_props2.inc)}
+\\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
 \\- 
@@ -1131,6 +1132,48 @@ SPECTATE\_MODE\_SIDE & Camera will be attached to the side of the player/vehicle
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/spectatemodes}
+
+
+\newpage
+\subsection{Starting IDs}
+Everything like objects, players or vehicles use IDs. Some IDs start with 0, others start with 1. If you plan to use an array to hold all IDs you might have to subtract 1 to get the array element ID.
+\bigskip
+\\\begin{tabular}{ |c|l| }
+\hline
+Starting ID & Type \\
+\hline
+0 & 3D Text Label \\
+0 & Actor \\
+0 & File \\
+0 & GangZone \\
+1 & Object \\
+0 & Pickup \\
+0 & Player \\
+0 & Player Class \\
+0 & TextDraw / PlayerTextDraw \\
+1 & Timer \\
+1 & Vehicle \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/startingids}
+
+
+\subsection{Svar Types}
+Used by \textit{GetSVarType(\textbf{varname})} function.
+\bigskip
+\\\begin{tabular}{ |c|l| }
+\hline
+Value & Name \\
+\hline
+0 & SERVER\_VARTYPE\_NONE \\
+1 & SERVER\_VARTYPE\_INT \\
+2 & SERVER\_VARTYPE\_STRING \\
+3 & SERVER\_VARTYPE\_FLOAT \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/svartypes}
 
 
 
