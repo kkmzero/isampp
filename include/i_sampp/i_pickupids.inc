@@ -1,150 +1,150 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2021, Ivan Kmeťo
+ * 2018 - 2022, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
  */
 
 
-#define PICKUP_GIFTSMALL           327
-#define PICKUP_GIFTBIG             328
-#define PICKUP_HORSESHOE           954
-#define PICKUP_NITRO1              1008
-#define PICKUP_NITRO2              1009
-#define PICKUP_NITRO3              1010
-#define PICKUP_BRIEFCASE           1210
-#define PICKUP_MONEY               1212
-#define PICKUP_LANDMINE            1213
-#define PICKUP_INFO                1239
-#define PICKUP_HEART               1240
-#define PICKUP_PILL                1241
-#define PICKUP_ARMOR               1242
-#define PICKUP_BRIBE               1247
-#define PICKUP_GTA3LOGO            1248
-#define PICKUP_BARRELEXPLOSIVE     1252
-#define PICKUP_PHOTOOP             1253
-#define PICKUP_RAMPAGESSKULL       1254
-#define PICKUP_PROPERTYBLUE        1272
-#define PICKUP_PROPERTYGRN         1273
-#define PICKUP_DOLLAR              1274
-#define PICKUP_BLSHIRT             1275
-#define PICKUP_TIKI                1276
-#define PICKUP_SAVE                1277
-#define PICKUP_DRUGS               1279
-#define PICKUP_ALTPARACHUTE        1310
-#define PICKUP_RAMPAGEMSKULL       1313
-#define PICKUP_TWOPLAYER           1314
-#define PICKUP_CORONA              1316
-#define PICKUP_CHECKPOINT          1317
-#define PICKUP_WHITEARROW          1318
-#define PICKUP_BEERBOTTLE1         1484
-#define PICKUP_BEERBOTTLE2         1486
-#define PICKUP_BEERBOTTLE3         1543
-#define PICKUP_MONEYBAG            1550
-#define PICKUP_YELLOWARROW         1559
-#define PICKUP_WDRUGS              1575
-#define PICKUP_ODRUGS              1576
-#define PICKUP_YDRUGS              1577
-#define PICKUP_GDRUGS              1578
-#define PICKUP_BDRUGS              1579
-#define PICKUP_RDRUGS              1580
-#define PICKUP_KEYCARD             1581
-#define PICKUP_PIZZABOX            1582
-#define PICKUP_RCBOMB              1636
-#define PICKUP_YELLOWBOTTLE        1644
-#define PICKUP_PETROLCAN           1650
-#define PICKUP_DYNAMITE            1654
-#define PICKUP_CJSAWNOFF2          2033
-#define PICKUP_CJSAWNOFF           2034
-#define PICKUP_RUSTYM4             2035
-#define PICKUP_RUSTYSNIPER         2036
-#define PICKUP_CJAMMOBOX           2037
-#define PICKUP_CJMP5               2044
-#define PICKUP_CJBBATNAILS         2045
-#define PICKUP_FLAMETINS           2057
-#define PICKUP_PAPERTARGETS        2058
-#define PICKUP_SCATTEREDPAPERS     2059
-#define PICKUP_SANDBAG             2060
-#define PICKUP_TWOROUNDS           2061
-#define PICKUP_CJFIELDGUN          2064
-#define PICKUP_DONUTS              2222
-#define PICKUP_SQUARESHOVEL        2228
-#define PICKUP_CJSHOVEL2           2237
-#define PICKUP_EXTINGUISHER        2690
-#define PICKUP_PAINKILLER          2709
-#define PICKUP_WATCH               2710
-#define PICKUP_RHYMEBOOK           2894
-#define PICKUP_NAVALMINE           2918
-#define PICKUP_AIDKIT              11736
-#define PICKUP_MEDCASE             11738
-#define PICKUP_STRIPEDQUESTIONM    18631
-#define PICKUP_XMASBOX1            19054
-#define PICKUP_XMASBOX2            19055
-#define PICKUP_XMASBOX3            19056
-#define PICKUP_XMASBOX4            19057
-#define PICKUP_XMASBOX5            19058
-#define PICKUP_ARROWTYPE1          19130
-#define PICKUP_ARROWTYPE2          19131
-#define PICKUP_ARROWTYPE3          19132
-#define PICKUP_REDARROWDOWN        19133
-#define PICKUP_ARROWTYPE5          19134
-#define PICKUP_ENEXMARKER1         19135
-#define PICKUP_ENEXMARKER2         19197
-#define PICKUP_YELLOWENMARKER      19198
-#define PICKUP_PUMPKIN             19320
-#define PICKUP_PROPERTYRED         19522
-#define PICKUP_PROPERTYORANGE      19523
-#define PICKUP_PROPERTYYELLOW      19524
-#define PICKUP_LANDMINE2           19602
-#define PICKUP_ENEXMARKERRED       19605
-#define PICKUP_ENEXMARKERGREEN     19606
-#define PICKUP_ENEXMARKERBLUE      19607
-#define PICKUP_AMMOBOX             19832
+#define PICKUP_GUNBOXSMALL         327     //gun_boxwee.dff
+#define PICKUP_GUNBOXBIG           328     //gun_boxbig.dff
+#define PICKUP_HORSESHOE           954     //cj_horse_Shoe.dff
+#define PICKUP_NITRO1              1008    //nto_b_l.dff
+#define PICKUP_NITRO2              1009    //nto_b_s.dff
+#define PICKUP_NITRO3              1010    //nto_b_tw.dff
+#define PICKUP_BRIEFCASE           1210    //briefcase.dff
+#define PICKUP_MONEY               1212    //Money.dff
+#define PICKUP_MINE                1213    //mine.dff
+#define PICKUP_INFO                1239    //info.dff
+#define PICKUP_HEALTH              1240    //health.dff
+#define PICKUP_ADRENALINE          1241    //adrenaline.dff
+#define PICKUP_BODYARMOUR          1242    //bodyarmour.dff
+#define PICKUP_BRIBE               1247    //bribe.dff
+#define PICKUP_BONUS               1248    //bonus.dff
+#define PICKUP_BARRELEXPLOSIVE     1252    //barrelexpos.dff
+#define PICKUP_PHOTOOP             1253    //camerapickup.dff
+#define PICKUP_KILLFRENZY          1254    //killfrenzy.dff
+#define PICKUP_PROPERTY_LOCKED     1272    //property_locked.dff
+#define PICKUP_PROPERTY_FSALE      1273    //property_fsale.dff
+#define PICKUP_BIGDOLLAR           1274    //bigdollar.dff
+#define PICKUP_CLOTHES             1275    //clothesp.dff
+#define PICKUP_TIKI                1276    //package1.dff
+#define PICKUP_SAVE                1277    //pickupsave.dff
+#define PICKUP_CRAIGPACKAGE        1279    //craigpackage.dff
+#define PICKUP_ALTPARACHUTE        1310    //pikupparachute.dff
+#define PICKUP_KILLFRENZY2         1313    //killfrenzy2plyr.dff
+#define PICKUP_TWOPLAYER           1314    //twoplayer.dff
+#define PICKUP_CORONA              1316    //hoop.dff
+#define PICKUP_CHECKPOINT          1317    //Cylinder.dff
+#define PICKUP_WHITEARROW          1318    //arrow.dff
+#define PICKUP_BEERBOTTLE1         1484    //CJ_BEAR_BOTTLE.dff
+#define PICKUP_BEERBOTTLE2         1486    //DYN_BEER_1.dff
+#define PICKUP_BEERBOTTLE3         1543    //CJ_BEER_B_2.dff
+#define PICKUP_MONEYBAG            1550    //CJ_MONEY_BAG.dff
+#define PICKUP_YELLOWARROW         1559    //diamond_3.dff
+#define PICKUP_WDRUGS              1575    //drug_white.dff
+#define PICKUP_ODRUGS              1576    //drug_orange.dff
+#define PICKUP_YDRUGS              1577    //drug_yellow.dff
+#define PICKUP_GDRUGS              1578    //drug_green.dff
+#define PICKUP_BDRUGS              1579    //drug_blue.dff
+#define PICKUP_RDRUGS              1580    //drug_red.dff
+#define PICKUP_KEYCARD             1581    //keycard.dff
+#define PICKUP_PIZZABOX            1582    //pizzabox.dff
+#define PICKUP_RCBOMB              1636    //rcbomb.dff
+#define PICKUP_LOTION              1644    //lotion.dff
+#define PICKUP_PETROLCAN           1650    //petrolcanm.dff
+#define PICKUP_DYNAMITE            1654    //dynamite.dff
+#define PICKUP_CJSAWNOFF2          2033    //CJ_sawnoff2.dff
+#define PICKUP_CJSAWNOFF           2034    //CJ_sawnoff.dff
+#define PICKUP_CJM16               2035    //CJ_M16.dff
+#define PICKUP_CJPSG1              2036    //CJ_psg1.dff
+#define PICKUP_CJAMMOBOX           2037    //CJ_PISTOL_AMMO.dff
+#define PICKUP_CJMP5               2044    //CJ_MP5K.dff
+#define PICKUP_CJBBATNAILS         2045    //CJ_BBAT_NAILS.dff
+#define PICKUP_FLAMETINS           2057    //Flame_tins.dff
+#define PICKUP_PAPERTARGETS        2058    //CJ_Gun_docs.dff
+#define PICKUP_SCATTEREDPAPERS     2059    //CJ_GUNSTUFF1.dff
+#define PICKUP_SANDBAG             2060    //CJ_SANDBAG.dff
+#define PICKUP_TWOROUNDS           2061    //CJ_SHELLS1.dff
+#define PICKUP_CJFIELDGUN          2064    //CJ_FEILDGUN.dff
+#define PICKUP_DONUTS              2222    //rustyhigh.dff
+#define PICKUP_CJSHOVEL            2228    //CJ_SHOVEL.dff
+#define PICKUP_CJSHOVEL2           2237    //CJ_SHOVEL2.dff
+#define PICKUP_EXTINGUISHER        2690    //CJ_FIRE_EXT.dff
+#define PICKUP_PAINKILLER          2709    //Pain_Killer.dff
+#define PICKUP_WATCH               2710    //WATCH_PICKUP.dff
+#define PICKUP_RHYMEBOOK           2894    //kmb_rhymesbook.dff
+#define PICKUP_NAVALMINE           2918    //kmb_mine.dff
+#define PICKUP_AIDKIT              11736   //MedicalSatchel1.dff
+#define PICKUP_MEDCASE             11738   //MedicCase1.dff
+#define PICKUP_NOMODELFILE         18631   //NoModelFile.dff
+#define PICKUP_XMASBOX1            19054   //XmasBox1.dff
+#define PICKUP_XMASBOX2            19055   //XmasBox2.dff
+#define PICKUP_XMASBOX3            19056   //XmasBox3.dff
+#define PICKUP_XMASBOX4            19057   //XmasBox4.dff
+#define PICKUP_XMASBOX5            19058   //XmasBox5.dff
+#define PICKUP_ARROWTYPE1          19130   //ArrowType1.dff
+#define PICKUP_ARROWTYPE2          19131   //ArrowType2.dff
+#define PICKUP_ARROWTYPE3          19132   //ArrowType3.dff
+#define PICKUP_ARROWTYPE4          19133   //ArrowType4.dff
+#define PICKUP_ARROWTYPE5          19134   //ArrowType5.dff
+#define PICKUP_ENEXMARKER1         19135   //EnExMarker1.dff
+#define PICKUP_ENEXMARKER2         19197   //EnExMarker2.dff
+#define PICKUP_ENEXMARKER3         19198   //EnExMarker3.dff
+#define PICKUP_PUMPKIN             19320   //pumpkin01.dff
+#define PICKUP_PROPERTYRED         19522   //property_red.dff
+#define PICKUP_PROPERTYORANGE      19523   //property_orange.dff
+#define PICKUP_PROPERTYYELLOW      19524   //property_yellow.dff
+#define PICKUP_LANDMINE1           19602   //Landmine1.dff
+#define PICKUP_ENEXMARKERRED       19605   //EnExMarker4-2.dff
+#define PICKUP_ENEXMARKERGREEN     19606   //EnExMarker4-3.dff
+#define PICKUP_ENEXMARKERBLUE      19607   //EnExMarker4-4.dff
+#define PICKUP_AMMOBOX             19832   //AmmoBox1.dff
 
-#define PICKUP_WEAP_RDILDO         321
-#define PICKUP_WEAP_WDILDO         322
-#define PICKUP_WEAP_VIBRATOR       323
-#define PICKUP_WEAP_VIBRATOR2      324
-#define PICKUP_WEAP_FLOWERS        325
-#define PICKUP_WEAP_CANE           326
-#define PICKUP_WEAP_PHONE          330
-#define PICKUP_WEAP_BRASSKNUCKLES  331
-#define PICKUP_WEAP_GOLFCLUB       333
-#define PICKUP_WEAP_NIGHTSTICK     334
-#define PICKUP_WEAP_KNIFE          335
-#define PICKUP_WEAP_BASEBALLBAT    336
-#define PICKUP_WEAP_SHOVEL         337
-#define PICKUP_WEAP_POOLCUE        338
-#define PICKUP_WEAP_KATANA         339
-#define PICKUP_WEAP_CHAINSAW       341
-#define PICKUP_WEAP_GRENADE        342
-#define PICKUP_WEAP_TEARGAS        343
-#define PICKUP_WEAP_MOLOTOV        344
-#define PICKUP_WEAP_PISTOL         346
-#define PICKUP_WEAP_SILENCEDPISTOL 347
-#define PICKUP_WEAP_DEAGLE         348
-#define PICKUP_WEAP_SHOTGUN        349
-#define PICKUP_WEAP_SAWNOFF        350
-#define PICKUP_WEAP_AUTOSHOTGUN    351
-#define PICKUP_WEAP_MICROUZI       352
-#define PICKUP_WEAP_MP5            353
-#define PICKUP_WEAP_HYDRAFLARE     354
-#define PICKUP_WEAP_AK47           355
-#define PICKUP_WEAP_M4             356
-#define PICKUP_WEAP_RIFLE          357
-#define PICKUP_WEAP_SNIPERRIFLE    358
-#define PICKUP_WEAP_RPG            359
-#define PICKUP_WEAP_HEATRPG        360
-#define PICKUP_WEAP_FLAMETHROWER   361
-#define PICKUP_WEAP_MINIGUN        362
-#define PICKUP_WEAP_SATCHEL        363
-#define PICKUP_WEAP_DETONATOR      364
-#define PICKUP_WEAP_SPRAY          365
-#define PICKUP_WEAP_EXTINGUISHER   366
-#define PICKUP_WEAP_CAMERA         367
-#define PICKUP_WEAP_NGOGGLES       368
-#define PICKUP_WEAP_TGOGGLES       369
-#define PICKUP_WEAP_JETPACK        370
-#define PICKUP_WEAP_PARACHUTE      371
-#define PICKUP_WEAP_TEC9           372
+#define PICKUP_WEAP_RDILDO         321     //gun_dildo1.dff
+#define PICKUP_WEAP_WDILDO         322     //gun_dildo2.dff
+#define PICKUP_WEAP_VIBRATOR       323     //gun_vibe1.dff
+#define PICKUP_WEAP_VIBRATOR2      324     //gun_vibe2.dff
+#define PICKUP_WEAP_FLOWERS        325     //flowera.dff
+#define PICKUP_WEAP_CANE           326     //gun_cane.dff
+#define PICKUP_WEAP_PHONE          330     //cellphone.dff
+#define PICKUP_WEAP_BRASSKNUCKLES  331     //brassknuckle.dff
+#define PICKUP_WEAP_GOLFCLUB       333     //golfclub.dff
+#define PICKUP_WEAP_NIGHTSTICK     334     //nitestick.dff
+#define PICKUP_WEAP_KNIFE          335     //knifecur.dff
+#define PICKUP_WEAP_BASEBALLBAT    336     //bat.dff
+#define PICKUP_WEAP_SHOVEL         337     //shovel.dff
+#define PICKUP_WEAP_POOLCUE        338     //poolcue.dff
+#define PICKUP_WEAP_KATANA         339     //katana.dff
+#define PICKUP_WEAP_CHAINSAW       341     //chnsaw.dff
+#define PICKUP_WEAP_GRENADE        342     //grenade.dff
+#define PICKUP_WEAP_TEARGAS        343     //teargas.dff
+#define PICKUP_WEAP_MOLOTOV        344     //molotov.dff
+#define PICKUP_WEAP_PISTOL         346     //colt45.dff
+#define PICKUP_WEAP_SILENCEDPISTOL 347     //silenced.dff
+#define PICKUP_WEAP_DEAGLE         348     //desert_eagle.dff
+#define PICKUP_WEAP_SHOTGUN        349     //chromegun.dff
+#define PICKUP_WEAP_SAWNOFF        350     //sawnoff.dff
+#define PICKUP_WEAP_AUTOSHOTGUN    351     //shotgspa.dff
+#define PICKUP_WEAP_MICROUZI       352     //micro_uzi.dff
+#define PICKUP_WEAP_MP5            353     //mp5lng.dff
+#define PICKUP_WEAP_HYDRAFLARE     354     //flare.dff
+#define PICKUP_WEAP_AK47           355     //ak47.dff
+#define PICKUP_WEAP_M4             356     //m4.dff
+#define PICKUP_WEAP_RIFLE          357     //cuntgun.dff
+#define PICKUP_WEAP_SNIPERRIFLE    358     //sniper.dff
+#define PICKUP_WEAP_RPG            359     //rocketla.dff
+#define PICKUP_WEAP_HEATRPG        360     //heatseek.dff
+#define PICKUP_WEAP_FLAMETHROWER   361     //flame.dff
+#define PICKUP_WEAP_MINIGUN        362     //minigun.dff
+#define PICKUP_WEAP_SATCHEL        363     //satchel.dff
+#define PICKUP_WEAP_DETONATOR      364     //bomb.dff
+#define PICKUP_WEAP_SPRAY          365     //spraycan.dff
+#define PICKUP_WEAP_EXTINGUISHER   366     //fire_ex.dff
+#define PICKUP_WEAP_CAMERA         367     //camera.dff
+#define PICKUP_WEAP_NGOGGLES       368     //nvgoggles.dff
+#define PICKUP_WEAP_TGOGGLES       369     //irgoggles.dff
+#define PICKUP_WEAP_JETPACK        370     //jetpack.dff
+#define PICKUP_WEAP_PARACHUTE      371     //gun_para.dff
+#define PICKUP_WEAP_TEC9           372     //tec9.dff
