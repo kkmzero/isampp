@@ -2,6 +2,28 @@ Changes in ISAMPP 1.9
 
 * ISAMPP Library *
 - Completed object list for props2.ide (ide_props2.inc)
+- PICKUP_GIFTSMALL renamed to PICKUP_GUNBOXSMALL (i_pickupids.inc)
+- PICKUP_GIFTBIG renamed to PICKUP_GUNBOXBIG (i_pickupids.inc)
+- PICKUP_LANDMINE renamed to PICKUP_MINE (i_pickupids.inc)
+- PICKUP_HEART renamed to PICKUP_HEALTH (i_pickupids.inc)
+- PICKUP_PILL renamed to PICKUP_ADRENALINE (i_pickupids.inc)
+- PICKUP_ARMOR renamed to PICKUP_BODYARMOUR (i_pickupids.inc)
+- PICKUP_GTA3LOGO renamed to PICKUP_BONUS (i_pickupids.inc)
+- PICKUP_RAMPAGESSKULL renamed to PICKUP_KILLFRENZY (i_pickupids.inc)
+- PICKUP_PROPERTYBLUE renamed to PICKUP_PROPERTY_LOCKED (i_pickupids.inc)
+- PICKUP_PROPERTYGRN renamed to PICKUP_PROPERTY_FSALE (i_pickupids.inc)
+- PICKUP_DOLLAR renamed to PICKUP_BIGDOLLAR (i_pickupids.inc)
+- PICKUP_BLSHIRT renamed to PICKUP_CLOTHES (i_pickupids.inc)
+- PICKUP_DRUGS renamed to PICKUP_CRAIGPACKAGE (i_pickupids.inc)
+- PICKUP_RAMPAGEMSKULL renamed to PICKUP_KILLFRENZY2 (i_pickupids.inc)
+- PICKUP_YELLOWBOTTLE renamed to PICKUP_LOTION (i_pickupids.inc)
+- PICKUP_RUSTYM4 renamed to PICKUP_CJM16 (i_pickupids.inc)
+- PICKUP_RUSTYSNIPER renamed to PICKUP_CJPSG1 (i_pickupids.inc)
+- PICKUP_SQUARESHOVEL renamed to PICKUP_CJSHOVEL (i_pickupids.inc)
+- PICKUP_STRIPEDQUESTIONM renamed to PICKUP_NOMODELFILE (i_pickupids.inc)
+- PICKUP_REDARROWDOWN renamed to PICKUP_ARROWTYPE4 (i_pickupids.inc)
+- PICKUP_YELLOWENMARKER renamed to PICKUP_ENEXMARKER3 (i_pickupids.inc)
+- ICKUP_LANDMINE2 renamed to ICKUP_LANDMINE1 (i_pickupids.inc)
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
