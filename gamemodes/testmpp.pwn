@@ -91,6 +91,7 @@ new pickupWeapCamera;
 new pickupWeapNGoggles;
 new pickupWeapTGoggles;
 new pickupWeapParachute;
+new pickupHealth;
 new pickupArmor;
 new pickupBeerBottle1;
 new pickupBeerBottle2;
@@ -471,7 +472,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_BRIEFCASE, PICKUP_TYPE_SCRIPTED, 425.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_MONEY, PICKUP_TYPE_SCRIPTED, 420.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_INFO, PICKUP_TYPE_SCRIPTED, 415.5590, 2486.2830, 16.4844, -1);
-	CreatePickup(PICKUP_HEALTH, PICKUP_TYPE_SCRIPTED, 410.5590, 2486.2830, 16.4844, -1);
+	pickupHealth = CreatePickup(PICKUP_HEALTH, PICKUP_TYPE_RESPAWN_30S, 410.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_ADRENALINE, PICKUP_TYPE_SCRIPTED, 405.5590, 2486.2830, 16.4844, -1);
 	pickupArmor = CreatePickup(PICKUP_BODYARMOUR, PICKUP_TYPE_RESPAWN_30S, 400.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_BRIBE, PICKUP_TYPE_SCRIPTED, 395.5590, 2486.2830, 16.4844, -1);
@@ -2094,6 +2095,9 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	}
 	else if(pickupid == pickupWeapTec9) {
 		GivePlayerWeapon(playerid, WEAP_TEC9, 100);
+	}
+	else if(pickupid == pickupHealth) {
+		SetPlayerHealth(playerid, 100);
 	}
 	else if(pickupid == pickupArmor) {
 		SetPlayerArmour(playerid, 100);
