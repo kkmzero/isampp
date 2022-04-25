@@ -372,6 +372,9 @@
 
 #define SND_VIDEOTAPE_LOOP            3800    //Videotape (continuous)
 
+#define SND_BALLAS_LINE1              4000    //Ballas: "Grove Street's going down!"
+#define SND_BALLAS_LINE2              4001    //Ballas: "Fuck them Grove Street fools!"
+
 #define SND_CASINO_WHEEL_START        4200    //Bandit wheel start
 #define SND_CASINO_COINS              4201    //Casino slot machine falling coins
 #define SND_CASINO_BLIP1              4202    //Casino slot machine blip
