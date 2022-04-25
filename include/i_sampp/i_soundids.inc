@@ -364,9 +364,12 @@
 
 #define SND_AIRHORN_SHORT             3200    //Air horn
 #define SND_AIRHORN_LONG              3201    //Air horn (longer than previous one)
+
 #define SND_AIRCONDITIONING           3400    //Air conditioning
-#define SND_BELLRING_LOOP             3401    //Continuous ringing bell
+#define SND_BELLRING_LOOP             3401    //Continuous ringing bell (Fire Alarm?)
+
 #define SND_PHONEDIAL                 3600    //Phone dialing
+
 #define SND_VIDEOTAPE_LOOP            3800    //Videotape (continuous)
 
 #define SND_CASINO_WHEEL_START        4200    //Bandit wheel start
