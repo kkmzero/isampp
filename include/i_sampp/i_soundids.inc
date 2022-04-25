@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2021, Ivan Kmeťo
+ * 2018 - 2022, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -13,9 +13,9 @@
 #define SND_HELI_DISABLE              1000    //Disable helicopter sounds
 #define SND_HELI_ENABLE               1001    //Enable helicopter sounds
 
-#define SND_CEILING_VENT_LAND         1002    //Vent dropped from ceiling
+#define SND_CEILING_VENT_DROP         1002    //Vent dropped from ceiling
 
-#define SND_HIT_CAR                   1009    //Player hitting the car
+#define SND_CAR_DENT                  1009    //Car part dent
 
 #define SND_WHEEL_OF_FORTUNE_CLACKER  1027    //Wheel Of Fortune clacker (Casino)
 
@@ -24,8 +24,8 @@
 
 #define SND_PARACHUTE_OPEN            1039    //Parachute opening
 
-#define SND_SHOP1_BUY                 1052    //Buy blip
-#define SND_SHOP1_BUY_DENIED          1053    //Buying failed (f.e. insufficient money)
+#define SND_SHOP1_BUY                 1052    //(Ammunation?) Buy blip
+#define SND_SHOP1_BUY_DENIED          1053    //(Ammunation?) Buying failed (f.e. insufficient money)
 #define SND_SHOP2_BUY                 1054    //Buy blip
 #define SND_SHOP2_BUY_DENIED          1055    //Buying failed (f.e. insufficient money)
 #define SND_RACE_COUNTDOWN            1056    //Race countdown blip
