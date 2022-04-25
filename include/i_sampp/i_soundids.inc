@@ -13,7 +13,7 @@
 #define SND_HELI_DISABLE              1000    //Disable helicopter sounds
 #define SND_HELI_ENABLE               1001    //Enable helicopter sounds
 
-#define SND_CEILING_VENT_DROP         1002    //Vent dropped from ceiling
+#define SND_VENT_DROP                 1002    //Vent dropped from ceiling
 
 #define SND_CAR_DENT                  1009    //Car part dent
 
@@ -60,10 +60,9 @@
 #define SND_VEH_RESPRAY               1134    //Respraying vehicle
 #define SND_BASEBALL_BAT_HIT_PED      1135    //Hitting ped with baseball bat
 #define SND_STAMP_PED                 1136    //Stamping ped
-#define SND_CHECKPOINT_BLIP1          1137    //Checkpoint blip
-#define SND_CHECKPOINT_BLIP2          1138    //Checkpoint blip
-#define SND_CHECKPOINT_BLIP3          1139    //Checkpoint blip
-
+#define SND_CHECKPOINT_BLIP1          1137    //Checkpoint blip (Amber)
+#define SND_CHECKPOINT_BLIP2          1138    //Checkpoint blip (Green)
+#define SND_CHECKPOINT_BLIP3          1139    //Checkpoint blip (Red)
 #define SND_VEH_SMASH1                1140    //Smashing vehicle
 #define SND_VEH_SMASH2                1141    //Smashing vehicle
 #define SND_OTB_TRACK_START           1142    //OTB Sound: start
@@ -73,7 +72,6 @@
 #define SND_SWEETS_HORN               1147    //Sweet's car horn
 #define SND_MAGNET_VEH_COLLISION      1148    //Attaching vehicle to magnet
 #define SND_PROPERTY_PURCHASED        1149    //Property purchased blip
-
 #define SND_PICKUP_BLIP               1150    //Picking up a pickup/selection blip
 
 #define SND_GARAGE_DOOR_LOOP_ALT      1153    //Garage doors opening/closing (same as SND_GARAGE_DOOR_LOOP)
