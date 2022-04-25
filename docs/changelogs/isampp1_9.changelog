@@ -2,6 +2,9 @@ Changes in ISAMPP 1.9
 
 * ISAMPP Library *
 - Completed object list for props2.ide (ide_props2.inc)
+- New sounds defined (i_soundids.inc)
+- SND_CEILING_VENT_LAND renamed to SND_VENT_DROP (i_soundids.inc)
+- SND_HIT_CAR renamed to SND_CAR_DENT (i_soundids.inc)
 - PICKUP_GIFTSMALL renamed to PICKUP_GUNBOXSMALL (i_pickupids.inc)
 - PICKUP_GIFTBIG renamed to PICKUP_GUNBOXBIG (i_pickupids.inc)
 - PICKUP_LANDMINE renamed to PICKUP_MINE (i_pickupids.inc)
