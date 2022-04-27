@@ -388,14 +388,30 @@
 #define SND_BASKETBALL_BOARDHIT       4603    //Basketball, ball hits backboard, bad shot
 #define SND_BASKETBALL_FIELDGOAL      4604    //Basketball, ball ripples net, good shot
 
-#define SND_GYM_LINE_1                4800    //Gym Guy: "Yo' you wanna learn some new moves?"
-#define SND_GYM_LINE_2                4801    //Gym Guy: "Suit youself homes, but the streets are mean dude."
-#define SND_GYM_LINE_3                4802    //Gym Guy: "Man you're an embarrassment, get yourselves some muscles first."
-#define SND_GYM_LINE_4                4803    //Gym Guy: "Hey you wanna go around with me?"
-#define SND_GYM_LINE_5                4804    //Gym Guy: "Yo' pay attention and you might learn something."
-#define SND_GYM_LINE_6                4805    //Gym Guy: "Yo' charge in and batter yo opponent!"
-#define SND_GYM_LINE_7                4806    //Gym Guy: "Make sure yo' opponent is down and out!"
-#define SND_GYM_LINE_8                4807    //Gym Guy: "Never give your opponent time to recover."
+#define SND_GYMGUY_LINE_1             4800    //Gym Guy: "Yo' you wanna learn some new moves?"
+#define SND_GYMGUY_LINE_2             4801    //Gym Guy: "Suit youself homes, but the streets are mean dude."
+#define SND_GYMGUY_LINE_3             4802    //Gym Guy: "Man you're an embarrassment, get yourselves some muscles first."
+#define SND_GYMGUY_LINE_4             4803    //Gym Guy: "Hey you wanna go around with me?"
+#define SND_GYMGUY_LINE_5             4804    //Gym Guy: "Yo' pay attention and you might learn something."
+#define SND_GYMGUY_LINE_6             4805    //Gym Guy: "Yo' charge in and batter yo opponent!"
+#define SND_GYMGUY_LINE_7             4806    //Gym Guy: "Make sure yo' opponent is down and out!"
+#define SND_GYMGUY_LINE_8             4807    //Gym Guy: "Never give your opponent time to recover."
+
+#define SND_CATALINA_LINE1            5000    //Catalina: "Oh Claude you're so big and manful."
+#define SND_CATALINA_LINE2            5001    //Catalina: "Claude, youre the best driver I've ever bedded!"
+#define SND_CATALINA_LINE3            5002    //Catalina: "Hands on the wheel, Claude, hands on the wheel!"
+#define SND_CATALINA_LINE4            5003    //Catalina: "Oh Claude, it's bigger than the gear stick!"
+#define SND_CATALINA_LINE5            5004    //Catalina: "I have never felt so satisfied!"
+#define SND_CATALINA_LINE6            5005    //Catalina: "Five orgasms in as many minutes!"
+#define SND_CATALINA_LINE7            5006    //Catalina: "Marry me, Claude, marry me!"
+#define SND_CATALINA_LINE8            5007    //Catalina: "Oh Claude, I don't know if I'm woman enough!"
+#define SND_CATALINA_LINE9            5008    //Catalina: "Hey, Carl, you drive like a drunken camel!"
+#define SND_CATALINA_LINE10           5009    //Catalina: "Carl, are you jealous, eh?"
+#define SND_CATALINA_LINE11           5010    //Catalina: "Claude has such girth, he is amazing!"
+#define SND_CATALINA_LINE12           5011    //Catalina: "Claude would make you feel inadequate."
+#define SND_CATALINA_LINE13           5012    //Catalina: "At last I have found a man to satisfy me!"
+#define SND_CATALINA_LINE14           5013    //Catalina: "Claude is so manful, so forceful!"
+#define SND_CATALINA_LINE15           5014    //Catalina: "I never knew there was so much more to sex!"
 
 #define SND_GAME_BUZZ_LOOP            5200    //Continuous buzz
 #define SND_GAME_BLING                5201    //Bling
