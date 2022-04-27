@@ -382,6 +382,12 @@
 
 #define SND_HAIRCUT                   4400    //Barber trimming hair (electric razor)
 
+#define SND_BASKETBALL_BOUNCE1        4600    //Basketball, ball bounce
+#define SND_BASKETBALL_BOUNCE2        4601    //Basketball, ball bounce
+#define SND_BASKETBALL_BOUNCE3        4602    //Basketball, ball bounce
+#define SND_BASKETBALL_BOARDHIT       4603    //Basketball, ball hits backboard, bad shot
+#define SND_BASKETBALL_FIELDGOAL      4604    //Basketball, ball ripples net, good shot
+
 #define SND_GYM_LINE_1                4800    //Gym Guy: "Yo' you wanna learn some new moves?"
 #define SND_GYM_LINE_2                4801    //Gym Guy: "Suit youself homes, but the streets are mean dude."
 #define SND_GYM_LINE_3                4802    //Gym Guy: "Man you're an embarrassment, get yourselves some muscles first."
