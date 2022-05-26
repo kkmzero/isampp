@@ -2,6 +2,7 @@ Changes in ISAMPP 1.9
 
 * ISAMPP Library *
 - Completed object list for props2.ide (ide_props2.inc)
+- New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
 - SND_GYM_ sounds use prefix SND_GYMGUY_ (i_soundids.inc)
 - SND_CROUPIER_ sounds use prefix SND_CROUPIERF_ (i_soundids.inc)
