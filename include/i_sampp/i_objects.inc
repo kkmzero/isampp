@@ -31,3 +31,4 @@
 #include <i_sampp/objects/ide_las2>
 #include <i_sampp/objects/ide_lae>
 #include <i_sampp/objects/ide_lawn>
+#include <i_sampp/objects/ide_law>
