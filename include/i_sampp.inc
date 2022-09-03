@@ -39,12 +39,12 @@ new ISAMPP_VERSION[5] = "v1.9";
 new ISAMPP_VERID = 202219;
 
 
-stock isampp_console_printversion() {
+stock print_isampp_version() {
 	printf("ISAMPP %s (%i)", ISAMPP_VERSION, ISAMPP_VERID);
 	return 1;
 }
 
-stock pawncc_console_printversion() {
+stock print_pawncc_version() {
 	printf("Pawn Community Compiler %d.%02d.%02d", __Pawn >>> 8, __Pawn & 0xFF, __PawnBuild);
 	return 1;
 }
