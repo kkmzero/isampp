@@ -38,6 +38,8 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \newpage
 \section{Changes in ISAMPP 1.9}
 \textbf{ISAMPP Library:}
+\\- Function isampp\_console\_printversion() renamed to print\_isampp\_version()
+\\- Function pawncc\_console\_printversion() renamed to print\_pawncc\_version()
 \\- Completed object list for props2.ide \textit{(ide\_props2.inc)}
 \\- New objects defined \textit{(i\_objects.inc)}
 \\- New sounds defined \textit{(i\_soundids.inc)}
@@ -477,24 +479,24 @@ Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}
 ISAMPP uses various stock functions which may be useful in creating your own game modes for SA-MP or simply for debugging purposes. These stock functions are defined in \textit{i\_sampp.inc} file.
 
 
-\subsection{isampp\_console\_printversion()}
+\subsection{print\_isampp\_version()}
 Outputs ISAMPP version to server console.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
 main() {
-    isampp_console_printversion();
+    print_isampp_version();
 }
 \end{verbatim}
 
 
-\subsection{pawncc\_console\_printversion()}
+\subsection{print\_pawncc\_version()}
 Outputs version of compiler to server console if Pawncc is used.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
 main() {
-    pawncc_console_printversion();
+    print_pawncc_version();
 }
 \end{verbatim}
 
