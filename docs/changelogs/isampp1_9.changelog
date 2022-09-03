@@ -1,6 +1,8 @@
 Changes in ISAMPP 1.9
 
 * ISAMPP Library *
+- Function isampp_console_printversion() renamed to print_isampp_version()
+- Function pawncc_console_printversion() renamed to print_pawncc_version()
 - Completed object list for props2.ide (ide_props2.inc)
 - New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
