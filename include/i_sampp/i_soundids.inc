@@ -19,7 +19,7 @@
 
 #define SND_WHEEL_OF_FORTUNE_CLACKER  1027    //Wheel Of Fortune clacker (Casino)
 
-#define SND_GARAGE_DOOR_LOOP          1035    //Garage doors opening/closing
+#define SND_GARAGE_DOOR_LOOP          1035    //Garage doors opening/closing loop
 #define SND_GARAGE_DOOR_STOP          1036    //Garage doors finish opening/closing
 
 #define SND_PARACHUTE_OPEN            1039    //Parachute opening
@@ -79,15 +79,15 @@
 
 #define SND_FEET_LAND_JUMP            1163    //Two-feet stomp (after jumping)
 
-#define SND_HANGAR_DOOR_LOOP          1165    //Hangar doors opening/closing 
+#define SND_HANGAR_DOOR_LOOP          1165    //Hangar doors opening/closing loop
 #define SND_HANGAR_DOOR_STOP          1166    //Hangar doors finish opening/closing
 
-#define SND_DRIVING_AWARD_TRACK_START 1183    //Driving School Award Music: Start
-#define SND_DRIVING_AWARD_TRACK_STOP  1184    //Driving School Award Music: Stop
-#define SND_BIKE_AWARD_TRACK_START    1185    //Bike School Award Music: Start
-#define SND_BIKE_AWARD_TRACK_STOP     1186    //Bike School Award Music: Stop
-#define SND_FLIGHT_AWARD_TRACK_START  1187    //Flight School Award Music: Start
-#define SND_FLIGHT_AWARD_TRACK_STOP   1188    //Flight School Award Music: Stop
+#define SND_DRIVING_AWARD_TRACK_START 1183    //Driving School Award Music: start
+#define SND_DRIVING_AWARD_TRACK_STOP  1184    //Driving School Award Music: stop
+#define SND_BIKE_AWARD_TRACK_START    1185    //Bike School Award Music: start
+#define SND_BIKE_AWARD_TRACK_STOP     1186    //Bike School Award Music: stop
+#define SND_FLIGHT_AWARD_TRACK_START  1187    //Flight School Award Music: start
+#define SND_FLIGHT_AWARD_TRACK_STOP   1188    //Flight School Award Music: stop
 
 #define SND_SLAP                      1190    //Slap
 
@@ -366,11 +366,11 @@
 #define SND_AIRHORN_LONG              3201    //Air horn (longer than previous one)
 
 #define SND_AIRCONDITIONING           3400    //Air conditioning
-#define SND_BELLRING_LOOP             3401    //Continuous ringing bell (Fire Alarm?)
+#define SND_BELLRING_LOOP             3401    //Ringing bell (Fire Alarm?) loop
 
 #define SND_PHONEDIAL                 3600    //Phone dialing
 
-#define SND_VIDEOTAPE_LOOP            3800    //Videotape (continuous)
+#define SND_VIDEOTAPE_LOOP            3800    //Videotape loop
 
 #define SND_BALLAS_LINE1              4000    //Ballas: "Grove Street's going down!"
 #define SND_BALLAS_LINE2              4001    //Ballas: "Fuck them Grove Street fools!"
@@ -413,7 +413,7 @@
 #define SND_CATALINA_LINE14           5013    //Catalina: "Claude is so manful, so forceful!"
 #define SND_CATALINA_LINE15           5014    //Catalina: "I never knew there was so much more to sex!"
 
-#define SND_GAME_BUZZ_LOOP            5200    //Continuous buzz
+#define SND_GAME_BUZZ_LOOP            5200    //Continuous buzz loop
 #define SND_GAME_BLING                5201    //Bling (high pitch sound effect - selection)
 #define SND_GAME_BBEE_DAMAGE          5202    //Bumblebee video game take damage
 #define SND_GAME_BBEE_GAMEOVER        5203    //Bumblebee video game game over
@@ -564,6 +564,15 @@
 #define SND_BLIP                      6400    //Blip ('door buzzer' in game files)
 #define SND_ELEVATOR_BELL             6401    //Lift bell rings
 #define SND_LIGHTS_SHUTOFF            6402    //Lights shut off
+
+#define SND_ROOF_COLLAPSE             6600    //Roof collapsing
+#define SND_WALL_COLLAPSE1            6601    //Wall collapsing
+#define SND_WALL_COLLAPSE2            6602    //Wall collapsing
+#define SND_WOODEN_DOOR_BREACH        6603    //Breaching wooden doors
+
+#define SND_CARGOPLANE_DOOR_LOOP      6800    //Cargo plane door opening/closing loop
+#define SND_CARGOPLANE_DOOR_START     6801    //Cargo plane door: start
+#define SND_CARGOPLANE_DOOR_STOP      6802    //Cargo plane door: stop
 
 #define SND_UNKNOWN_LINE_1            39000   //"What would your mother think?"
 #define SND_UNKNOWN_LINE_2            39001   //"You're as bad as them"
