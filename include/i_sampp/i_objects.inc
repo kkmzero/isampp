@@ -32,3 +32,4 @@
 #include <i_sampp/objects/ide_lae>
 #include <i_sampp/objects/ide_lawn>
 #include <i_sampp/objects/ide_law>
+#include <i_sampp/objects/ide_law2>
