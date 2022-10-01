@@ -33,3 +33,4 @@
 #include <i_sampp/objects/ide_lawn>
 #include <i_sampp/objects/ide_law>
 #include <i_sampp/objects/ide_law2>
+#include <i_sampp/objects/ide_vegasn>
