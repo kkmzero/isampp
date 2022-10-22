@@ -35,3 +35,4 @@
 #include <i_sampp/objects/ide_law2>
 #include <i_sampp/objects/ide_vegasn>
 #include <i_sampp/objects/ide_vegasw>
+#include <i_sampp/objects/ide_vegass>
