@@ -6,6 +6,7 @@ Changes in ISAMPP 1.9
 - Completed object list for props2.ide (ide_props2.inc)
 - New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
+- Sound IDs 39074 and 39076 are temporarily undefined (i_soundids.inc)
 - SND_GYM_ sounds use prefix SND_GYMGUY_ (i_soundids.inc)
 - SND_CROUPIER_ sounds use prefix SND_CROUPIERF_ (i_soundids.inc)
 - SND_CEILING_VENT_LAND renamed to SND_VENT_DROP (i_soundids.inc)
