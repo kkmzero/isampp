@@ -37,3 +37,4 @@
 #include <i_sampp/objects/ide_vegasw>
 #include <i_sampp/objects/ide_vegass>
 #include <i_sampp/objects/ide_vegase>
+#include <i_sampp/objects/ide_sfn>
