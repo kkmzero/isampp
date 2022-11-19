@@ -38,3 +38,4 @@
 #include <i_sampp/objects/ide_vegass>
 #include <i_sampp/objects/ide_vegase>
 #include <i_sampp/objects/ide_sfn>
+#include <i_sampp/objects/ide_sfw>
