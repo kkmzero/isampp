@@ -81,10 +81,10 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 ISAMPP uses various stock functions which may be useful in creating your custom game modes for SA-MP 
 or simply for debugging purposes. These stock functions are defined in *i_sampp.inc* file.
 
-#### isampp_console_printversion()
+#### print_isampp_version()
 *Outputs ISAMPP version to server console.*
 
-#### pawncc_console_printversion()
+#### print_pawncc_version()
 *Outputs version of compiler to server console if Pawncc is used.*
 
 #### MppTeleport(playerid, locationid)
