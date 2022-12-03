@@ -40,3 +40,4 @@
 #include <i_sampp/objects/ide_sfn>
 #include <i_sampp/objects/ide_sfw>
 #include <i_sampp/objects/ide_sfe>
+#include <i_sampp/objects/ide_sfs>
