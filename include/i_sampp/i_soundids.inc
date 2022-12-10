@@ -1787,6 +1787,29 @@
 #define SND_DANCE_AWFUL_LINE_55       12054   //Dancing minigame crowd reaction (awful move): "Are you like, scratching yourself or what?"
 #define SND_DANCE_AWFUL_LINE_56       12055   //Dancing minigame crowd reaction (awful move): "And the point of this is... ?"
 
+#define SND_CONTAINTER_OPEN           12200   //Container door opens
+#define SND_GATE_OPEN                 12201   //Gate being opened
+
+#define SND_MDCROWD_LINE_1            12400   //Crowd watching Madd Dogg: "Can I get your sneakers?"
+#define SND_MDCROWD_LINE_2            12401   //Crowd watching Madd Dogg: "You won't be needing those fancy clothes."
+#define SND_MDCROWD_LINE_3            12402   //Crowd watching Madd Dogg: "Don't take your clothes with ya'!"
+#define SND_MDCROWD_LINE_4            12403   //Crowd watching Madd Dogg: "A little more action!"
+#define SND_MDCROWD_LINE_5            12404   //Crowd watching Madd Dogg: "The show must go on!"
+#define SND_MDCROWD_LINE_6            12405   //Crowd watching Madd Dogg: "He's gonna be pavement pizza!"
+#define SND_MDCROWD_LINE_7            12406   //Crowd watching Madd Dogg: "Holy Moly, that was close!"
+#define SND_MDCROWD_LINE_8            12407   //Crowd watching Madd Dogg: "Thank you very much!"
+#define SND_MDCROWD_LINE_9            12408   //Crowd watching Madd Dogg: "Oh... you got him!"
+#define SND_MDCROWD_LINE_10           12409   //Crowd watching Madd Dogg: "Jump! Look what dying did for my career!"
+#define SND_MDCROWD_LINE_11           12410   //Crowd watching Madd Dogg: "Jump you fool!"
+#define SND_MDCROWD_LINE_12           12411   //Crowd watching Madd Dogg: "Jump! It'll save your career!"
+
+#define SND_CEMENT_POUR_LOOP          12600   //Cement pouring loop
+#define SND_PORTABLEBUILDING_SMASH1   12601   //Smashing portable building
+#define SND_PORTABLEBUILDING_SMASH2   12602   //Smashing portable building
+#define SND_PORTABLEBUILDING_SMASH3   12603   //Smashing portable building
+#define SND_PORTABLEBUILDING_SMASH4   12604   //Smashing portable building
+#define SND_TOILET_FLUSH              12605   //Toilet flushing
+
 #define SND_UNKNOWN_LINE_1            39000   //"What would your mother think?"
 #define SND_UNKNOWN_LINE_2            39001   //"You're as bad as them"
 #define SND_UNKNOWN_LINE_3            39002   //"Filth like you always have to pay for sex!"
