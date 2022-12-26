@@ -24,8 +24,8 @@
 #else
 	main()
 	{
-		pawncc_console_printversion();
-		isampp_console_printversion();
+		print_pawncc_version();
+		print_isampp_version();
 
 		print("\n----------------------------");
 		printf("ISAMPP %s Sandbox GameMode", ISAMPP_VERSION);
@@ -44,7 +44,6 @@ new Float:cpos_pclass_angle = 276.6780;
 new Float:cpos_explosion_x = 414.37;
 new Float:cpos_explosion_y = 2502.48;
 new Float:cpos_explosion_z = 16.484;
-
 
 //Active Pickups
 new pickupWeapBrassKnuckles;
@@ -97,7 +96,7 @@ new pickupArmor;
 new pickupBeerBottle1;
 new pickupBeerBottle2;
 
-//Get Vehicle Model
+//Get and Store Vehicle Model
 new VehicleModelID = 0;
 
 //Create Actor Dummy
@@ -972,7 +971,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_LINEN, "Linen");
 			SendClientMessage(playerid, COLOR_MAROON, "Maroon");
 			SendClientMessage(playerid, COLOR_MEDIUMAQUAMARINE, "Medium Aquamarine");
-			SendClientMessage(playerid, COLOR_MEDIUMBLUE, "Mediu mBlue");
+			SendClientMessage(playerid, COLOR_MEDIUMBLUE, "Medium Blue");
 			SendClientMessage(playerid, COLOR_MEDIUMORCHID, "Medium Orchid");
 			SendClientMessage(playerid, COLOR_MEDIUMPURPLE, "Medium Purple");
 			SendClientMessage(playerid, COLOR_MEDIUMSEAGREEN, "Medium Sea Green");
@@ -1899,7 +1898,49 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
 		return 1;
 	}
-
+/*
+	//TODO: REMOVE LATER PLAYER PLAY SOUND
+	if(strcmp(cmdtext, "/playsound1", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_44, 0.0, 0.0, 00.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound2", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_45, 0.0, 0.0, 00.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound3", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_46, 0.0, 0.0, 0.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound4", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_47, 0.0, 0.0, 0.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound5", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_48, 0.0, 0.0, 0.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound6", true) == 0) {
+		PlayerPlaySound(playerid, SND_CJ_LINE_217, 0.0, 0.0, 00.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound7", true) == 0) {
+		PlayerPlaySound(playerid, SND_CJ_LINE_218, 0.0, 0.0, 00.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound8", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_49, 0.0, 0.0, 0.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound9", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_50, 0.0, 0.0, 0.0);
+		return 1;
+	}
+	if(strcmp(cmdtext, "/playsound0", true) == 0) {
+		PlayerPlaySound(playerid, SND_CESAR_LINE_43, 0.0, 0.0, 0.0);
+		return 1;
+	}
+*/
 
 	return 0;
 }
