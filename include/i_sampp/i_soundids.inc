@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2022, Ivan Kmeťo
+ * 2018 - 2023, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -1883,6 +1883,45 @@
 #define SND_CJ_LINE_218               13036   //CJ: "We can take it there and get some cash for it."
 #define SND_CESAR_LINE_49             13037   //Cesar: "Ok, well drop me off and I'll make my own way back to the garage."
 #define SND_CESAR_LINE_50             13038   //Cesar: "See you later, holmes!"
+
+#define SND_TORENO_LINE_11            13200   //Mike Toreno: "Jesus, what took you?"
+#define SND_CJ_LINE_219               13201   //CJ: "Toreno! Where you at?!"
+#define SND_TORENO_LINE_12            13202   //Mike Toreno: "Miles away. No time for niceties, kid."
+#define SND_TORENO_LINE_13            13203   //Mike Toreno: "Choose a vehicle, grab the equipment I've provided,..."
+#define SND_TORENO_LINE_14            13204   //Mike Toreno: "...get to that drop zone, and wait for that package."
+#define SND_TORENO_LINE_15            13205   //Mike Toreno: "That's our cargo arriving now!"
+#define SND_CJ_LINE_220               13206   //CJ: "Jesus! Will you stop doing that?"
+#define SND_TORENO_LINE_16            13207   //Mike Toreno: "Hold up."
+#define SND_TORENO_LINE_17            13208   //Mike Toreno: "Shit, pilot says he's got trouble,..."
+#define SND_TORENO_LINE_18            13209   //Mike Toreno: "...two agency choppers coming in on an intercept."
+#define SND_TORENO_LINE_19            13210   //Mike Toreno: "Can you see them?"
+#define SND_CJ_LINE_221               13211   //CJ: "Yeah."
+#define SND_TORENO_LINE_20            13212   //Mike Toreno: "Shoot 'em down. Protect the cargo at all costs!"
+#define SND_TORENO_LINE_21            13213   //Mike Toreno: "Ok, get the package back to Las Brujas."
+#define SND_CJ_LINE_222               13214   //CJ: "Where are you?"
+#define SND_CJ_LINE_223               13215   //CJ: "You givin' me the heebie jeebies, man!"
+#define SND_TORENO_LINE_22            13216   //Mike Toreno: "Carl, I will ALWAYS be watching... or listening... or both."
+
+#define SND_TORENO_LINE_23            13400   //Mike Toreno: "Hey Carl."
+#define SND_TORENO_LINE_24            13401   //Mike Toreno: "You gotta stay nice and low on your approach or you'll pop up on the radar."
+#define SND_TORENO_LINE_25            13402   //Mike Toreno: "Use the canyon as cover."
+#define SND_CJ_LINE_224               13403   //CJ: "You sure this thing's safe? I can see daylight through the floor!"
+#define SND_TORENO_LINE_26            13404   //Mike Toreno: "Hey, in that thing you look like an enthusiast."
+#define SND_TORENO_LINE_27            13405   //Mike Toreno: "The US Air Force is less likely to shoot you down."
+#define SND_CJ_LINE_225               13406   //CJ: "Cool. What's the problem then?"
+#define SND_TORENO_LINE_28            13407   //Mike Toreno: "I said less likely."
+#define SND_TORENO_LINE_29            13408   //Mike Toreno: "If you did as many amphetamines as these guys do, you'd be lucky not to shoot anything that moves."
+#define SND_CJ_LINE_226               13409   //CJ: "Aw, shit."
+#define SND_TORENO_LINE_30            13410   //Mike Toreno: "Hey, just stay low and you'll be fine."
+#define SND_TORENO_LINE_31            13411   //Mike Toreno: "You're flying too high!"
+#define SND_TORENO_LINE_32            13412   //Mike Toreno: "Get below the radar!"
+#define SND_TORENO_LINE_33            13413   //Mike Toreno: "Stay low, Carl!"
+#define SND_TORENO_LINE_34            13414   //Mike Toreno: "Nap-of-the-Earth, Carl, nap-of-the-Earth!"
+#define SND_TORENO_LINE_35            13415   //Mike Toreno: "Shit, you've been spotted!"
+#define SND_CJ_LINE_227               13416   //CJ: "What that mean?"
+#define SND_TORENO_LINE_36            13417   //Mike Toreno: "It means they'll send something in the area to go check you out!"
+#define SND_TORENO_LINE_37            13418   //Mike Toreno: "Watch your six!"
+#define SND_TORENO_LINE_38            13419   //Mike Toreno: "Nice going Carl, really, you did good, kid."
 
 #define SND_UNKNOWN_LINE_1            39000   //"What would your mother think?"
 #define SND_UNKNOWN_LINE_2            39001   //"You're as bad as them"
