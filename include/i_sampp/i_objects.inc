@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2022, Ivan Kmeťo
+ * 2018 - 2023, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -42,3 +42,4 @@
 #include <i_sampp/objects/ide_sfe>        //Object model IDs: 9900 - 10310
 #include <i_sampp/objects/ide_sfs>        //Object model IDs: 10350 - 10744
 #include <i_sampp/objects/ide_sfse>       //Object model IDs: 10750 - 11417
+#include <i_sampp/objects/ide_countryn>
