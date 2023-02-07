@@ -43,3 +43,6 @@
 #include <i_sampp/objects/ide_sfs>        //Object model IDs: 10350 - 10744
 #include <i_sampp/objects/ide_sfse>       //Object model IDs: 10750 - 11417
 #include <i_sampp/objects/ide_countryn>
+#include <i_sampp/objects/ide_countrye>
+
+#include <i_sampp/objects/ide_samp>
