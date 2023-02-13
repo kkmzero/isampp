@@ -2,6 +2,7 @@ Changes in ISAMPP 2.0
 
 * ISAMPP Library *
 - New sounds defined (i_soundids.inc)
+- Updated documentation
 
 * ISAMPP Sandbox Game Mode *
 - Added new command /wantedlevel [0-6]
