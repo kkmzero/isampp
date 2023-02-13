@@ -83,6 +83,8 @@ new pickupHealth;
 new pickupArmor;
 new pickupBeerBottle1;
 new pickupBeerBottle2;
+new pickupBribe;
+new pickupTiki;
 
 //Get and Store Vehicle Model
 new VehicleModelID = 0;
@@ -458,22 +460,22 @@ public OnGameModeInit()
 	
 	//PICKUPS - ROW 2
 	CreatePickup(PICKUP_BRIEFCASE, PICKUP_TYPE_SCRIPTED, 425.5590, 2486.2830, 16.4844, -1);
-	pickupMoney = CreatePickup(PICKUP_MONEY, PICKUP_TYPE_RESPAWN_30S, 420.5590, 2486.2830, 16.4844, -1);
+	pickupMoney = CreatePickup(PICKUP_MONEY, PICKUP_TYPE_MONEY, 420.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_INFO, PICKUP_TYPE_SCRIPTED, 415.5590, 2486.2830, 16.4844, -1);
 	pickupHealth = CreatePickup(PICKUP_HEALTH, PICKUP_TYPE_RESPAWN_30S, 410.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_ADRENALINE, PICKUP_TYPE_SCRIPTED, 405.5590, 2486.2830, 16.4844, -1);
 	pickupArmor = CreatePickup(PICKUP_BODYARMOUR, PICKUP_TYPE_RESPAWN_30S, 400.5590, 2486.2830, 16.4844, -1);
-	CreatePickup(PICKUP_BRIBE, PICKUP_TYPE_SCRIPTED, 395.5590, 2486.2830, 16.4844, -1);
+	pickupBribe = CreatePickup(PICKUP_BRIBE, PICKUP_TYPE_RESPAWN_12M, 395.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_BONUS, PICKUP_TYPE_SCRIPTED, 390.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_BARRELEXPLOSIVE, PICKUP_TYPE_SCRIPTED, 385.5590, 2486.2830, 16.4844, -1);
-	CreatePickup(PICKUP_PHOTOOP, PICKUP_TYPE_SCRIPTED, 380.5590, 2486.2830, 16.4844, -1);
+	CreatePickup(PICKUP_PHOTOOP, PICKUP_TYPE_SNAPSHOT, 380.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_KILLFRENZY, PICKUP_TYPE_SCRIPTED, 375.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_KILLFRENZY2, PICKUP_TYPE_SCRIPTED, 370.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_PROPERTY_LOCKED, PICKUP_TYPE_SCRIPTED, 365.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_PROPERTY_FSALE, PICKUP_TYPE_SCRIPTED, 360.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_BIGDOLLAR, PICKUP_TYPE_SCRIPTED, 355.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_CLOTHES, PICKUP_TYPE_SCRIPTED, 350.5590, 2486.2830, 16.4844, -1);
-	CreatePickup(PICKUP_TIKI, PICKUP_TYPE_SCRIPTED, 345.5590, 2486.2830, 16.4844, -1);
+	pickupTiki = CreatePickup(PICKUP_TIKI, PICKUP_TYPE_ONCE, 345.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_SAVE, PICKUP_TYPE_SCRIPTED, 340.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_CRAIGPACKAGE, PICKUP_TYPE_SCRIPTED, 335.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_TWOPLAYER, PICKUP_TYPE_SCRIPTED, 330.5590, 2486.2830, 16.4844, -1);
@@ -2147,7 +2149,6 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	}
 	else if(pickupid == pickupMoney) {
 		GivePlayerMoney(playerid, 500);
-		PlayerPlaySound(playerid, SND_PICKUP_BLIP, 0.0, 0.0, 0.0);
 	}
 	else if(pickupid == pickupHealth) {
 		SetPlayerHealth(playerid, 100);
@@ -2160,6 +2161,14 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 	}
 	else if(pickupid == pickupBeerBottle2) {
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DRINK_BEER);
+	}
+	else if(pickupid == pickupBribe) {
+		if(GetPlayerWantedLevel(playerid) > 0) {
+			SetPlayerWantedLevel(playerid, (GetPlayerWantedLevel(playerid)-1));
+		}
+	}
+	else if(pickupid == pickupTiki) {
+		GivePlayerMoney(playerid, 100);
 	}
 
 	return 1;
