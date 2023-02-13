@@ -1,7 +1,11 @@
 Changes in ISAMPP 2.0
 
 * ISAMPP Library *
-- 
+- New sounds defined (i_soundids.inc)
 
 * ISAMPP Sandbox Game Mode *
-- 
+- Added new command /wantedlevel [0-6]
+- Bribe stars and Tiki pickup now work
+- Money pickup now uses type PICKUP_TYPE_MONEY
+- Snapshot pickup now uses type PICKUP_TYPE_SNAPSHOT
+- Updated main function
