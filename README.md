@@ -85,7 +85,7 @@ or simply for debugging purposes. These stock functions are defined in *i_sampp.
 *Outputs ISAMPP version to server console.*
 
 #### print_pawncc_version()
-*Outputs version of compiler to server console if Pawncc is used.*
+*Outputs version of compiler to server console if Pawn Community Compiler (Pawncc) is used.*
 
 #### MppTeleport(playerid, locationid)
 *Teleports player to desired location passed as parameter ’locationid’.*
