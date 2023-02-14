@@ -38,6 +38,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \newpage
 \section{Changes in ISAMPP 2.0}
 \textbf{ISAMPP Library:}
+\\- New objects defined \textit{(i\_objects.inc)}
 \\- New sounds defined \textit{(i\_soundids.inc)}
 \\- Updated documentation
 \bigskip
@@ -46,7 +47,9 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \\- Bribe stars and Tiki pickup now work
 \\- Money pickup now uses type PICKUP\_TYPE\_MONEY
 \\- Snapshot pickup now uses type PICKUP\_TYPE\_SNAPSHOT
+\\- Destroy active pickups in OnGameModeExit function
 \\- Updated main function
+\\- Removed green hat from player model
 \bigskip
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -111,7 +114,7 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \\\textit{funcl} - Legacy functions
 \\\textit{iconids} - List of map icon identifiers
 \\\textit{locationids} - List of location definitions with coordinates, interior identifiers and names
-\\\textit{objects}- List of game objects/models
+\\\textit{objects} - List of game objects/models
 \\\textit{paintjob} - List of definitions for all available vehicle paintjobs
 \\\textit{pickupids} - List of definitions for pickup identifiers
 \\\textit{pickuptypes} - List of definitions for pickup types
@@ -465,7 +468,7 @@ main() {
 
 
 \subsection{print\_pawncc\_version()}
-Outputs version of compiler to server console if Pawncc is used.
+Outputs version of compiler to server console if Pawn Community Compiler (Pawncc) is used.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
