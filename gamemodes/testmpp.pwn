@@ -736,6 +736,60 @@ public OnGameModeInit()
 
 public OnGameModeExit()
 {
+	//Destroy Active Pickups
+	DestroyPickup(pickupWeapBrassKnuckles);
+	DestroyPickup(pickupWeapGolfClub);
+	DestroyPickup(pickupWeapKnife);
+	DestroyPickup(pickupWeapBaseballBat);
+	DestroyPickup(pickupWeapNightStick);
+	DestroyPickup(pickupWeapShovel);
+	DestroyPickup(pickupWeapPoolCue);
+	DestroyPickup(pickupWeapKatana);
+	DestroyPickup(pickupWeapChainsaw);
+	DestroyPickup(pickupWeapRdildo);
+	DestroyPickup(pickupWeapWdildo);
+	DestroyPickup(pickupWeapVibrator);
+	DestroyPickup(pickupWeapVibrator2);
+	DestroyPickup(pickupWeapFlowers);
+	DestroyPickup(pickupWeapCane);
+	DestroyPickup(pickupWeapPhone);
+	DestroyPickup(pickupWeapGrenade);
+	DestroyPickup(pickupWeapTeargas);
+	DestroyPickup(pickupWeapMolotov);
+	DestroyPickup(pickupWeapSatchel);
+	DestroyPickup(pickupWeapPistol);
+	DestroyPickup(pickupWeapSilencedPistol);
+	DestroyPickup(pickupWeapDeagle);
+	DestroyPickup(pickupWeapShotgun);
+	DestroyPickup(pickupWeapSawedoff);
+	DestroyPickup(pickupWeapAutoshotgun);
+	DestroyPickup(pickupWeapMicroUzi);
+	DestroyPickup(pickupWeapMP5);
+	DestroyPickup(pickupWeapTec9);
+	DestroyPickup(pickupWeapAK47);
+	DestroyPickup(pickupWeapM4);
+	DestroyPickup(pickupWeapRifle);
+	DestroyPickup(pickupWeapSniperRifle);
+	DestroyPickup(pickupWeapRPG);
+	DestroyPickup(pickupWeapHeatRPG);
+	DestroyPickup(pickupWeapFlamethrower);
+	DestroyPickup(pickupWeapMinigun);
+	DestroyPickup(pickupWeapDetonator);
+	DestroyPickup(pickupWeapSpray);
+	DestroyPickup(pickupWeapExtinguisher);
+	DestroyPickup(pickupWeapCamera);
+	DestroyPickup(pickupWeapNGoggles);
+	DestroyPickup(pickupWeapTGoggles);
+	DestroyPickup(pickupWeapParachute);
+	DestroyPickup(pickupMoney);
+	DestroyPickup(pickupHealth);
+	DestroyPickup(pickupArmor);
+	DestroyPickup(pickupBeerBottle1);
+	DestroyPickup(pickupBeerBottle2);
+	DestroyPickup(pickupBribe);
+	DestroyPickup(pickupTiki);
+
+    //Destroy Actor Dummy
 	DestroyActor(gActorDummy);
 
 	return 1;
@@ -777,7 +831,6 @@ public OnPlayerDisconnect(playerid, reason)
 public OnPlayerSpawn(playerid)
 {
 	GivePlayerWeapon(playerid, WEAP_MP5, 100);
-	SetPlayerAttachedObject(playerid, BONE_LEFTUPPERARM, 19487, 2, 0.101, -0.0, 0.0, 5.50, 84.60, 83.7, 1.0, 1.0, 1.0, 0xFF00FF00);
 
 	return 1;
 }
@@ -807,7 +860,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	new cmd[128], idx;
 	cmd = strtok(cmdtext, idx);
 
-	//HELP COMMANDS
+	//Client Command: Output List of Available Client Commands
 	if (strcmp(cmd, "/help", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -851,7 +904,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//PRIMARY COLOR TEXT TEST COMMANDS
+	//Client Command: Primary/Main Color Test Output
 	if (strcmp(cmd, "/maincols", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -1038,7 +1091,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//STRING COLOR TEXT TEST COMMANDS
+	//Client Command: Secondary/String Color Test Output
 	if (strcmp("/stringcols", cmdtext, true, 15) == 0) {
 		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_BLACK"X"SCOL_WHITE"X"SCOL_RED"X"SCOL_GREEN"X"SCOL_BLUE"X"SCOL_CYAN"X"SCOL_MAGENTA"X"SCOL_YELLOW"X"SCOL_DARKRED"X"SCOL_DARKGREEN"X"SCOL_DARKBLUE"X"SCOL_DARKCYAN"X"SCOL_DARKMAGENTA"X"SCOL_DARKYELLOW"X"SCOL_LIGHTRED"X"SCOL_LIGHTGREEN"X");
 		SendClientMessage(playerid, COLOR_WHITE, ""SCOL_LIGHTBLUE"X"SCOL_LIGHTCYAN"X"SCOL_LIGHTMAGENTA"X"SCOL_LIGHTYELLOW"X"SCOL_ALICEBLUE"X"SCOL_ANTIQUEWHITE"X"SCOL_AQUA"X"SCOL_AQUAMARINE"X"SCOL_AZURE"X"SCOL_BEIGE"X"SCOL_BISQUE"X"SCOL_BLANCHEDALMOND"X"SCOL_BLUEVIOLET"X"SCOL_BROWN"X"SCOL_BURLYWOOD"X"SCOL_CADETBLUE"X");
@@ -1052,7 +1105,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//PLAY CRIME REPORT COMMAND
+	//Client Command: Play Crime Report for Player
 	if (strcmp(cmd, "/crime", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -1124,7 +1177,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//TEST EXPLOSIONS COMMAND
+	//Client Command: Create Explosions on Given Coordinates
 	if (strcmp(cmd, "/explosion", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -1181,7 +1234,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//GAME TEXT TEST COMMANDS
+	//Client Command: Game Text Test Draw
 	if (strcmp(cmd, "/gametext", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -1244,7 +1297,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//SET VEHICLE HEALTH COMMAND
+	//Client Command: Set Current Vehicle Health
 	if (strcmp(cmd, "/setvehiclehealth", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -1288,7 +1341,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//CHANGE WEATHER COMMANDS
+	//Client Command: Change Weather
 	if (strcmp(cmd, "/weather", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -1366,7 +1419,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//TELEPORT COMMANDS
+	//Client Command: Teleport Player to Given Locations
 	if (strcmp(cmd, "/tp", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
@@ -1819,26 +1872,26 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//TELEPORT TO COORDINATES
+	//Client Command: Teleport Player to Given Coordinates
 	if (strcmp("/tpcoord", cmdtext, true, 20) == 0) {
 		//Teleport to end of runway
 		MppTeleportToCoords(playerid, 49.4172, 2512.4282, 16.4844, 0, 272);
 		return 1;
 	}
 
-	//SHOW PLAYER POSITION COORDINATES
+	//Client Command: Output Current Player Position
 	if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 		MppShowPlayerPosition(playerid, COLOR_LIGHTRED);
 		return 1;
 	}
 
-	//SHOW VEHICLE INFORMATION
+	//Client Command: Output Current Vehicle Information
 	if (strcmp("/showvehicleinfo", cmdtext, true, 15) == 0) {
 		MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTRED);
 		return 1;
 	}
 
-	//SHOW PLAYER CAMERA MODE
+	//Client Command: Output Set Camera Mode
 	if (strcmp("/cameramode", cmdtext, true, 15) == 0) {
 		new szMessage[128]; new sCammode[128];
 
@@ -1869,7 +1922,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//CHANGE PLAYER CLASS/PLAYER SKIN
+	//Client Command: Change Player Class/Skin
 	if (strcmp("/changeskin", cmdtext, true, 15) == 0) {
 		SetPlayerFacingAngle(playerid, 270);
 		ForceClassSelection(playerid);
@@ -1878,19 +1931,19 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
-	//SHOW PLAYER NAME
+	//Client Command: Output Player Name
 	if(strcmp(cmdtext, "/myname", true) == 0) {
 		SendClientMessage(playerid, COLOR_LIGHTBLUE, MppGetPlayerName(playerid));
 		return 1;
 	}
 
-	//CANCEL SPECIAL ACTIONS
+	//Client Command: Cancel Special Action
 	if(strcmp(cmdtext, "/cancelaction", true) == 0) {
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
 		return 1;
 	}
 
-	//SET WANTED LEVEL
+	//Client Command: Set Wanted Level for Player
 	if (strcmp(cmd, "/wantedlevel", true) == 0) {
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
