@@ -1,6 +1,7 @@
 Changes in ISAMPP 2.0
 
 * ISAMPP Library *
+- New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
 - Updated documentation
 
@@ -9,4 +10,6 @@ Changes in ISAMPP 2.0
 - Bribe stars and Tiki pickup now work
 - Money pickup now uses type PICKUP_TYPE_MONEY
 - Snapshot pickup now uses type PICKUP_TYPE_SNAPSHOT
+- Destroy active pickups in OnGameModeExit function
 - Updated main function
+- Removed green hat from player model
