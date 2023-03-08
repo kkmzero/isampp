@@ -789,7 +789,7 @@ public OnGameModeExit()
 	DestroyPickup(pickupBribe);
 	DestroyPickup(pickupTiki);
 
-    //Destroy Actor Dummy
+	//Destroy Actor Dummy
 	DestroyActor(gActorDummy);
 
 	return 1;
@@ -872,7 +872,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /help gametext for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /help setvehiclehealth for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/weather [ID] (type /help weather for weather ID list)");
-			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin; /myname");
+			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin; /myname; /kill");
 			SendClientMessage(playerid, COLOR_ORANGE, "/cancelaction; /tp [ID]; /tpcoord");
 		}
 		else if (strcmp(tmp, "explosion") == 0) {
@@ -909,7 +909,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
 
-		if(isnull(tmp)) {
+		if (isnull(tmp)) {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /maincols [0-14]");
 		}
 		else if(strval(tmp) == 0) {
@@ -1110,64 +1110,64 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
 
-		if(isnull(tmp)) {
+		if (isnull(tmp)) {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /crime [3-19, 21, 22]");
 		}
-		else if(strval(tmp) == 3) {
+		else if (strval(tmp) == 3) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_71);
 		}
-		else if(strval(tmp) == 4) {
+		else if (strval(tmp) == 4) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_37_1);
 		}
-		else if(strval(tmp) == 5) {
+		else if (strval(tmp) == 5) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_1);
 		}
-		else if(strval(tmp) == 6) {
+		else if (strval(tmp) == 6) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_24);
 		}
-		else if(strval(tmp) == 7) {
+		else if (strval(tmp) == 7) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_21_1);
 		}
-		else if(strval(tmp) == 8) {
+		else if (strval(tmp) == 8) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_21_2);
 		}
-		else if(strval(tmp) == 9) {
+		else if (strval(tmp) == 9) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_21_3);
 		}
-		else if(strval(tmp) == 10) {
+		else if (strval(tmp) == 10) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_17);
 		}
-		else if(strval(tmp) == 11) {
+		else if (strval(tmp) == 11) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_2);
 		}
-		else if(strval(tmp) == 12) {
+		else if (strval(tmp) == 12) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_91_1);
 		}
-		else if(strval(tmp) == 13) {
+		else if (strval(tmp) == 13) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_28_1);
 		}
-		else if(strval(tmp) == 14) {
+		else if (strval(tmp) == 14) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_3);
 		}
-		else if(strval(tmp) == 15) {
+		else if (strval(tmp) == 15) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_28_2);
 		}
-		else if(strval(tmp) == 16) {
+		else if (strval(tmp) == 16) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_91_2);
 		}
-		else if(strval(tmp) == 17) {
+		else if (strval(tmp) == 17) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_34);
 		}
-		else if(strval(tmp) == 18) {
+		else if (strval(tmp) == 18) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_37_2);
 		}
-		else if(strval(tmp) == 19) {
+		else if (strval(tmp) == 19) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_81_4);
 		}
-		else if(strval(tmp) == 21) {
+		else if (strval(tmp) == 21) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_7_1);
 		}
-		else if(strval(tmp) == 22) {
+		else if (strval(tmp) == 22) {
 			PlayCrimeReportForPlayer(playerid, playerid, CRIME_10_7_2);
 		}
 		else {
@@ -1932,13 +1932,19 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 
 	//Client Command: Output Player Name
-	if(strcmp(cmdtext, "/myname", true) == 0) {
+	if (strcmp(cmdtext, "/myname", true) == 0) {
 		SendClientMessage(playerid, COLOR_LIGHTBLUE, MppGetPlayerName(playerid));
 		return 1;
 	}
 
+	//Client Command: Kill Player
+	if (strcmp(cmdtext, "/kill", true) == 0) {
+		SetPlayerHealth(playerid, 0.0);
+		return 1;
+	}
+
 	//Client Command: Cancel Special Action
-	if(strcmp(cmdtext, "/cancelaction", true) == 0) {
+	if (strcmp(cmdtext, "/cancelaction", true) == 0) {
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
 		return 1;
 	}
@@ -2068,159 +2074,159 @@ public OnPlayerObjectMoved(playerid, objectid)
 
 public OnPlayerPickUpPickup(playerid, pickupid)
 {
-	if(pickupid == pickupWeapRdildo) {
+	if (pickupid == pickupWeapRdildo) {
 		GivePlayerWeapon(playerid, WEAP_RDILDO, 1);
 	}
-	else if(pickupid == pickupWeapWdildo) {
+	else if (pickupid == pickupWeapWdildo) {
 		GivePlayerWeapon(playerid, WEAP_WDILDO, 1);
 	}
-	else if(pickupid == pickupWeapVibrator) {
+	else if (pickupid == pickupWeapVibrator) {
 		GivePlayerWeapon(playerid, WEAP_VIBRATOR, 1);
 	}
-	else if(pickupid == pickupWeapVibrator2) {
+	else if (pickupid == pickupWeapVibrator2) {
 		GivePlayerWeapon(playerid, WEAP_VIBRATOR2, 1);
 	}
-	else if(pickupid == pickupWeapFlowers) {
+	else if (pickupid == pickupWeapFlowers) {
 		GivePlayerWeapon(playerid, WEAP_FLOWERS, 1);
 	}
-	else if(pickupid == pickupWeapCane) {
+	else if (pickupid == pickupWeapCane) {
 		GivePlayerWeapon(playerid, WEAP_CANE, 1);
 	}
-	else if(pickupid == pickupWeapPhone) {
+	else if (pickupid == pickupWeapPhone) {
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USECELLPHONE);
 	}
-	else if(pickupid == pickupWeapBrassKnuckles) {
+	else if (pickupid == pickupWeapBrassKnuckles) {
 		GivePlayerWeapon(playerid, WEAP_BRASSKNUCKLES, 1);
 	}
-	else if(pickupid == pickupWeapGolfClub) {
+	else if (pickupid == pickupWeapGolfClub) {
 		GivePlayerWeapon(playerid, WEAP_GOLFCLUB, 1);
 	}
-	else if(pickupid == pickupWeapNightStick) {
+	else if (pickupid == pickupWeapNightStick) {
 		GivePlayerWeapon(playerid, WEAP_NIGHTSTICK, 1);
 	}
-	else if(pickupid == pickupWeapKnife) {
+	else if (pickupid == pickupWeapKnife) {
 		GivePlayerWeapon(playerid, WEAP_KNIFE, 1);
 	}
-	else if(pickupid == pickupWeapBaseballBat) {
+	else if (pickupid == pickupWeapBaseballBat) {
 		GivePlayerWeapon(playerid, WEAP_BASEBALLBAT, 1);
 	}
-	else if(pickupid == pickupWeapShovel) {
+	else if (pickupid == pickupWeapShovel) {
 		GivePlayerWeapon(playerid, WEAP_SHOVEL, 1);
 	}
-	else if(pickupid == pickupWeapPoolCue) {
+	else if (pickupid == pickupWeapPoolCue) {
 		GivePlayerWeapon(playerid, WEAP_POOLCUE, 1);
 	}
-	else if(pickupid == pickupWeapKatana) {
+	else if (pickupid == pickupWeapKatana) {
 		GivePlayerWeapon(playerid, WEAP_KATANA, 1);
 	}
-	else if(pickupid == pickupWeapChainsaw) {
+	else if (pickupid == pickupWeapChainsaw) {
 		GivePlayerWeapon(playerid, WEAP_CHAINSAW, 1);
 	}
-	else if(pickupid == pickupWeapGrenade) {
+	else if (pickupid == pickupWeapGrenade) {
 		GivePlayerWeapon(playerid, WEAP_GRENADE, 10);
 	}
-	else if(pickupid == pickupWeapTeargas) {
+	else if (pickupid == pickupWeapTeargas) {
 		GivePlayerWeapon(playerid, WEAP_TEARGAS, 10);
 	}
-	else if(pickupid == pickupWeapMolotov) {
+	else if (pickupid == pickupWeapMolotov) {
 		GivePlayerWeapon(playerid, WEAP_MOLOTOV, 10);
 	}
-	else if(pickupid == pickupWeapPistol) {
+	else if (pickupid == pickupWeapPistol) {
 		GivePlayerWeapon(playerid, WEAP_PISTOL, 100);
 	}
-	else if(pickupid == pickupWeapSilencedPistol) {
+	else if (pickupid == pickupWeapSilencedPistol) {
 		GivePlayerWeapon(playerid, WEAP_SILENCEDPISTOL, 100);
 	}
-	else if(pickupid == pickupWeapDeagle) {
+	else if (pickupid == pickupWeapDeagle) {
 		GivePlayerWeapon(playerid, WEAP_DEAGLE, 100);
 	}
-	else if(pickupid == pickupWeapShotgun) {
+	else if (pickupid == pickupWeapShotgun) {
 		GivePlayerWeapon(playerid, WEAP_SHOTGUN, 50);
 	}
-	else if(pickupid == pickupWeapSawedoff) {
+	else if (pickupid == pickupWeapSawedoff) {
 		GivePlayerWeapon(playerid, WEAP_SAWEDOFF, 50);
 	}
-	else if(pickupid == pickupWeapAutoshotgun) {
+	else if (pickupid == pickupWeapAutoshotgun) {
 		GivePlayerWeapon(playerid, WEAP_AUTOSHOTGUN, 50);
 	}
-	else if(pickupid == pickupWeapMicroUzi) {
+	else if (pickupid == pickupWeapMicroUzi) {
 		GivePlayerWeapon(playerid, WEAP_MICROUZI, 100);
 	}
-	else if(pickupid == pickupWeapMP5) {
+	else if (pickupid == pickupWeapMP5) {
 		GivePlayerWeapon(playerid, WEAP_MP5, 100);
 	}
-	else if(pickupid == pickupWeapAK47) {
+	else if (pickupid == pickupWeapAK47) {
 		GivePlayerWeapon(playerid, WEAP_AK47, 100);
 	}
-	else if(pickupid == pickupWeapM4) {
+	else if (pickupid == pickupWeapM4) {
 		GivePlayerWeapon(playerid, WEAP_M4, 100);
 	}
-	else if(pickupid == pickupWeapRifle) {
+	else if (pickupid == pickupWeapRifle) {
 		GivePlayerWeapon(playerid, WEAP_RIFLE, 25);
 	}
-	else if(pickupid == pickupWeapSniperRifle) {
+	else if (pickupid == pickupWeapSniperRifle) {
 		GivePlayerWeapon(playerid, WEAP_SNIPERRIFLE, 25);
 	}
-	else if(pickupid == pickupWeapRPG) {
+	else if (pickupid == pickupWeapRPG) {
 		GivePlayerWeapon(playerid, WEAP_RPG, 10);
 	}
-	else if(pickupid == pickupWeapHeatRPG) {
+	else if (pickupid == pickupWeapHeatRPG) {
 		GivePlayerWeapon(playerid, WEAP_HEATRPG, 10);
 	}
-	else if(pickupid == pickupWeapFlamethrower) {
+	else if (pickupid == pickupWeapFlamethrower) {
 		GivePlayerWeapon(playerid, WEAP_FLAMETHROWER, 200);
 	}
-	else if(pickupid == pickupWeapMinigun) {
+	else if (pickupid == pickupWeapMinigun) {
 		GivePlayerWeapon(playerid, WEAP_MINIGUN, 500);
 	}
-	else if(pickupid == pickupWeapSatchel) {
+	else if (pickupid == pickupWeapSatchel) {
 		GivePlayerWeapon(playerid, WEAP_SATCHEL, 10);
 	}
-	else if(pickupid == pickupWeapDetonator) {
+	else if (pickupid == pickupWeapDetonator) {
 		GivePlayerWeapon(playerid, WEAP_DETONATOR, 1);
 	}
-	else if(pickupid == pickupWeapSpray) {
+	else if (pickupid == pickupWeapSpray) {
 		GivePlayerWeapon(playerid, WEAP_SPRAY, 100);
  	}
- 	else if(pickupid == pickupWeapExtinguisher) {
+ 	else if (pickupid == pickupWeapExtinguisher) {
 		GivePlayerWeapon(playerid, WEAP_EXTINGUISHER, 100);
 	}
-	else if(pickupid == pickupWeapCamera) {
+	else if (pickupid == pickupWeapCamera) {
 		GivePlayerWeapon(playerid, WEAP_CAMERA, 25);
 	}
-	else if(pickupid == pickupWeapNGoggles) {
+	else if (pickupid == pickupWeapNGoggles) {
 		GivePlayerWeapon(playerid, WEAP_NGOGGLES, 1);
 	}
-	else if(pickupid == pickupWeapTGoggles) {
+	else if (pickupid == pickupWeapTGoggles) {
 		GivePlayerWeapon(playerid, WEAP_TGOGGLES, 1);
 	}
-	else if(pickupid == pickupWeapParachute) {
+	else if (pickupid == pickupWeapParachute) {
 		GivePlayerWeapon(playerid, WEAP_PARACHUTE, 1);
 	}
-	else if(pickupid == pickupWeapTec9) {
+	else if (pickupid == pickupWeapTec9) {
 		GivePlayerWeapon(playerid, WEAP_TEC9, 100);
 	}
-	else if(pickupid == pickupMoney) {
+	else if (pickupid == pickupMoney) {
 		GivePlayerMoney(playerid, 500);
 	}
-	else if(pickupid == pickupHealth) {
+	else if (pickupid == pickupHealth) {
 		SetPlayerHealth(playerid, 100);
 	}
-	else if(pickupid == pickupArmor) {
+	else if (pickupid == pickupArmor) {
 		SetPlayerArmour(playerid, 100);
 	}
-	else if(pickupid == pickupBeerBottle1) {
+	else if (pickupid == pickupBeerBottle1) {
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DRINK_WINE);
 	}
-	else if(pickupid == pickupBeerBottle2) {
+	else if (pickupid == pickupBeerBottle2) {
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_DRINK_BEER);
 	}
-	else if(pickupid == pickupBribe) {
-		if(GetPlayerWantedLevel(playerid) > 0) {
+	else if (pickupid == pickupBribe) {
+		if (GetPlayerWantedLevel(playerid) > 0) {
 			SetPlayerWantedLevel(playerid, (GetPlayerWantedLevel(playerid)-1));
 		}
 	}
-	else if(pickupid == pickupTiki) {
+	else if (pickupid == pickupTiki) {
 		GivePlayerMoney(playerid, 100);
 	}
 
