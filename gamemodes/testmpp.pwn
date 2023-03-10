@@ -871,8 +871,9 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /help explosion for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /help gametext for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /help setvehiclehealth for ID list)");
+			SendClientMessage(playerid, COLOR_ORANGE, "/showvehicleinfo; /fixtires; /poptires");
 			SendClientMessage(playerid, COLOR_ORANGE, "/weather [ID] (type /help weather for weather ID list)");
-			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /showvehicleinfo; /cameramode; /changeskin; /myname; /kill");
+			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /cameramode; /changeskin; /myname; /kill");
 			SendClientMessage(playerid, COLOR_ORANGE, "/cancelaction; /tp [ID]; /tpcoord");
 		}
 		else if (strcmp(tmp, "explosion") == 0) {
@@ -1891,6 +1892,18 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+	//Client Command: Fix All Vehicle Tires
+	if (strcmp(cmdtext, "/fixtires", true) == 0) {
+		MppFixVehicleTires(GetPlayerVehicleID(playerid), TIRE4W_ALL);
+		return 1;
+	}
+
+	//Client Command: Pop All Vehicle Tires
+	if (strcmp(cmdtext, "/poptires", true) == 0) {
+		MppPopVehicleTires(GetPlayerVehicleID(playerid), TIRE4W_ALL);
+		return 1;
+	}
+
 	//Client Command: Output Set Camera Mode
 	if (strcmp("/cameramode", cmdtext, true, 15) == 0) {
 		new szMessage[128]; new sCammode[128];
@@ -1966,6 +1979,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 		return 1;
 	}
+
 
 	//TODO: REMOVE LATER PLAYER PLAY SOUND
 	if(strcmp(cmdtext, "/playsound1", true) == 0) {
