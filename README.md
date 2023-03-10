@@ -101,7 +101,7 @@ or simply for debugging purposes. These stock functions are defined in *i_sampp.
 #### MppShowPlayerPosition(playerid, pstringcolor)
 *Outputs current player location coordinates, interior identifier, facing angle and player camera position coordinates to in-game chat window.*
 
-#### MppShowVehicleInfo(playerid, vehicleid, pstringcolor)
+#### MppShowVehicleInfo(playerid, vehmodelid, pstringcolor)
 *Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.*
 
 #### MppGetPlayerName(playerid)
