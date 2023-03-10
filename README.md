@@ -40,6 +40,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_soundids>
 #include <i_sampp/i_textstyle>
+#include <i_sampp/i_vehcomponents>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_weaponids>
@@ -71,7 +72,8 @@ Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that IS
 *skinids* - List of definitions for character skin/model identifiers</br>
 *soundids* - List of definitions for sound identifiers</br>
 *textstyle* - List of definitions for GameText styles</br>
-*vehhealth* - Vehicle Health configurations</br>
+*vehcomponents* - List of default vehicle components</br>
+*vehhealth* - Vehicle health configurations</br>
 *vehids* - List of definitions for all available vehicles</br>
 *weaponids* - List of definitions for weapon identifiers, sorted by weapon slot IDs</br>
 *weatherids* - List of definitions for weather identifiers
@@ -104,3 +106,9 @@ or simply for debugging purposes. These stock functions are defined in *i_sampp.
 
 #### MppGetPlayerName(playerid)
 *Returns player nick/name from given playerid.*
+
+#### MppFixVehicleTires(vehicleid, tires)
+*Fixes tires of any given vehicle. You can use bitwise operator OR to combine specific tires.*
+
+#### MppPopVehicleTires(vehicleid, tires)
+*Pops tires of any given vehicle. You can use bitwise operator OR to combine specific tires.*
