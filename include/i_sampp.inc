@@ -96,26 +96,27 @@ stock MppShowPlayerPosition(playerid, pstringcolor) {
 	return 1;
 }
 
-stock MppShowVehicleInfo(playerid, vehicleid, pstringcolor) {
+stock MppShowVehicleInfo(playerid, vehmodelid, pstringcolor) {
 	new vehicle, getvehiclename, Float:health;
 	new Float:vehx, Float:vehy, Float:vehz;
-	new Float:rotw, Float:rotx, Float:roty, Float:rotz;
+	new Float:rotw, Float:rotx, Float:roty, Float:rotz, Float:zangle;
 
 	vehicle = GetPlayerVehicleID(playerid);
 	GetVehicleHealth(vehicle, health);
 
 	GetVehiclePos(vehicle, vehx, vehy, vehz);
 	GetVehicleRotationQuat(vehicle, rotw, rotx, roty, rotz);
+	GetVehicleZAngle(vehicle, zangle);
 	
-	getvehiclename = vehicleid - 399;
+	getvehiclename = vehmodelid - 399;
 	if (getvehiclename < 0 ) getvehiclename = 0;
 
 	new svehinfo[128];
 	new svehpos[128];
 	new svehrot[128];
-	format(svehinfo, sizeof(svehinfo), "ID: %i | Model: %i %s | Health: %0.2f", vehicle, vehicleid, vehicleName[getvehiclename], health);
+	format(svehinfo, sizeof(svehinfo), "ID: %i | Model: %i %s | Health: %0.2f", vehicle, vehmodelid, vehicleName[getvehiclename], health);
 	format(svehpos, sizeof(svehpos), "Position [X]: %f [Y]: %f [Z]: %f", vehx, vehy, vehz);
-	format(svehrot, sizeof(svehrot), "Rotation [W]: %0.3f [X]: %0.3f [Y]: %0.3f [Z]: %0.3f", rotw, rotx, roty, rotz);
+	format(svehrot, sizeof(svehrot), "Rotation [W]: %0.3f [X]: %0.3f [Y]: %0.3f [Z]: %0.3f [Z-Angle]: %0.3f", rotw, rotx, roty, rotz, zangle);
 
 	SendClientMessage(playerid, pstringcolor, svehinfo);
 	SendClientMessage(playerid, pstringcolor, svehpos);
@@ -125,21 +126,21 @@ stock MppShowVehicleInfo(playerid, vehicleid, pstringcolor) {
 }
 
 MppFixVehicleTires(vehicleid, tires) {
-    new panelstate, doorstate, lightstate, tirestate;
+	new panelstate, doorstate, lightstate, tirestate;
 
-    GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
-    UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate & (~tires));
+	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
+	UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate & (~tires));
 
-    return 1;
+	return 1;
 }
 
 MppPopVehicleTires(vehicleid, tires) {
-    new panelstate, doorstate, lightstate, tirestate;
+	new panelstate, doorstate, lightstate, tirestate;
 
-    GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
-    UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate | (tires));
+	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
+	UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate | (tires));
 
-    return 1;
+	return 1;
 }
 
 stock MppGetPlayerName(playerid) {
