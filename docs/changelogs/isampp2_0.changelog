@@ -5,6 +5,7 @@ Changes in ISAMPP 2.0
 - New sounds defined (i_soundids.inc)
 - New definitions for vehicle components (i_vehcomponents.inc)
 - New custom functions: MppFixVehicleTires, MppPopVehicleTires
+- Function MppShowVehicleInfo now outputs Z-Angle
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
