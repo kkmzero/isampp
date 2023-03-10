@@ -30,6 +30,7 @@
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_soundids>
 #include <i_sampp/i_textstyle>
+#include <i_sampp/i_vehcomponents>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_weaponids>
@@ -121,6 +122,24 @@ stock MppShowVehicleInfo(playerid, vehicleid, pstringcolor) {
 	SendClientMessage(playerid, pstringcolor, svehrot);
 
 	return 1;
+}
+
+MppFixVehicleTires(vehicleid, tires) {
+    new panelstate, doorstate, lightstate, tirestate;
+
+    GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
+    UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate & (~tires));
+
+    return 1;
+}
+
+MppPopVehicleTires(vehicleid, tires) {
+    new panelstate, doorstate, lightstate, tirestate;
+
+    GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
+    UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate | (tires));
+
+    return 1;
 }
 
 stock MppGetPlayerName(playerid) {
