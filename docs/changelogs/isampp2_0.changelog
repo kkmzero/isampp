@@ -3,9 +3,12 @@ Changes in ISAMPP 2.0
 * ISAMPP Library *
 - New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
+- New definitions for vehicle components (i_vehcomponents.inc)
+- New custom functions: MppFixVehicleTires, MppPopVehicleTires
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
+- Added new commands /fixtires and /poptires
 - Added new command /wantedlevel [0-6]
 - Added new command /kill
 - Bribe stars and Tiki pickup now work
