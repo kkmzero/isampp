@@ -95,7 +95,7 @@ new gActorDummy;
 
 public OnGameModeInit()
 {
-	SetWorldTime(12);
+	SetWorldTime(21);
 	SetGameModeText("ISAMPP 2.0 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
@@ -871,7 +871,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_ORANGE, "/explosion [ID] (type /help explosion for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/gametext [ID] (type /help gametext for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /help setvehiclehealth for ID list)");
-			SendClientMessage(playerid, COLOR_ORANGE, "/showvehicleinfo; /fixtires; /poptires");
+			SendClientMessage(playerid, COLOR_ORANGE, "/showvehicleinfo; /lightson; /lightsoff; /fixtires; /poptires");
 			SendClientMessage(playerid, COLOR_ORANGE, "/weather [ID] (type /help weather for weather ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /cameramode; /changeskin; /myname; /kill");
 			SendClientMessage(playerid, COLOR_ORANGE, "/cancelaction; /tp [ID]; /tpcoord");
@@ -1887,6 +1887,18 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	//Client Command: Output Current Vehicle Information
 	if (strcmp("/showvehicleinfo", cmdtext, true, 15) == 0) {
 		MppShowVehicleInfo(playerid, VehicleModelID, COLOR_LIGHTRED);
+		return 1;
+	}
+
+	//Client Command: Enable All Vehicle Lights
+	if (strcmp(cmdtext, "/lightson", true) == 0) {
+		MppEnableVehicleLights(GetPlayerVehicleID(playerid), LIGHT_ALL);
+		return 1;
+	}
+
+	//Client Command: Disable All Vehicle Lights
+	if (strcmp(cmdtext, "/lightsoff", true) == 0) {
+		MppDisableVehicleLights(GetPlayerVehicleID(playerid), LIGHT_ALL);
 		return 1;
 	}
 
