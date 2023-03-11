@@ -1303,37 +1303,35 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		new tmp[128];
 		tmp = strtok(cmdtext, idx);
 
-		new vehicleid = GetPlayerVehicleID(playerid);
-
 		if (isnull(tmp)) {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /setvehiclehealth [ID]. Type /help setvehiclehealth for ID list.");
 		}
 		else if (strcmp(tmp, "full") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_FULL);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_FULL);
 		}
 		else if (strcmp(tmp, "fulllow") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_FULL_LOW);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_FULL_LOW);
 		}
 		else if (strcmp(tmp, "whitesmoke") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_WHITESMOKE);
 		}
 		else if (strcmp(tmp, "whitesmokelow") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_WHITESMOKE_LOW);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_WHITESMOKE_LOW);
 		}
 		else if (strcmp(tmp, "greysmoke") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_GREYSMOKE);
 		}
 		else if (strcmp(tmp, "greysmokelow") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_GREYSMOKE_LOW);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_GREYSMOKE_LOW);
 		}
 		else if (strcmp(tmp, "blacksmoke") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_BLACKSMOKE);
 		}
 		else if (strcmp(tmp, "blacksmokelow") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_BLACKSMOKE_LOW);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_BLACKSMOKE_LOW);
 		}
 		else if (strcmp(tmp, "onfire") == 0) {
-			SetVehicleHealth(vehicleid, VEH_HEALTH_ONFIRE);
+			SetVehicleHealth(GetPlayerVehicleID(playerid), VEH_HEALTH_ONFIRE);
 		}
 		else {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /setvehiclehealth [ID]. Type /help setvehiclehealth for ID list.");
