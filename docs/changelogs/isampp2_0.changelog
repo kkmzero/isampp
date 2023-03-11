@@ -19,3 +19,4 @@ Changes in ISAMPP 2.0
 - Destroy active pickups in OnGameModeExit function
 - Updated main function
 - Removed green hat from player model
+- Reduced amount of spawned static vehicles
