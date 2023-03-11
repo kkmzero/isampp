@@ -125,6 +125,24 @@ stock MppShowVehicleInfo(playerid, vehmodelid, pstringcolor) {
 	return 1;
 }
 
+MppEnableVehicleLights(vehicleid, lights) {
+	new panelstate, doorstate, lightstate, tirestate;
+
+	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
+	UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate & (~lights), tirestate);
+
+	return 1;
+}
+
+MppDisableVehicleLights(vehicleid, lights) {
+	new panelstate, doorstate, lightstate, tirestate;
+
+	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
+	UpdateVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate | (lights), tirestate);
+
+	return 1;
+}
+
 MppFixVehicleTires(vehicleid, tires) {
 	new panelstate, doorstate, lightstate, tirestate;
 
