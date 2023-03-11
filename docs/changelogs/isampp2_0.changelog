@@ -9,6 +9,7 @@ Changes in ISAMPP 2.0
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
+- Added new commands /lightson and /lightsoff
 - Added new commands /fixtires and /poptires
 - Added new command /wantedlevel [0-6]
 - Added new command /kill
