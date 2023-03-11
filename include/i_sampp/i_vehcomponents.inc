@@ -7,6 +7,12 @@
  */
 
 
+//Vehicle Lights
+#define LIGHT_FL                     0b00000001   //Front-left light
+#define LIGHT_FR                     0b00000100   //Front-right light
+#define LIGHT_BACK                   0b01000000   //Both back lights
+#define LIGHT_ALL                    0b01000101   //All lights
+
 //Vehicle Tires
 #define TIRE4W_FL                    0b1000   //4-wheeled vehicle, front-left tire
 #define TIRE4W_BL                    0b0100   //4-wheeled vehicle, back-left tire
