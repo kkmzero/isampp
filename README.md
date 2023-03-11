@@ -107,6 +107,12 @@ or simply for debugging purposes. These stock functions are defined in *i_sampp.
 #### MppGetPlayerName(playerid)
 *Returns player nick/name from given playerid.*
 
+#### MppEnableVehicleLights(vehicleid, lights)
+*Turns on (enables) lights of any given vehicle. You can use bitwise operator OR to combine specific lights.*
+
+#### MppDisableVehicleLights(vehicleid, lights)
+*Turns off (disables) lights of any given vehicle. You can use bitwise operator OR to combine specific lights.*
+
 #### MppFixVehicleTires(vehicleid, tires)
 *Fixes tires of any given vehicle. You can use bitwise operator OR to combine specific tires.*
 
