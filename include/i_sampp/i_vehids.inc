@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2022, Ivan Kmeťo
+ * 2018 - 2023, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -146,7 +146,7 @@
 #define VEH_CLUB                   589
 #define VEH_COPCARLA               596
 #define VEH_COPCARSF               597
-#define VEH_COPCARVG               598
+#define VEH_COPCARLV               598
 #define VEH_POLRANGER              599
 #define VEH_PICADOR                600
 #define VEH_SWATVAN                601
@@ -169,7 +169,7 @@
 
 //Boats
 #define VEH_PREDATOR               430
-#define VEH_SQUALLO                446
+#define VEH_SQUALO                 446
 #define VEH_SPEEDER                452
 #define VEH_REEFER                 453
 #define VEH_TROPIC                 454
@@ -180,7 +180,7 @@
 #define VEH_LAUNCH                 595
 
 //Truck Trailers
-#define VEH_ACRTICLETRAILER        435
+#define VEH_ARTICLETRAILER1        435
 #define VEH_ARTICLETRAILER2        450
 #define VEH_PETROLTRAILER          584
 #define VEH_ARTICLETRAILER3        591
@@ -237,7 +237,7 @@
 //Misc Trailers
 #define VEH_BAGBOXA                606
 #define VEH_BAGBOXB                607
-#define VEH_TUGSTARS               608
+#define VEH_TUGSTAIRS              608
 #define VEH_FARMTRAILER            610
 #define VEH_UTILITYTRAILER         611
 
@@ -279,7 +279,7 @@ new vehicleName[213][] = {
 "Rhino",
 "Barracks",
 "Hotknife",
-"Article Trailer",
+"Article Trailer 1",
 "Previon",
 "Coach",
 "Cabbie",
@@ -290,8 +290,8 @@ new vehicleName[213][] = {
 "Packer",
 "Monster",
 "Admiral",
-"Squallo",
-"Seasparrow",
+"Squalo",
+"Sea Sparrow",
 "Pizzaboy",
 "Tram",
 "Article Trailer 2",
@@ -303,7 +303,7 @@ new vehicleName[213][] = {
 "Yankee",
 "Caddy",
 "Solair",
-"Topfun Van (Berkley's RC",
+"Topfun Van",
 "Skimmer",
 "PCJ-600",
 "Faggio",
@@ -332,7 +332,7 @@ new vehicleName[213][] = {
 "Baggage",
 "Dozer",
 "Maverick",
-"SAN News Maverick",
+"SAN Maverick",
 "Rancher",
 "FBI Rancher",
 "Virgo",
