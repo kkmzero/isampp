@@ -125,7 +125,7 @@ stock MppShowVehicleInfo(playerid, vehmodelid, pstringcolor) {
 	return 1;
 }
 
-MppEnableVehicleLights(vehicleid, lights) {
+stock MppEnableVehicleLights(vehicleid, lights) {
 	new panelstate, doorstate, lightstate, tirestate;
 
 	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
@@ -134,7 +134,7 @@ MppEnableVehicleLights(vehicleid, lights) {
 	return 1;
 }
 
-MppDisableVehicleLights(vehicleid, lights) {
+stock MppDisableVehicleLights(vehicleid, lights) {
 	new panelstate, doorstate, lightstate, tirestate;
 
 	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
@@ -143,7 +143,7 @@ MppDisableVehicleLights(vehicleid, lights) {
 	return 1;
 }
 
-MppFixVehicleTires(vehicleid, tires) {
+stock MppFixVehicleTires(vehicleid, tires) {
 	new panelstate, doorstate, lightstate, tirestate;
 
 	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
@@ -152,7 +152,7 @@ MppFixVehicleTires(vehicleid, tires) {
 	return 1;
 }
 
-MppPopVehicleTires(vehicleid, tires) {
+stock MppPopVehicleTires(vehicleid, tires) {
 	new panelstate, doorstate, lightstate, tirestate;
 
 	GetVehicleDamageStatus(vehicleid, panelstate, doorstate, lightstate, tirestate);
