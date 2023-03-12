@@ -3,9 +3,11 @@ Changes in ISAMPP 2.0
 * ISAMPP Library *
 - New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
+- Reworked vehicle color list (i_carcols.inc)
 - New definitions for vehicle components (i_vehcomponents.inc)
 - New custom functions: MppEnableVehicleLights, MppDisableVehicleLights, MppFixVehicleTires, MppPopVehicleTires (i_sampp.inc)
 - Function MppShowVehicleInfo now outputs Z-Angle
+- Other minor tweaks and fixes
 - Updated documentation
 
 * ISAMPP Sandbox Game Mode *
