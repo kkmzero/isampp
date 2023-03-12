@@ -750,7 +750,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_MAGENTA, "sunnysf, extrasunnysf, cloudysf, rainysf, foggysf");
 			SendClientMessage(playerid, COLOR_MAGENTA, "sunnyvegas, extrasunnyvegas, cloudyvegas");
 			SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnycountry, sunnycountry, cloudycountry, rainycountry");
-			SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater");
+			SendClientMessage(playerid, COLOR_MAGENTA, "extrasunnydesert, sunnydesert, sandstorm, underwater, interior1, interior2");
 		}
 		else {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Use command /help for list of available commands");
@@ -1264,6 +1264,12 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		}
 		else if (strcmp(tmp, "underwater") == 0) {
 			SetWeather(WEATHER_UNDERWATER);
+		}
+		else if (strcmp(tmp, "interior1") == 0) {
+			SetWeather(WEATHER_INTERIOR1);
+		}
+		else if (strcmp(tmp, "interior2") == 0) {
+			SetWeather(WEATHER_INTERIOR2);
 		}
 		else {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /weather [ID]. Type /help weather for ID list.");
