@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2022, Ivan Kmeťo
+ * 2018 - 2023, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -20,20 +20,6 @@
 #define WEAP_POOLCUE               7
 #define WEAP_KATANA                8
 #define WEAP_CHAINSAW              9
-
-//Weapon Slot 10
-#define WEAP_RDILDO                10
-#define WEAP_WDILDO                11
-#define WEAP_VIBRATOR              12
-#define WEAP_VIBRATOR2             13
-#define WEAP_FLOWERS               14
-#define WEAP_CANE                  15
-
-//Weapon Slot 8
-#define WEAP_GRENADE               16
-#define WEAP_TEARGAS               17
-#define WEAP_MOLOTOV               18
-#define WEAP_SATCHEL               39
 
 //Weapon Slot 2
 #define WEAP_PISTOL                22
@@ -64,15 +50,29 @@
 #define WEAP_FLAMETHROWER          37
 #define WEAP_MINIGUN               38
 
-//Weapon Slot 12
-#define WEAP_DETONATOR             40
+//Weapon Slot 8
+#define WEAP_GRENADE               16
+#define WEAP_TEARGAS               17
+#define WEAP_MOLOTOV               18
+#define WEAP_SATCHEL               39
 
 //Weapon Slot 9
 #define WEAP_SPRAY                 41
 #define WEAP_EXTINGUISHER          42
 #define WEAP_CAMERA                43
 
+//Weapon Slot 10
+#define WEAP_RDILDO                10
+#define WEAP_WDILDO                11
+#define WEAP_VIBRATOR              12
+#define WEAP_VIBRATOR2             13
+#define WEAP_FLOWERS               14
+#define WEAP_CANE                  15
+
 //Weapon Slot 11
 #define WEAP_NGOGGLES              44
 #define WEAP_TGOGGLES              45
 #define WEAP_PARACHUTE             46
+
+//Weapon Slot 12
+#define WEAP_DETONATOR             40
