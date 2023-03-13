@@ -147,7 +147,7 @@
 #define VEH_COPCARLA               596
 #define VEH_COPCARSF               597
 #define VEH_COPCARLV               598
-#define VEH_POLRANGER              599
+#define VEH_RANGER                 599
 #define VEH_PICADOR                600
 #define VEH_SWATVAN                601
 #define VEH_ALPHA                  602
@@ -332,7 +332,7 @@ new vehicleName[213][] = {
 "Baggage",
 "Dozer",
 "Maverick",
-"SAN Maverick",
+"News Chopper",
 "Rancher",
 "FBI Rancher",
 "Virgo",
@@ -443,7 +443,7 @@ new vehicleName[213][] = {
 "Police Car (LSPD)",
 "Police Car (SFPD)",
 "Police Car (LVPD)",
-"Police Ranger",
+"Ranger",
 "Picador",
 "S.W.A.T.",
 "Alpha",
