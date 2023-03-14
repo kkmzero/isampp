@@ -40,16 +40,32 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \textbf{ISAMPP Library:}
 \\- New objects defined \textit{(i\_objects.inc)}
 \\- New sounds defined \textit{(i\_soundids.inc)}
+\\- Reworked vehicle color list \textit{(i\_carcols.inc)}
+\\- Fixed some incorrect strings in vehicle list \textit{(i\_vehids.inc)}
+\\- VEH\_COPCARVG renamed to VEH\_COPCARLV \textit{(i\_vehids.inc)}
+\\- VEH\_POLRANGER renamed to VEH\_RANGER \textit{(i\_vehids.inc)}
+\\- VEH\_SQUALLO renamed to VEH\_SQUALO \textit{(i\_vehids.inc)}
+\\- VEH\_ACRTICLETRAILER renamed to VEH\_ARTICLETRAILER1 \textit{(i\_vehids.inc)}
+\\- VEH\_TUGSTARS renamed to VEH\_TUGSTAIRS \textit{(i\_vehids.inc)}
+\\- New definitions for vehicle components \textit{(i\_vehcomponents.inc)}
+\\- Two new weather IDs set: WEATHER\_INTERIOR1 and WEATHER\_INTERIOR2 \textit{(i\_weatherids.inc)}
+\\- New custom functions: MppEnableVehicleLights, MppDisableVehicleLights, MppFixVehicleTires, MppPopVehicleTires \textit{(i\_sampp.inc)}
+\\- Function MppShowVehicleInfo now outputs Z-Angle
+\\- Other minor tweaks and fixes
 \\- Updated documentation
 \bigskip
 \\\textbf{ISAMPP Sandbox Game Mode:}
+\\- Added new commands /lightson and /lightsoff
+\\- Added new commands /fixtires and /poptires
 \\- Added new command /wantedlevel [0-6]
+\\- Added new command /kill
 \\- Bribe stars and Tiki pickup now work
 \\- Money pickup now uses type PICKUP\_TYPE\_MONEY
 \\- Snapshot pickup now uses type PICKUP\_TYPE\_SNAPSHOT
 \\- Destroy active pickups in OnGameModeExit function
 \\- Updated main function
 \\- Removed green hat from player model
+\\- Reduced amount of spawned static vehicles
 \bigskip
 \\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
@@ -62,9 +78,6 @@ San Andreas Multiplayer Includes Library+ or ISAMPP \textit{(Includes for San An
 
 \textit{\\ISAMPP versions 1.3 or newer should be considered public domain.}
 \\\url{https://creativecommons.org/publicdomain/zero/1.0/}
-\bigskip
-\\\textit{Older versions were published under MIT License.}
-\\\url{http://opensource.org/licenses/mit-license}
 
 \section{Installation}
 Copy contents of \textit{include} folder to \textit{"[SA-MP Server folder]/include"} and also to \textit{"include"} folder for Pawno (by default \textit{"[SA-MP Server folder]/pawno/include"}).
@@ -92,6 +105,7 @@ or include header files as you wish separately:
 #include <i_sampp/i_skinids>
 #include <i_sampp/i_soundids>
 #include <i_sampp/i_textstyle>
+#include <i_sampp/i_vehcomponents>
 #include <i_sampp/i_vehhealth>
 #include <i_sampp/i_vehids>
 #include <i_sampp/i_weaponids>
@@ -121,7 +135,8 @@ Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind t
 \\\textit{skinids} - List of definitions for character skin/model identifiers
 \\\textit{soundids} - List of definitions for sound identifiers
 \\\textit{textstyle} - List of definitions for GameText styles
-\\\textit{vehhealth} - Vehicle Health configurations
+\\\textit{vehcomponents} - List of default vehicle components
+\\\textit{vehhealth} - Vehicle health configurations
 \\\textit{vehids} - List of definitions for all available vehicles
 \\\textit{weaponids} - List of definitions for weapon identifiers, sorted by weapon slot IDs
 \\\textit{weatherids} - List of definitions for weather identifiers
@@ -379,7 +394,7 @@ Sounds meant to be played with function \textit{PlayerPlaySound} are defined wit
 \\Resources: \url{https://open.mp/docs/scripting/resources/sound-ids}
 
 
-\section{Vehicle Components}
+\section{Vehicle Customization Components}
 List of all available components for vehicle customization, starting with prefix \textit{CARMOD\_}\\Can be used with function \textit{AddVehicleComponent(vehicleid, \textbf{componentid});}
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/carcomponentid}
@@ -389,6 +404,56 @@ List of all available components for vehicle customization, starting with prefix
 Vehicle identifiers are included as macro defines with prefix \textit{VEH\_} followed by the name of vehicle in game with capital letters \textit{(motorcycles, bicycles, boats, planes, helicopters, trailers, trains, etc. are included in this format as well)}. For better orientation in list, defines are sorted by vehicle type.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehicleid}
+
+
+\newpage
+\section{Default Vehicle Components}
+These are tables of default vehicle components as defined in file i\_vehcomponents.inc. Can be used with function \textit{UpdateVehicleDamageStatus} or related custom functions.
+
+\subsection{Vehicle Lights}
+\begin{sloppypar}
+List of all vehicle lights. Can be used with custom functions \textit{MppEnableVehicleLights(vehicleid, \textbf{lights})} and \textit{MppDisableVehicleLights(vehicleid, \textbf{lights})}. Use bitwise operator OR to create any combination of lights. \textit{Note: The lights on vehicles with 2 lights can not be changed and the two back lights of a vehicle can not be changed separately.}
+\end{sloppypar}
+\bigskip
+\noindent\begin{tabular}{ |l|l|l| } 
+\hline
+Identifier & Exact Value & Description \\
+\hline
+LIGHT\_FL & 0b00000001 & Front-left light \\ 
+LIGHT\_FR & 0b00000100 & Front-right light \\ 
+LIGHT\_BACK & 0b01000000 & Both back lights \\ 
+LIGHT\_ALL & 0b01000101 & All lights \\ 
+\hline
+\end{tabular}
+\bigskip
+\\You can test this in ISAMPP sandbox game mode with commands \textbf{/lightson} and \textbf{/lightsoff} while being in any vehicle.
+\bigskip
+\\Resources: \url{https://www.open.mp/docs/scripting/resources/lightstates}
+
+
+\subsection{Vehicle Tires}
+\begin{sloppypar}
+List of all vehicle tires. Can be used with custom functions \textit{MppFixVehicleTires(vehicleid, \textbf{tires})} and \textit{MppPopVehicleTires(vehicleid, \textbf{tires})}. Use bitwise operator OR to create any combination of tires.
+\end{sloppypar}
+\bigskip
+\noindent\begin{tabular}{ |l|l|l| } 
+\hline
+Identifier & Exact Value & Description \\
+\hline
+TIRE4W\_FL & 0b1000 & 4-wheeled vehicle, front-left tire \\ 
+TIRE4W\_BL & 0b0100 & 4-wheeled vehicle, back-left tire \\ 
+TIRE4W\_FR & 0b0010 & 4-wheeled vehicle, front-right tire \\ 
+TIRE4W\_BR & 0b0001 & 4-wheeled vehicle, back-right tire \\ 
+TIRE4W\_ALL & 0b1111 & 4-wheeled vehicle, all tires \\ 
+TIRE2W\_FRONT & 0b10 & 2-wheeled vehicle, front tire \\ 
+TIRE2W\_BACK & 0b01 & 2-wheeled vehicle, back tire \\ 
+TIRE2W\_ALL & 0b11 & 2-wheeled vehicle, all tires \\ 
+\hline
+\end{tabular}
+\bigskip
+\\You can test this in ISAMPP sandbox game mode with commands \textbf{/fixtires} and \textbf{/poptires} while being in any vehicle.
+\bigskip
+\\Resources: \url{https://www.open.mp/docs/scripting/resources/tirestates}
 
 
 \newpage
@@ -419,7 +484,7 @@ VEH\_HEALTH\_ONFIRE & 249 & Sets car on fire \\
 
 
 \section{Vehicle Colors}
-List of all available colors for vehicles in game. Color names using prefix \textit{CARCOL\_SAMP\_} are supported only in SA-MP version 0.3x.
+List of all available colors for vehicles in game. Colors from carcols.dat file use prefix \textit{CARCOL\_} and color names with prefix \textit{CARCOL\_SAMP\_} are supported in SA-MP version 0.3x or newer.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehiclecolorid}
 
@@ -446,7 +511,7 @@ Weapon identifiers are included as macro defines with prefix \textit{WEAP\_}. In
 
 
 \section{Weather Identifiers}
-Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}. In ISAMPP sandbox game mode you can test weather settings with command \textbf{/w [ID]}
+Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}. In ISAMPP sandbox game mode you can test weather settings with command \textbf{/weather [ID]}
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/weatherid}
 
@@ -529,7 +594,7 @@ if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 \end{verbatim}
 
 
-\subsection{MppShowVehicleInfo(playerid, vehicleid, pstringcolor)}
+\subsection{MppShowVehicleInfo(playerid, vehmodelid, pstringcolor)}
 Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.
 \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
 \\Note: You must pass vehicleid parameter if you want to get model name else function returns '0 Unknown'.
@@ -568,6 +633,55 @@ Returns player nick/name from given playerid.
 \begin{verbatim}
 if(strcmp(cmdtext, "/myname", true) == 0) {
     SendClientMessage(playerid, COLOR_LIGHTBLUE, MppGetPlayerName(playerid));
+    return 1;
+}
+\end{verbatim}
+
+
+\newpage
+\subsection{MppEnableVehicleLights(vehicleid, lights)}
+Turns on (enables) lights of any given vehicle. You can use bitwise operator OR to combine specific lights.
+\bigskip
+\\\textbf{Example of implementation:}
+\begin{verbatim}
+if (strcmp(cmdtext, "/lightson", true) == 0) {
+    MppEnableVehicleLights(GetPlayerVehicleID(playerid), LIGHT_ALL);
+    return 1;
+}
+\end{verbatim}
+
+
+\subsection{MppDisableVehicleLights(vehicleid, lights)}
+Turns off (disables) lights of any given vehicle. You can use bitwise operator OR to combine specific lights.
+\bigskip
+\\\textbf{Example of implementation:}
+\begin{verbatim}
+if (strcmp(cmdtext, "/frontlightsoff", true) == 0) {
+    MppDisableVehicleLights(GetPlayerVehicleID(playerid), LIGHT_FL | LIGHT_FR);
+    return 1;
+}
+\end{verbatim}
+
+
+\subsection{MppFixVehicleTires(vehicleid, tires)}
+Fixes tires of any given vehicle. You can use bitwise operator OR to combine specific tires.
+\bigskip
+\\\textbf{Example of implementation:}
+\begin{verbatim}
+if(strcmp(cmdtext, "/fixtires", true) == 0) {
+    MppFixVehicleTires(GetPlayerVehicleID(playerid), TIRE4W_ALL);
+    return 1;
+}
+\end{verbatim}
+
+
+\subsection{MppPopVehicleTires(vehicleid, tires)}
+Pops tires of any given vehicle. You can use bitwise operator OR to combine specific tires.
+\bigskip
+\\\textbf{Example of implementation:}
+\begin{verbatim}
+if(strcmp(cmdtext, "/popbacktires", true) == 0) {
+    MppPopVehicleTires(GetPlayerVehicleID(playerid), TIRE4W_BR | TIRE4W_BL);
     return 1;
 }
 \end{verbatim}
@@ -729,9 +843,6 @@ Tab List Row Characters & 256 \\
 \newpage
 \section{SA-MP Macros}
 SA-MP has in certain cases various macros replacing numeric identifiers by default.
-\subsection{Animations List}
-Read More: \url{https://open.mp/docs/scripting/resources/animations}
-
 
 \subsection{Bullet Hit Types}
 To be used with function \textit{OnPlayerWeaponShot}.
@@ -1181,6 +1292,73 @@ Value & Name \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/svartypes}
+
+
+\subsection{Vehicle Information Types}
+Vehicle information types used by \textit{GetVehicleModelInfo function}.
+\bigskip
+\\\begin{tabular}{ |l|l| }
+\hline
+Vehicle Information Type & Description \\
+\hline
+VEHICLE\_MODEL\_INFO\_SIZE & Vehicle size \\ 
+VEHICLE\_MODEL\_INFO\_FRONTSEAT & Position of the front seat \\ 
+VEHICLE\_MODEL\_INFO\_REARSEAT & Position of the rear seat \\ 
+VEHICLE\_MODEL\_INFO\_PETROLCAP & Position of the fuel cap \\ 
+VEHICLE\_MODEL\_INFO\_WHEELSFRONT & Position of the front wheels \\ 
+VEHICLE\_MODEL\_INFO\_WHEELSREAR & Position of the rear wheels \\ 
+VEHICLE\_MODEL\_INFO\_WHEELSMID & Position of the middle wheels \\ 
+VEHICLE\_MODEL\_INFO\_FRONT\_BUMPER\_Z & Height of the front bumper \\ 
+VEHICLE\_MODEL\_INFO\_REAR\_BUMPER\_Z & Height of the rear bumper \\ 
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://www.open.mp/docs/scripting/resources/vehicleinformationtypes}
+
+
+\newpage
+\subsection{Weapon Skills}
+Weapon skill types and skill levels used by \textit{SetPlayerSkillLevel} function.
+\bigskip
+\\\begin{tabular}{ |c|l|l|c|c|c| }
+\hline
+Value & Weapon & Type & Poor & Gangster & Hitman \\
+\hline
+0 & Pistol & WEAPONSKILL\_PISTOL & 0 & 40 & 999 \\ 
+1 & Slienced Pistol & WEAPONSKILL\_PISTOL\_SILENCED & 0 & 500 & 999 \\ 
+2 & Desert Eagle & WEAPONSKILL\_DESERT\_EAGLE & 0 & 200 & 999 \\ 
+3 & Shotgun & WEAPONSKILL\_SHOTGUN & 0 & 200 & 999 \\ 
+4 & Sawnoff & WEAPONSKILL\_SAWNOFF\_SHOTGUN & 0 & 200 & 999 \\ 
+5 & Autoshotgun & WEAPONSKILL\_SPAS12\_SHOTGUN & 0 & 200 & 999 \\ 
+6 & Micro Uzi & WEAPONSKILL\_MICRO\_UZI & 0 & 50 & 999 \\ 
+- & Tec 9 & - & 0 & 50 & 999 \\ 
+7 & MP5 & WEAPONSKILL\_MP5 & 0 & 250 & 999 \\ 
+8 & AK47 & WEAPONSKILL\_AK47 & 0 & 200 & 999 \\ 
+9 & M4 & WEAPONSKILL\_M4 & 0 & 200 & 999 \\ 
+10 & Sniper Rifle & WEAPONSKILL\_SNIPERRIFLE & 0 & 300 & 999 \\ 
+- & Rifle & - & 0 & 300 & 999 \\ 
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://www.open.mp/docs/scripting/resources/weaponskills}
+
+
+\subsection{Weapon States}
+Weapon states used by \textit{GetPlayerWeaponState} function.
+\bigskip
+\\\begin{tabular}{ |c|l|l| }
+\hline
+Value & State & Description \\
+\hline
+-1 & WEAPONSTATE\_UNKNOWN & Set in vehicle, spectating or on player's spawn \\ 
+0 & WEAPONSTATE\_NO\_BULLETS & Player's current weapon has no ammo remaining \\ 
+1 & WEAPONSTATE\_LAST\_BULLET & Player's current weapon has a single bullet left \\ 
+2 & WEAPONSTATE\_MORE\_BULLETS & Player's current weapon has more than one bullet left \\ 
+3 & WEAPONSTATE\_RELOADING & Player is reloading current weapon \\ 
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://www.open.mp/docs/scripting/resources/weaponstates}
 
 
 
