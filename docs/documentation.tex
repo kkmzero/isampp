@@ -41,6 +41,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \\- New objects defined \textit{(i\_objects.inc)}
 \\- New sounds defined \textit{(i\_soundids.inc)}
 \\- Reworked vehicle color list \textit{(i\_carcols.inc)}
+\\- Added legacy functions max and min \textit{(i\_funcl.inc)}
 \\- Fixed some incorrect strings in vehicle list \textit{(i\_vehids.inc)}
 \\- VEH\_COPCARVG renamed to VEH\_COPCARLV \textit{(i\_vehids.inc)}
 \\- VEH\_POLRANGER renamed to VEH\_RANGER \textit{(i\_vehids.inc)}
@@ -695,6 +696,12 @@ Legacy functions are implemented in file \textit{i\_funcl.inc} for backwards com
 \subsection{isnull(string)}
 Checks whether a string is equal to null (empty). More efficient than checking if strlen is equal to 0.
 
+\subsection{max(int1, int2)}
+Returns larger of two given integers.
+
+\subsection{min(int1, int2)}
+Returns smaller of two given integers.
+
 \subsection{rot13(string[])}
 Rotates the alphabet in string by half of its length - 13 characters. It is a symmetric operation: applying it twice on the same string reveals the original.
 
@@ -807,6 +814,49 @@ Explosions & 10 \\
 \hline
 \end{tabular}
 \bigskip
+\\Read More: \url{https://www.open.mp/docs/scripting/resources/limits}
+\bigskip
+\\\textbf{String Length}
+\bigskip
+\\\begin{tabular}{ |l|l|l| } 
+\hline
+Type & Limit & Description \\
+\hline
+Text input & 128 & Text you input in the chat \\
+Text output & 144 & Text that outputs on the client's screen \\
+Name & 24 & Player's nickname \\
+Textdraw string & 1024 & Length of string for textdraws \\
+Dialog info & 4096 & Text of various dialog windows \\
+Dialog caption & 64 & The caption on top of the dialog window \\
+Dialog input & 128 & Input box on dialog windows \\
+Dialog column & 128 & Characters on each column of dialog tables \\
+Dialog row & 256 & Characters on each row of dialog tables \\
+Chat bubble & 144 & Chat bubble that shows above the player's name tag \\
+Menu title & 31 & GTA San Andreas native menu header \\
+Menu item & 31 & GTA San Andreas native menu item/row \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://www.open.mp/docs/tutorials/stringmanipulation}
+
+
+\newpage
+\noindent\textbf{Server Properties (SA-MP v0.3.7)}
+\bigskip
+\\\begin{tabular}{ |l|l| } 
+\hline
+Type & Limit \\
+\hline
+Gamemodes & 16 \\
+Filterscripts & 16 \\
+Text Input (Chat/Commands) & 128 cells (512 bytes) \\
+Text Output & 144 cells (576 bytes) \\
+Name Length & 24 \\
+\hline
+\end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/limits}
+\bigskip
 \\\textbf{Textdraws}
 \bigskip
 \\\begin{tabular}{ |l|l| } 
@@ -820,6 +870,8 @@ Created Serverwise (Global) & 2048 \\
 Created Serverwise (Per-Player) & 256 \\
 \hline
 \end{tabular}
+\bigskip
+\\Read More: \url{https://open.mp/docs/scripting/resources/limits}
 \bigskip
 \\\textbf{Dialogs}
 \bigskip
@@ -843,6 +895,10 @@ Tab List Row Characters & 256 \\
 \newpage
 \section{SA-MP Macros}
 SA-MP has in certain cases various macros replacing numeric identifiers by default.
+
+\subsection{Animations List}
+Read More: \url{https://open.mp/docs/scripting/resources/animations}
+
 
 \subsection{Bullet Hit Types}
 To be used with function \textit{OnPlayerWeaponShot}.
