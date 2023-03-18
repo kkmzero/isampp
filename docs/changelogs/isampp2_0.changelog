@@ -4,7 +4,7 @@ Changes in ISAMPP 2.0
 - New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
 - Reworked vehicle color list (i_carcols.inc)
-- Added legacy functions max and min (i_funcl.inc)
+- Added legacy functions max, min and swap (i_funcl.inc)
 - Fixed some incorrect strings in vehicle list (i_vehids.inc)
 - VEH_COPCARVG renamed to VEH_COPCARLV (i_vehids.inc)
 - VEH_POLRANGER renamed to VEH_RANGER (i_vehids.inc)
