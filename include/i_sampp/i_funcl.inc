@@ -23,10 +23,10 @@
 stock rot13(string[]) {
 	for (new index = 0; string[index]; index++) {
 		if ('a' <= string[index] <= 'z') {
-			string[index] = (string[index] - 'a' +13) % 26 + 'a';
+			string[index] = (string[index] - 'a' + 13) % 26 + 'a';
 		}
 		else if ('A' <= string[index] <= 'Z') {
-			string[index] = (string[index] - 'A' +13) % 26 + 'A';
+			string[index] = (string[index] - 'A' + 13) % 26 + 'A';
 		}
 	}
 
@@ -124,4 +124,10 @@ stock strtoupper(string[]) {
 
 	result[i] = EOS;
 	return result;
+}
+
+stock swap(&inta, &intb) {
+	new tmp = intb;
+	intb = inta;
+	inta = tmp;
 }
