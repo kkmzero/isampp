@@ -95,7 +95,7 @@ new gActorDummy;
 
 public OnGameModeInit()
 {
-	SetWorldTime(21);
+	SetWorldTime(12);
 	SetGameModeText("ISAMPP 2.0 Sandbox GameMode");
 	
 	AddPlayerClass(SKIN_CJ, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
@@ -727,7 +727,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			SendClientMessage(playerid, COLOR_ORANGE, "/setvehiclehealth [ID] (type /help setvehiclehealth for ID list)");
 			SendClientMessage(playerid, COLOR_ORANGE, "/showvehicleinfo; /lightson; /lightsoff; /fixtires; /poptires");
 			SendClientMessage(playerid, COLOR_ORANGE, "/weather [ID] (type /help weather for weather ID list)");
-			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /cameramode; /changeskin; /myname; /kill");
+			SendClientMessage(playerid, COLOR_ORANGE, "/showplayerpos; /cameramode; /changeskin; /myname; /kill; /time [0-23]");
 			SendClientMessage(playerid, COLOR_ORANGE, "/cancelaction; /tp [ID]; /tpcoord");
 		}
 		else if (strcmp(tmp, "explosion") == 0) {
@@ -1825,6 +1825,24 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		return 1;
 	}
 
+	//Client Command: Set World Time
+	if (strcmp(cmd, "/time", true) == 0) {
+		new tmp[128];
+		tmp = strtok(cmdtext, idx);
+
+		if (isnull(tmp)) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Missing argument for command /time [0-23]");
+		}
+		else if (strval(tmp) < 0 || strval(tmp) > 23) {
+			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /time [0-23]");
+		}
+		else {
+			SetWorldTime(strval(tmp));
+		}
+
+		return 1;
+	}
+
 	//Client Command: Cancel Special Action
 	if (strcmp(cmdtext, "/cancelaction", true) == 0) {
 		SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
@@ -1852,43 +1870,43 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//TODO: REMOVE LATER PLAYER PLAY SOUND
 	if(strcmp(cmdtext, "/playsound1", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_34, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound2", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_35, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound3", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_36, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound4", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_37, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound5", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_38, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound6", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_21, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound7", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_18, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound8", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_19, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound9", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_20, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound0", true) == 0) {
-		PlayerPlaySound(playerid, SND_TORENO_LINE_21, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_JIZZY_LINE_1, 0.0, 0.0, 0.0);
 		return 1;
 	}
 
