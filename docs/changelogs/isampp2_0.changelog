@@ -21,8 +21,8 @@ Changes in ISAMPP 2.0
 * ISAMPP Sandbox Game Mode *
 - Added new commands /lightson and /lightsoff
 - Added new commands /fixtires and /poptires
+- Added new commands /kill and /time [0-23]
 - Added new command /wantedlevel [0-6]
-- Added new command /kill
 - Bribe stars and Tiki pickup now work
 - Money pickup now uses type PICKUP_TYPE_MONEY
 - Snapshot pickup now uses type PICKUP_TYPE_SNAPSHOT
