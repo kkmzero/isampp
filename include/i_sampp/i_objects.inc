@@ -45,5 +45,6 @@
 #include <i_sampp/objects/ide_countryn>
 #include <i_sampp/objects/ide_countrye>
 #include <i_sampp/objects/ide_stadint>
+#include <i_sampp/objects/ide_lahills>
 
 #include <i_sampp/objects/ide_samp>
