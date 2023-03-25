@@ -7,7 +7,7 @@
 # https://creativecommons.org/publicdomain/zero/1.0/
 
 
-#Configure full path to compiler executable and includes folder
+# Configure full path to compiler executable and includes folder
 COMPILER_PATH=pawncc
 INCLUDE_PATH=include
 
