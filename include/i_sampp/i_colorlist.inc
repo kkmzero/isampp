@@ -1,6 +1,6 @@
 /*
  * Includes for San Andreas Multiplayer+
- * 2018 - 2022, Ivan Kmeťo
+ * 2018 - 2023, Ivan Kmeťo
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -151,6 +151,7 @@
 #define COLOR_WHEAT                0xF5DEB3FF
 #define COLOR_WHITESMOKE           0xF5F5F5FF
 #define COLOR_YELLOWGREEN          0x9ACD32FF
+
 
 #define SCOL_WHITE                 "{FFFFFF}"
 #define SCOL_BLACK                 "{000000}"
