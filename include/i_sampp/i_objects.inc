@@ -49,5 +49,7 @@
 #include <i_sampp/objects/ide_int_la>
 #include <i_sampp/objects/ide_int_sf>
 #include <i_sampp/objects/ide_int_veg>
+#include <i_sampp/objects/ide_int_cont>
+#include <i_sampp/objects/ide_gen_int1>
 
 #include <i_sampp/objects/ide_samp>
