@@ -51,5 +51,9 @@
 #include <i_sampp/objects/ide_int_veg>
 #include <i_sampp/objects/ide_int_cont>
 #include <i_sampp/objects/ide_gen_int1>
+#include <i_sampp/objects/ide_gen_int2>
+#include <i_sampp/objects/ide_gen_intb>
+#include <i_sampp/objects/ide_gen_int3>
+#include <i_sampp/objects/ide_gen_int4>
 
 #include <i_sampp/objects/ide_samp>
