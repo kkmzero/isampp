@@ -42,18 +42,20 @@
 #include <i_sampp/objects/ide_sfe>        //Object model IDs: 9900 - 10310
 #include <i_sampp/objects/ide_sfs>        //Object model IDs: 10350 - 10744
 #include <i_sampp/objects/ide_sfse>       //Object model IDs: 10750 - 11417
-#include <i_sampp/objects/ide_countryn>
-#include <i_sampp/objects/ide_countrye>
-#include <i_sampp/objects/ide_stadint>
-#include <i_sampp/objects/ide_lahills>
-#include <i_sampp/objects/ide_int_la>
-#include <i_sampp/objects/ide_int_sf>
-#include <i_sampp/objects/ide_int_veg>
-#include <i_sampp/objects/ide_int_cont>
-#include <i_sampp/objects/ide_gen_int1>
-#include <i_sampp/objects/ide_gen_int2>
-#include <i_sampp/objects/ide_gen_intb>
-#include <i_sampp/objects/ide_gen_int3>
-#include <i_sampp/objects/ide_gen_int4>
+#include <i_sampp/objects/ide_countryn>   //Object model IDs: 11420 - 11681
+#include <i_sampp/objects/ide_countrye>   //Object model IDs: 12800 - 13563
+#include <i_sampp/objects/ide_stadint>    //Object model IDs: 13590 - 13667
+#include <i_sampp/objects/ide_lahills>    //Object model IDs: 13672 - 13890
+#include <i_sampp/objects/ide_int_la>     //Object model IDs: 14383 - 14528
+#include <i_sampp/objects/ide_int_sf>     //Object model IDs: 14530 - 14559
+#include <i_sampp/objects/ide_int_veg>    //Object model IDs: 14560 - 14643
+#include <i_sampp/objects/ide_int_cont>   //Object model IDs: 14650 - 14657
+#include <i_sampp/objects/ide_gen_int1>   //Object model IDs: 14660 - 14699
+#include <i_sampp/objects/ide_gen_int2>   //Object model IDs: 14700 - 14728
+#include <i_sampp/objects/ide_gen_intb>   //Object model IDs: 14735 - 14764
+#include <i_sampp/objects/ide_gen_int3>   //Object model IDs: 14770 - 14840
+#include <i_sampp/objects/ide_gen_int4>   //Object model IDs: 14842 - 14903
+#include <i_sampp/objects/ide_savehous>
+#include <i_sampp/objects/ide_countn2>
 
 #include <i_sampp/objects/ide_samp>
