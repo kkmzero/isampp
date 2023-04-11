@@ -51,7 +51,7 @@ Alternatively, you can use pre-compiled file ```testmpp.amx```.
 
 # Library
 
-Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
+Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix. Extended manual can be found in [docs](docs/manual.md) folder.
 
 *bodyparts* - List of available player/npc body parts</br>
 *boneids* - List of player bone identifiers</br>
