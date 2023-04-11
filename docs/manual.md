@@ -754,38 +754,38 @@ if(strcmp(cmdtext, "/popbacktires", true) == 0) {
 Legacy functions are implemented in file *i_funcl.inc* for backwards compatibility with really old SA-MP gamemodes which often use them.
 </br></br>
 
-#### isnull(string)
+### isnull(string)
 Checks whether a string is equal to null (empty). More efficient than checking if strlen is equal to 0.
 
-#### max(int1, int2)
+### max(int1, int2)
 Returns larger of two given integers.
 
-#### min(int1, int2)
+### min(int1, int2)
 Returns smaller of two given integers.
 
-#### rot13(string[])
+### rot13(string[])
 Rotates the alphabet in string by half of its length - 13 characters. It is a symmetric operation: applying it twice on the same string reveals the original.
 
-#### strcpy(dest[], const source[], len = sizeof(dest))
+### strcpy(dest[], const source[], len = sizeof(dest))
 Copies the source string to the destination string.
 
-#### strclr(string[])
+### strclr(string[])
 Empties and clears given string.
 
-#### strisempty(const string[])
+### strisempty(const string[])
 Returns true if the given string is empty, otherwise returns false.
 
-#### strrest(const string[], \&index)
+### strrest(const string[], \&index)
 Splits string and gives back remaining part of the string divided by space ' ' character as default delimiter.
 
-#### strtok(const string[], \&index)
+### strtok(const string[], \&index)
 Strtok is used for splitting strings and was used as one of the methods for creating game commands with arguments. Strings are divided by space ' ' character as default delimiter.
 
-#### strtolower(string[])
+### strtolower(string[])
 Changes all characters in the string to lowercase.
 
-#### strtoupper(string[])
+### strtoupper(string[])
 Changes all characters in the string to uppercase.
 
-#### swap(int1, int2)
+### swap(int1, int2)
 Swaps assigned values of two given integers.
