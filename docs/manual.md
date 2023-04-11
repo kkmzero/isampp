@@ -750,7 +750,7 @@ if(strcmp(cmdtext, "/popbacktires", true) == 0) {
 </br>
 
 
-### Legacy Functions
+## Legacy Functions
 Legacy functions are implemented in file *i_funcl.inc* for backwards compatibility with really old SA-MP gamemodes which often use them.
 </br></br>
 
