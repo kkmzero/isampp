@@ -1,4 +1,5 @@
-% This file is part of documentation for ISAMPP
+% This file is part of ISAMPP documentation
+% https://github.com/kkmzero/isampp
 % 2018 - 2023, Ivan Kmeťo
 %
 % CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
@@ -22,7 +23,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 \title{Includes for San Andreas Multiplayer Plus\\Version 2.0, Documentation}
 \author{Ivan Kmeťo}
-\date{March 2023}
+\date{April 2023}
 
 
 \begin{document}
@@ -32,61 +33,61 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 \includegraphics[width = 40mm]{logo/isampp_logo_big.png}
 \end{center}
 
+
 \newpage
 \tableofcontents
 
-\newpage
-\section{Changes in ISAMPP 2.0}
-\textbf{ISAMPP Library:}
-\\- New objects defined \textit{(i\_objects.inc)}
-\\- New sounds defined \textit{(i\_soundids.inc)}
-\\- Reworked vehicle color list \textit{(i\_carcols.inc)}
-\\- Added legacy functions max and min \textit{(i\_funcl.inc)}
-\\- Fixed some incorrect strings in vehicle list \textit{(i\_vehids.inc)}
-\\- VEH\_COPCARVG renamed to VEH\_COPCARLV \textit{(i\_vehids.inc)}
-\\- VEH\_POLRANGER renamed to VEH\_RANGER \textit{(i\_vehids.inc)}
-\\- VEH\_SQUALLO renamed to VEH\_SQUALO \textit{(i\_vehids.inc)}
-\\- VEH\_ACRTICLETRAILER renamed to VEH\_ARTICLETRAILER1 \textit{(i\_vehids.inc)}
-\\- VEH\_TUGSTARS renamed to VEH\_TUGSTAIRS \textit{(i\_vehids.inc)}
-\\- New definitions for vehicle components \textit{(i\_vehcomponents.inc)}
-\\- Two new weather IDs set: WEATHER\_INTERIOR1 and WEATHER\_INTERIOR2 \textit{(i\_weatherids.inc)}
-\\- New custom functions: MppEnableVehicleLights, MppDisableVehicleLights, MppFixVehicleTires, MppPopVehicleTires \textit{(i\_sampp.inc)}
-\\- Function MppShowVehicleInfo now outputs Z-Angle
-\\- Other minor tweaks and fixes
-\\- Updated documentation
-\bigskip
-\\\textbf{ISAMPP Sandbox Game Mode:}
-\\- Added new commands /lightson and /lightsoff
-\\- Added new commands /fixtires and /poptires
-\\- Added new command /wantedlevel [0-6]
-\\- Added new command /kill
-\\- Bribe stars and Tiki pickup now work
-\\- Money pickup now uses type PICKUP\_TYPE\_MONEY
-\\- Snapshot pickup now uses type PICKUP\_TYPE\_SNAPSHOT
-\\- Destroy active pickups in OnGameModeExit function
-\\- Updated main function
-\\- Removed green hat from player model
-\\- Reduced amount of spawned static vehicles
-\bigskip
-\\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
 \newpage
 \section{Introduction}
-San Andreas Multiplayer Includes Library+ or ISAMPP \textit{(Includes for San Andreas Multiplayer Plus)} is library of include files for San Andreas Multiplayer Mod SA-MP. Purpose of ISAMPP is to make development of game modes for SA-MP much easier. SA-MP by default uses in most cases numeric identifiers which are hard to remember and without enough experience you have to use SA-MP wiki a lot. Word identifiers are much more easier to remember, they make much more sense (especially if you are familiar with modding the game Grand Theft Auto: San Andreas) and may also have positive impact on your workflow. Except re-definitions of numeric identifiers, ISAMPP also contains other useful libraries - such as library of location names with coordinates, vehicle names list, legacy scripting functions, or few related custom stock functions. ISAMPP is available with sandbox-styled game mode in which you can see everything implemented.
+Includes for San Andreas Multiplayer Plus (ISAMPP) is library of include files for San Andreas Multiplayer Mod (SA-MP). SA-MP uses in most cases counterintuitive numeric identifiers as input values which can be very hard to remember and without enough experience you have to rely on external sources, such as mirrors of SA-MP wiki with incomplete or outdated information. ISAMPP seeks to make development of SA-MP gamemodes easier by re-defining these numeric identifiers and by providing collection of useful custom scripting functions.
 
-\textit{\\ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar Games, Rockstar North or Take-Two Interactive Software Inc.}
-\textit{\\Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive Software Inc.}
+\bigskip
+\noindent Additionally, ISAMPP provides other libraries - such as list of location coordinates and their names in game, lists of objects, sounds and vehicle names, various functions for string manipulation and much more. ISAMPP also has its own sandbox-styled gamemode in which you can test everything.
+
+\textit{\\ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar Games, Rockstar North or Take-Two Interactive Software, Inc. Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive Software, Inc.}
 
 \textit{\\ISAMPP versions 1.3 or newer should be considered public domain.}
 \\\url{https://creativecommons.org/publicdomain/zero/1.0/}
 
+\section{Library}
+Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
+\bigskip
+\\\textit{bodyparts} - List of available player/npc body parts
+\\\textit{boneids} - List of player bone identifiers
+\\\textit{cammode} - List of known camera modes
+\\\textit{carcols} - List of definitions for all available vehicle colors
+\\\textit{carmods} - List of all available components for vehicle customization
+\\\textit{colorlist} - List of color definitions for strings
+\\\textit{crimes} - List of crime reports
+\\\textit{explosions} - List of available types of explosions
+\\\textit{funcl} - Legacy functions
+\\\textit{iconids} - List of HUD map icons
+\\\textit{locationids} - List of location coordinates, interior identifiers and names
+\\\textit{objects} - List of game objects/models
+\\\textit{paintjob} - List of all available vehicle paintjobs
+\\\textit{pickupids} - List of definitions for pickup identifiers
+\\\textit{pickuptypes} - List of definitions for pickup types
+\\\textit{skinids} - List of character skins/models
+\\\textit{soundids} - List of game sounds
+\\\textit{textstyle} - List of definitions for GameText styles
+\\\textit{vehcomponents} - List of default vehicle components
+\\\textit{vehhealth} - List of vehicle health configurations
+\\\textit{vehids} - List of all available vehicles and their names
+\\\textit{weaponids} - List of weapons sorted by weapon slot IDs
+\\\textit{weatherids} - List of definitions for weather identifiers
+
+
+\newpage
 \section{Installation}
 Copy contents of \textit{include} folder to \textit{"[SA-MP Server folder]/include"} and also to \textit{"include"} folder for Pawno (by default \textit{"[SA-MP Server folder]/pawno/include"}).
-\\In your game mode file you can include ISAMPP header for all its contents:
+
+\bigskip
+\noindent In your gamemode file you can include ISAMPP header for all its contents:
 \begin{verbatim}
 #include <i_sampp>
 \end{verbatim}
-or include header files as you wish separately:
+or you can include each file separately:
 \begin{verbatim}
 #include <i_sampp/i_bodyparts>
 #include <i_sampp/i_boneids>
@@ -112,41 +113,49 @@ or include header files as you wish separately:
 #include <i_sampp/i_weaponids>
 #include <i_sampp/i_weatherids>
 \end{verbatim}
-If you wish to run included sandbox game mode, you have to add file testmpp.pwn to your \textit{"gamemodes"} folder and compile it. Alternatively, you can use pre-compiled file testmpp.amx.
+If you wish to run included sandbox gamemode, you have to add file testmpp.pwn to your \textit{"gamemodes"} folder and compile it. Alternatively, you can use pre-compiled file testmpp.amx.
+
 
 \newpage
-\section{Includes}
-Every ISAMPP include file starts with prefix \textit{i\_}. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
+\section{Changes in ISAMPP 2.0}
+\textbf{ISAMPP Library:}
+\\- New objects defined \textit{(i\_objects.inc)}
+\\- New sounds defined \textit{(i\_soundids.inc)}
+\\- Reworked vehicle color list \textit{(i\_carcols.inc)}
+\\- Added legacy functions max, min and swap \textit{(i\_funcl.inc)}
+\\- Fixed some incorrect strings in vehicle list \textit{(i\_vehids.inc)}
+\\- VEH\_COPCARVG renamed to VEH\_COPCARLV \textit{(i\_vehids.inc)}
+\\- VEH\_POLRANGER renamed to VEH\_RANGER \textit{(i\_vehids.inc)}
+\\- VEH\_SQUALLO renamed to VEH\_SQUALO \textit{(i\_vehids.inc)}
+\\- VEH\_ACRTICLETRAILER renamed to VEH\_ARTICLETRAILER1 \textit{(i\_vehids.inc)}
+\\- VEH\_TUGSTARS renamed to VEH\_TUGSTAIRS \textit{(i\_vehids.inc)}
+\\- New definitions for vehicle components \textit{(i\_vehcomponents.inc)}
+\\- Two new weather IDs set: WEATHER\_INTERIOR1 and WEATHER\_INTERIOR2 \textit{(i\_weatherids.inc)}
+\\- New custom functions: MppEnableVehicleLights, MppDisableVehicleLights, MppFixVehicleTires, MppPopVehicleTires \textit{(i\_sampp.inc)}
+\\- Function MppShowVehicleInfo now outputs Z-Angle
+\\- Other minor tweaks and fixes
+\\- Updated documentation
 \bigskip
-\\\textit{bodyparts} - List of available player/npc body part identifiers
-\\\textit{boneids} - List of player bone identifiers
-\\\textit{cammode} - List of known camera modes
-\\\textit{carcols} - List of definitions for all available vehicle colors
-\\\textit{carmods} - List of all available components for vehicle customization
-\\\textit{colorlist} - List of color definitions
-\\\textit{crimes} - List of crime reports
-\\\textit{explosions} - List of available types of explosions
-\\\textit{funcl} - Legacy functions
-\\\textit{iconids} - List of map icon identifiers
-\\\textit{locationids} - List of location definitions with coordinates, interior identifiers and names
-\\\textit{objects} - List of game objects/models
-\\\textit{paintjob} - List of definitions for all available vehicle paintjobs
-\\\textit{pickupids} - List of definitions for pickup identifiers
-\\\textit{pickuptypes} - List of definitions for pickup types
-\\\textit{skinids} - List of definitions for character skin/model identifiers
-\\\textit{soundids} - List of definitions for sound identifiers
-\\\textit{textstyle} - List of definitions for GameText styles
-\\\textit{vehcomponents} - List of default vehicle components
-\\\textit{vehhealth} - Vehicle health configurations
-\\\textit{vehids} - List of definitions for all available vehicles
-\\\textit{weaponids} - List of definitions for weapon identifiers, sorted by weapon slot IDs
-\\\textit{weatherids} - List of definitions for weather identifiers
+\\\textbf{ISAMPP Sandbox Game Mode:}
+\\- Added new commands /lightson and /lightsoff
+\\- Added new commands /fixtires and /poptires
+\\- Added new commands /kill and /time [0-23]
+\\- Added new command /wantedlevel [0-6]
+\\- Bribe stars and Tiki pickup now work
+\\- Money pickup now uses type PICKUP\_TYPE\_MONEY
+\\- Snapshot pickup now uses type PICKUP\_TYPE\_SNAPSHOT
+\\- Destroy active pickups in OnGameModeExit function
+\\- Updated main function
+\\- Removed green hat from player model
+\\- Reduced amount of spawned static vehicles
+\bigskip
+\\\textit{Changelogs for previous versions of ISAMPP are located in folder "docs/changelogs"}
 
 
 \newpage
 \section{Body Parts}
 \begin{sloppypar}
-Body part identifiers are included as macro defines with prefix \textit{BODYPART\_}. Body parts can be used in functions \textit{OnPlayerGiveDamage}, \textit{OnPlayerTakeDamage} and \textit{OnPlayerGiveDamageActor}. It is unknown if IDs 0, 1 and 2 have any use. You can test this feature in sandbox game mode by shooting Actor NPC.
+Body part identifiers are included in file \textit{i\_bodyparts.inc} as macros with prefix \textit{BODYPART}. Body parts can be used as parameters in functions \textit{OnPlayerGiveDamage}, \textit{OnPlayerTakeDamage} or \textit{OnPlayerGiveDamageActor}. It is unknown if IDs 0, 1 and 2 have any use. You can test this feature in sandbox gamemode by shooting Actor NPC.
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
@@ -167,7 +176,7 @@ BODYPART\_HEAD & 9 & Head \\
 
 \section{Bone Identifiers}
 \begin{sloppypar}
-Bone identifiers with prefix \textit{BONE\_} can be used for attaching objects to specific parts of player model/skin with function \textit{SetPlayerAttachedObject}.
+Bone identifiers are defined in file \textit{i\_boneids.inc} as macros with prefix \textit{BONE}. They can be used as parameters for attaching objects to specific parts of player model/skin with function \textit{SetPlayerAttachedObject}.
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
@@ -213,7 +222,7 @@ Resources: \url{https://open.mp/docs/scripting/resources/boneid}
 \newpage
 \section{Camera Modes}
 \begin{sloppypar}
-List of known camera modes to be used as returned value of function \textit{GetPlayerCameraMode(playerid)}.\\In ISAMPP sandbox game mode you can output more information about active camera mode with command \textbf{/cameramode}
+List of known camera modes used as returned value of function \textit{GetPlayerCameraMode}.\\In ISAMPP sandbox gamemode you can output more information about active camera mode with command \textbf{/cameramode}
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
@@ -244,9 +253,8 @@ CAMMODE\_PILOTCHASE & 64 & Chase camera (air vehicles): camera focused on pilot 
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/cameramodes}
 
-
 \section{Color List}
-Color List contains definitions of some few common colors in two formats. Primary or Main color definitions have prefix \textit{COLOR\_} and are defined in 0xRRGGBBAA format. Secondary or String color definitions with prefix \textit{SCOL\_} are defined in more common hex format "\{RRGGBB\}" without the alpha color transparency values. The difference of these two formats can be explained by this example:
+Color List contains definitions of some frequently used colors in two formats. Primary or Main color definitions have prefix \textit{COLOR} and are defined in 0xRRGGBBAA format. Secondary or String color definitions with prefix \textit{SCOL} are defined in more common hex format "\{RRGGBB\}" without the alpha color transparency values. The difference between these two formats can be explained in this example:
 \begin{verbatim}
 SendClientMessage(playerid, COLOR_RED, "Hello "SCOL_BLUE"World");
 \end{verbatim}
@@ -255,7 +263,7 @@ SendClientMessage(playerid, COLOR_RED, "Hello "SCOL_BLUE"World");
 \textbf{\color{red}Hello \color{blue}World}
 \end{sloppypar}
 \bigskip
-Secondary or String colors can be used directly in strings while Primary/Main colors would be used mainly as separate parameters in SA-MP functions. To see how every color looks in game, use in included sandbox mode for ISAMPP command \textit{/maincols [0-14]} or \textit{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/i\_colorlist.png"}.
+Secondary or String colors can be used directly in strings while Primary/Main colors would be used mainly as separate parameters in SA-MP functions. To see how every color looks in game, use in included sandbox gamemode command \textbf{/maincols [0-14]} or \textbf{/stringcols}. Screenshot of color strings printed out in client message box is located in \textit{"docs/images/colorlist.png"}.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/colorslist}
 
@@ -263,7 +271,7 @@ Secondary or String colors can be used directly in strings while Primary/Main co
 \newpage
 \section{Crime Reports}
 \begin{sloppypar}
-List of crime report identifiers starting with prefix \textit{CRIME\_} followed by ten-code. These macros can be used with function \textit{PlayCrimeReportForPlayer(playerid, suspectid, \textbf{crimeid});}
+List of crime report identifiers starting with prefix \textit{CRIME} followed by ten-code. These macros can be used as input parameters in function \textit{PlayCrimeReportForPlayer(playerid, suspectid, \textbf{crimeid})}. You can try this in sandbox gamemode with command \textbf{/crime [3-19, 21, 22]}.
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
@@ -307,9 +315,8 @@ public OnPlayerCommandText(playerid, cmdtext[])
 \bigskip
 Resources: \url{https://open.mp/docs/scripting/resources/crimelist}
 
-
 \section{Explosions}
-There are 14 types of available explosions defined as macros with prefix \textit{EXPLOSION\_} and you can test every explosion with in-game command \textbf{/explosion [ID]}. These identifiers can be used with both functions \textit{CreateExplosion} or \textit{CreateExplosionForPlayer}.
+There are 14 types of available explosions defined as macros with prefix \textit{EXPLOSION} and you can test every explosion in sandbox gamemode with in-game command \textbf{/explosion [ID]}. These identifiers can be used with both functions \textit{CreateExplosion} or \textit{CreateExplosionForPlayer}.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/explosionlist}
 
@@ -322,7 +329,7 @@ List of definitions for SA-MP function \textit{GameTextForPlayer(playerid, const
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
 \hline
-Identifier & Value & Notes \\
+Identifier & Value & Description \\
 \hline
 GMTEXT\_STYLE\_PRICEDOWN & 0 & Appears for 9 seconds \\
 GMTEXT\_STYLE\_RPRICEDOWN & 1 & Fades out after 8 seconds \\
@@ -347,73 +354,65 @@ GMTEXT\_STYLE\_NOTIFICATION & 15 & SA notification popup (fixes.inc) \\
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/gametextstyles}
 
-
-\section{Location Identifiers}
+\section{Locations}
 \begin{sloppypar}
-Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed.
+Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed. You can test teleporting to all locations in sandbox gamemode with in-game command \textbf{/tp [ID]}.
 \end{sloppypar}
 \bigskip
 \noindent \textit{\textbf{Note:} If you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.}
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/interiorids}
 
-
-\section{Map Icon Identifiers}
-There are in total 64 map icons included as macro defines with prefix \textit{ICON\_}.
+\section{Map Icons}
+There are in total 64 map icons included as macro defines with prefix \textit{ICON}.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/mapicons}
 
-
 \section{Objects}
-Available game objects are in order by IDE file and ID number. Every game object is listed with prefix \textit{OBJ\_} followed by its name of DFF file.
+Available game objects are ordered by IDE file and ID number. Every game object is listed with prefix \textit{OBJ} followed by its name of DFF file. Every dash in DFF filename is replaced with underscore.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/samp_objects}
 
 
 \newpage
-\section{Pickup Identifiers}
-Pickup identifiers are included as macro defines with prefix \textit{PICKUP\_}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox game mode. Weapon pickups use combined prefix \textit{PICKUP\_WEAP\_} for easier use.
+\section{Pickups}
+Pickup identifiers are included as macro defines with prefix \textit{PICKUP}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox gamemode. Weapon pickups use extended prefix \textit{PICKUP\_WEAP} for easier use.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/pickupids}
 
-
 \section{Pickup Types}
-Pickup types specify behavior of created pickups in game modes. Every pickup type available in SA-MP is listed with prefix \textit{PICKUP\_TYPE\_}
+Pickup types specify behavior of created pickups in gamemodes. Every pickup type available in SA-MP is listed with prefix \textit{PICKUP\_TYPE}
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/pickuptypes}
 
-
-\section{Skin/Playermodel Identifiers}
-Skins are included as macro defines with prefix \textit{SKIN\_}, followed by name of model in game. With exception of few character models \textit{(mainly main story characters and other special characters)} where the name of model is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYS = (\textbf{S}an \textbf{F}ransisco) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}treet, etc. This format is very helpful in contrast with plain number identifiers SA-MP uses by default.
+\section{Skins/Playermodels}
+Skins are included as macro defines with prefix \textit{SKIN}, followed by name of model in game. With exception of few character models \textit{(mainly main story characters and other special characters)} where the name of model is obvious \textit{(f.e. emmet = Emmet, etc.)}, character models are named in this or similar format: prefix \textit{(f.e. if is located only in certain area)}, race, gender, age, suffix. In this context BMYRI = \textbf{B}lack, \textbf{M}ale, \textbf{Y}oung, \textbf{RI}ch. SBFYST = (\textbf{S}an Fierro) \textbf{B}lack, \textbf{F}emale, \textbf{Y}oung, \textbf{S}tree\textbf{T}, etc. This format is very helpful in contrast with plain number identifiers SA-MP uses by default.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/skins}
 
-
-\section{Sound Identifiers}
-Sounds meant to be played with function \textit{PlayerPlaySound} are defined with prefix \textit{SND\_} in file i\_soundids.inc. Please note that this list of available sounds may be incomplete and some sound loops might cause the game client to crash.
+\section{Sounds}
+Sound identifiers which are meant to be used as input parameters in function \textit{PlayerPlaySound} are defined with prefix \textit{SND} in file \textit{i\_soundids.inc}. Please note that this list of available sounds may be incomplete and some sound loops might cause the game client to crash.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/sound-ids}
 
-
 \section{Vehicle Customization Components}
-List of all available components for vehicle customization, starting with prefix \textit{CARMOD\_}\\Can be used with function \textit{AddVehicleComponent(vehicleid, \textbf{componentid});}
+List of all available components for vehicle customization, starting with prefix \textit{CARMOD}\\Can be used with function \textit{AddVehicleComponent(vehicleid, \textbf{componentid});}
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/carcomponentid}
 
-
-\section{Vehicle Identifiers}
-Vehicle identifiers are included as macro defines with prefix \textit{VEH\_} followed by the name of vehicle in game with capital letters \textit{(motorcycles, bicycles, boats, planes, helicopters, trailers, trains, etc. are included in this format as well)}. For better orientation in list, defines are sorted by vehicle type.
+\section{Vehicles}
+Vehicle identifiers are included as macro defines with prefix \textit{VEH} followed by the name of vehicle in game with capital letters \textit{(motorcycles, bicycles, boats, planes, helicopters, trailers, trains, etc. are included in this format as well)}. For better orientation in list, these defines are sorted by vehicle type.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehicleid}
 
 
 \newpage
 \section{Default Vehicle Components}
-These are tables of default vehicle components as defined in file i\_vehcomponents.inc. Can be used with function \textit{UpdateVehicleDamageStatus} or related custom functions.
+These are tables of default vehicle components as defined in file \textit{i\_vehcomponents.inc}. Can be used as paramenters in function \textit{UpdateVehicleDamageStatus} or related custom functions.
 
 \subsection{Vehicle Lights}
 \begin{sloppypar}
-List of all vehicle lights. Can be used with custom functions \textit{MppEnableVehicleLights(vehicleid, \textbf{lights})} and \textit{MppDisableVehicleLights(vehicleid, \textbf{lights})}. Use bitwise operator OR to create any combination of lights. \textit{Note: The lights on vehicles with 2 lights can not be changed and the two back lights of a vehicle can not be changed separately.}
+List of all vehicle lights. Can be used as parameters in custom functions \textit{MppEnableVehicleLights(vehicleid, \textbf{lights})} and \textit{MppDisableVehicleLights(vehicleid, \textbf{lights})}. Use bitwise operator OR to create any combination of lights. \textit{Note: The lights on vehicles with 2 lights can not be changed and the two back lights of a vehicle can not be changed separately.}
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|l|l| } 
@@ -427,14 +426,13 @@ LIGHT\_ALL & 0b01000101 & All lights \\
 \hline
 \end{tabular}
 \bigskip
-\\You can test this in ISAMPP sandbox game mode with commands \textbf{/lightson} and \textbf{/lightsoff} while being in any vehicle.
+\\You can test this in ISAMPP sandbox gamemode with commands \textbf{/lightson} and \textbf{/lightsoff} while being in any vehicle.
 \bigskip
 \\Resources: \url{https://www.open.mp/docs/scripting/resources/lightstates}
 
-
 \subsection{Vehicle Tires}
 \begin{sloppypar}
-List of all vehicle tires. Can be used with custom functions \textit{MppFixVehicleTires(vehicleid, \textbf{tires})} and \textit{MppPopVehicleTires(vehicleid, \textbf{tires})}. Use bitwise operator OR to create any combination of tires.
+List of all vehicle tires. Can be used as parameters in custom functions \textit{MppFixVehicleTires(vehicleid, \textbf{tires})} and \textit{MppPopVehicleTires(vehicleid, \textbf{tires})}. Use bitwise operator OR to create any combination of tires.
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|l|l| } 
@@ -452,7 +450,7 @@ TIRE2W\_ALL & 0b11 & 2-wheeled vehicle, all tires \\
 \hline
 \end{tabular}
 \bigskip
-\\You can test this in ISAMPP sandbox game mode with commands \textbf{/fixtires} and \textbf{/poptires} while being in any vehicle.
+\\You can test this in ISAMPP sandbox gamemode with commands \textbf{/fixtires} and \textbf{/poptires} while being in any vehicle.
 \bigskip
 \\Resources: \url{https://www.open.mp/docs/scripting/resources/tirestates}
 
@@ -460,12 +458,12 @@ TIRE2W\_ALL & 0b11 & 2-wheeled vehicle, all tires \\
 \newpage
 \section{Vehicle Health}
 \begin{sloppypar}
-Vehicle Health configurations are included as macro defines with prefix \textit{VEH\_HEALTH\_} followed by the desired pre-defined identifier. These values are only related to engine condition and do not change visual damage of vehicle model.
+Vehicle Health configurations are included as macro defines with prefix \textit{VEH\_HEALTH} followed by the desired pre-defined identifier. These values are only related to engine condition and do not change visual damage of vehicle model.
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
 \hline
-Identifier & Exact Value & Description \\
+Identifier & Value & Description \\
 \hline
 VEH\_HEALTH\_FULL & 1000 & Full vehicle health \\ 
 VEH\_HEALTH\_FULL\_LOW & 650 &  Lowest value for undamaged vehicle \\ 
@@ -479,20 +477,18 @@ VEH\_HEALTH\_ONFIRE & 249 & Sets car on fire \\
 \hline
 \end{tabular}
 \bigskip
-\\You can test this in ISAMPP sandbox game mode with command \textbf{/setvehiclehealth [ID]} while being in any vehicle.
+\\You can test this in ISAMPP sandbox gamemode with command \textbf{/setvehiclehealth [ID]} while being in any vehicle.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehiclehealth}
 
-
 \section{Vehicle Colors}
-List of all available colors for vehicles in game. Colors from carcols.dat file use prefix \textit{CARCOL\_} and color names with prefix \textit{CARCOL\_SAMP\_} are supported in SA-MP version 0.3x or newer.
+List of all available colors for vehicles in game. Colors from carcols.dat file use prefix \textit{CARCOL} and color names with prefix \textit{CARCOL\_SAMP} are supported only in SA-MP version 0.3x or newer.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/vehiclecolorid}
 
-
 \section{Vehicle Paintjobs}
 \begin{sloppypar}
-List of all available paintjobs for vehicles in game, starting with prefix \textit{PAINTJOB\_} followed by vehicle name and name of paintjob. Use \textit{PAINTJOB\_REMOVE} to remove applied paintjob.
+List of all available paintjobs for vehicles in game, starting with prefix \textit{PAINTJOB} followed by vehicle name and name of paintjob. Use \textit{PAINTJOB\_REMOVE} to remove applied paintjob.
 \end{sloppypar}
 \bigskip
 \noindent \textbf{Example of implementation:}
@@ -504,23 +500,20 @@ ChangeVehiclePaintjob(vehicleid, PAINTJOB_CAMPER_TRUTH);
 \bigskip
 Resources: \url{https://open.mp/docs/scripting/resources/paintjobs}
 
-
-\section{Weapon Identifiers}
-Weapon identifiers are included as macro defines with prefix \textit{WEAP\_}. In ISAMPP sandbox game mode weapon pickups are fully functional. Every weapon in game can be used only for certain weapon slot and weapon identifiers are ordered in file \textit{i\_weaponids.inc} by weapon slot number.
+\section{Weapons}
+Weapon identifiers are included as macro defines with prefix \textit{WEAP}. In ISAMPP sandbox gamemode weapon pickups are fully functional. Every weapon in game can be used only for certain weapon slot and weapon identifiers are ordered in file \textit{i\_weaponids.inc} by weapon slot number.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/weaponids}
 
-
 \section{Weather Identifiers}
-Weather identifiers are included as macro defines with prefix \textit{WEATHER\_}. In ISAMPP sandbox game mode you can test weather settings with command \textbf{/weather [ID]}
+Weather identifiers are included as macro defines with prefix \textit{WEATHER}. In ISAMPP sandbox gamemode you can test weather settings with command \textbf{/weather [ID]}.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/weatherid}
 
 
 \newpage
 \section{Custom Functions}
-ISAMPP uses various stock functions which may be useful in creating your own game modes for SA-MP or simply for debugging purposes. These stock functions are defined in \textit{i\_sampp.inc} file.
-
+ISAMPP provides various stock scripting functions which may be useful in creating your own gamemodes for SA-MP or simply for debugging purposes. These stock functions are defined in \textit{i\_sampp.inc} file.
 
 \subsection{print\_isampp\_version()}
 Outputs ISAMPP version to server console.
@@ -532,7 +525,6 @@ main() {
 }
 \end{verbatim}
 
-
 \subsection{print\_pawncc\_version()}
 Outputs version of compiler to server console if Pawn Community Compiler (Pawncc) is used.
 \bigskip
@@ -542,7 +534,6 @@ main() {
     print_pawncc_version();
 }
 \end{verbatim}
-
 
 \subsection{MppTeleport(playerid, locationid)}
 Teleports player to desired location passed as parameter 'locationid'.
@@ -555,7 +546,6 @@ if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
 }
 \end{verbatim}
 
-
 \subsection{MppTeleportEx(playerid, locationid, pstringcolor)}
 Same as MppTeleport, plus outputs location name to in-game chat window. \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
 \bigskip
@@ -567,9 +557,8 @@ if (strcmp("/tp barbershop", cmdtext, true, 20) == 0) {
 }
 \end{verbatim}
 
-
 \subsection{MppTeleportToCoords(playerid, x, y, z, interiorid, facingangle)}
-Teleports player to specified xyz coordinates, supplied with interior identifier and player facing angle.
+Teleports player to specified XYZ coordinates, supplied with interior identifier and player facing angle.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -594,11 +583,10 @@ if (strcmp("/showplayerpos", cmdtext, true, 15) == 0) {
 }
 \end{verbatim}
 
-
 \subsection{MppShowVehicleInfo(playerid, vehmodelid, pstringcolor)}
 Outputs ID, model, health, position and rotation of vehicle in which is player currently sitting to in-game chat window.
 \\Parameter 'pstringcolor' must be in hexadecimal format 0xRRGGBBAA.
-\\Note: You must pass vehicleid parameter if you want to get model name else function returns '0 Unknown'.
+\\Note: You must pass vehicleid parameter if you want to get model name otherwise function returns '0 Unknown'.
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -626,7 +614,6 @@ public OnPlayerExitVehicle(playerid, vehicleid)
 }
 \end{verbatim}
 
-
 \subsection{MppGetPlayerName(playerid)}
 Returns player nick/name from given playerid.
 \bigskip
@@ -641,7 +628,7 @@ if(strcmp(cmdtext, "/myname", true) == 0) {
 
 \newpage
 \subsection{MppEnableVehicleLights(vehicleid, lights)}
-Turns on (enables) lights of any given vehicle. You can use bitwise operator OR to combine specific lights.
+Turns on (enables) lights of any given vehicle. You can use bitwise operator OR to combine specific lights. \textit{Note: Lights can not be turned on during daytime.}
 \bigskip
 \\\textbf{Example of implementation:}
 \begin{verbatim}
@@ -650,7 +637,6 @@ if (strcmp(cmdtext, "/lightson", true) == 0) {
     return 1;
 }
 \end{verbatim}
-
 
 \subsection{MppDisableVehicleLights(vehicleid, lights)}
 Turns off (disables) lights of any given vehicle. You can use bitwise operator OR to combine specific lights.
@@ -663,7 +649,6 @@ if (strcmp(cmdtext, "/frontlightsoff", true) == 0) {
 }
 \end{verbatim}
 
-
 \subsection{MppFixVehicleTires(vehicleid, tires)}
 Fixes tires of any given vehicle. You can use bitwise operator OR to combine specific tires.
 \bigskip
@@ -675,7 +660,6 @@ if(strcmp(cmdtext, "/fixtires", true) == 0) {
 }
 \end{verbatim}
 
-
 \subsection{MppPopVehicleTires(vehicleid, tires)}
 Pops tires of any given vehicle. You can use bitwise operator OR to combine specific tires.
 \bigskip
@@ -686,7 +670,6 @@ if(strcmp(cmdtext, "/popbacktires", true) == 0) {
     return 1;
 }
 \end{verbatim}
-
 
 
 \newpage
@@ -726,6 +709,8 @@ Changes all characters in the string to lowercase.
 \subsection{strtoupper(string[])}
 Changes all characters in the string to uppercase.
 
+\subsection{swap(int1, int2)}
+Swaps assigned values of two given integers.
 
 
 \newpage
@@ -748,7 +733,6 @@ Masterlist & The server SA-MP stores its data on such as the Internet list \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/glossary}
-
 
 \subsection{Escape Codes}
 \begin{sloppypar}
@@ -899,7 +883,6 @@ SA-MP has in certain cases various macros replacing numeric identifiers by defau
 \subsection{Animations List}
 Read More: \url{https://open.mp/docs/scripting/resources/animations}
 
-
 \subsection{Bullet Hit Types}
 To be used with function \textit{OnPlayerWeaponShot}.
 \bigskip
@@ -917,7 +900,6 @@ Value & Name \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/bullethittypes}
 
-
 \subsection{Camera Cut Styles}
 Camera Cut Styles to be used with functions \textit{SetPlayerCameraLookAt}, \textit{InterpolateCameraPos} and \textit{InterpolateCameraLookAt}.
 \bigskip
@@ -931,7 +913,6 @@ Value & Name \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/cameracutstyles}
-
 
 \subsection{Component Slots}
 All available component slots for vehicle customization.\\To be used with function \textit{GetVehicleComponentInSlot(vehicleid, \textbf{slot});}
@@ -985,12 +966,10 @@ Value & Name & Description \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/connectionstatus}
 
-
 \subsection{Constants List}
 Pre-defined constants and identifiers in various SA-MP header files.
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/constants}
-
 
 \subsection{Dialog Styles}
 Styles of dialog windows in SA-MP, to be used with function \textit{ShowPlayerDialog}.
@@ -1009,7 +988,6 @@ Style 5 & DIALOG\_STYLE\_TABLIST\_HEADERS \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/dialogstyles}
-
 
 \subsection{Fighting Styles}
 \begin{sloppypar}
@@ -1071,7 +1049,6 @@ Value & Name \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/keys}
 
-
 \subsection{Map Icon Styles}
 To be used with function \textit{SetPlayerMapIcon}.
 \bigskip
@@ -1087,7 +1064,6 @@ Value & Name & Marker & Radar Map Range \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/mapiconstyles}
-
 
 \subsection{Marker Modes}
 To be used with function \textit{ShowPlayerMarkers(\textbf{mode});}
@@ -1121,7 +1097,6 @@ Value & Name \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/materialtextalignment}
 
-
 \subsection{Material Text Sizes}
 To be used with function \textit{SetObjectMaterialText}.
 \bigskip
@@ -1147,7 +1122,6 @@ Value & Name \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/materialtextsizes}
-
 
 \subsection{Object Edition Response Types}
 To be used with functions \textit{OnPlayerEditObject} and \textit{OnPlayerEditAttachedObject}.
@@ -1188,7 +1162,6 @@ Value & Name & Description \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/playerstates}
 
-
 \subsection{Pvar Types}
 Types of player variables (also called pvar types) used in Per-player variable system.
 \bigskip
@@ -1205,7 +1178,6 @@ Value & Name \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/pvartypes}
 
-
 \subsection{Record Types}
 To be used with \textit{StartRecordingPlayerData} function.
 \bigskip
@@ -1220,7 +1192,6 @@ Value & Name \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/recordtypes}
-
 
 \subsection{Select Object Types}
 Select object types used by \textit{OnPlayerSelectObject} function.
@@ -1258,7 +1229,6 @@ AMMUN5 & Fifth Ammu-Nation interior & LOC\_AMMUNATION5 \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/shopnames}
 
-
 \subsection{Special Actions}
 Used by \textit{GetPlayerSpecialAction} and \textit{SetPlayerSpecialAction} functions.
 \bigskip
@@ -1290,7 +1260,6 @@ Value & Action & Description \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/specialactions}
-
 
 \subsection{Spectate Modes}
 Used by \textit{PlayerSpectatePlayer} and \textit{PlayerSpectateVehicle} functions.
@@ -1332,7 +1301,6 @@ Starting ID & Type \\
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/startingids}
 
-
 \subsection{Svar Types}
 Used by \textit{GetSVarType(\textbf{varname})} function.
 \bigskip
@@ -1348,7 +1316,6 @@ Value & Name \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://open.mp/docs/scripting/resources/svartypes}
-
 
 \subsection{Vehicle Information Types}
 Vehicle information types used by \textit{GetVehicleModelInfo function}.
@@ -1397,7 +1364,6 @@ Value & Weapon & Type & Poor & Gangster & Hitman \\
 \end{tabular}
 \bigskip
 \\Read More: \url{https://www.open.mp/docs/scripting/resources/weaponskills}
-
 
 \subsection{Weapon States}
 Weapon states used by \textit{GetPlayerWeaponState} function.
