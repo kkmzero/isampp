@@ -9,7 +9,7 @@ Additionally, ISAMPP provides other libraries - such as list of location coordin
 </br>*https://creativecommons.org/publicdomain/zero/1.0/*
 
 <img src="logo/isampp_logo_250px.png" width="100">
-</br></br>
+</br>
 
 
 # Library
