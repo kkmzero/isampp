@@ -57,5 +57,6 @@
 #include <i_sampp/objects/ide_gen_int4>   //Object model IDs: 14842 - 14903
 #include <i_sampp/objects/ide_savehous>
 #include <i_sampp/objects/ide_countn2>
+#include <i_sampp/objects/ide_countryw>
 
 #include <i_sampp/objects/ide_samp>
