@@ -196,7 +196,7 @@ File:   i_colorlist.inc
 
 Color List contains definitions of some frequently used colors in two formats. Primary or Main color definitions have prefix *COLOR* and are defined in 0xRRGGBBAA format. Secondary or String color definitions with prefix *SCOL* are defined in more common hex format "\{RRGGBB\}" without the alpha color transparency values. Secondary or String colors can be used directly in strings while Primary/Main colors would be used mainly as separate parameters in SA-MP functions.
 
-To see how every color looks in game, use in included sandbox gamemode command **/maincols [0-14]** or **/stringcols**. Screenshot of color strings printed out in client message box is located in *docs/images/colorlist.png*.
+To see how every color looks in game, use in included sandbox gamemode command **/maincols [0-14]** or **/stringcols**. Screenshot of color strings printed out in client message box is located in [*docs/images/colorlist.png*](images/colorlist.png).
 
 </br>**Example of implementation:**
 ```pawn
