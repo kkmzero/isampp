@@ -107,7 +107,7 @@ stock MppShowVehicleInfo(playerid, vehmodelid, pstringcolor) {
 	GetVehiclePos(vehicle, vehx, vehy, vehz);
 	GetVehicleRotationQuat(vehicle, rotw, rotx, roty, rotz);
 	GetVehicleZAngle(vehicle, zangle);
-	
+
 	getvehiclename = vehmodelid - 399;
 	if (getvehiclename < 0 ) getvehiclename = 0;
 
