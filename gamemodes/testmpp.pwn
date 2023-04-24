@@ -97,7 +97,7 @@ public OnGameModeInit()
 {
 	SetWorldTime(12);
 	SetGameModeText("ISAMPP 2.0 Sandbox GameMode");
-	
+
 	AddPlayerClass(SKIN_CJ, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_TRUTH, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_MACCER, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
@@ -409,7 +409,7 @@ public OnGameModeInit()
 	AddPlayerClass(SKIN_WFYCLLV, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_CSHERNA, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
 	AddPlayerClass(SKIN_DSHERNA, cpos_pclass_x, cpos_pclass_y, cpos_pclass_z, cpos_pclass_angle, 0, 0, 0, 0, 0, 0);
-	
+
 	//PICKUPS - ROW 1
 	pickupWeapRdildo = CreatePickup(PICKUP_WEAP_RDILDO, PICKUP_TYPE_RESPAWN_30S, 425.5590, 2480.2830, 16.4844, -1);
 	pickupWeapWdildo = CreatePickup(PICKUP_WEAP_WDILDO, PICKUP_TYPE_RESPAWN_30S, 420.5590, 2480.2830, 16.4844, -1);
@@ -457,7 +457,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_WEAP_JETPACK, PICKUP_TYPE_SCRIPTED, 210.5590, 2480.2830, 16.4844, -1);
 	pickupWeapParachute = CreatePickup(PICKUP_WEAP_PARACHUTE, PICKUP_TYPE_RESPAWN_30S, 205.5590, 2480.2830, 16.4844, -1);
 	pickupWeapTec9 = CreatePickup(PICKUP_WEAP_TEC9, PICKUP_TYPE_RESPAWN_30S, 200.5590, 2480.2830, 16.4844, -1);
-	
+
 	//PICKUPS - ROW 2
 	CreatePickup(PICKUP_BRIEFCASE, PICKUP_TYPE_SCRIPTED, 425.5590, 2486.2830, 16.4844, -1);
 	pickupMoney = CreatePickup(PICKUP_MONEY, PICKUP_TYPE_MONEY, 420.5590, 2486.2830, 16.4844, -1);
@@ -510,7 +510,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_NITRO1, PICKUP_TYPE_SCRIPTED, 190.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_NITRO2, PICKUP_TYPE_SCRIPTED, 185.5590, 2486.2830, 16.4844, -1);
 	CreatePickup(PICKUP_NITRO3, PICKUP_TYPE_SCRIPTED, 180.5590, 2486.2830, 16.4844, -1);
-	
+
 	//PICKUPS - ROW 3
 	CreatePickup(PICKUP_WDRUGS, PICKUP_TYPE_SCRIPTED, 425.5590, 2492.2830, 16.4844, -1);
 	CreatePickup(PICKUP_ODRUGS, PICKUP_TYPE_SCRIPTED, 420.5590, 2492.2830, 16.4844, -1);
@@ -555,7 +555,7 @@ public OnGameModeInit()
 	CreatePickup(PICKUP_ENEXMARKERBLUE, PICKUP_TYPE_SCRIPTED, 225.5590, 2492.2830, 16.4844, -1);
 	CreatePickup(PICKUP_CJFIELDGUN, PICKUP_TYPE_SCRIPTED, 220.5590, 2492.2830, 16.4844, -1);
 	CreatePickup(PICKUP_PUMPKIN, PICKUP_TYPE_SCRIPTED, 215.5590, 2492.2830, 16.4844, -1);
-	
+
 	//Add Static Vehicles
 	AddStaticVehicle(VEH_BUFFALO, 425.7991, 2523.3472, 16.5794, 180, CARCOL_SAMP_OBSIDIANSHARD, 0);
 	AddStaticVehicle(VEH_PHOENIX, 420.7991, 2523.3472, 16.5764, 180, CARCOL_YELLOW, CARCOL_BLACK);
@@ -1873,39 +1873,39 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//TODO: REMOVE LATER PLAYER PLAY SOUND
 	if(strcmp(cmdtext, "/playsound1", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_1, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_PHONEDIAL2, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound2", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_2, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_PHONEDIAL3, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound3", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_3, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_CJ_LINE_297, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound4", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_4, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_CJ_LINE_300, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound5", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_5, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_BASKETBALL_BOUNCE, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound6", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_6, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_COP6_LINE_1, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound7", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_7, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_RYDER_LINE_22, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound8", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_8, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_CJ_LINE_286, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound9", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_9, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_CJ_LINE_287, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound0", true) == 0) {
