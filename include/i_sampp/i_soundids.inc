@@ -2422,6 +2422,37 @@
 #define SND_CJ_LINE_326               16503    //CJ: "Ok, we here."
 #define SND_ZERO_LINE_6               16504    //Zero: "Grade A, tip-top genius, that's me."
 
+#define SND_FOREMAN_LINE_1            16600    //Foreman: "What's all that damned clatter?"
+#define SND_FOREMAN_LINE_2            16601    //Foreman: "Holy crap! I didn't see nothing!"
+#define SND_FOREMAN_LINE_3            16602    //Foreman: "Oh God, no!"
+#define SND_FOREMAN_LINE_4            16603    //Foreman: "Oh God! Argh, I'm gonna barf!"
+#define SND_FOREMAN_LINE_5            16604    //Foreman: "Oh, my suit, it's ruined!"
+#define SND_FOREMAN_LINE_6            16605    //Foreman: "Oh God, the stench!"
+#define SND_FOREMAN_LINE_7            16606    //Foreman: "Please, somebody help!"
+#define SND_FOREMAN_LINE_8            16607    //Foreman: "I'm gonna throw... hurgh!"
+#define SND_FOREMAN_LINE_9            16608    //Foreman: "Oh, my own shit!"
+#define SND_FOREMAN_LINE_10           16609    //Foreman: "Shouldn't have had that goddamned curry!"
+#define SND_FOREMAN_LINE_11           16610    //Foreman: "Oh God, is that corn?"
+#define SND_FOREMAN_LINE_12           16611    //Foreman: "Urgh, it's all in my mouth!"
+#define SND_CONSTWORKER_LINE_1        16612    //Construction Worker: "Hey, where's your hard hat?"
+#define SND_CONSTWORKER_LINE_2        16613    //Construction Worker: "Are you supposed to be here?"
+#define SND_CONSTWORKER_LINE_3        16614    //Construction Worker: "Hey, this site is dangerous!"
+
+#define SND_AIRPORTGUARD_LINE_1       16800    //Airport Gate Guard: "This area is restricted to pilots only!"
+#define SND_AIRPORTGUARD_LINE_2       16801    //Airport Gate Guard: "Only people holding a valid pilot's license may enter!"
+#define SND_AIRPORTGUARD_LINE_3       16802    //Airport Gate Guard: "They'll give a pilot license to anybody these days!"
+#define SND_AIRPORTGUARD_LINE_4       16803    //Airport Gate Guard: "Pilots are looking younger these days!"
+
+#define SND_GAME_GOGO_1               17000    //GoGo Space Monkey video game sound
+#define SND_GAME_GOGO_2               17001    //GoGo Space Monkey selecting sound effect
+#define SND_GAME_GOGO_3               17002    //GoGo Space Monkey video game sound
+#define SND_GAME_GOGO_4               17003    //GoGo Space Monkey explosion sound
+#define SND_GAME_GOGO_5               17004    //GoGo Space Monkey video game noise
+#define SND_GAME_GOGO_6               17005    //GoGo Space Monkey zap
+#define SND_GAME_GOGO_7               17006    //GoGo Space Monkey cellphone keypad sound
+
+#define SND_CRATE_DROP                17200    //Heavy crate landing
+
 
 
 //#define SND_UNKNOWN_LINE_7            50002   //"Just Try Punk! Just Try It!"
