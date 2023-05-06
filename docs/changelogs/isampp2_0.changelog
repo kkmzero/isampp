@@ -3,6 +3,8 @@ Changes in ISAMPP 2.0
 * ISAMPP Library *
 - New objects defined (i_objects.inc)
 - New sounds defined (i_soundids.inc)
+- New exterior locations defined (i_locationids.inc)
+- Changed LOC_TORRENOR to LOC_TORENOSRANCH (i_locationids.inc)
 - Reworked vehicle color list (i_carcols.inc)
 - Added legacy functions max, min and swap (i_funcl.inc)
 - Fixed some incorrect strings in vehicle list (i_vehids.inc)
@@ -17,6 +19,7 @@ Changes in ISAMPP 2.0
 - Function MppShowVehicleInfo now outputs Z-Angle
 - Other minor tweaks and fixes
 - Updated documentation
+- Added manual (docs/manual.md)
 
 * ISAMPP Sandbox Game Mode *
 - Added new commands /lightson and /lightsoff
