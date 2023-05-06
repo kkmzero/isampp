@@ -143,7 +143,7 @@
 #define LOC_PALOBANK               133
 #define LOC_PALODINER              134
 #define LOC_DILLIGASST             135
-#define LOC_TORRENOR               136
+#define LOC_TORENOSRANCH           136
 #define LOC_ZOMBOTECH              137
 #define LOC_LSCEMETC               138
 #define LOC_BLUEBLIQ               139
@@ -153,8 +153,19 @@
 #define LOC_BIKESCHOOLLV           143
 #define LOC_OTTOAUTOS              144
 #define LOC_WANGCARS               145
+#define LOC_GANTON                 146
+#define LOC_GLENPARK               147
+#define LOC_LSOBSERVATORY          148
+#define LOC_SANTAMARIA             149
+#define LOC_TRUTHSFARM             150
+#define LOC_MTCHILIAD              151
+#define LOC_SAN                    152
+#define LOC_BATTERYPOINT           153
+#define LOC_BOATSCHOOL             154
+#define LOC_LASBRUJAS              155
+#define LOC_BIGEAR                 156
 
-new Float:locCoords[146][4] = {
+new Float:locCoords[157][4] = {
 {1412.15,-2.28,1000.92,114.66},
 {621.45,-23.73,1000.92,15.68},
 {445.6,-6.98,1000.73,172.21},
@@ -300,10 +311,21 @@ new Float:locCoords[146][4] = {
 {215.15,1874.06,13.14,177.55},
 {1168.51,1360.11,10.93,196.59},
 {-1658.17,1215.0,7.25,103.91},
-{-1961.63,295.24,35.47,264.49}
+{-1961.63,295.24,35.47,264.49},
+{2512.6813,-1668.3422,13.563,93.29},
+{1962.7583,-1142.98547,25.9733,32.9},
+{1167.629,-2036.9343,69.0,90.29},
+{362.776,-2027.098,7.836,264.82},
+{-1074.003,-1643.6767,76.128,88.62},
+{-2237.6196,-1713.501,480.872,187.25},
+{-2393.8,-576.6948,132.117,112.0},
+{-2617.9641,1394.534,7.102,27.65},
+{-2185.6972,2415.5679,5.1675,36.10},
+{-392.8188,2255.9887,42.3113,195.62},
+{-339.301,1514.43,75.3593,1.70}
 };
 
-new locID[146][1] = {
+new locID[157][1] = {
 {1},
 {1},
 {1},
@@ -437,6 +459,17 @@ new locID[146][1] = {
 {18},
 {18},
 {18},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
+{0},
 {0},
 {0},
 {0},
@@ -452,7 +485,7 @@ new locID[146][1] = {
 {0}
 };
 
-new locName[146][] = {
+new locName[157][] = {
 "Warehouse 2",
 "TransFender",
 "World of Coq",
@@ -589,7 +622,7 @@ new locName[146][] = {
 "Palomino Creek Bank",
 "Palomino Creek Diner",
 "Dillimore Gas Station",
-"Torreno's Ranch",
+"Toreno's Ranch",
 "Zombotech - Lobby Area",
 "Crypt in LS Cemetery",
 "Blueberry Liquor Store",
@@ -598,5 +631,16 @@ new locName[146][] = {
 "Area 69",
 "Bike School",
 "Otto's Autos",
-"Wang Cars"
+"Wang Cars",
+"Ganton",
+"Glen Park",
+"Los Santos Observatory",
+"Santa Maria Pier",
+"Truth's Farm",
+"Mount Chiliad",
+"SAN Broadcasting Facility",
+"Battery Point",
+"Boat School",
+"Las Brujas",
+"The Big Ear"
 };
