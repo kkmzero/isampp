@@ -1698,7 +1698,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 			MppTeleportEx(playerid, LOC_DILLIGASST, COLOR_LIMEGREEN);
 		}
 		else if (strcmp(tmp, "ranch") == 0) {
-			MppTeleportEx(playerid, LOC_TORRENOR, COLOR_LIMEGREEN);
+			MppTeleportEx(playerid, LOC_TORENOSRANCH, COLOR_LIMEGREEN);
 		}
 		else if (strcmp(tmp, "zombotech") == 0) {
 			MppTeleportEx(playerid, LOC_ZOMBOTECH, COLOR_LIMEGREEN);
@@ -1726,6 +1726,39 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		}
 		else if (strcmp(tmp, "wangcars") == 0) {
 			MppTeleportEx(playerid, LOC_WANGCARS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "ganton") == 0) {
+			MppTeleportEx(playerid, LOC_GANTON, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "glenpark") == 0) {
+			MppTeleportEx(playerid, LOC_GLENPARK, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "observatory") == 0) {
+			MppTeleportEx(playerid, LOC_LSOBSERVATORY, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "santamaria") == 0) {
+			MppTeleportEx(playerid, LOC_SANTAMARIA, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "truthsfarm") == 0) {
+			MppTeleportEx(playerid, LOC_TRUTHSFARM, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "mtchiliad") == 0) {
+			MppTeleportEx(playerid, LOC_MTCHILIAD, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "san") == 0) {
+			MppTeleportEx(playerid, LOC_SAN, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "batterypoint") == 0) {
+			MppTeleportEx(playerid, LOC_BATTERYPOINT, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "boatschool") == 0) {
+			MppTeleportEx(playerid, LOC_BOATSCHOOL, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "lasbrujas") == 0) {
+			MppTeleportEx(playerid, LOC_LASBRUJAS, COLOR_LIMEGREEN);
+		}
+		else if (strcmp(tmp, "bigear") == 0) {
+			MppTeleportEx(playerid, LOC_BIGEAR, COLOR_LIMEGREEN);
 		}
 		else {
 			SendClientMessage(playerid, COLOR_INDIANRED, "Undefined argument for command /tp [ID]");
@@ -1873,43 +1906,43 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	//TODO: REMOVE LATER PLAYER PLAY SOUND
 	if(strcmp(cmdtext, "/playsound1", true) == 0) {
-		PlayerPlaySound(playerid, SND_PHONEDIAL2, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_MAFIA_LINE_10, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound2", true) == 0) {
-		PlayerPlaySound(playerid, SND_PHONEDIAL3, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_CJ_LINE_405, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound3", true) == 0) {
-		PlayerPlaySound(playerid, SND_CJ_LINE_297, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_ZERO_LINE_36, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound4", true) == 0) {
-		PlayerPlaySound(playerid, SND_CJ_LINE_300, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_MAFIA_LINE_4, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound5", true) == 0) {
-		PlayerPlaySound(playerid, SND_BASKETBALL_BOUNCE, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_CJ_LINE_389, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound6", true) == 0) {
-		PlayerPlaySound(playerid, SND_COP6_LINE_1, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_WOOZIE_LINE_3, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound7", true) == 0) {
-		PlayerPlaySound(playerid, SND_RYDER_LINE_22, 0.0, 0.0, 00.0);
+		PlayerPlaySound(playerid, SND_TRIAD_LINE_7, 0.0, 0.0, 00.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound8", true) == 0) {
-		PlayerPlaySound(playerid, SND_CJ_LINE_286, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_WOOZIE_LINE_8, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound9", true) == 0) {
-		PlayerPlaySound(playerid, SND_CJ_LINE_287, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_ZERO_LINE_48, 0.0, 0.0, 0.0);
 		return 1;
 	}
 	if(strcmp(cmdtext, "/playsound0", true) == 0) {
-		PlayerPlaySound(playerid, SND_DANANG_LINE_10, 0.0, 0.0, 0.0);
+		PlayerPlaySound(playerid, SND_ZERO_LINE_50, 0.0, 0.0, 0.0);
 		return 1;
 	}
 
