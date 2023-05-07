@@ -274,7 +274,7 @@ Secondary or String colors can be used directly in strings while Primary/Main co
 \newpage
 \section{Crime Reports}
 \begin{sloppypar}
-List of crime report identifiers starting with prefix \textit{CRIME} followed by ten-code. These macros can be used as input parameters in function \textit{PlayCrimeReportForPlayer(playerid, suspectid, \textbf{crimeid})}. You can try this in sandbox gamemode with command \textbf{/crime [3-19, 21, 22]}.
+List of crime report identifiers starting with prefix \textit{CRIME} followed by ten-code. These macros can be used as input parameters in function \textit{PlayCrimeReportForPlayer(playerid, suspectid, \textbf{crimeid})}. You can try to play each crime report in sandbox gamemode with command \textbf{/crime [3-19, 21, 22]}.
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
@@ -319,7 +319,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 Resources: \url{https://open.mp/docs/scripting/resources/crimelist}
 
 \section{Explosions}
-There are 14 types of available explosions defined as macros with prefix \textit{EXPLOSION} and you can test every explosion in sandbox gamemode with in-game command \textbf{/explosion [ID]}. These identifiers can be used with both functions \textit{CreateExplosion} or \textit{CreateExplosionForPlayer}.
+There are 14 types of available explosions defined as macros with prefix \textit{EXPLOSION} and you can test every explosion type in sandbox gamemode with in-game command \textbf{/explosion [ID]}. These identifiers can be used as input parameters in functions \textit{CreateExplosion} or \textit{CreateExplosionForPlayer}.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/explosionlist}
 
@@ -359,7 +359,7 @@ GMTEXT\_STYLE\_NOTIFICATION & 15 & SA notification popup (fixes.inc) \\
 
 \section{Locations}
 \begin{sloppypar}
-Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined strings of names of particular locations so this information can be displayed to player if needed. You can test teleporting to all locations in sandbox gamemode with in-game command \textbf{/tp [ID]}.
+Locations, in-game interiors and exteriors, are stored in file \textit{i\_locationids.inc} as set of macro definitions for identifiers and three arrays. Array \textit{locCoords} is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters interior you have to change PlayerInterior value accordingly. This is what array \textit{locID} includes. Third array, \textit{locName}, has defined names of each location as strings, so this information can be displayed to player if needed. You can test teleporting to all locations in sandbox gamemode with in-game command \textbf{/tp [ID]}.
 \end{sloppypar}
 \bigskip
 \noindent \textit{\textbf{Note:} If you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.}
@@ -367,7 +367,7 @@ Locations, in-game interiors and exteriors, are stored in file \textit{i\_locati
 \\Resources: \url{https://open.mp/docs/scripting/resources/interiorids}
 
 \section{Map Icons}
-There are in total 64 map icons included as macro defines with prefix \textit{ICON}.
+There are in total 64 map icons defined as macros with prefix \textit{ICON}.  Each icon can be placed on map with function \textit{SetPlayerMapIcon}.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/mapicons}
 
@@ -379,7 +379,7 @@ Available game objects are ordered by IDE file and ID number. Every game object 
 
 \newpage
 \section{Pickups}
-Pickup identifiers are included as macro defines with prefix \textit{PICKUP}. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox gamemode. Weapon pickups use extended prefix \textit{PICKUP\_WEAP} for easier use.
+Pickup identifiers are defined as macros with prefix \textit{PICKUP}. Every pickup defined in ISAMPP is placed on map in sandbox gamemode. Weapon pickups use extended prefix \textit{PICKUP\_WEAP} for easier use.
 \bigskip
 \\Resources: \url{https://open.mp/docs/scripting/resources/pickupids}
 
@@ -461,7 +461,7 @@ TIRE2W\_ALL & 0b11 & 2-wheeled vehicle, all tires \\
 \newpage
 \section{Vehicle Health}
 \begin{sloppypar}
-Vehicle Health configurations are included as macro defines with prefix \textit{VEH\_HEALTH} followed by the desired pre-defined identifier. These values are only related to engine condition and do not change visual damage of vehicle model.
+Vehicle Health configurations are included as macro defines with prefix \textit{VEH\_HEALTH}. These values are only related to engine condition and do not change visual damage of vehicle model.
 \end{sloppypar}
 \bigskip
 \noindent\begin{tabular}{ |l|c|l| } 
