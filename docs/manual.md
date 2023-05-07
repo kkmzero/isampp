@@ -217,7 +217,7 @@ Prefix: CRIME_
 File:   i_crimes.inc
 ```
 
-List of crime report identifiers starting with prefix *CRIME* followed by ten-code. These macros can be used as input parameters in function *PlayCrimeReportForPlayer(playerid, suspectid, **crimeid**)*. You can try this in sandbox gamemode with command **/crime [3-19, 21, 22]**.
+List of crime report identifiers starting with prefix *CRIME* followed by ten-code. These macros can be used as input parameters in function *PlayCrimeReportForPlayer(playerid, suspectid, **crimeid**)*. You can try to play each crime report in sandbox gamemode with command **/crime [3-19, 21, 22]**.
 </br></br>
 
 | Identifier    | Value | Description                            |
@@ -265,7 +265,7 @@ Prefix: EXPLOSION_
 File:   i_explosions.inc
 ```
 
-There are 14 types of available explosions and you can test every explosion in sandbox gamemode with in-game command **/explosion [ID]**. These identifiers can be used with both functions *CreateExplosion* or *CreateExplosionForPlayer*.
+There are 14 types of available explosions and you can test every explosion type in sandbox gamemode with in-game command **/explosion [ID]**. These identifiers can be used as input parameters in functions *CreateExplosion* or *CreateExplosionForPlayer*.
 </br></br>
 
 | Identifier            | Value | Description                                        |
@@ -328,7 +328,7 @@ Prefix: LOC_
 File:   i_locationids.inc
 ```
 
-Definitions for in-game locations, interiors or exteriors, set as macros for numeric identifiers and three arrays. Array **locCoords** is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters the interior, in order to load the interior you have to change PlayerInterior value accordingly. This is what array **locID** includes. Third array, **locName**, has defined strings of names of particular locations so this information can be displayed to player if needed. You can test teleporting to all locations in sandbox gamemode with in-game command **/tp [ID]**.
+Definitions for in-game locations, interiors or exteriors, set as macros for numeric identifiers and three arrays. Array **locCoords** is storing float values of XYZ position on the map and float value of PlayerFacingAngle. By default, your PlayerInterior value is set to 0 whenever you are "outside" on the map. When player enters interior you have to change PlayerInterior value accordingly. This is what array **locID** includes. Third array, **locName**, has defined names of each location as strings, so this information can be displayed to player if needed. You can test teleporting to all locations in sandbox gamemode with in-game command **/tp [ID]**.
 
 *Note: If you wish to add new location to this list, you have to do it in correct order. Not every location has proper collision boxes because it was used only in cutscene, so in certain interiors you may fall through ground.*
 
@@ -342,7 +342,7 @@ Prefix: ICON_
 File:   i_iconids.inc
 ```
 
-There are in total 64 map icons included as macro defines with prefix *ICON*.
+There are in total 64 map icons defined as macros with prefix *ICON*. Each icon can be placed on map with function *SetPlayerMapIcon*.
 
 Resources: https://open.mp/docs/scripting/resources/mapicons
 </br></br>
@@ -366,7 +366,7 @@ Prefix: PICKUP_, PICKUP_WEAP_
 File:   i_pickupids.inc
 ```
 
-Pickup identifiers are included as macro defines with prefix *PICKUP*. Every pickup defined in ISAMPP is placed on map in ISAMPP sandbox gamemode. Weapon pickups use extended prefix *PICKUP_WEAP* for easier use.
+Pickup identifiers are defined as macros with prefix *PICKUP*. Every pickup defined in ISAMPP is placed on map in sandbox gamemode. Weapon pickups use extended prefix *PICKUP_WEAP* for easier use.
 
 Resources: https://open.mp/docs/scripting/resources/pickupids
 </br></br>
@@ -378,7 +378,7 @@ Prefix: PICKUP_TYPE_
 File:   i_pickuptypes.inc
 ```
 
-Pickup types specify behavior of created pickups in gamemodes.
+Pickup types specify behavior of created pickups in gamemodes and each of them can be set as input parameter in function *CreatePickup*.
 </br></br>
 
 | Identifier              | Value | Description                                                              |
@@ -537,7 +537,7 @@ Prefix: VEH_HEALTH_
 File:   i_vehhealth.inc
 ```
 
-Vehicle Health configurations are included as macro defines with prefix *VEH_HEALTH* followed by the desired pre-defined identifier. These values are only related to engine condition and do not change visual damage of vehicle model. You can test this in ISAMPP sandbox gamemode with command **/setvehiclehealth [ID]** while being in any vehicle.
+Vehicle Health configurations are included as macro defines with prefix *VEH_HEALTH*. These values are only related to engine condition and do not change visual damage of vehicle model. You can test this in sandbox gamemode with command **/setvehiclehealth [ID]** while being in any vehicle.
 </br></br>
 
 | Identifier                | Value | Description                         |
