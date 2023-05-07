@@ -706,19 +706,19 @@
 #define SND_CJ_LINE_36                7420    //CJ: "Delivery for Woozie."
 #define SND_CJ_LINE_37                7421    //CJ: "Hey, you be careful with that."
 
-#define SND_SINDACCO_LINE_1           7600    //Sindacco Gang Member: "Hey, who's this character? He looks like a cop to me."
-#define SND_SINDACCO_LINE_2           7601    //Sindacco Gang Member: "We better go warn the boss."
-#define SND_SINDACCO_LINE_3           7602    //Sindacco Gang Member: "Hey, watch the car, I just got this baby detailed!"
-#define SND_SINDACCO_LINE_4           7603    //Sindacco Gang Boss: "What? He must be a fed! Let's give him a proper Sindacco welcome!"
-#define SND_SINDACCO_LINE_5           7604    //Sindacco Gang Member: "Hey, what's going on?"
-#define SND_SINDACCO_LINE_6           7605    //Sindacco Gang Member: "Someone's got a fucking deathwish if they're starting trouble 'round here!"
-#define SND_SINDACCO_LINE_7           7606    //Sindacco Gang Boss: "Get the boys ready! Production line's gotta keep rolling!"
-#define SND_SINDACCO_LINE_8           7607    //Sindacco Gang Member: "Hey, who's this prick?"
-#define SND_SINDACCO_LINE_9           7608    //Sindacco Gang Member: "Somebody take care of this joker!"
+#define SND_SINDACCO_LINE_1           7600    //Sindacco Mafia Member: "Hey, who's this character? He looks like a cop to me."
+#define SND_SINDACCO_LINE_2           7601    //Sindacco Mafia Member: "We better go warn the boss."
+#define SND_SINDACCO_LINE_3           7602    //Sindacco Mafia Member: "Hey, watch the car, I just got this baby detailed!"
+#define SND_SINDACCO_LINE_4           7603    //Sindacco Mafia Member: "What? He must be a fed! Let's give him a proper Sindacco welcome!"
+#define SND_SINDACCO_LINE_5           7604    //Sindacco Mafia Member: "Hey, what's going on?"
+#define SND_SINDACCO_LINE_6           7605    //Sindacco Mafia Member: "Someone's got a fucking deathwish if they're starting trouble 'round here!"
+#define SND_SINDACCO_LINE_7           7606    //Sindacco Mafia Member: "Get the boys ready! Production line's gotta keep rolling!"
+#define SND_SINDACCO_LINE_8           7607    //Sindacco Mafia Member: "Hey, who's this prick?"
+#define SND_SINDACCO_LINE_9           7608    //Sindacco Mafia Member: "Somebody take care of this joker!"
 #define SND_TRIAD_LINE_2              7609    //Triad Gang Member: "Hey, Carl, how'd it go?"
 #define SND_CJ_LINE_38                7610    //CJ: "Tell Woozie we'll be getting no more trouble with them..."
 #define SND_CJ_LINE_39                7611    //CJ: "...counterfeit chips"
-#define SND_SINDACCO_LINE_10          7612    //Sindacco Gang Member: "Aye Johnny, how you feelin'?"
+#define SND_SINDACCO_LINE_10          7612    //Sindacco Mafia Member: "Aye Johnny, how you feelin'?"
 
 #define SND_MACCER_LINE_2             7800    //Maccer: "Me legs are fucked and me head's fuckin' poundin'!"
 #define SND_KENT_LINE_1               7801    //Kent Paul: "We can't walk back, son, look at the state of us."
@@ -838,8 +838,8 @@
 #define SND_JOHNNY_LINE_62            8011    //Johnny Sindacco: "Oh my God, where am I?"
 #define SND_JOHNNY_LINE_63            8012    //Johnny Sindacco: "Nurse, hey nurse!"
 #define SND_JOHNNY_LINE_64            8013    //Johnny Sindacco: "I need my bag emptied!"
-#define SND_SINDACCO_LINE_11          8014    //Sindacco Gang Member: "Hey, Johnny, how you feelin'?"
-#define SND_SINDACCO_LINE_12          8015    //Sindacco Gang Member: "I didn't think he was going to be discharged 'til tomorrow!"
+#define SND_SINDACCO_LINE_11          8014    //Sindacco Mafia Member: "Hey, Johnny, how you feelin'?"
+#define SND_SINDACCO_LINE_12          8015    //Sindacco Mafia Member: "I didn't think he was going to be discharged 'til tomorrow!"
 #define SND_FORELLI_LINE_2            8016    //Forelli Mafia Member: "Alright, who's messing with Forelli business?"
 #define SND_FORELLI_LINE_3            8017    //Forelli Mafia Member: "Yeah, who's got a death wish?"
 
@@ -2787,6 +2787,40 @@
 #define SND_MAFIA_LINE_9              19133    //Mafia Member: "There he is, get him!"
 #define SND_MAFIA_LINE_10             19134    //Mafia Member: "That's our man!"
 #define SND_MAFIA_LINE_11             19135    //Mafia Member: "Stop 'em! Now!"
+
+#define SND_PLANNINGDEP_LINE_1        19200    //Planning Department Worker: "Can I help you, sir?"
+#define SND_CJ_LINE_410               19201    //CJ: "No, thank you."
+#define SND_CJ_LINE_411               19202    //CJ: "I'd like to see the architectural plans for the Caligula's Casino, please."
+#define SND_PLANNINGDEP_LINE_2        19203    //Planning Department Worker: "Ok sir. Are you aware that reproduction of such plans is prohibited?"
+#define SND_CJ_LINE_412               19204    //CJ: "Ah no, I didn't know that. Why?"
+#define SND_CJ_LINE_413               19205    //CJ: "Yeah. I'm only after some refrence."
+#define SND_CJ_LINE_414               19206    //CJ: "I'm building a scale model for my uncle's birthday, he's really into blackjack."
+#define SND_PLANNINGDEP_LINE_3        19207    //Planning Department Worker: "You'll find the plans on the top floor."
+#define SND_PLANNINGDEP_LINE_4        19208    //Planning Department Worker: "Very witty, sir."
+#define SND_PLANNINGDEP_LINE_5        19209    //Planning Department Worker: "I'll buzz the door open. It's directly by the main entrance."
+#define SND_PLANNINGDEP_LINE_6        19210    //Planning Department Worker: "I'm very sorry sir, I can't make it any clearer,..."
+#define SND_PLANNINGDEP_LINE_7        19211    //Planning Department Worker: "...alert me when you've thought it over."
+#define SND_PLANNINGDEP_LINE_8        19212    //Planning Department Worker: "Just let me know if you've changed your mind."
+#define SND_PLANNINGDEP_LINE_9        19213    //Planning Department Worker: "I'm rather busy, sir."
+#define SND_PLANNINGDEP_LINE_10       19214    //Planning Department Worker: "Come to me if you change your mind."
+#define SND_PLANNINGDEP_LINE_11       19215    //Planning Department Worker: "Well, we don't want to be party to preparation of a daring raid on the count room!"
+#define SND_PLANNINGDEP_LINE_12       19216    //Planning Department Worker: "Does sir understand?"
+#define SND_CJ_LINE_415               19217    //CJ: "Nah. I'm just a dumb ghetto kid. I don't understand shit."
+#define SND_CJ_LINE_416               19218    //CJ: "Ah, of course. The owners wouldn't want to take a gamble on that happening."
+#define SND_PLANNINGDEP_LINE_13       19219    //Planning Department Worker: "Seeing as you're walking away, sir, I take it you don't want to talk anymore."
+
+#define SND_TRUCK_SMASH1              19400    //Smashing truck
+#define SND_TRUCK_SMASH2              19401    //Smashing truck
+#define SND_TRUCK_SMASH3              19402    //Smashing truck
+#define SND_TRUCK_SMASH4              19403    //Smashing truck
+
+#define SND_ALARM_CLOCK_LOOP          19600    //Alarm clock loop
+#define SND_SNORING1                  19601    //Snoring
+#define SND_SNORING2                  19602    //Snoring
+#define SND_SNORING3                  19603    //Snoring
+#define SND_SNORING4                  19604    //Snoring
+
+#define SND_MUSIC_MUFFLED_LOOP        19800    //Music playing from house in a loop
 
 
 
