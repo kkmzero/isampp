@@ -142,7 +142,7 @@ Bone identifiers can be used as parameters for attaching objects to specific par
 public OnPlayerSpawn(playerid)
 {
     //Give player green hat on spawn
-    SetPlayerAttachedObject(playerid, BONE_LEFTUPPERARM, 19487, 2, 0.101, 
+    SetPlayerAttachedObject(playerid, BONE_LEFTUPPERARM, OBJ_TOPHAT02, 2, 0.101, 
     -0.0, 0.0, 5.50, 84.60, 83.7, 1.0, 1.0, 1.0, 0xFF00FF00);
 
     return 1;
