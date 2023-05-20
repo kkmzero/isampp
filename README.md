@@ -1,7 +1,7 @@
 # Includes for San Andreas Multiplayer+
 Includes for San Andreas Multiplayer Plus (ISAMPP) is library of include files for San Andreas Multiplayer Mod (SA-MP). SA-MP uses in most cases counterintuitive numeric identifiers as input values which can be very hard to remember and without enough experience you have to rely on external sources, such as mirrors of SA-MP wiki with incomplete or outdated information. ISAMPP seeks to make development of SA-MP gamemodes easier by re-defining these numeric identifiers and by providing collection of useful custom scripting functions.
 
-Additionally, ISAMPP provides other libraries - such as list of location coordinates and their names in game, lists of objects, sounds and vehicle names, various functions for string manipulation and much more. ISAMPP also has its own sandbox-styled gamemode in which you can test everything.
+Additionally, ISAMPP provides other libraries - such as list of location coordinates and their names in game, lists of objects, sounds and vehicle names, various functions for string manipulation and much more. ISAMPP also has its own sandbox-styled gamemode in which you can test everything. Extended manual can be found in [docs](docs/manual.md) folder.
 
 *ISAMPP is not part of San Andreas Multiplayer mod (SA-MP) and it is not affiliated with Rockstar Games, Rockstar North or Take-Two Interactive Software, Inc. Grand Theft Auto and Grand Theft Auto: San Andreas are registered trademarks of Take-Two Interactive Software, Inc.*
 
@@ -51,7 +51,7 @@ Alternatively, you can use pre-compiled file ```testmpp.amx```.
 
 # Library
 
-Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix. Extended manual can be found in [docs](docs/manual.md) folder.
+Every ISAMPP include file starts with prefix *'i_'*. Please keep in mind that ISAMPP may not be the only set of include files using this prefix.
 
 *bodyparts* - List of available player/npc body parts</br>
 *boneids* - List of player bone identifiers</br>
