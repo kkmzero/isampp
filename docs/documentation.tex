@@ -23,7 +23,7 @@ plainpages=false,pdfpagelabels,linktocpage]{hyperref}
 
 \title{Includes for San Andreas Multiplayer Plus\\Version 2.0, Documentation}
 \author{Ivan Kmeťo}
-\date{May 2023}
+\date{December 2023}
 
 
 \begin{document}
@@ -212,7 +212,7 @@ BONE\_JAW & 18 & Jaw \\
 public OnPlayerSpawn(playerid)
 {
     //Give player green hat on spawn
-    SetPlayerAttachedObject(playerid, BONE_LEFTUPPERARM, 19487, 2, 0.101, 
+    SetPlayerAttachedObject(playerid, BONE_LEFTUPPERARM, OBJ_TOPHAT02, 2, 0.101, 
     -0.0, 0.0, 5.50, 84.60, 83.7, 1.0, 1.0, 1.0, 0xFF00FF00);
 
     return 1;
@@ -498,7 +498,7 @@ List of all available paintjobs for vehicles in game, starting with prefix \text
 \begin{verbatim}
 AddStaticVehicle(VEH_CAMPER, 425.7991, 2493.3472, 16.5794,
                  180, CARCOL_WHITE, CARCOL_WHITE);
-ChangeVehiclePaintjob(vehicleid, PAINTJOB_CAMPER_TRUTH);
+ChangeVehiclePaintjob(GetPlayerVehicleID(playerid), PAINTJOB_CAMPER_TRUTH);
 \end{verbatim}
 \bigskip
 Resources: \url{https://open.mp/docs/scripting/resources/paintjobs}
