@@ -1904,49 +1904,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 
 
-	//TODO: REMOVE LATER PLAYER PLAY SOUND
-	if(strcmp(cmdtext, "/playsound1", true) == 0) {
-		PlayerPlaySound(playerid, SND_MAFIA_LINE_10, 0.0, 0.0, 00.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound2", true) == 0) {
-		PlayerPlaySound(playerid, SND_CJ_LINE_405, 0.0, 0.0, 00.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound3", true) == 0) {
-		PlayerPlaySound(playerid, SND_ZERO_LINE_36, 0.0, 0.0, 0.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound4", true) == 0) {
-		PlayerPlaySound(playerid, SND_MAFIA_LINE_4, 0.0, 0.0, 0.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound5", true) == 0) {
-		PlayerPlaySound(playerid, SND_CJ_LINE_389, 0.0, 0.0, 0.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound6", true) == 0) {
-		PlayerPlaySound(playerid, SND_WOOZIE_LINE_3, 0.0, 0.0, 00.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound7", true) == 0) {
-		PlayerPlaySound(playerid, SND_TRIAD_LINE_7, 0.0, 0.0, 00.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound8", true) == 0) {
-		PlayerPlaySound(playerid, SND_WOOZIE_LINE_8, 0.0, 0.0, 0.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound9", true) == 0) {
-		PlayerPlaySound(playerid, SND_ZERO_LINE_48, 0.0, 0.0, 0.0);
-		return 1;
-	}
-	if(strcmp(cmdtext, "/playsound0", true) == 0) {
-		PlayerPlaySound(playerid, SND_ZERO_LINE_50, 0.0, 0.0, 0.0);
-		return 1;
-	}
-
-
 	return 0;
 }
 
