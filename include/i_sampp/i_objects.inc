@@ -55,11 +55,11 @@
 #include <i_sampp/objects/ide_gen_intb>   //Object model IDs: 14735 - 14764
 #include <i_sampp/objects/ide_gen_int3>   //Object model IDs: 14770 - 14840
 #include <i_sampp/objects/ide_gen_int4>   //Object model IDs: 14842 - 14903
-#include <i_sampp/objects/ide_savehous>
-#include <i_sampp/objects/ide_countn2>
-#include <i_sampp/objects/ide_countryw>
-#include <i_sampp/objects/ide_lae2>
-#include <i_sampp/objects/ide_gen_int5>
-#include <i_sampp/objects/ide_countrys>
+#include <i_sampp/objects/ide_savehous>   //Object model IDs: 15025 - 15064
+#include <i_sampp/objects/ide_countn2>    //Object model IDs: 16000 - 16790
+#include <i_sampp/objects/ide_countryw>   //Object model IDs: 17000 - 17474
+#include <i_sampp/objects/ide_lae2>       //Object model IDs: 17500 - 17978
+#include <i_sampp/objects/ide_gen_int5>   //Object model IDs: 18000 - 18112
+#include <i_sampp/objects/ide_countrys>   //Object model IDs: 18200 - 18630
 
-#include <i_sampp/objects/ide_samp>
+#include <i_sampp/objects/ide_samp>       //Object model IDs: 11682 - 11753, 18631 - 19999
