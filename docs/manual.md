@@ -524,7 +524,7 @@ List of all available paintjobs for vehicles in game, starting with prefix *PAIN
 ```pawn
 AddStaticVehicle(VEH_CAMPER, 425.7991, 2493.3472, 16.5794,
                  180, CARCOL_WHITE, CARCOL_WHITE);
-ChangeVehiclePaintjob(vehicleid, PAINTJOB_CAMPER_TRUTH);
+ChangeVehiclePaintjob(GetPlayerVehicleID(playerid), PAINTJOB_CAMPER_TRUTH);
 ```
 
 Resources: https://open.mp/docs/scripting/resources/paintjobs
