@@ -1,7 +1,7 @@
 /*
  * This file is part of Includes for San Andreas Multiplayer+
  * as its sandbox game mode for San Andreas Multiplayer Mod (SA-MP)
- * 2018 - 2023, Ivan Kmeto
+ * 2018 - 2025, Ivan Kmeto
  *
  * CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  * https://creativecommons.org/publicdomain/zero/1.0/
@@ -14,7 +14,7 @@
 
 main()
 {
-	print("\n----------------------------");
+	print("----------------------------");
 	printf("ISAMPP %s Sandbox GameMode", ISAMPP_VERSION);
 	print("----------------------------\n");
 	print_isampp_version();
